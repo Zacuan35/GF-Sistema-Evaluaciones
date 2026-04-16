@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Montserrat", serif;
   font-weight: 700;
-  margin: 0 0 0.25rem 0;
+  margin: 0;
   padding: 0;
   line-height: normal;
 }
@@ -539,10 +539,12 @@ Tabletas verticales o celulares horizontales*/
 Tabletas horizontales*/
 @media (min-width: 1024px) {
   /* Márgenes y espaciados */
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6 {
+  /*
+  h1,h2,h3,h4,h5,h6,
+  .h1,.h2,.h3,.h4,.h5,.h6 {
     margin: 0 0 1rem 0;
   }
+  */
   h1.home, h2.home {
     font-size: 3.8rem;
   }
