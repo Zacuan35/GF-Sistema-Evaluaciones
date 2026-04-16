@@ -9,7 +9,7 @@ table {
   width: 100%;
   min-width: 800px;
   border-collapse: collapse;
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
 }
 
 thead {
@@ -40,15 +40,17 @@ td, th {
 /* # Mensaje de celda agregada
 ----------------------------------------------- */
 tr.new {
-  background-color:lighten($success-color, 45%);
+  background-color:lighten($success-color, 40%) !important;
   color: $success-color;
   p{color: $success-color;}
+  /*
   td small{
     color:$success-color;
     display: block;
     font-weight: bold;
     margin-bottom: 0.25rem;
   }
+  */
 }
 
 /* # Tablas con contenido alineado hacia la derecha

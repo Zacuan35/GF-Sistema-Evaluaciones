@@ -3326,7 +3326,7 @@ Tabletas horizontales */
 
 /* btn-default-inverse */
 .btn-default-inverse {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
   color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
 }
@@ -3967,7 +3967,6 @@ table {
   width: 100%;
   min-width: 800px;
   border-collapse: collapse;
-  margin-bottom: 1rem;
 }
 
 thead {
@@ -3996,17 +3995,19 @@ td, th {
 /* # Mensaje de celda agregada
 ----------------------------------------------- */
 tr.new {
-  background-color: #cceecd;
+  background-color: #b9e8ba !important;
   color: #35a038;
+  /*
+  td small{
+    color:$success-color;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  */
 }
 tr.new p {
   color: #35a038;
-}
-tr.new td small {
-  color: #35a038;
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
 }
 
 /* # Tablas con contenido alineado hacia la derecha

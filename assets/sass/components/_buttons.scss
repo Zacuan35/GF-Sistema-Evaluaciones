@@ -93,7 +93,7 @@
 
 /* btn-default-inverse */
 .btn-default-inverse {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
   color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
   i {color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);}
