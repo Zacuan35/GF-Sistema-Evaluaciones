@@ -3539,44 +3539,59 @@ Tabletas horizontales */
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background-color: var(--highlight-color);
-  border: 1px solid var(--highlight-color);
   border-radius: 50%;
   font-size: 1rem;
   line-height: 2rem;
   text-align: center;
   cursor: pointer;
-}
-.btn-circle i {
-  color: var(--tertiary-color) !important;
-}
-.btn-circle:hover {
-  background-color: var(--tertiary-color);
-}
-.btn-circle:hover i {
-  color: var(--highlight-color) !important;
 }
 
-.btn-circle-inverse {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background-color: var(--tertiary-color);
-  border: 1px solid var(--highlight-color);
-  border-radius: 50%;
-  font-size: 1rem;
-  line-height: 2rem;
-  text-align: center;
-  cursor: pointer;
+.btn-circle.btn-default {
+  background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
 }
-.btn-circle-inverse i {
-  color: var(--highlight-color);
+.btn-circle.btn-default i {
+  color: var(--secondary-color);
 }
-.btn-circle-inverse:hover {
+.btn-circle.btn-default:hover {
   background-color: var(--highlight-color);
 }
-.btn-circle-inverse:hover i {
-  color: var(--tertiary-color);
+
+.btn-circle.btn-default-inverse {
+  background-color: var(--secondary-color);
+  border: 1px solid color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
+}
+.btn-circle.btn-default-inverse i {
+  color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
+}
+.btn-circle.btn-default-inverse:hover {
+  background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
+}
+.btn-circle.btn-default-inverse:hover i {
+  color: var(--secondary-color);
+}
+
+.btn-circle.btn-danger {
+  background-color: #e62b1a;
+}
+.btn-circle.btn-danger i {
+  color: var(--secondary-color);
+}
+.btn-circle.btn-danger:hover {
+  background-color: #b92214;
+}
+
+.btn-circle.btn-danger-inverse {
+  background-color: var(--secondary-color);
+  border: 1px solid #e62b1a;
+}
+.btn-circle.btn-danger-inverse i {
+  color: #e62b1a;
+}
+.btn-circle.btn-danger-inverse:hover {
+  background-color: #e62b1a;
+}
+.btn-circle.btn-danger-inverse:hover i {
+  color: var(--secondary-color);
 }
 
 /* =====================
