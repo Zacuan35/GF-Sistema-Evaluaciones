@@ -1,5 +1,5 @@
 /* =====================
-# BUTTONS
+# Buttons
 ===================== */
 .btn {
   display: inline-block;
@@ -20,8 +20,9 @@
   }
 }
 
-/* # Btn-properties
------------------------------------------------ */
+/* =====================
+# Button sizes
+===================== */
 .btn-block {
   display: block;
   width: 100%;
@@ -39,18 +40,22 @@
   }
 }
 
+/* =====================
+# Button variants
+===================== */
+
 /* # Btn-disable
 ----------------------------------------------- */
 .btn-disable {
   background-color: var(--secondary-color);
-  color: var(--fourth-color);
+  color: var(--fifth-color);
   cursor:not-allowed;
-  i {color: var(--fourth-color);}    
+  i {color: var(--fifth-color);}    
 }    
 
-/* # Btn-lighter
+/* # Btn-light
 ----------------------------------------------- */
-.btn-lighter {
+.btn-light {
   background-color: color-mix(in srgb, var(--sixty-color) 90%, $white-color);
   color: var(--primary-color); 
   i {color: var(--primary-color);}
@@ -61,7 +66,7 @@
 }
 
 /* btn-light-inverse */
-.btn-lighter-inverse {  
+.btn-light-inverse {  
   background-color: var(--secondary-color);
   color: color-mix(in srgb, var(--sixty-color) 90%, $white-color); 
   border-color: color-mix(in srgb, var(--sixty-color) 90%, $white-color); 
@@ -74,54 +79,30 @@
   }
 }
 
-/* # Btn-light
+/* # Btn-default
 ----------------------------------------------- */
-.btn-light {
-  background-color: color-mix(in srgb, var(--seventy-color) 90%, $white-color); 
+.btn-default {
+  background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
   color: var(--primary-color); 
   i {color: var(--primary-color);}
   
   &:hover {
-    background-color: var(--seventy-color);
+    background-color: var(--highlight-color);
   }
 }
 
 /* btn-default-inverse */
-.btn-light-inverse {
+.btn-default-inverse {
   background-color: var(--secondary-color);
-  color: color-mix(in srgb, var(--seventy-color) 90%, $white-color); 
-  border-color: color-mix(in srgb, var(--seventy-color) 90%, $white-color); 
-  i {color: color-mix(in srgb, var(--seventy-color) 90%, $white-color);}
+  border-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+  color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+  i {color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);}
 
   &:hover{
-    background-color: var(--seventy-color); 
+    background-color: var(--highlight-color); 
+    border-color: var(--highlight-color); 
     color: var(--primary-color);
     i {color: var(--primary-color);}      
-  }
-}
-
-/* # Btn-dark
------------------------------------------------ */
-.btn-dark {
-  background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);   
-  color: var(--tertiary-color);
-  i {color: var(--tertiary-color);}    
-
-  &:hover{
-    background-color:var(--highlight-color);
-  }
-}
-/* btn-default-inverse */
-.btn-dark-inverse {
-  background-color: var(--tertiary-color);
-  color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
-  border-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
-  i {color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);}
-  
-  &:hover {
-    background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
-    color: var(--tertiary-color); 
-    i {color: var(--tertiary-color);}
   }
 }
 
@@ -134,15 +115,13 @@
   
   &:hover{
     background:$success-color;
-    color: var(--secondary-color);
-    i {color: var(--secondary-color);}      
   }
 }
 /* btn-success-inverse */
 .btn-success-inverse {
   background-color: var(--secondary-color);
-  color: lighten($success-color, 10%);
   border-color: lighten($success-color, 10%);
+  color: lighten($success-color, 10%);
   i {color: lighten($success-color, 10%);}
   
   &:hover {
@@ -155,26 +134,24 @@
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-danger {
-  background-color: lighten($danger-color, 25%);
+  background-color: lighten($danger-color, 10%);
   color: var(--secondary-color);
   i {color: var(--secondary-color);}    
   
   &:hover{
     background:$danger-color;
-    color: var(--secondary-color);
-    i {color: var(--secondary-color);}      
   }
 }
 
 /* btn-danger-inverse */
 .btn-danger-inverse {
   background-color: var(--secondary-color);
-  color: lighten($danger-color, 25%);
-  border-color: lighten($danger-color, 25%);
-  i {color: lighten($danger-color, 25%);}
+  border-color: lighten($danger-color, 10%);
+  color: lighten($danger-color, 10%);
+  i {color: lighten($danger-color, 10%);}
   
   &:hover {
-    background-color: lighten($danger-color, 25%);
+    background-color: lighten($danger-color, 10%);
     color:var(--secondary-color);
     i {color: var(--secondary-color);}
   }
@@ -189,16 +166,14 @@
   
   &:hover{
     background:$warning-color;
-    color: var(--secondary-color);
-    i {color: var(--secondary-color);}      
   }
 }
 
 /* btn-warning-inverse */
 .btn-warning-inverse {
   background-color: var(--secondary-color);
-  color: lighten($warning-color, 10%);
   border-color: lighten($warning-color, 10%);
+  color: lighten($warning-color, 10%);
   i {color: lighten($warning-color, 10%);}
   
   &:hover {
@@ -208,8 +183,9 @@
   }
 }
 
-/* # Btn-Link
------------------------------------------------ */
+/* =====================
+# Btn-Link
+===================== */
 .btn-link {
   &:hover, &:active, &:focus{
     text-decoration: underline;
@@ -217,8 +193,9 @@
   }
 }
 
-/* # Btn-group
------------------------------------------------ */
+/* =====================
+# Btn-Group
+===================== */
 .button-group {
   display: inline-flex;
   border-radius: 0.25rem; 
@@ -237,15 +214,15 @@
 /* # Botón izquierdo
 ----------------------------------------------- */
 .button-left {
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);  
   border: 1px solid color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
   border-radius: 0.25rem 0 0 0.25rem; 
 
   &:hover {
     background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
-    color:var(--tertiary-color);
-    i {color: var(--tertiary-color);}
+    color:var(--secondary-color);
+    i {color: var(--secondary-color);}
   }  
 }
 
@@ -253,10 +230,10 @@
 ----------------------------------------------- */
 .button-right {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
-  color: var(--tertiary-color);  
+  color: var(--secondary-color);  
   border: 1px solid color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
   border-radius: 0 0.25rem 0.25rem 0; 
-  i {color: var(--tertiary-color);}    
+  i {color: var(--secondary-color);}    
 
   &:hover {
     background-color: var(--highlight-color);
@@ -265,6 +242,7 @@
 }
 
 /*Exclusivo para este proyecto*/
+/*
 .btn.btn-flat {
   border-radius: 0;
   -webkit-box-shadow: none;
@@ -272,9 +250,11 @@
   box-shadow: none;
   border-width: 1px;
 }
+*/
 
-/* # Btn-circle
------------------------------------------------ */
+/* =====================
+# Btn-Circle
+===================== */
 .btn-circle {
   display: inline-block;
   width: 2rem;
@@ -286,6 +266,8 @@
   cursor: pointer;
 }
 
+/* # Btn-default
+----------------------------------------------- */
 .btn-circle.btn-default {
   background-color:color-mix(in srgb, var(--highlight-color) 90%, $white-color);
   i{color:var(--secondary-color);}
@@ -306,6 +288,8 @@
   }
 }
 
+/* # Btn-danger
+----------------------------------------------- */
 .btn-circle.btn-danger {  
   background-color:lighten($danger-color, 10%);
   i{color:var(--secondary-color);}

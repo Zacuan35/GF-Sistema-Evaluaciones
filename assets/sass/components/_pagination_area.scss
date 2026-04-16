@@ -16,9 +16,7 @@
 		.form-control{
 			width: 80px;
 		}
-
 	}
-
 }
 
 /* Pagination */
@@ -46,11 +44,12 @@
 		a:hover{
 			background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
 			color: var(--tertiary-color);
+			i{color: var(--tertiary-color);}
 		}  
 			
 		.current *{
 			background-color:color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
-			color:var(--tertiary-color); 
+			color:var(--secondary-color); 
 		}            
 	}     
 

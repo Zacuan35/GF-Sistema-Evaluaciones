@@ -3228,7 +3228,7 @@ Tabletas horizontales */
 }
 
 /* =====================
-# BUTTONS
+# Buttons
 ===================== */
 .btn {
   display: inline-block;
@@ -3248,8 +3248,9 @@ Tabletas horizontales */
   margin-right: 0.25rem;
 }
 
-/* # Btn-properties
------------------------------------------------ */
+/* =====================
+# Button sizes
+===================== */
 .btn-block {
   display: block;
   width: 100%;
@@ -3266,105 +3267,79 @@ Tabletas horizontales */
   line-height: 0.5rem;
 }
 
+/* =====================
+# Button variants
+===================== */
 /* # Btn-disable
 ----------------------------------------------- */
 .btn-disable {
   background-color: var(--secondary-color);
-  color: var(--fourth-color);
+  color: var(--fifth-color);
   cursor: not-allowed;
 }
 .btn-disable i {
-  color: var(--fourth-color);
-}
-
-/* # Btn-lighter
------------------------------------------------ */
-.btn-lighter {
-  background-color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
-  color: var(--primary-color);
-}
-.btn-lighter i {
-  color: var(--primary-color);
-}
-.btn-lighter:hover {
-  background-color: var(--sixty-color);
-}
-
-/* btn-light-inverse */
-.btn-lighter-inverse {
-  background-color: var(--secondary-color);
-  color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
-  border-color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
-}
-.btn-lighter-inverse i {
-  color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
-}
-.btn-lighter-inverse:hover {
-  background-color: var(--sixty-color);
-  color: var(--primary-color);
-}
-.btn-lighter-inverse:hover i {
-  color: var(--primary-color);
+  color: var(--fifth-color);
 }
 
 /* # Btn-light
 ----------------------------------------------- */
 .btn-light {
-  background-color: color-mix(in srgb, var(--seventy-color) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
   color: var(--primary-color);
 }
 .btn-light i {
   color: var(--primary-color);
 }
 .btn-light:hover {
-  background-color: var(--seventy-color);
+  background-color: var(--sixty-color);
 }
 
-/* btn-default-inverse */
+/* btn-light-inverse */
 .btn-light-inverse {
   background-color: var(--secondary-color);
-  color: color-mix(in srgb, var(--seventy-color) 90%, #ffffff);
-  border-color: color-mix(in srgb, var(--seventy-color) 90%, #ffffff);
+  color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
+  border-color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
 }
 .btn-light-inverse i {
-  color: color-mix(in srgb, var(--seventy-color) 90%, #ffffff);
+  color: color-mix(in srgb, var(--sixty-color) 90%, #ffffff);
 }
 .btn-light-inverse:hover {
-  background-color: var(--seventy-color);
+  background-color: var(--sixty-color);
   color: var(--primary-color);
 }
 .btn-light-inverse:hover i {
   color: var(--primary-color);
 }
 
-/* # Btn-dark
+/* # Btn-default
 ----------------------------------------------- */
-.btn-dark {
+.btn-default {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
-  color: var(--tertiary-color);
+  color: var(--primary-color);
 }
-.btn-dark i {
-  color: var(--tertiary-color);
+.btn-default i {
+  color: var(--primary-color);
 }
-.btn-dark:hover {
+.btn-default:hover {
   background-color: var(--highlight-color);
 }
 
 /* btn-default-inverse */
-.btn-dark-inverse {
-  background-color: var(--tertiary-color);
-  color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
+.btn-default-inverse {
+  background-color: var(--secondary-color);
   border-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
-}
-.btn-dark-inverse i {
   color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
 }
-.btn-dark-inverse:hover {
-  background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
-  color: var(--tertiary-color);
+.btn-default-inverse i {
+  color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
 }
-.btn-dark-inverse:hover i {
-  color: var(--tertiary-color);
+.btn-default-inverse:hover {
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+  color: var(--primary-color);
+}
+.btn-default-inverse:hover i {
+  color: var(--primary-color);
 }
 
 /* # Btn-success
@@ -3378,17 +3353,13 @@ Tabletas horizontales */
 }
 .btn-success:hover {
   background: #35a038;
-  color: var(--secondary-color);
-}
-.btn-success:hover i {
-  color: var(--secondary-color);
 }
 
 /* btn-success-inverse */
 .btn-success-inverse {
   background-color: var(--secondary-color);
-  color: #46c24a;
   border-color: #46c24a;
+  color: #46c24a;
 }
 .btn-success-inverse i {
   color: #46c24a;
@@ -3404,7 +3375,7 @@ Tabletas horizontales */
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-danger {
-  background-color: #ee6b5f;
+  background-color: #e62b1a;
   color: var(--secondary-color);
 }
 .btn-danger i {
@@ -3412,23 +3383,19 @@ Tabletas horizontales */
 }
 .btn-danger:hover {
   background: #b92214;
-  color: var(--secondary-color);
-}
-.btn-danger:hover i {
-  color: var(--secondary-color);
 }
 
 /* btn-danger-inverse */
 .btn-danger-inverse {
   background-color: var(--secondary-color);
-  color: #ee6b5f;
-  border-color: #ee6b5f;
+  border-color: #e62b1a;
+  color: #e62b1a;
 }
 .btn-danger-inverse i {
-  color: #ee6b5f;
+  color: #e62b1a;
 }
 .btn-danger-inverse:hover {
-  background-color: #ee6b5f;
+  background-color: #e62b1a;
   color: var(--secondary-color);
 }
 .btn-danger-inverse:hover i {
@@ -3446,17 +3413,13 @@ Tabletas horizontales */
 }
 .btn-warning:hover {
   background: #db9a17;
-  color: var(--secondary-color);
-}
-.btn-warning:hover i {
-  color: var(--secondary-color);
 }
 
 /* btn-warning-inverse */
 .btn-warning-inverse {
   background-color: var(--secondary-color);
-  color: #eab03b;
   border-color: #eab03b;
+  color: #eab03b;
 }
 .btn-warning-inverse i {
   color: #eab03b;
@@ -3469,15 +3432,17 @@ Tabletas horizontales */
   color: var(--secondary-color);
 }
 
-/* # Btn-Link
------------------------------------------------ */
+/* =====================
+# Btn-Link
+===================== */
 .btn-link:hover, .btn-link:active, .btn-link:focus {
   text-decoration: underline;
   color: var(--highlight-color);
 }
 
-/* # Btn-group
------------------------------------------------ */
+/* =====================
+# Btn-Group
+===================== */
 .button-group {
   display: inline-flex;
   border-radius: 0.25rem;
@@ -3495,29 +3460,29 @@ Tabletas horizontales */
 /* # Botón izquierdo
 ----------------------------------------------- */
 .button-left {
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
   border: 1px solid color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
   border-radius: 0.25rem 0 0 0.25rem;
 }
 .button-left:hover {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 .button-left:hover i {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 
 /* # Botón derecho
 ----------------------------------------------- */
 .button-right {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   border: 1px solid color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
   border-radius: 0 0.25rem 0.25rem 0;
 }
 .button-right i {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 .button-right:hover {
   background-color: var(--highlight-color);
@@ -3525,6 +3490,7 @@ Tabletas horizontales */
 }
 
 /*Exclusivo para este proyecto*/
+/*
 .btn.btn-flat {
   border-radius: 0;
   -webkit-box-shadow: none;
@@ -3532,9 +3498,10 @@ Tabletas horizontales */
   box-shadow: none;
   border-width: 1px;
 }
-
-/* # Btn-circle
------------------------------------------------ */
+*/
+/* =====================
+# Btn-Circle
+===================== */
 .btn-circle {
   display: inline-block;
   width: 2rem;
@@ -3546,6 +3513,8 @@ Tabletas horizontales */
   cursor: pointer;
 }
 
+/* # Btn-default
+----------------------------------------------- */
 .btn-circle.btn-default {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
 }
@@ -3570,6 +3539,8 @@ Tabletas horizontales */
   color: var(--secondary-color);
 }
 
+/* # Btn-danger
+----------------------------------------------- */
 .btn-circle.btn-danger {
   background-color: #e62b1a;
 }
@@ -3941,9 +3912,12 @@ i, .material-symbols-outlined {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
   color: var(--tertiary-color);
 }
+.pagination ul a:hover i {
+  color: var(--tertiary-color);
+}
 .pagination ul .current * {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 
 /* # Tablet ------------------------------------------ */
