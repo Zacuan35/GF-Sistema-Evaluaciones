@@ -5769,7 +5769,7 @@ Colour theme
  Sidebar
  ========== */
 .main-sidebar {
-  background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
+  background-color: var(--primary-color);
 }
 
 /* # Sidebar-footer
@@ -6042,29 +6042,29 @@ Colour theme
 /* # Colours
 ----------------------------------------------- */
 .sidebar a {
-  color: var(--tertiary-color);
+  color: var(--primary-text-color);
 }
 .sidebar a:hover {
   text-decoration: none;
 }
 
 .sidebar-menu > li > a > i {
-  color: var(--tertiary-color);
+  color: var(--primary-text-color);
 }
 
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
-  background: var(--highlight-color);
-  color: var(--fourth-color);
+  background: var(--secondary-color);
+  color: var(--highlight-color);
   border-left-color: var(--highlight-color);
 }
 .sidebar-menu > li > a:hover i,
 .sidebar-menu > li.active > a i {
-  color: var(--fourth-color);
+  color: var(--highlight-color);
 }
 
 .sidebar-menu > li > .treeview-menu {
-  background: var(--fourth-color);
+  background: var(--secondary-color);
 }
 
 .treeview-menu > li > a {

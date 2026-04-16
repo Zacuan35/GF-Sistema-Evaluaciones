@@ -80,25 +80,25 @@
 /* # Colours
 ----------------------------------------------- */
 .sidebar a {
-  color: var(--tertiary-color);
+  color: var(--primary-text-color);
   &:hover {
    text-decoration: none;
   }
 }
 
 .sidebar-menu > li > a > i {
-	color: var(--tertiary-color);
+	color: var(--primary-text-color);
 }
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
-  background: var(--highlight-color);
-  color: var(--fourth-color);
+  background: var(--secondary-color);
+  color: var(--highlight-color);
   border-left-color: var(--highlight-color);
 
-  i{color: var(--fourth-color);}
+  i{color: var(--highlight-color);}
 }
 .sidebar-menu > li > .treeview-menu {
-  background: var(--fourth-color);
+  background: var(--secondary-color);
 }
 
 .treeview-menu > li > a {
