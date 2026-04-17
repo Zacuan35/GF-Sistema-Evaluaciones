@@ -3602,17 +3602,19 @@ Tabletas horizontales */
 # box
 ===================== */
 .box {
-  border-radius: 0.5rem;
-  padding: 1rem;
-  border: 1px solid var(--tertiary-color);
-  background-clip: border-box;
-}
-.box p {
-  margin: 0;
+  display: grid;
+  gap: 0.5rem;
 }
 
 .box-header {
+  padding: 1rem;
   background-color: var(--tertiary-color);
+  background-clip: border-box;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+.box-header p {
+  margin: 0;
 }
 
 .box-body {
@@ -3620,7 +3622,14 @@ Tabletas horizontales */
   gap: 0.5rem;
 }
 .box-body .box-item {
+  padding: 1rem;
   background-color: var(--primary-color);
+  background-clip: border-box;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 0.5rem;
+}
+.box-body .box-item p {
+  margin: 0;
 }
 .box-body .box-item:nth-child(even) {
   background-color: var(--secondary-color);
