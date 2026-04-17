@@ -3602,11 +3602,31 @@ Tabletas horizontales */
 # box
 ===================== */
 .box {
-  background-color: var(--primary-color);
-  background-clip: border-box;
   border-radius: 0.5rem;
+  padding: 1rem;
   border: 1px solid var(--tertiary-color);
-  margin-bottom: 1rem;
+  background-clip: border-box;
+}
+.box p {
+  margin: 0;
+}
+
+.box-header {
+  background-color: var(--tertiary-color);
+}
+
+.box-body {
+  display: grid;
+  gap: 0.5rem;
+}
+.box-body .box-item {
+  background-color: var(--primary-color);
+}
+.box-body .box-item:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+.box-body .box-item:hover {
+  background-color: var(--tertiary-color);
 }
 
 canvas {

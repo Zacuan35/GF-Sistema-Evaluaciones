@@ -1,10 +1,25 @@
 /* =====================
 # box
 ===================== */
-.box {
-  background-color:var(--primary-color);
-  background-clip: border-box;
+.box{
   border-radius: 0.5rem;
-  border:1px solid var(--tertiary-color);
-  margin-bottom: 1rem;   
+  padding:1rem;  
+  border:1px solid var(--tertiary-color);  
+  background-clip: border-box;  
+  p{margin:0;}
+}
+
+.box-header {
+  background-color:var(--tertiary-color);
+} 
+
+.box-body{
+  display: grid;
+  gap: 0.5rem;
+
+  .box-item {
+    background-color:var(--primary-color);
+    &:nth-child(even) {background-color: var(--secondary-color); }
+    &:hover {background-color: var(--tertiary-color); } 
   }     
+}
