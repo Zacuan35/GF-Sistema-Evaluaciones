@@ -5739,7 +5739,7 @@ Tabletas horizontales*/
 =============== */
 .dashboard-footer {
   margin-left: 230px;
-  z-index: 800;
+  z-index: 100;
 }
 
 @media (max-width: 767px) {
@@ -5816,7 +5816,7 @@ Colour theme
 .main-header {
   position: relative;
   max-height: 100px;
-  z-index: 850;
+  z-index: 900;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -5885,7 +5885,7 @@ Colour theme
   }
 }
 .navbar-static-top {
-  z-index: 850;
+  z-index: 1000;
   border-width: 0 0 1px;
 }
 
