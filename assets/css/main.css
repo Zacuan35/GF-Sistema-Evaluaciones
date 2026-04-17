@@ -3598,6 +3598,17 @@ Tabletas horizontales */
   word-break: break-all;
 }
 
+/* =====================
+# box
+===================== */
+.box {
+  background-color: var(--primary-color);
+  background-clip: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid var(--tertiary-color);
+  margin-bottom: 1rem;
+}
+
 canvas {
   width: 100%;
   max-width: 1500px;
