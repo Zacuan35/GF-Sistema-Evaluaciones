@@ -5679,9 +5679,8 @@ Tabletas horizontales*/
 ============== */
 .content-wrapper {
   margin-left: 230px;
-  z-index: 820;
-  min-height: 100%;
   z-index: 800;
+  min-height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -5740,7 +5739,7 @@ Tabletas horizontales*/
 =============== */
 .dashboard-footer {
   margin-left: 230px;
-  z-index: 100;
+  z-index: 800;
 }
 
 @media (max-width: 767px) {
@@ -5817,7 +5816,7 @@ Colour theme
 .main-header {
   position: relative;
   max-height: 100px;
-  z-index: 900;
+  z-index: 850;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -5886,7 +5885,7 @@ Colour theme
   }
 }
 .navbar-static-top {
-  z-index: 1000;
+  z-index: 850;
   border-width: 0 0 1px;
 }
 
