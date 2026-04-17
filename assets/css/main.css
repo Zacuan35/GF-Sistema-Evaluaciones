@@ -3847,10 +3847,13 @@ i, .material-symbols-outlined {
 
 /* # Sólo para este proyecto
 ----------------------------------------------- */
-.modal .tabs-container {
-  margin-bottom: 0;
+/*
+.modal {
+  .tabs-container {
+    margin-bottom: 0;
+  }
 }
-
+*/
 /* =====================
 # MEDIAQUERIES
 ===================== */
@@ -5620,7 +5623,7 @@ Tabletas horizontales*/
   padding-top: 50px;
   height: 100%;
   width: 230px;
-  z-index: 810;
+  z-index: 800;
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
   -moz-transition: -moz-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
   -o-transition: -o-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
