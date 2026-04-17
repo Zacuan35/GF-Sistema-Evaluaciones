@@ -3606,6 +3606,8 @@ Tabletas horizontales */
   gap: 0.5rem;
 }
 
+/* # Box-header
+----------------------------------------------- */
 .box-header {
   padding: 1rem;
   background-color: var(--tertiary-color);
@@ -3617,6 +3619,8 @@ Tabletas horizontales */
   margin: 0;
 }
 
+/* # Box-body
+----------------------------------------------- */
 .box-body {
   display: grid;
   gap: 0.5rem;
@@ -3629,6 +3633,7 @@ Tabletas horizontales */
   border-radius: 0.5rem;
 }
 .box-body .box-item p {
+  color: var(--primary-text-color);
   margin: 0;
 }
 .box-body .box-item:nth-child(even) {
@@ -3636,6 +3641,13 @@ Tabletas horizontales */
 }
 .box-body .box-item:hover {
   background-color: var(--tertiary-color);
+}
+.box-body .box-item.success {
+  background-color: #b9e8ba;
+}
+.box-body .box-item.success p {
+  color: #35a038;
+  font-weight: 400;
 }
 
 canvas {

@@ -6,6 +6,8 @@
   gap: 0.5rem;
 }
 
+/* # Box-header
+----------------------------------------------- */
 .box-header {
   padding:1rem;  
   background-color:var(--tertiary-color);
@@ -15,6 +17,8 @@
   p{margin:0;}  
 } 
 
+/* # Box-body
+----------------------------------------------- */
 .box-body{
   display: grid;
   gap: 0.5rem;
@@ -25,8 +29,19 @@
     background-clip: border-box;  
     border:1px solid var(--tertiary-color);  
     border-radius: 0.5rem;
-    p{margin:0;}    
+    p{
+      color:var(--primary-text-color);
+      margin:0;
+    }    
     &:nth-child(even) {background-color: var(--secondary-color); }
     &:hover {background-color: var(--tertiary-color); } 
+
+    &.success{
+      background-color:lighten($success-color, 40%);      
+      p{
+        color:$success-color;
+        font-weight:400;
+      }          
+    }
   }     
 }
