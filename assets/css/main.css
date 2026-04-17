@@ -3526,7 +3526,7 @@ Tabletas horizontales */
 }
 
 .btn-circle.btn-default-inverse {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border: 1px solid color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
 }
 .btn-circle.btn-default-inverse i {
@@ -3536,7 +3536,7 @@ Tabletas horizontales */
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
 }
 .btn-circle.btn-default-inverse:hover i {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* # Btn-danger
@@ -3552,7 +3552,7 @@ Tabletas horizontales */
 }
 
 .btn-circle.btn-danger-inverse {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border: 1px solid #e62b1a;
 }
 .btn-circle.btn-danger-inverse i {
@@ -3562,7 +3562,7 @@ Tabletas horizontales */
   background-color: #e62b1a;
 }
 .btn-circle.btn-danger-inverse:hover i {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* =====================
