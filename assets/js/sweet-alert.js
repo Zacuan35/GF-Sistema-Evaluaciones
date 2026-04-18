@@ -1,27 +1,36 @@
 /* =====================
 # SWEET ALERT
 ===================== */  
-function crearAlerta(id, config) {
-	const btn = document.getElementById(id);
-	if (!btn) return;
+const alertas = {
+	success: {
+		title: '¡Felicidades!',
+		text: 'La operación se realizó con éxito',
+		icon: 'success'
+	},
+	error: {
+		title: '¡Error!',
+		text: 'Algo salió mal.',
+		icon: 'error'
+	},
+	delete: {
+		title: '¿Estas seguro?',
+		text: 'De eliminar este elemento.',
+		icon: 'question'
+	}
+};
 
-	btn.addEventListener('click', () => Swal.fire(config));
-}
+document.addEventListener('click', (e) => {
+	const tipo = e.target.dataset.alert;
+	if (!tipo) return;
 
-crearAlerta('alertaExitoBtn', {
-	title: '¡Éxito!',
-	text: 'Este es un mensaje de éxito.',
-	icon: 'success'
-});
+	const config = alertas[tipo];
+	if (!config) return;
 
-crearAlerta('alertaErrorBtn', {
-	title: '¡Error!',
-	text: 'Algo salió mal.',
-	icon: 'error'
-});
-
-crearAlerta('alertaDeleteBtn', {
-	title: '¿Estas seguro?',
-	text: 'De eliminar este elemento.',
-	icon: 'warning'
+	Swal.fire({
+		...config,
+		confirmButtonText: 'Aceptar',
+		customClass: {
+			confirmButton: 'btn-alert'
+		}
+	});
 });
