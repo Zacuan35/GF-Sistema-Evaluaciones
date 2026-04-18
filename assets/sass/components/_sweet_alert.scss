@@ -1,0 +1,23 @@
+/* =====================
+# SWEET ALERT
+===================== */
+.swal2-styled {
+    margin: .3125em;
+    padding: .625em 1.1em;
+    transition: box-shadow .1s;
+    box-shadow: none !important;
+    font-weight: 500;
+}
+
+.swal2-styled.swal2-confirm {
+    border-radius: .25em;
+    background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color) !important; 
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.swal2-icon.swal2-question {
+    border-color: $warning-color !important;
+    color: $warning-color !important;
+}

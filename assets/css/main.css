@@ -4511,6 +4511,30 @@ html {
   display: block;
 }
 
+/* =====================
+# SWEET ALERT
+===================== */
+.swal2-styled {
+  margin: 0.3125em;
+  padding: 0.625em 1.1em;
+  transition: box-shadow 0.1s;
+  box-shadow: none !important;
+  font-weight: 500;
+}
+
+.swal2-styled.swal2-confirm {
+  border-radius: 0.25em;
+  background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff) !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.swal2-icon.swal2-question {
+  border-color: #db9a17 !important;
+  color: #db9a17 !important;
+}
+
 /*Forms*/
 /* =====================
 # FORM GROUP
