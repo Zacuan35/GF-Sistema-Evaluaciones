@@ -3061,7 +3061,7 @@ Tabletas horizontales */
 /* =====================
 # ALERTS
 ===================== */
-.alert {
+.banner_alert {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
@@ -3070,40 +3070,40 @@ Tabletas horizontales */
   align-items: center;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.alert.alert-success {
+.banner_alert.alert-success {
   background-color: #b9e8ba;
   border: 1px solid #35a038;
 }
-.alert.alert-success p, .alert.alert-success i {
+.banner_alert.alert-success p, .banner_alert.alert-success i {
   color: #35a038;
   font-weight: 500;
 }
-.alert.alert-warning {
+.banner_alert.alert-warning {
   background-color: #f9e8c5;
   border: 1px solid #db9a17;
 }
-.alert.alert-warning p, .alert.alert-warning i {
+.banner_alert.alert-warning p, .banner_alert.alert-warning i {
   color: #db9a17;
   font-weight: 500;
 }
-.alert.alert-danger {
+.banner_alert.alert-danger {
   background-color: #f5aba4;
   border: 1px solid #b92214;
 }
-.alert.alert-danger p, .alert.alert-danger i {
+.banner_alert.alert-danger p, .banner_alert.alert-danger i {
   color: #b92214;
   font-weight: 500;
 }
-.alert.hide {
+.banner_alert.hide {
   opacity: 0;
   transform: translateY(-10px); /* Desplazamiento hacia arriba al cerrar */
   pointer-events: none; /* Desactivar eventos al cerrar */
 }
-.alert p {
+.banner_alert p {
   margin: 0;
   color: var(--primary-color);
 }
-.alert .btn-close {
+.banner_alert .btn-close {
   box-sizing: content-box;
   background-color: inherit;
   color: var(--primary-color);
@@ -3114,7 +3114,7 @@ Tabletas horizontales */
   line-height: 1rem;
   cursor: pointer;
 }
-.alert .btn-close:hover {
+.banner_alert .btn-close:hover {
   opacity: 1;
 }
 
