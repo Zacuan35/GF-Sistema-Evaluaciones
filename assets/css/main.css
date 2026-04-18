@@ -3845,7 +3845,7 @@ i, .material-symbols-outlined {
 .modal {
   display: none;
   position: fixed;
-  z-index: 900;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
@@ -5937,7 +5937,7 @@ Colour theme
   }
 }
 .navbar-static-top {
-  z-index: 1000;
+  z-index: 900;
   border-width: 0 0 1px;
 }
 
