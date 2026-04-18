@@ -1,28 +1,27 @@
 /* =====================
 # SWEET ALERT
 ===================== */  
-// Botón para mostrar alerta de éxito
-document.getElementById('alertaExitoBtn').addEventListener('click', function() {
-	Swal.fire({
-		title: '¡Éxito!',
-		text: 'Este es un mensaje de éxito.',
-		icon: 'success',
-		confirmButtonText: 'Aceptar',
-		customClass: {
-			confirmButton: 'btn-alert' // Clase personalizada para el color del botón
-		}
-	});
+function crearAlerta(id, config) {
+	const btn = document.getElementById(id);
+	if (!btn) return;
+
+	btn.addEventListener('click', () => Swal.fire(config));
+}
+
+crearAlerta('alertaExitoBtn', {
+	title: '¡Éxito!',
+	text: 'Este es un mensaje de éxito.',
+	icon: 'success'
 });
 
-// Botón para mostrar alerta de error
-document.getElementById('alertaErrorBtn').addEventListener('click', function() {
-	Swal.fire({
-		title: '¡Error!',
-		text: 'Algo salió mal. Intenta de nuevo.',
-		icon: 'error',
-		confirmButtonText: 'Aceptar',
-		customClass: {
-			confirmButton: 'btn-alert' // Clase personalizada para el color del botón
-		}
-	});
+crearAlerta('alertaErrorBtn', {
+	title: '¡Error!',
+	text: 'Algo salió mal.',
+	icon: 'error'
+});
+
+crearAlerta('alertaDeleteBtn', {
+	title: '¿Estas seguro?',
+	text: 'De eliminar este elemento.',
+	icon: 'warning'
 });
