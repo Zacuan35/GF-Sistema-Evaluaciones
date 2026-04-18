@@ -15,7 +15,7 @@
     border: 1px solid $success-color;
     p,i{
       color:$success-color;
-      font-weight: bold;
+      font-weight:500;
     }
   }
   &.alert-warning{
@@ -23,7 +23,7 @@
     border: 1px solid $warning-color;
     p,i{
       color:$warning-color;
-      font-weight: bold;
+      font-weight:500;
     }    
   }
   &.alert-danger{
@@ -31,7 +31,7 @@
     border: 1px solid $danger-color;
     p,i{
       color:$danger-color;
-      font-weight: bold;
+      font-weight:500;
     }
   }
 

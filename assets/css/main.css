@@ -3076,7 +3076,7 @@ Tabletas horizontales */
 }
 .alert.alert-success p, .alert.alert-success i {
   color: #35a038;
-  font-weight: bold;
+  font-weight: 500;
 }
 .alert.alert-warning {
   background-color: #f9e8c5;
@@ -3084,7 +3084,7 @@ Tabletas horizontales */
 }
 .alert.alert-warning p, .alert.alert-warning i {
   color: #db9a17;
-  font-weight: bold;
+  font-weight: 500;
 }
 .alert.alert-danger {
   background-color: #f5aba4;
@@ -3092,7 +3092,7 @@ Tabletas horizontales */
 }
 .alert.alert-danger p, .alert.alert-danger i {
   color: #b92214;
-  font-weight: bold;
+  font-weight: 500;
 }
 .alert.hide {
   opacity: 0;
