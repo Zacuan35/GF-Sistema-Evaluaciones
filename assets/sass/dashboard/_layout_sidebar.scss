@@ -151,6 +151,8 @@
 .dashboard-footer {
   margin-left: 230px;
   z-index: 100;
+
+  p,a{font-size: 0.850rem;}
 }
 @media (max-width: 767px) {
   .dashboard-footer {

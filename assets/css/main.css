@@ -181,12 +181,6 @@ b {
   background-color: #35a038;
 }
 
-/* # Icons
------------------------------------------------ */
-i.icon {
-  color: var(--seventy-color);
-}
-
 /*Base*/
 /* =====================
 # STYLES
@@ -3239,7 +3233,7 @@ Tabletas horizontales */
   text-align: center;
   cursor: pointer;
   font-family: "Montserrat", serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 .btn i {
@@ -3807,38 +3801,6 @@ Tabletas verticales o celulares horizontales*/
     height: 220px;
   }
 }
-/* =====================
-# ICONS
-===================== */
-i, .material-symbols-outlined {
-  font-size: 1rem;
-  color: var(--highlight-color);
-}
-
-/* # Background color
------------------------------------------------ */
-.bg-default i,
-.bg-light i,
-.bg-dark i {
-  color: var(--highlight-color);
-}
-.bg-default .material-symbols-outlined,
-.bg-light .material-symbols-outlined,
-.bg-dark .material-symbols-outlined {
-  color: var(--highlight-color);
-}
-
-.bg-darker i,
-.bg-success i,
-.bg-danger i {
-  color: var(--primary-color);
-}
-.bg-darker .material-symbols-outlined,
-.bg-success .material-symbols-outlined,
-.bg-danger .material-symbols-outlined {
-  color: var(--primary-color);
-}
-
 /* =====================
 # MODAL
 ===================== */
@@ -4533,6 +4495,177 @@ html {
 .swal2-icon.swal2-question {
   border-color: #db9a17 !important;
   color: #db9a17 !important;
+}
+
+/* =====================
+# ICONS
+===================== */
+i {
+  font-size: 1rem;
+  color: var(--primary-text-color);
+}
+
+/*
+fa-2xl
+fa-xl
+*/
+.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-md {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-lg {
+  width: 40px;
+  height: 40px;
+}
+
+/* # Background colors
+----------------------------------------------- */
+.bg-default i {
+  color: var(--highlight-color);
+}
+
+.bg-light i {
+  color: var(--highlight-color);
+}
+
+.bg-dark i {
+  color: var(--highlight-color);
+}
+
+.bg-darker i {
+  color: var(--highlight-color);
+}
+
+.bg-success i {
+  color: var(--highlight-color);
+}
+
+.bg-danger i {
+  color: var(--highlight-color);
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../icons/icomoon.eot");
+  src: url("../icons/icomoon.eot?#iefix") format("embedded-opentype"), url("../icons/icomoon.ttf") format("truetype"), url("../icons/icomoon.woff") format("woff"), url("../icons/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-document-arrow-up:before {
+  content: "\e900";
+}
+
+.icon-arrow-right-start-on-rectangle:before {
+  content: "\e901";
+}
+
+.icon-bars-3:before {
+  content: "\e902";
+}
+
+.icon-bell:before {
+  content: "\e903";
+}
+
+.icon-chat-bubble-oval-left:before {
+  content: "\e904";
+}
+
+.icon-check:before {
+  content: "\e905";
+}
+
+.icon-clipboard:before {
+  content: "\e906";
+}
+
+.icon-clipboard-document-check:before {
+  content: "\e907";
+}
+
+.icon-cog-6-tooth:before {
+  content: "\e908";
+}
+
+.icon-document-check:before {
+  content: "\e909";
+}
+
+.icon-envelope:before {
+  content: "\e90a";
+}
+
+.icon-flag:before {
+  content: "\e90b";
+}
+
+.icon-Home:before {
+  content: "\e90c";
+}
+
+.icon-moon:before {
+  content: "\e90d";
+}
+
+.icon-pencil-square:before {
+  content: "\e90e";
+}
+
+.icon-plus:before {
+  content: "\e90f";
+}
+
+.icon-presentation-chart-line:before {
+  content: "\e910";
+}
+
+.icon-question-mark-circle:before {
+  content: "\e911";
+}
+
+.icon-sun:before {
+  content: "\e912";
+}
+
+.icon-trash:before {
+  content: "\e913";
+}
+
+.icon-user:before {
+  content: "\e914";
+}
+
+.icon-user-circle:before {
+  content: "\e915";
+}
+
+.icon-user-group:before {
+  content: "\e916";
+}
+
+.icon-x-mark:before {
+  content: "\e917";
 }
 
 /*Forms*/
@@ -5817,6 +5950,9 @@ Tabletas horizontales*/
   margin-left: 230px;
   z-index: 100;
 }
+.dashboard-footer p, .dashboard-footer a {
+  font-size: 0.85rem;
+}
 
 @media (max-width: 767px) {
   .dashboard-footer {
@@ -5977,11 +6113,11 @@ Colour theme
   background-color: transparent;
   background-image: none;
   padding: 15px 15px;
-  font-family: fontAwesome;
+  font-family: icomoon;
 }
 
 .main-header .sidebar-toggle:before {
-  content: "\f0c9";
+  content: "\e902";
 }
 
 .main-header .sidebar-toggle:hover {
@@ -6127,7 +6263,7 @@ Colour theme
 }
 
 .sidebar-menu > li > a > i {
-  color: var(--primary-text-color);
+  color: var(--highlight-color);
 }
 
 .sidebar-menu > li > a:hover,

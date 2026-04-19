@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
   src:  url('../icons/icomoon.eot');
-  src:  url('../icons/icomoon.eotiefix') format('embedded-opentype'),
+  src:  url('../icons/icomoon.eot?#iefix') format('embedded-opentype'),
     url('../icons/icomoon.ttf') format('truetype'),
     url('../icons/icomoon.woff') format('woff'),
     url('../icons/icomoon.svg') format('svg');
@@ -25,69 +25,75 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-bars-3:before {
+.icon-document-arrow-up:before {
   content: "\e900";
 }
-.icon-bell:before {
+.icon-arrow-right-start-on-rectangle:before {
   content: "\e901";
 }
-.icon-chat-bubble-oval-left:before {
+.icon-bars-3:before {
   content: "\e902";
 }
-.icon-check:before {
+.icon-bell:before {
   content: "\e903";
 }
-.icon-clipboard:before {
+.icon-chat-bubble-oval-left:before {
   content: "\e904";
 }
-.icon-clipboard-document-check:before {
+.icon-check:before {
   content: "\e905";
 }
-.icon-document-check:before {
+.icon-clipboard:before {
   content: "\e906";
 }
-.icon-envelope:before {
+.icon-clipboard-document-check:before {
   content: "\e907";
 }
-.icon-flag:before {
+.icon-cog-6-tooth:before {
   content: "\e908";
 }
-.icon-Home:before {
+.icon-document-check:before {
   content: "\e909";
 }
-.icon-moon:before {
+.icon-envelope:before {
   content: "\e90a";
 }
-.icon-pencil-square:before {
+.icon-flag:before {
   content: "\e90b";
 }
-.icon-plus:before {
+.icon-Home:before {
   content: "\e90c";
 }
-.icon-presentation-chart-line:before {
+.icon-moon:before {
   content: "\e90d";
 }
-.icon-question-mark-circle:before {
+.icon-pencil-square:before {
   content: "\e90e";
 }
-.icon-sun:before {
+.icon-plus:before {
   content: "\e90f";
 }
-.icon-trash:before {
+.icon-presentation-chart-line:before {
   content: "\e910";
 }
-.icon-trash-1:before {
+.icon-question-mark-circle:before {
   content: "\e911";
 }
-.icon-user:before {
+.icon-sun:before {
   content: "\e912";
 }
-.icon-user-circle:before {
+.icon-trash:before {
   content: "\e913";
 }
-.icon-user-group:before {
+.icon-user:before {
   content: "\e914";
 }
-.icon-x-mark:before {
+.icon-user-circle:before {
   content: "\e915";
+}
+.icon-user-group:before {
+  content: "\e916";
+}
+.icon-x-mark:before {
+  content: "\e917";
 }

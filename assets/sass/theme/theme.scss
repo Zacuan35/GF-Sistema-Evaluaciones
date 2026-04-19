@@ -25,7 +25,6 @@ $secondary-font: "Roboto", serif;
   --seventy-color: #1A6AB4;
   --primary-text-color: #30363d;
   --highlight-color: #1464C3;
-  //--highlight-color: #0F4C95;
 }
 
 /* Dark theme */
@@ -109,7 +108,6 @@ b {
   background-color: var(--primary-color);
   p, ul { color: var(--primary-text-color); }
   b { color:var(--highlight-color);}
-  //a {}
 }
 
 .bg-light {
@@ -147,9 +145,3 @@ b {
 .label-primary { background-color: var(--fourth-color); }
 .label-danger { background-color: $danger-color; }
 .label-success { background-color: $success-color; }
-
-/* # Icons
------------------------------------------------ */
-i.icon {
-  color: var(--seventy-color);
-}

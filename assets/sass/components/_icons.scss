@@ -1,24 +1,24 @@
 /* =====================
 # ICONS
 ===================== */
-i,.material-symbols-outlined{
+i{
   font-size: 1rem;
-  color: var(--highlight-color);
+  color: var(--primary-text-color);
 }
 
-/* # Background color
+/*
+fa-2xl
+fa-xl
+*/
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 24px; height: 24px; }
+.icon-lg { width: 40px; height: 40px; }
+
+/* # Background colors
 ----------------------------------------------- */
-.bg-default,
-.bg-light,
-.bg-dark {
-  i {color:var(--highlight-color);}  
-  .material-symbols-outlined{color: var(--highlight-color);}
-}
-
-.bg-darker,
-.bg-success,
-.bg-danger
- {
-  i {color: var(--primary-color);}
-  .material-symbols-outlined{color: var(--primary-color);}
-}
+.bg-default i{color: var(--highlight-color);}
+.bg-light i{color: var(--highlight-color);}
+.bg-dark i{color: var(--highlight-color);}
+.bg-darker i{color: var(--highlight-color);}
+.bg-success i{color: var(--highlight-color);}
+.bg-danger i{color: var(--highlight-color);}
