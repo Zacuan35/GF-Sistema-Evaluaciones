@@ -4572,6 +4572,10 @@ fa-xl
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-solid-pencil-square:before {
+  content: "\e923";
+}
+
 .icon-arrow-long-down:before {
   content: "\e918";
 }
@@ -6238,7 +6242,7 @@ Colour theme
   font-size: 12px;
 }
 
-.sidebar-menu li > a > .fa-angle-right {
+.sidebar-menu li > a > .icon-chevron-right {
   width: auto;
   height: auto;
   padding: 0;
@@ -6246,14 +6250,14 @@ Colour theme
   margin-top: 3px;
 }
 
-.sidebar-menu li.active > a > .fa-angle-right {
+.sidebar-menu li.active > a > .icon-chevron-right {
   -webkit-transform: rotate(-270deg);
   -ms-transform: rotate(-270deg);
   -o-transform: rotate(-270deg);
   transform: rotate(-270deg);
 }
 
-.sidebar-menu .treeview a i.fa-angle-right {
+.sidebar-menu .treeview a i.icon-chevron-right {
   font-size: 10px;
 }
 
@@ -6292,7 +6296,7 @@ Colour theme
   font-size: 10px;
 }
 
-.sidebar-menu .treeview-menu > li > a > .fa-angle-right,
+.sidebar-menu .treeview-menu > li > a > .icon-chevron-right,
 .sidebar-menu .treeview-menu > li > a > .fa-angle-down {
   width: auto;
 }

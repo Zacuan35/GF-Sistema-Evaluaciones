@@ -28,20 +28,20 @@
 	padding: 10px 25px 10px 15px;
 	font-size: 12px;
 }
-.sidebar-menu li > a > .fa-angle-right {
+.sidebar-menu li > a > .icon-chevron-right {
 	width: auto;
 	height: auto;
 	padding: 0;
 	margin-right: 10px;
 	margin-top: 3px;
 }
-.sidebar-menu li.active > a > .fa-angle-right {
+.sidebar-menu li.active > a > .icon-chevron-right {
 	-webkit-transform: rotate(-270deg);
 	-ms-transform: rotate(-270deg);
 	-o-transform: rotate(-270deg);
 	transform: rotate(-270deg);
 }
-.sidebar-menu .treeview a i.fa-angle-right{
+.sidebar-menu .treeview a i.icon-chevron-right{
 	font-size: 10px;
 }
 .sidebar-menu li.active > .treeview-menu {
@@ -72,7 +72,7 @@
 	width: 15px;
 	font-size: 10px;
 }
-.sidebar-menu .treeview-menu > li > a > .fa-angle-right,
+.sidebar-menu .treeview-menu > li > a > .icon-chevron-right,
 .sidebar-menu .treeview-menu > li > a > .fa-angle-down {
 	width: auto;
 }
