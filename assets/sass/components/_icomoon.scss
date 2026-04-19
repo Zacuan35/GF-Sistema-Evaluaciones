@@ -25,6 +25,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-long-down:before {
+  content: "\e918";
+}
+.icon-arrow-long-left:before {
+  content: "\e919";
+}
+.icon-arrow-long-right:before {
+  content: "\e91a";
+}
+.icon-arrow-long-up:before {
+  content: "\e91b";
+}
+.icon-chevron-down:before {
+  content: "\e91c";
+}
+.icon-chevron-left:before {
+  content: "\e91d";
+}
+.icon-chevron-right:before {
+  content: "\e91e";
+}
+.icon-chevron-up:before {
+  content: "\e91f";
+}
+.icon-minus:before {
+  content: "\e920";
+}
+.icon-solid-moon:before {
+  content: "\e921";
+}
+.icon-solid-sun:before {
+  content: "\e922";
+}
 .icon-document-arrow-up:before {
   content: "\e900";
 }
