@@ -4,6 +4,7 @@
 .box{
   display: grid;
   gap: 0.5rem;
+  p{margin:0;}  
 }
 
 /* # Box-header
@@ -14,7 +15,6 @@
   background-clip: border-box;  
   border:1px solid var(--tertiary-color);  
   border-radius: 0.5rem;
-  p{margin:0;}  
 } 
 
 /* # Box-body

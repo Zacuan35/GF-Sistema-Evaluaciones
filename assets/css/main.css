@@ -3599,6 +3599,9 @@ Tabletas horizontales */
   display: grid;
   gap: 0.5rem;
 }
+.box p {
+  margin: 0;
+}
 
 /* # Box-header
 ----------------------------------------------- */
@@ -3608,9 +3611,6 @@ Tabletas horizontales */
   background-clip: border-box;
   border: 1px solid var(--tertiary-color);
   border-radius: 0.5rem;
-}
-.box-header p {
-  margin: 0;
 }
 
 /* # Box-body
