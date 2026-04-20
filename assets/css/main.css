@@ -4620,6 +4620,22 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check-circle:before {
+  content: "\e924";
+}
+
+.icon-exclamation-triangle:before {
+  content: "\e925";
+}
+
+.icon-hand-thumb-down:before {
+  content: "\e926";
+}
+
+.icon-hand-thumb-up:before {
+  content: "\e927";
+}
+
 .icon-solid-pencil-square:before {
   content: "\e923";
 }
