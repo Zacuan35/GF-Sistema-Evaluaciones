@@ -3638,9 +3638,18 @@ Tabletas horizontales */
 }
 .box-body .box-item.success {
   background-color: #b9e8ba;
+  border-color: #35a038;
 }
 .box-body .box-item.success p {
   color: #35a038;
+  font-weight: 400;
+}
+.box-body .box-item.warning {
+  background-color: #f9e8c5;
+  border-color: #db9a17;
+}
+.box-body .box-item.warning p {
+  color: #db9a17;
   font-weight: 400;
 }
 

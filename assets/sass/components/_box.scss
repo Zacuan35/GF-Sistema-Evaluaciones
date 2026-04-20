@@ -37,11 +37,22 @@
     &:hover {background-color: var(--tertiary-color); } 
 
     &.success{
-      background-color:lighten($success-color, 40%);      
+      background-color:lighten($success-color, 40%);     
+      border-color:$success-color; 
       p{
         color:$success-color;
         font-weight:400;
       }          
     }
+
+    &.warning{
+      background-color:lighten($warning-color, 40%);      
+      border-color:$warning-color; 
+      p{
+        color:$warning-color;
+        font-weight:400;
+      }          
+    }    
+
   }     
 }
