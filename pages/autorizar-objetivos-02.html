@@ -195,7 +195,7 @@
                   <button class="btn btn-disable">
                     <i class="icon-hand-thumb-up"></i> Rechazar
                   </button>      
-                  <button class="btn btn-disable">
+                  <button class="btn btn-default">
                     <i class="icon-hand-thumb-down"></i> Autorizar
                   </button>                      
                 </div> 
@@ -233,7 +233,7 @@
                     <p class="col-span-12 md:col-span-1">25%</p>
                     <div class="col-span-12 md:col-span-1">
                       <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-disable" data-modal="modal-02">
+                        <button class="btn-circle btn-default" data-modal="modal-01">
                           <i class="icon-chat-bubble-oval-left"></i>
                         </button>         
                       </div>                
@@ -248,7 +248,7 @@
                     <p class="col-span-12 md:col-span-1">25%</p>
                     <div class="col-span-12 md:col-span-1">
                       <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-disable" data-modal="modal-02">
+                        <button class="btn-circle btn-disable">
                           <i class="icon-chat-bubble-oval-left"></i>
                         </button>         
                       </div>                
@@ -263,7 +263,7 @@
                     <p class="col-span-12 md:col-span-1">25%</p>
                     <div class="col-span-12 md:col-span-1">
                       <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-disable" data-modal="modal-02">
+                        <button class="btn-circle btn-disable">
                           <i class="icon-chat-bubble-oval-left"></i>
                         </button>         
                       </div>                
@@ -278,7 +278,7 @@
                     <p class="col-span-12 md:col-span-1">25%</p>
                     <div class="col-span-12 md:col-span-1">
                       <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-disable" data-modal="modal-02">
+                        <button class="btn-circle btn-disable">
                           <i class="icon-chat-bubble-oval-left"></i>
                         </button>         
                       </div>                
@@ -287,6 +287,12 @@
                 </div>          
               </div>                            
             </div>
+            <!-- ------ Card-footer ------ -->
+            <footer class="card-footer">
+              <span class="flex md:justify-end">
+                <p><b>Peso total:</b> 100%</p>
+              </span>
+            </footer>     
           </div>            
 
         </section>
@@ -305,78 +311,13 @@
       </footer>
 
       <!-- Modal-01
-      ========================================== -->                
-      <div id="modal-01" class="modal">
-        <div class="modal-content">
-          <!-- ====== Modal-header ====== --> 
-          <div class="modal-header">
-            <div class="flex items-center gap-2">
-              <i class="icon-question-mark-circle icon-xl"></i>
-              <h2>Agregar objetivo</h2>
-            </div>
-            <span class="btn-close" data-dismiss="modal">
-              <i class="icon-x-mark"></i>
-            </span>
-          </div>
-          <!-- ====== Modal-body ====== --> 
-          <div class="modal-body grid gap-5">                
-            <!-- Form -->
-            <form class="grid gap-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2">
-                <div class="item">                    
-                  <label for="object">Objetivo <span>*</span></label>
-                  <input class="form-control" type="text" id="object" name="object" placeholder="Establece un objetivo de manera clara y concisa." required>
-                </div>        
-                <div class="item">
-                  <label for="business-approach">Enfoque de negocio <span>*</span></label>
-                  <select id="business-approach" name="business-approach" class="form-control" required>
-                    <option value="" disabled selected>-- Selecciona --</option>
-                    <option value="Enfoque-01">Enfoque-01</option>
-                    <option value="Enfoque-01">Enfoque-02</option>
-                    <option value="Enfoque-01">Enfoque-03</option>            
-                    <option value="Enfoque-01">Enfoque-04</option>
-                    <option value="Enfoque-01">Enfoque-05</option>
-                  </select> 
-                </div>
-                <div class="item">
-                  <label for="kpi">Indicador de medición<span>*</span></label>
-                  <textarea class="form-control" id="kpi" name="kpi" rows="2" cols="50" placeholder="Escribe un indicador de medición para poder evaluar de manera objetiva el cumplimiento de tu objetivo." required></textarea>                
-                </div>                                                    
-                <div class="item">
-                  <label for="activities">Actividades<span>*</span></label>
-                  <textarea class="form-control" id="activities" name="activities" rows="2" cols="50" placeholder="Detalla los pasos que realizarás para lograr tu objetivo." required></textarea>                
-                </div>                                                                        
-                <div class="item">
-                  <label for="weight">Peso (%)</label>
-                  <input class="form-control" type="number" id="weight" name="weight" min="1" max="100" step="5" value="25">              
-                </div>                                    
-                <div class="item">
-                  <label for="compliance">Fecha de cumplimiento <span>*</span></label>
-                  <input id="compliance" type="datetime-local" name="compliance" class="form-control" required>
-                </div>  
-              </div>                                                    
-            </form>  
-            <p class="flex flex-row justify-end gap-2"><b>Evaluador:</b> Héctor Aguilar Cuevas</p>
-          </div>
-          <!-- ====== Modal-footer ====== --> 
-          <div class="modal-footer">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center w-100">                  
-              <button type="reset" class="btn btn-disable" data-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-default" id="btnEnviar"><i class="fa-solid fa-plus"></i> Agregar</button>          
-            </div>
-          </div>
-        </div>
-      </div>  
-
-      <!-- Modal-02
       ========================================== -->        
-      <div id="modal-02" class="modal">
+      <div id="modal-01" class="modal">
         <div class="modal-content">
           <!-- ====== Modal-header ====== -->                       
           <div class="modal-header">
             <div class="flex items-center gap-3">
-              <i class="icon-question-mark-circle"></i>
-              <h2>Editar objetivo</h2>
+              <h2>Agregar comentario</h2>
             </div>
             <span class="btn-close" data-dismiss="modal">
               <i class="icon-x-mark"></i>
@@ -385,48 +326,18 @@
           <!-- ====== Modal-body ====== -->            
           <div class="modal-body grid gap-5">                
             <!-- Form -->
-            <form class="grid gap-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2">
-                <div class="item">                    
-                  <label for="object">Objetivo <span>*</span></label>
-                  <input class="form-control" type="text" id="object" name="object" placeholder="Establece un objetivo de manera clara y concisa." required>
-                </div>        
-                <div class="item">
-                  <label for="business-approach">Enfoque de negocio <span>*</span></label>
-                  <select id="business-approach" name="business-approach" class="form-control" required>
-                    <option value="" disabled selected>-- Selecciona --</option>
-                    <option value="Enfoque-01">Enfoque-01</option>
-                    <option value="Enfoque-01">Enfoque-02</option>
-                    <option value="Enfoque-01">Enfoque-03</option>            
-                    <option value="Enfoque-01">Enfoque-04</option>
-                    <option value="Enfoque-01">Enfoque-05</option>
-                  </select> 
-                </div>
-                <div class="item">
-                  <label for="kpi">Indicador de medición<span>*</span></label>
-                  <textarea class="form-control" id="kpi" name="kpi" rows="2" cols="50" placeholder="Escribe un indicador de medición para poder evaluar de manera objetiva el cumplimiento de tu objetivo." required></textarea>                
-                </div>                                                    
-                <div class="item">
-                  <label for="activities">Actividades<span>*</span></label>
-                  <textarea class="form-control" id="activities" name="activities" rows="2" cols="50" placeholder="Detalla los pasos que realizarás para lograr tu objetivo." required></textarea>                
-                </div>                                                                        
-                <div class="item">
-                  <label for="weight">Peso (%)</label>
-                  <input class="form-control" type="number" id="weight" name="weight" min="1" max="100" step="5" value="25">              
-                </div>                                    
-                <div class="item">
-                  <label for="compliance">Fecha de cumplimiento <span>*</span></label>
-                  <input id="compliance" type="datetime-local" name="compliance" class="form-control" required>
-                </div>  
-              </div>                                                    
-            </form>  
-            <p class="flex flex-row justify-end"><b>Evaluador:</b> Héctor Aguilar Cuevas</p>
+            <form>
+              <div class="item">
+                <label for="comment">Comentar</label>
+                <textarea class="form-control" id="comment" name="comment" rows="5" cols="50" placeholder="Escribe tu comentario" required></textarea>
+              </div>
+            </form>
           </div>
-          <!-- ====== Modal-footer ====== --> 
+          <!-- ====== Modal-footer ====== -->
           <div class="modal-footer">
             <div class="flex flex-col md:flex-row md:justify-between md:items-center w-100">                  
-              <button type="reset" class="btn btn-disable" data-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-default" id="btnEnviar">Guardar</button>          
+              <button type="reset" class="btn btn-default-inverse" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-default" id="btnEnviar">Guardar</button>    
             </div>
           </div>
         </div>
