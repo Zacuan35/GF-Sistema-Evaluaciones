@@ -3559,6 +3559,17 @@ Tabletas horizontales */
   color: var(--primary-color);
 }
 
+/* # Btn-disable
+----------------------------------------------- */
+.btn-circle.btn-disable {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--fifth-color);
+  cursor: not-allowed;
+}
+.btn-circle.btn-disable i {
+  color: var(--fifth-color);
+}
+
 /* =====================
 # CARD
 ===================== */
