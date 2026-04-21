@@ -1,38 +1,18 @@
 /* =====================
 # SWEET ALERT
 ===================== */  
-const alertas = {
-	success: {
-		title: '¡Felicidades!',
-		text: 'La operación se realizó con éxito',
-		icon: 'success'
-	},
-	error: {
-		title: '¡Error!',
-		text: 'Algo salió mal.',
-		icon: 'error'
-	},
-	delete: {
-		title: '¿Estas seguro?',
-		text: 'De eliminar este elemento.',
-		icon: 'question'
-	},
-	authorize: {
-		title: '¡Felicidades!',
-		text: 'El objetivo se autorizó con éxito.',
-		icon: 'success'
-	}	
-};
-
 document.addEventListener('click', (e) => {
-	const tipo = e.target.dataset.alert;
-	if (!tipo) return;
+	const btn = e.target.closest('[data-title]');
+	if (!btn) return;
 
-	const config = alertas[tipo];
-	if (!config) return;
+	const title = btn.dataset.title;
+	const text = btn.dataset.text || '';
+	const icon = btn.dataset.icon || 'info'; // default
 
 	Swal.fire({
-		...config,
+		title,
+		text,
+		icon,
 		confirmButtonText: 'Aceptar',
 		customClass: {
 			confirmButton: 'btn-alert'
