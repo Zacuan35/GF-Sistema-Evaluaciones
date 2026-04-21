@@ -16,7 +16,12 @@ const alertas = {
 		title: '¿Estas seguro?',
 		text: 'De eliminar este elemento.',
 		icon: 'question'
-	}
+	},
+	authorize: {
+		title: '¡Felicidades!',
+		text: 'El objetivo se autorizó con éxito.',
+		icon: 'success'
+	}	
 };
 
 document.addEventListener('click', (e) => {
