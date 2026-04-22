@@ -20,11 +20,9 @@ a {
   transition: 0.5s;
   -webkit-transition: 0.5s;
   //Estados de botón
-  /*
   &:hover, &:active, a:focus {
     text-decoration: underline;
   }  
-  */
 }
 
 /*Para realizar desplazamientos suaves*/
@@ -179,19 +177,15 @@ img{
 }
 .ie6 img {width:100%;}
 .img-hover:hover {opacity: 0.8;}
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-.w-100{width: 100%}
-/*Background images*/
+
+/* # Background images
+----------------------------------------------- */
 .bg-img{
   background-position:center center;
   background-repeat:no-repeat;
   background-size:cover;
 }
 .bg-attach{background-attachment: fixed;}
-.img-circle {border-radius: 50%;}
 
 /* # Container filter with background image
 ----------------------------------------------- */
