@@ -64,7 +64,10 @@ body {
 
 /* # General colors
 ----------------------------------------------- */
-p, ul, ol {
+p, ul, ol, small {
+  color: var(--primary-text-color);
+}
+p.small, ul.small, ol.small, small.small {
   color: var(--primary-text-color);
 }
 
@@ -264,9 +267,6 @@ p, ul, ol {
 
 p {
   line-height: 1.4rem;
-}
-
-p {
   margin: 0 0 20px;
 }
 
@@ -291,9 +291,9 @@ a {
 }
 
 small, .small {
+  font-family: "Roboto", serif;
   font-weight: normal;
   line-height: 1;
-  color: var(--fifth-color);
   font-size: 80%;
 }
 
@@ -3633,7 +3633,6 @@ Tabletas horizontales */
   border-radius: 0.5rem;
 }
 .box-body .box-item p {
-  color: var(--primary-text-color);
   margin: 0;
 }
 .box-body .box-item:nth-child(even) {

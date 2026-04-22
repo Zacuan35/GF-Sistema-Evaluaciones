@@ -72,8 +72,11 @@ body {
 
 /* # General colors
 ----------------------------------------------- */
-p, ul, ol {
+p, ul, ol, small {
   color: var(--primary-text-color);
+  &.small{
+    color: var(--primary-text-color);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
