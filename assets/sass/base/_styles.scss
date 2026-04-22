@@ -19,10 +19,6 @@ a {
   outline: none;
   transition: 0.5s;
   -webkit-transition: 0.5s;
-  //Estados de botón
-  &:hover, &:active, a:focus {
-    text-decoration: underline;
-  }  
 }
 
 /*Para realizar desplazamientos suaves*/
