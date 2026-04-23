@@ -6,20 +6,11 @@
   background-clip: border-box;
   border-radius: 0.5rem;
   border:1px solid var(--tertiary-color);
-  //margin-bottom: 1rem;
 
   .card-header {
     padding: 1rem 1rem;
-    background-color:var(--primary-color);
-    border-bottom: 1px solid var(--tertiary-color);
     border-radius:0.5rem 0.5rem 0 0;
-
-    /*
-    h3,h4{
-      margin-bottom: 0;
-    }    
-    */
-
+    border-bottom: 1px solid var(--tertiary-color);
   }    
 
   .card-body {
@@ -27,14 +18,60 @@
   }     
 
   .card-footer {
-    background-color:var(--primary-color);
     padding:1rem;
-    border-top: 1px solid var(--tertiary-color);
     border-radius:0 0 0.5rem 0.5rem ;      
     text-align: left;
+    border-top: 1px solid var(--tertiary-color);
 
-    p{
-      word-break: break-all;
-    }      
+    p{word-break: break-all;}      
   }     
+
+  &.card-highlight {
+    background-color:color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
+    p{color:var(--primary-color);}
+    i {color: var(--primary-color);}
+    border-color:var(--highlight-color);
+    border:1px solid var(--highlight-color);
+    .card-header,
+    .card-footer {
+      border-color: var(--highlight-color);
+    }    
+  }  
+  &.card-success {
+    background-color:lighten($success-color, 10%);
+    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
+    p{color:var(--primary-color);}
+    i {color: var(--primary-color);}
+    border-color:$success-color;    
+    border:1px solid $success-color;
+    .card-header,
+    .card-footer {
+      border-color: $success-color;
+    }
+  }
+  &.card-danger {
+    background-color:lighten($danger-color, 10%);
+    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
+    p{color:var(--primary-color);}
+    i {color: var(--primary-color);}
+    border-color:$danger-color;    
+    border:1px solid $danger-color;
+    .card-header,
+    .card-footer {
+      border-color: $danger-color;
+    }    
+  }    
+&.card-warning {
+    background-color:lighten($warning-color, 10%);
+    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
+    p{color:var(--primary-color);}
+    i {color: var(--primary-color);}
+    border-color:$warning-color;    
+    border:1px solid $warning-color;
+    .card-header,
+    .card-footer {
+      border-color: $warning-color;
+    }    
+  }    
 }
