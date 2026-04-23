@@ -3924,6 +3924,10 @@ a.card.card-warning:hover {
   border: 1px solid var(--tertiary-color);
   border-radius: 0.5rem;
 }
+.box-header p {
+  font-weight: bold;
+  color: var(--highlight-color);
+}
 
 /* # Box-body
 ----------------------------------------------- */
