@@ -3800,16 +3800,17 @@ Tabletas horizontales */
   background-clip: border-box;
   border-radius: 0.5rem;
   border: 1px solid var(--tertiary-color);
-  margin-bottom: 1rem;
 }
 .card .card-header {
   padding: 1rem 1rem;
   background-color: var(--primary-color);
   border-bottom: 1px solid var(--tertiary-color);
   border-radius: 0.5rem 0.5rem 0 0;
-}
-.card .card-header h3, .card .card-header h4 {
-  margin-bottom: 0;
+  /*
+  h3,h4{
+    margin-bottom: 0;
+  }    
+  */
 }
 .card .card-body {
   padding: 1rem;
@@ -6285,6 +6286,8 @@ Tabletas horizontales*/
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  display: grid;
+  gap: 1rem;
 }
 
 /* ===============

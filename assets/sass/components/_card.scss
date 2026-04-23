@@ -6,7 +6,7 @@
   background-clip: border-box;
   border-radius: 0.5rem;
   border:1px solid var(--tertiary-color);
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
 
   .card-header {
     padding: 1rem 1rem;
@@ -14,9 +14,12 @@
     border-bottom: 1px solid var(--tertiary-color);
     border-radius:0.5rem 0.5rem 0 0;
 
+    /*
     h3,h4{
       margin-bottom: 0;
-    }
+    }    
+    */
+
   }    
 
   .card-body {
