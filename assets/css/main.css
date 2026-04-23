@@ -3800,6 +3800,7 @@ Tabletas horizontales */
   background-clip: border-box;
   border-radius: 0.5rem;
   border: 1px solid var(--tertiary-color);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 .card .card-header {
   padding: 1rem 1rem;
@@ -3835,6 +3836,9 @@ Tabletas horizontales */
 .card.card-highlight .card-header,
 .card.card-highlight .card-footer {
   border-color: var(--highlight-color);
+}
+.card.card-highlight:hover {
+  background-color: var(--highlight-color);
 }
 .card.card-success {
   background-color: #46c24a;
