@@ -1,7 +1,7 @@
 /* =====================
-# box
+# Panel
 ===================== */
-.box{
+.panel{
   display: grid;
   gap: 0.5rem;
   p{margin:0;}  
@@ -9,7 +9,7 @@
 
 /* # Box-header
 ----------------------------------------------- */
-.box-header {
+.panel-header {
   padding:1rem;  
   background-color:var(--tertiary-color);
   background-clip: border-box;  
@@ -24,11 +24,11 @@
 
 /* # Box-body
 ----------------------------------------------- */
-.box-body{
+.panel-body{
   display: grid;
   gap: 0.5rem;
 
-  .box-item {
+  .panel-item {
     padding:1rem;  
     background-color:var(--primary-color);
     background-clip: border-box;  
