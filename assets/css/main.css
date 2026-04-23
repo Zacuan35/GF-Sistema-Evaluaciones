@@ -3822,7 +3822,6 @@ Tabletas horizontales */
 .card.card-highlight {
   background-color: color-mix(in srgb, var(--highlight-color) 90%, #ffffff);
   border-color: var(--highlight-color);
-  border: 1px solid var(--highlight-color);
 }
 .card.card-highlight h1, .card.card-highlight h2, .card.card-highlight h3, .card.card-highlight h4, .card.card-highlight h5, .card.card-highlight h6 {
   color: var(--primary-color);
@@ -3837,13 +3836,9 @@ Tabletas horizontales */
 .card.card-highlight .card-footer {
   border-color: var(--highlight-color);
 }
-.card.card-highlight:hover {
-  background-color: var(--highlight-color);
-}
 .card.card-success {
   background-color: #46c24a;
   border-color: #35a038;
-  border: 1px solid #35a038;
 }
 .card.card-success h1, .card.card-success h2, .card.card-success h3, .card.card-success h4, .card.card-success h5, .card.card-success h6 {
   color: var(--primary-color);
@@ -3861,7 +3856,6 @@ Tabletas horizontales */
 .card.card-danger {
   background-color: #e62b1a;
   border-color: #b92214;
-  border: 1px solid #b92214;
 }
 .card.card-danger h1, .card.card-danger h2, .card.card-danger h3, .card.card-danger h4, .card.card-danger h5, .card.card-danger h6 {
   color: var(--primary-color);
@@ -3879,7 +3873,6 @@ Tabletas horizontales */
 .card.card-warning {
   background-color: #eab03b;
   border-color: #db9a17;
-  border: 1px solid #db9a17;
 }
 .card.card-warning h1, .card.card-warning h2, .card.card-warning h3, .card.card-warning h4, .card.card-warning h5, .card.card-warning h6 {
   color: var(--primary-color);
@@ -3893,6 +3886,22 @@ Tabletas horizontales */
 .card.card-warning .card-header,
 .card.card-warning .card-footer {
   border-color: #db9a17;
+}
+
+a.card:hover {
+  background-color: var(--tertiary-color);
+}
+a.card.card-highlight:hover {
+  background-color: var(--highlight-color);
+}
+a.card.card-success:hover {
+  background-color: var(--success-color);
+}
+a.card.card-danger:hover {
+  background-color: var(--danger-color);
+}
+a.card.card-warning:hover {
+  background-color: var(--warning-color);
 }
 
 /* =====================
