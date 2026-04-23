@@ -10,13 +10,13 @@
   </head>
   <body>
 
-    <div class="wrapper fixed">          
+    <div class="wrapper fixed">                  
       <!-- ==========
       * MAIN-HEADER *
       =========== -->            
       <header class="main-header">
         <!-- Logo
-        ========================================== -->
+        ========================================== -->           
         <a href="grid.html" class="logo">
           <img src="../assets/img/logo-default.svg" alt="">
         </a>
@@ -140,7 +140,7 @@
                   <a href="autorizar-objetivos-01.html">
                     <i class="icon-minus"></i> Autorizar
                   </a>
-                </li>
+                </li>                                                  
               </ul>
             </li>                
             <li>
@@ -170,184 +170,131 @@
         ========================================== -->               
         <div class="content-header">
           <div class="flex flex-col md:flex-row md:justify-between md:items-center w-full">
-            <h1>Carga de objetivos</h1>          
-            <span class="flex items-center gap-1">
-              <i class="icon-question-mark-circle icon-lg"></i>
-              <h6>Tutorial</h6>
-            </span>
+            <div class="flex flex-row gap-4">
+              <img src="../assets/img/user-image.jpg" alt="" class="rounded-full size-20">
+              <div class="flex flex-col gap-1">
+                <h1>Nombre de colaborador</h1>          
+                <p>#0000 Objetivos 2026</p>
+              </div>
+            </div>
+            <a href="01.-evaluar-equipo-listado.html">
+              <i class="icon-arrow-long-left icon-2xl"></i>
+            </a>
           </div>
         </div>         
         <!-- Content-body
         ========================================== -->               
-        <section class="content-body">         
+        <section class="content-body">                   
+
+          <!-- ====== Cards ====== -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
+            <a href="#" class="card card-highlight">
+              <div class="card-body flex justify-between items-center">
+                <div class="flex flex-col gap-1">
+                  <h6>Calif. Objetivo</h6>
+                  <p class="m-0">Valor total 70%</p>                
+                </div>
+                <h2>67.2</h2>              
+              </div>    
+            </a>                
+            <a href="#" class="card">
+              <div class="card-body flex justify-between items-center">
+                <div class="flex flex-col gap-1">
+                  <h6>Calif. Competencias</h6>
+                  <p class="m-0">Valor total 30%</p>                
+                </div>
+                <h2>0</h2>              
+              </div>    
+            </a>                
+            <a href="#" class="card">
+              <div class="card-body flex justify-between items-center">
+                <div class="flex flex-col gap-1">
+                  <h6>Calif. Final</h6>
+                </div>
+                <h2>0</h2>              
+              </div>    
+            </a>                
+          </div>          
+
           <!-- ====== Card ====== --> 
           <div class="card">
             <!-- ------ Card-header ------ -->
             <header class="card-header">
               <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                 <p class="m-0"><b>Nombre de jefe:</b> Héctor Aguilar Cuevas</p>
-                <div>                  
-                  <select class="form-control">
-                    <option selected>-- Selecciona --</option>
-                    <option>Objetivo 2026</option>
-                    <option>Objetivo 2025</option>                                            
-                  </select>
-                </div> 
+                <button 
+                  class="btn btn-default"
+                  data-title="¡Felicidades!"
+                  data-text="Los cambios se guardaron con éxito"
+                  data-icon="success"> <!--successs/error/warning/info/question-->
+                  <i class="icon-hand-thumb-down"></i> Guardar
+                </button>                
               </div>
             </header>
             <!-- ------ Card-body ------ -->
-            <div class="card-body grid gap-5">                    
-              <!-- --------
-              Title
-              --------- -->       
-              <div class="grid gap-1">
-                <div class="flex flex-row gap-2">
-                  <i class="icon-exclamation-triangle icon-lg"></i>
-                  <h5>Pendientes de evaluar</h5>
-                </div>
-              </div>
+            <div class="card-body grid gap-5">
+              <h4>Evaluación objetivos</h4>
               <!-- --------
               panel
-              --------- -->       
-              <div class="panel"> 
+              --------- -->
+              <div class="panel">
+                <!-- panel-header
+                ------------------------------------------ -->
+                <div class="panel-header grid grid-cols-12">
+                  <p class="col-span-12 md:col-span-5">Objetivo</p>
+                  <p class="col-span-12 md:col-span-4">Comentarios</p>
+                  <p class="col-span-12 md:col-span-1">Peso %</p>
+                  <p class="col-span-12 md:col-span-1">Calif.Auto</p>
+                  <p class="col-span-12 md:col-span-1">Calif.Jefe</p>
+                </div>
                 <!-- panel-body
-                ------------------------------------------ -->  
+                ------------------------------------------ -->
                 <div class="panel-body">
                   <!-- ------ panel-item ------ --> 
-                  <a href="autorizar-objetivos-02.html" class="panel-item flex flex-col md:flex-row md:justify-between md:items-center">
-                    <div class="flex gap-4">
-                      <img src="../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                      <div class="flex flex-col gap-1">
-                        <h6>Nombre de colaborador</h6>
-                        <p>#0000 Objetivos 2026</p>
-                      </div>
-                    </div>                    
-                    <span class="flex flex-row gap-5">
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                    </span>
-                  </a>                                                                   
+                  <div class="panel-item grid grid-cols-12">                                
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                  </div>
                   <!-- ------ panel-item ------ --> 
-                  <a href="autorizar-objetivos-02.html" class="panel-item flex flex-col md:flex-row md:justify-between md:items-center">
-                    <div class="flex gap-4">
-                      <img src="../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                      <div class="flex flex-col gap-1">
-                        <h6>Nombre de colaborador</h6>
-                        <p>#0000 Objetivos 2026</p>
-                      </div>
-                    </div>                    
-                    <span class="flex flex-row gap-5">
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                    </span>
-                  </a>                            
-                  <!-- ------ panel-item ------ -->                                        
-                  <a href="autorizar-objetivos-02.html" class="panel-item flex flex-col md:flex-row md:justify-between md:items-center">
-                    <div class="flex gap-4">
-                      <img src="../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                      <div class="flex flex-col gap-1">
-                        <h6>Nombre de colaborador</h6>
-                        <p>#0000 Objetivos 2026</p>
-                      </div>
-                    </div>                    
-                    <span class="flex flex-row gap-5">
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                    </span>
-                  </a>  
-                  <!-- ------ panel-item ------ -->                                                                  
-                  <a href="autorizar-objetivos-02.html" class="panel-item flex flex-col md:flex-row md:justify-between md:items-center">
-                    <div class="flex gap-4">
-                      <img src="../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                      <div class="flex flex-col gap-1">
-                        <h6>Nombre de colaborador</h6>
-                        <p>#0000 Objetivos 2026</p>
-                      </div>
-                    </div>                    
-                    <span class="flex flex-row gap-5">
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                      <div class="flex flex-col items-center gap-1">
-                        <h5>0</h5>
-                        <p class="text-center small">
-                          Calif.<br>
-                          Obj. 70%
-                        </p>
-                      </div>
-                    </span>
-                  </a>                                                                                                                                                                                                                                
+                  <div class="panel-item grid grid-cols-12">                                
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                  </div>
+                  <!-- ------ panel-item ------ --> 
+                  <div class="panel-item grid grid-cols-12">                                
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                  </div>
+                  <!-- ------ panel-item ------ --> 
+                  <div class="panel-item grid grid-cols-12">                                
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                  </div>
                 </div>          
-              </div>              
-            </div>                                 
+              </div>                            
+            </div>
+            <!-- ------ Card-footer ------ -->
+            <footer class="card-footer">
+              <span class="flex md:justify-between">
+                <div class="flex flex-row gap-2">
+                  <p><b>Peso:</b> 100%</p>
+                  <p><b>Calif.Auto:</b> 80</p>
+                </div>
+                <p><b>Calif.Jefe:</b> 70</p>
+              </span>
+            </footer>     
           </div>            
 
         </section>
