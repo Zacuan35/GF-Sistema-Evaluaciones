@@ -219,25 +219,12 @@
           <!-- ====== Card ====== --> 
           <div class="card">
             <!-- ------ Card-header ------ -->
-            <header class="card-header ">
+            <header class="card-header">
               <div class="flex flex-col md:flex-row md:justify-between md:items-center">
-                <h4 class="m-0">Autorización de objetivos 2026</h4>
-                <div class="flex flex-row gap-2">                  
-                  <button 
-                    class="btn btn-default-inverse"
-                    data-title="¡Felicidades!"
-                    data-text="El objetivo se rechazó con éxito"
-                    data-icon="success"> <!--successs/error/warning/info/question-->
-                    <i class="icon-hand-thumb-up"></i> Rechazar
-                  </button>                  
-                  <button 
-                    class="btn btn-default"
-                    data-title="¡Felicidades!"
-                    data-text="El objetivo se autorizó con éxito"
-                    data-icon="success"> <!--successs/error/warning/info/question-->
-                    <i class="icon-hand-thumb-down"></i> Autorizar
-                  </button>
-                </div> 
+                <p class="m-0"><b>Nombre de jefe:</b> Héctor Aguilar Cuevas</p>
+                <button class="btn btn-default">
+                  Guardar
+                </button>
               </div>
             </header>
             <!-- ------ Card-body ------ -->
@@ -249,87 +236,58 @@
                 <!-- Box-header
                 ------------------------------------------ -->
                 <div class="box-header grid grid-cols-12">
-                  <div class="col-span-12 md:col-span-1">
-                    <div class="flex justify-center">
-                      <input type="checkbox" id="checkbox2">
-                    </div>
-                  </div>
-                  <p class="col-span-12 md:col-span-9"><b>Objetivo</b></p>
-                  <p class="col-span-12 md:col-span-1"><b>Peso %</b></p>                     
-                  <p class="col-span-12 md:col-span-1"><b>Comentar</b></p>
+                  <p class="col-span-12 md:col-span-5">Objetivo</p>
+                  <p class="col-span-12 md:col-span-4">Comentarios</p>
+                  <p class="col-span-12 md:col-span-1">Peso %</p>
+                  <p class="col-span-12 md:col-span-1">Calif.Auto</p>
+                  <p class="col-span-12 md:col-span-1">Calif.Jefe</p>
                 </div>
                 <!-- Box-body
                 ------------------------------------------ -->
                 <div class="box-body">
                   <!-- ------ box-item ------ --> 
                   <div class="box-item grid grid-cols-12">                                
-                    <div class="col-span-12 md:col-span-1">
-                      <div class="flex justify-center">
-                        <input type="checkbox" id="checkbox2">
-                      </div>
-                    </div>
-                    <p class="col-span-12 md:col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                    <p class="col-span-12 md:col-span-1">25%</p>
-                    <div class="col-span-12 md:col-span-1">
-                      <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-default-inverse" data-modal="modal-01">
-                          <i class="icon-chat-bubble-oval-left"></i>
-                        </button>         
-                      </div>                
-                    </div>                  
-                  </div>
-                  <!-- ------ box-item ------ -->
-                  <div class="box-item grid grid-cols-12">                                
-                    <div class="flex justify-center">
-                      <input type="checkbox" id="checkbox2">
-                    </div>
-                    <p class="col-span-12 md:col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                    <p class="col-span-12 md:col-span-1">25%</p>
-                    <div class="col-span-12 md:col-span-1">
-                      <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-default-inverse" data-modal="modal-01">
-                          <i class="icon-chat-bubble-oval-left"></i>
-                        </button>         
-                      </div>                
-                    </div>                  
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
                   </div>
                   <!-- ------ box-item ------ --> 
                   <div class="box-item grid grid-cols-12">                                
-                    <div class="flex justify-center">
-                      <input type="checkbox" id="checkbox2">
-                    </div>
-                    <p class="col-span-12 md:col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                    <p class="col-span-12 md:col-span-1">25%</p>
-                    <div class="col-span-12 md:col-span-1">
-                      <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-disable">
-                          <i class="icon-chat-bubble-oval-left"></i>
-                        </button>         
-                      </div>                
-                    </div>                  
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
                   </div>
                   <!-- ------ box-item ------ --> 
-                  <div class="box-item success grid grid-cols-12">                                
-                    <div class="flex justify-center">
-                      <input type="checkbox" id="checkbox2">
-                    </div>
-                    <p class="col-span-12 md:col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                    <p class="col-span-12 md:col-span-1">25%</p>
-                    <div class="col-span-12 md:col-span-1">
-                      <div class="flex md:justify-center">       
-                        <button class="btn-circle btn-disable">
-                          <i class="icon-chat-bubble-oval-left"></i>
-                        </button>         
-                      </div>                
-                    </div>                  
-                  </div>                                                         
+                  <div class="box-item grid grid-cols-12">                                
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                  </div>
+                  <!-- ------ box-item ------ --> 
+                  <div class="box-item grid grid-cols-12">                                
+                    <textarea class="form-control col-span-12 md:col-span-5" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                    <textarea class="form-control col-span-12 md:col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    <input class="form-control col-span-12 md:col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                  </div>
                 </div>          
               </div>                            
             </div>
             <!-- ------ Card-footer ------ -->
             <footer class="card-footer">
-              <span class="flex md:justify-end">
-                <p><b>Peso total:</b> 100%</p>
+              <span class="flex md:justify-between">
+                <div class="flex flex-row gap-2">
+                  <p><b>Peso:</b> 100%</p>
+                  <p><b>Calif.Auto:</b> 80</p>
+                </div>
+                <p><b>Calif.Jefe:</b> 70</p>
               </span>
             </footer>     
           </div>            
