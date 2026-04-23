@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-face-smile:before {
+  content: "\e928";
+}
+.icon-face-frown:before {
+  content: "\e929";
+}
+.icon-face-sad-tear:before {
+  content: "\e92a";
+}
+.icon-face-smile-beam:before {
+  content: "\e92b";
+}
 .icon-check-circle:before {
   content: "\e924";
 }
