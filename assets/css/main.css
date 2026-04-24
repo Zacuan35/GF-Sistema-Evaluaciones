@@ -5119,7 +5119,15 @@ i {
   flex-direction: row;
   gap: 1rem;
 }
+.faces button {
+  all: unset;
+  cursor: pointer;
+}
 .faces .face-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -5135,17 +5143,17 @@ i {
   font-size: 90%;
   margin: 0;
 }
-.faces .face-item.danger:hover i, .faces .face-item.danger:hover p {
-  color: #dc2626;
+.faces .face-item.danger:hover i, .faces .face-item.danger:hover p, .faces .face-item.danger.active i, .faces .face-item.danger.active p {
+  color: #b92214;
 }
-.faces .face-item.warning:hover i, .faces .face-item.warning:hover p {
-  color: #f59e0b;
+.faces .face-item.warning:hover i, .faces .face-item.warning:hover p, .faces .face-item.warning.active i, .faces .face-item.warning.active p {
+  color: #db9a17;
 }
-.faces .face-item.highlight:hover i, .faces .face-item.highlight:hover p {
-  color: #3b82f6;
+.faces .face-item.highlight:hover i, .faces .face-item.highlight:hover p, .faces .face-item.highlight.active i, .faces .face-item.highlight.active p {
+  color: var(--highlight-color);
 }
-.faces .face-item.success:hover i, .faces .face-item.success:hover p {
-  color: #16a34a;
+.faces .face-item.success:hover i, .faces .face-item.success:hover p, .faces .face-item.success.active i, .faces .face-item.success.active p {
+  color: #35a038;
 }
 
 /*Forms*/

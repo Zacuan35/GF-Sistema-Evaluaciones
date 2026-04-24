@@ -6,7 +6,17 @@
   flex-direction: row;
   gap: 1rem;
 
+  button{
+  all: unset;
+  cursor: pointer;    
+  }
+
   .face-item {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 0.5rem;
+    
     cursor: pointer;
     transition: all 0.2s ease;
 
@@ -25,23 +35,31 @@
     }
 
     &.danger:hover i,
-    &.danger:hover p {
-      color: #dc2626;
+    &.danger:hover p,
+    &.danger.active i,
+    &.danger.active p {
+      color: $danger-color;
     }
 
     &.warning:hover i,
-    &.warning:hover p {
-      color: #f59e0b;
+    &.warning:hover p,
+    &.warning.active i,
+    &.warning.active p{
+      color: $warning-color;
     }
 
     &.highlight:hover i,
-    &.highlight:hover p {
-      color: #3b82f6;
+    &.highlight:hover p,
+    &.highlight.active i,
+    &.highlight.active p {
+      color:var(--highlight-color);
     }
 
     &.success:hover i,
-    &.success:hover p {
-      color: #16a34a;
+    &.success:hover p,
+    &.success.active i,
+    &.success.active p     {
+      color: $success-color;
     }
   }
 }
