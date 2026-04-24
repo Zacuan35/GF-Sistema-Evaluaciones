@@ -5111,6 +5111,42 @@ i {
   content: "\e917";
 }
 
+/* =====================
+# SISTEMA EVALUACIONES
+===================== */
+.faces {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.faces .face-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.faces .face-item i {
+  transition: color 0.2s ease;
+  color: var(--fourth-color);
+  font-size: 2rem;
+}
+.faces .face-item p {
+  color: var(--fourth-color);
+  transition: color 0.2s ease;
+  font-weight: bold;
+  font-size: 80%;
+}
+.faces .face-item.danger:hover i, .faces .face-item.danger:hover p {
+  color: #dc2626;
+}
+.faces .face-item.warning:hover i, .faces .face-item.warning:hover p {
+  color: #f59e0b;
+}
+.faces .face-item.highlight:hover i, .faces .face-item.highlight:hover p {
+  color: #3b82f6;
+}
+.faces .face-item.success:hover i, .faces .face-item.success:hover p {
+  color: #16a34a;
+}
+
 /*Forms*/
 /* =====================
 # FORM GROUP

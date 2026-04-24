@@ -1,0 +1,46 @@
+/* =====================
+# SISTEMA EVALUACIONES
+===================== */
+.faces {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  .face-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    i {
+      transition: color 0.2s ease;
+      color: var(--fourth-color);
+      font-size: 2rem;
+    }
+
+    p {
+      color: var(--fourth-color);
+      transition: color 0.2s ease;
+      font-weight: bold;
+      font-size: 80%;
+    }
+
+    &.danger:hover i,
+    &.danger:hover p {
+      color: #dc2626;
+    }
+
+    &.warning:hover i,
+    &.warning:hover p {
+      color: #f59e0b;
+    }
+
+    &.highlight:hover i,
+    &.highlight:hover p {
+      color: #3b82f6;
+    }
+
+    &.success:hover i,
+    &.success:hover p {
+      color: #16a34a;
+    }
+  }
+}
