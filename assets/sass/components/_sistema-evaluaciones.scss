@@ -104,5 +104,34 @@
 }
 
 /* =====================
-# SISTEMA EVALUACIONES
+# Contributor-ratings
 ===================== */
+.contributor-ratings{
+  display: flex;
+
+  .contributor-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5rem;
+    padding: 0 1rem;
+    border-right: 1px solid var(--fourth-color);
+    &:last-child {
+      border-right: none;
+    }
+
+    .contributor-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      p{
+        font-size: 80%;
+        line-height: 0.850rem;
+        color:var(--primary-text-color);
+        font-weight: 400;
+      }
+    }
+
+  }
+}

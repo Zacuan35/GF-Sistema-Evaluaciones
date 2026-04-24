@@ -1,7 +1,7 @@
 /* =====================
 Face - Evaluation
 ===================== */  
-document.querySelectorAll('.faces').forEach(group => {
+document.querySelectorAll('.moods').forEach(group => {
   const items = group.querySelectorAll('.face-item');
   const input = group.querySelector('input[type="hidden"]');
 

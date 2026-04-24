@@ -5183,8 +5183,35 @@ i {
 }
 
 /* =====================
-# SISTEMA EVALUACIONES
+# Contributor-ratings
 ===================== */
+.contributor-ratings {
+  display: flex;
+}
+.contributor-ratings .contributor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  border-right: 1px solid var(--fourth-color);
+}
+.contributor-ratings .contributor-item:last-child {
+  border-right: none;
+}
+.contributor-ratings .contributor-item .contributor-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.contributor-ratings .contributor-item .contributor-text p {
+  font-size: 80%;
+  line-height: 0.85rem;
+  color: var(--primary-text-color);
+  font-weight: 400;
+}
+
 /*Forms*/
 /* =====================
 # FORM GROUP
