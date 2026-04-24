@@ -5114,6 +5114,35 @@ i {
 /* =====================
 # SISTEMA EVALUACIONES
 ===================== */
+.face-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.face-item i {
+  color: var(--fourth-color);
+  font-size: 2rem;
+}
+.face-item p {
+  color: var(--fourth-color);
+  font-weight: bold;
+  font-size: 90%;
+  margin: 0;
+}
+.face-item.danger i, .face-item.danger p {
+  color: #b92214;
+}
+.face-item.warning i, .face-item.warning p {
+  color: #db9a17;
+}
+.face-item.highlight i, .face-item.highlight p {
+  color: var(--highlight-color);
+}
+.face-item.success i, .face-item.success p {
+  color: #35a038;
+}
+
 .faces {
   display: flex;
   flex-direction: row;
