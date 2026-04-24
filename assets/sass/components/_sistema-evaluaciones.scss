@@ -118,13 +118,21 @@
     border-right: 1px solid var(--fourth-color);
     &:last-child {
       border-right: none;
+      /*
+      background-color: var(--highlight-color);
+      h5{color:var(--primary-color);}
+      .contributor-text{
+        p{color:var(--primary-color);}
+      }
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      */
     }
 
     .contributor-text{
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 0.25rem;
+      align-items: center;      
       p{
         font-size: 80%;
         line-height: 0.850rem;
