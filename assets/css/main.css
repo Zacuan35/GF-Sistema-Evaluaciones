@@ -5140,16 +5140,16 @@ i {
   color: #35a038;
 }
 
-.faces {
+.moods {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-.faces button {
+.moods button {
   all: unset;
   cursor: pointer;
 }
-.faces .face-item {
+.moods .face-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5157,31 +5157,34 @@ i {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.faces .face-item i {
+.moods .face-item i {
   transition: color 0.2s ease;
   color: var(--fourth-color);
   font-size: 2rem;
 }
-.faces .face-item p {
+.moods .face-item p {
   color: var(--fourth-color);
   transition: color 0.2s ease;
   font-weight: bold;
   font-size: 90%;
   margin: 0;
 }
-.faces .face-item.danger:hover i, .faces .face-item.danger:hover p, .faces .face-item.danger.active i, .faces .face-item.danger.active p {
+.moods .face-item.danger:hover i, .moods .face-item.danger:hover p, .moods .face-item.danger.active i, .moods .face-item.danger.active p {
   color: #b92214;
 }
-.faces .face-item.warning:hover i, .faces .face-item.warning:hover p, .faces .face-item.warning.active i, .faces .face-item.warning.active p {
+.moods .face-item.warning:hover i, .moods .face-item.warning:hover p, .moods .face-item.warning.active i, .moods .face-item.warning.active p {
   color: #db9a17;
 }
-.faces .face-item.highlight:hover i, .faces .face-item.highlight:hover p, .faces .face-item.highlight.active i, .faces .face-item.highlight.active p {
+.moods .face-item.highlight:hover i, .moods .face-item.highlight:hover p, .moods .face-item.highlight.active i, .moods .face-item.highlight.active p {
   color: var(--highlight-color);
 }
-.faces .face-item.success:hover i, .faces .face-item.success:hover p, .faces .face-item.success.active i, .faces .face-item.success.active p {
+.moods .face-item.success:hover i, .moods .face-item.success:hover p, .moods .face-item.success.active i, .moods .face-item.success.active p {
   color: #35a038;
 }
 
+/* =====================
+# SISTEMA EVALUACIONES
+===================== */
 /*Forms*/
 /* =====================
 # FORM GROUP
