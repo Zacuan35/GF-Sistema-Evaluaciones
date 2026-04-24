@@ -71,7 +71,8 @@ p,ul,ol {
 }
 p{
   line-height: 1.4rem;
-  margin: 0 0 20px;  
+  //margin: 0 0 20px;  
+  margin: 0;
 }
 p:last-child {margin-bottom: 0;}
 p.lead{
