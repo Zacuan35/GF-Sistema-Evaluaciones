@@ -4932,20 +4932,24 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-face-smile:before {
+.icon-map-pin:before {
   content: "\e928";
 }
 
-.icon-face-frown:before {
+.icon-puzzle-piece:before {
   content: "\e929";
 }
 
-.icon-face-sad-tear:before {
+.icon-rectangle-group:before {
   content: "\e92a";
 }
 
-.icon-face-smile-beam:before {
+.icon-table-cells:before {
   content: "\e92b";
+}
+
+.icon-wrench-screwdriver:before {
+  content: "\e92c";
 }
 
 .icon-check-circle:before {
