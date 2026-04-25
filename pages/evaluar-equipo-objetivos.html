@@ -185,120 +185,119 @@
         <!-- Content-body
         ========================================== -->               
         <section class="content-body">                   
-
-          <!-- ====== Cards ====== -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <a href="evaluar-equipo-objetivos.html" class="card card-highlight">
-              <div class="card-body flex justify-between items-center">
-                <div class="flex flex-col gap-1">
-                  <h6>Calif. Objetivo</h6>
-                  <p class="m-0">Valor total 70%</p>                
+          <div class="grid gap-5">
+            <!-- ====== Cards ====== -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <a href="evaluar-equipo-objetivos.html" class="card card-highlight">
+                <div class="card-body flex justify-between items-center">
+                  <div class="flex flex-col gap-1">
+                    <h6>Calif. Objetivo</h6>
+                    <p class="m-0">Valor total 70%</p>                
+                  </div>
+                  <h2>67.2</h2>              
+                </div>    
+              </a>                
+              <a href="evaluar-equipo-competencias.html" class="card">
+                <div class="card-body flex justify-between items-center">
+                  <div class="flex flex-col gap-1">
+                    <h6>Calif. Competencias</h6>
+                    <p class="m-0">Valor total 30%</p>                
+                  </div>
+                  <h2>0</h2>              
+                </div>    
+              </a>                
+              <a href="#" class="card">
+                <div class="card-body flex justify-between items-center">
+                  <div class="flex flex-col gap-1">
+                    <h6>Calif. Final</h6>
+                  </div>
+                  <h2>0</h2>              
+                </div>    
+              </a>                
+            </div>          
+            <!-- ====== Card ====== --> 
+            <div class="card">
+              <!-- ------ Card-header ------ -->
+              <header class="card-header">
+                <div class="flex flex-col items-center md:flex-row md:justify-between gap-2">
+                  <p class="m-0"><b>Jefe:</b> Héctor Aguilar Cuevas</p>
+                  <button 
+                    class="btn btn-default"
+                    data-title="¡Felicidades!"
+                    data-text="Los cambios se guardaron con éxito"
+                    data-icon="success">
+                      Guardar
+                  </button>                
                 </div>
-                <h2>67.2</h2>              
-              </div>    
-            </a>                
-            <a href="evaluar-equipo-competencias.html" class="card">
-              <div class="card-body flex justify-between items-center">
-                <div class="flex flex-col gap-1">
-                  <h6>Calif. Competencias</h6>
-                  <p class="m-0">Valor total 30%</p>                
-                </div>
-                <h2>0</h2>              
-              </div>    
-            </a>                
-            <a href="#" class="card">
-              <div class="card-body flex justify-between items-center">
-                <div class="flex flex-col gap-1">
-                  <h6>Calif. Final</h6>
-                </div>
-                <h2>0</h2>              
-              </div>    
-            </a>                
-          </div>          
-
-          <!-- ====== Card ====== --> 
-          <div class="card">
-            <!-- ------ Card-header ------ -->
-            <header class="card-header">
-              <div class="flex flex-col items-center md:flex-row md:justify-between gap-2">
-                <p class="m-0"><b>Jefe:</b> Héctor Aguilar Cuevas</p>
-                <button 
-                  class="btn btn-default"
-                  data-title="¡Felicidades!"
-                  data-text="Los cambios se guardaron con éxito"
-                  data-icon="success">
-                    Guardar
-                </button>                
-              </div>
-            </header>
-            <!-- ------ Card-body ------ -->
-            <div class="card-body grid gap-5">
-              <h4>Evaluación objetivos</h4>
-              <div class="table-responsive">
-                <!-- --------
-                panel
-                --------- -->
-                <div class="panel">
-                  <!-- panel-header
-                  ------------------------------------------ -->
-                  <div class="panel-header grid grid-cols-12">
-                    <p class="col-span-4">Objetivo</p>
-                    <p class="col-span-4">Comentarios</p>
-                    <p class="col-span-2">Peso %</p>
-                    <p class="col-span-1">Calif.Auto</p>
-                    <p class="col-span-1">Calif.Jefe</p>
+              </header>
+              <!-- ------ Card-body ------ -->
+              <div class="card-body grid gap-5">
+                <h4>Evaluación objetivos</h4>
+                <div class="table-responsive">
+                  <!-- --------
+                  panel
+                  --------- -->
+                  <div class="panel">
+                    <!-- panel-header
+                    ------------------------------------------ -->
+                    <div class="panel-header grid grid-cols-12">
+                      <p class="col-span-4">Objetivo</p>
+                      <p class="col-span-4">Comentarios</p>
+                      <p class="col-span-2">Peso %</p>
+                      <p class="col-span-1">Calif.Auto</p>
+                      <p class="col-span-1">Calif.Jefe</p>
+                    </div>                            
+                    <!-- panel-body
+                    ------------------------------------------ -->
+                    <div class="panel-body">
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item grid grid-cols-12">                                
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                      </div>
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item grid grid-cols-12">                                
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                      </div>
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item grid grid-cols-12">                                
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                      </div>
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item grid grid-cols-12">                                
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                      </div>
+                    </div>          
                   </div>                            
-                  <!-- panel-body
-                  ------------------------------------------ -->
-                  <div class="panel-body">
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12">                                
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                      <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                    </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12">                                
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                      <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                    </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12">                                
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                      <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                    </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12">                                
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                      <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                      <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                      <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                    </div>
-                  </div>          
-                </div>                            
-              </div>
-            </div>
-            <!-- ------ Card-footer ------ -->
-            <footer class="card-footer">
-              <span class="flex justify-between gap-2">
-                <div class="flex flex-row gap-2">
-                  <p><b>Peso:</b> 100%</p>
-                  <p><b>Calif.Auto:</b> 80</p>
                 </div>
-                <p><b>Calif.Jefe:</b> 70</p>
-              </span>
-            </footer>     
-          </div>            
-
+              </div>
+              <!-- ------ Card-footer ------ -->
+              <footer class="card-footer">
+                <span class="flex justify-between gap-2">
+                  <div class="flex flex-row gap-2">
+                    <p><b>Peso:</b> 100%</p>
+                    <p><b>Calif.Auto:</b> 80</p>
+                  </div>
+                  <p><b>Calif.Jefe:</b> 70</p>
+                </span>
+              </footer>     
+            </div>            
+          </div>
         </section>
       </main>
 

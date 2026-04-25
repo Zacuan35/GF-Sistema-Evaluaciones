@@ -179,150 +179,151 @@
         </div>           
         <!-- Content-body
         ========================================== -->               
-        <section class="content-body">         
-          <!-- ====== Alert ====== -->
-          <div class="banner_alert alert-warning" role="alert" aria-live="assertive">
-            <p>Tus objetivos están listos para enviarse a tu líder. Revísalos cuidadosamente, ya que no podrás modificarlos una vez aprobados. </p>
-            <button type="button" class="btn-close" aria-label="Close" onclick="closeAlert(this)">
-              <i class="icon-x-mark"></i>
-            </button>
-          </div>  
-          <!-- ====== Card ====== --> 
-          <div class="card">
-            <!-- ------ Card-header ------ -->
-            <header class="card-header">
-              <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-                <p class="m-0"><b>Jefe:</b> Héctor Aguilar Cuevas</p>
-                <div>                  
-                  <select class="form-control">
-                    <option selected>-- Selecciona --</option>
-                    <option>Objetivo 2026</option>
-                    <option>Objetivo 2025</option>                                            
-                  </select>
-                </div> 
-              </div>
-            </header>
-            <!-- ------ Card-body ------ -->            
-            <div class="card-body grid gap-5">                    
-              <!-- --------
-              Title
-              --------- -->   
-              <div class="flex flex-col items-center md:flex-row md:justify-between gap-2">
-                <h5>Registro de objetivos</h5>
-                <div class="flex gap-4">
-                  <button class="btn btn-default-inverse" data-modal="modal-01">
-                    <i class="icon-plus"></i> Agregar
-                  </button>          
-                  <button 
-                    class="btn btn-default"
-                    data-title="¡Felicidades!"
-                    data-text="Los objetivos se enviaron con éxito"
-                    data-icon="success"> <!--successs/error/warning/info/question-->
-                    <i class="icon-check"></i> Enviar
-                  </button>                  
+        <section class="content-body">
+          <div class="grid gap-5">
+            <!-- ====== Alert ====== -->
+            <div class="banner_alert alert-warning" role="alert" aria-live="assertive">
+              <p>Tus objetivos están listos para enviarse a tu líder. Revísalos cuidadosamente, ya que no podrás modificarlos una vez aprobados. </p>
+              <button type="button" class="btn-close" aria-label="Close" onclick="closeAlert(this)">
+                <i class="icon-x-mark"></i>
+              </button>
+            </div>  
+            <!-- ====== Card ====== --> 
+            <div class="card">
+              <!-- ------ Card-header ------ -->
+              <header class="card-header">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                  <p class="m-0"><b>Jefe:</b> Héctor Aguilar Cuevas</p>
+                  <div>                  
+                    <select class="form-control">
+                      <option selected>-- Selecciona --</option>
+                      <option>Objetivo 2026</option>
+                      <option>Objetivo 2025</option>                                            
+                    </select>
+                  </div> 
+                </div>
+              </header>
+              <!-- ------ Card-body ------ -->            
+              <div class="card-body grid gap-5">                    
+                <!-- --------
+                Title
+                --------- -->   
+                <div class="flex flex-col items-center md:flex-row md:justify-between gap-2">
+                  <h5>Registro de objetivos</h5>
+                  <div class="flex gap-4">
+                    <button class="btn btn-default-inverse" data-modal="modal-01">
+                      <i class="icon-plus"></i> Agregar
+                    </button>          
+                    <button 
+                      class="btn btn-default"
+                      data-title="¡Felicidades!"
+                      data-text="Los objetivos se enviaron con éxito"
+                      data-icon="success"> <!--successs/error/warning/info/question-->
+                      <i class="icon-check"></i> Enviar
+                    </button>                  
+                  </div>
+                </div>
+                <!-- --------
+                panel
+                --------- -->
+                <div class="table-responsive">
+                  <div class="panel">
+                    <!-- panel-header
+                    ------------------------------------------ -->
+                    <div class="panel-header grid grid-cols-12">                                
+                      <p class="col-span-10">Objetivo</p>
+                      <p class="col-span-1">Peso</p>
+                      <p class="col-span-1">Acciones</p>
+                    </div>     
+                    <!-- panel-body
+                    ------------------------------------------ -->
+                    <div class="panel-body">
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item grid grid-cols-12 items-center">
+                        <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
+                        <p class="col-span-1">25%</p>
+                        <div class="col-span-1">
+                          <div class="flex gap-2">       
+                            <button class="btn-circle btn-default-inverse" data-modal="modal-02">
+                              <i class="icon-solid-pencil-square"></i>
+                            </button>         
+                            <button 
+                              class="btn-circle btn-danger-inverse"
+                              data-title="¿Estas seguro?"
+                              data-text="De eliminar este elemento"
+                              data-icon="question"> <!--successs/error/warning/info/question-->
+                              <i class="icon-trash"></i>
+                            </button>
+                          </div>                
+                        </div>                  
+                      </div>
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item grid grid-cols-12 items-center">                                
+                        <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
+                        <p class="col-span-1">25%</p>
+                        <div class="col-span-1">
+                          <div class="flex gap-2">       
+                            <button class="btn-circle btn-default-inverse" data-modal="modal-02">
+                              <i class="icon-solid-pencil-square"></i>
+                            </button>         
+                            <button 
+                              class="btn-circle btn-danger-inverse"
+                              data-title="¿Estas seguro?"
+                              data-text="De eliminar este elemento"
+                              data-icon="question"> <!--successs/error/warning/info/question-->
+                              <i class="icon-trash"></i>
+                            </button>
+                          </div>                
+                        </div>                  
+                      </div>
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item grid grid-cols-12 items-center">                                
+                        <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
+                        <p class="col-span-1">25%</p>
+                        <div class="col-span-1">
+                          <div class="flex gap-2">       
+                            <button class="btn-circle btn-default-inverse" data-modal="modal-02">
+                              <i class="icon-solid-pencil-square"></i>
+                            </button>         
+                            <button 
+                              class="btn-circle btn-danger-inverse"
+                              data-title="¿Estas seguro?"
+                              data-text="De eliminar este elemento"
+                              data-icon="question"> <!--successs/error/warning/info/question-->
+                              <i class="icon-trash"></i>
+                            </button>
+                          </div>                
+                        </div>                  
+                      </div>
+                      <!-- ------ panel-item ------ --> 
+                      <div class="panel-item success grid grid-cols-12 items-center">                                
+                        <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
+                        <p class="col-span-1">25%</p>
+                        <div class="col-span-1">
+                          <div class="flex gap-2">       
+                            <button class="btn-circle btn-default-inverse" data-modal="modal-02">
+                              <i class="icon-solid-pencil-square"></i>
+                            </button>         
+                            <button 
+                              class="btn-circle btn-danger-inverse"
+                              data-title="¿Estas seguro?"
+                              data-text="De eliminar este elemento"
+                              data-icon="question"> <!--successs/error/warning/info/question-->
+                              <i class="icon-trash"></i>
+                            </button>
+                          </div>                
+                        </div>                  
+                      </div>                                                                        
+                    </div>          
+                  </div>              
                 </div>
               </div>
-              <!-- --------
-              panel
-              --------- -->
-              <div class="table-responsive">
-                <div class="panel">
-                  <!-- panel-header
-                  ------------------------------------------ -->
-                  <div class="panel-header grid grid-cols-12">                                
-                    <p class="col-span-10">Objetivo</p>
-                    <p class="col-span-1">Peso</p>
-                    <p class="col-span-1">Acciones</p>
-                  </div>     
-                  <!-- panel-body
-                  ------------------------------------------ -->
-                  <div class="panel-body">
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12 items-center">
-                      <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex gap-2">       
-                          <button class="btn-circle btn-default-inverse" data-modal="modal-02">
-                            <i class="icon-solid-pencil-square"></i>
-                          </button>         
-                          <button 
-                            class="btn-circle btn-danger-inverse"
-                            data-title="¿Estas seguro?"
-                            data-text="De eliminar este elemento"
-                            data-icon="question"> <!--successs/error/warning/info/question-->
-                            <i class="icon-trash"></i>
-                          </button>
-                        </div>                
-                      </div>                  
-                    </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12 items-center">                                
-                      <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex gap-2">       
-                          <button class="btn-circle btn-default-inverse" data-modal="modal-02">
-                            <i class="icon-solid-pencil-square"></i>
-                          </button>         
-                          <button 
-                            class="btn-circle btn-danger-inverse"
-                            data-title="¿Estas seguro?"
-                            data-text="De eliminar este elemento"
-                            data-icon="question"> <!--successs/error/warning/info/question-->
-                            <i class="icon-trash"></i>
-                          </button>
-                        </div>                
-                      </div>                  
-                    </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12 items-center">                                
-                      <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex gap-2">       
-                          <button class="btn-circle btn-default-inverse" data-modal="modal-02">
-                            <i class="icon-solid-pencil-square"></i>
-                          </button>         
-                          <button 
-                            class="btn-circle btn-danger-inverse"
-                            data-title="¿Estas seguro?"
-                            data-text="De eliminar este elemento"
-                            data-icon="question"> <!--successs/error/warning/info/question-->
-                            <i class="icon-trash"></i>
-                          </button>
-                        </div>                
-                      </div>                  
-                    </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item success grid grid-cols-12 items-center">                                
-                      <p class="col-span-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos illo consequatur!</p>                
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex gap-2">       
-                          <button class="btn-circle btn-default-inverse" data-modal="modal-02">
-                            <i class="icon-solid-pencil-square"></i>
-                          </button>         
-                          <button 
-                            class="btn-circle btn-danger-inverse"
-                            data-title="¿Estas seguro?"
-                            data-text="De eliminar este elemento"
-                            data-icon="question"> <!--successs/error/warning/info/question-->
-                            <i class="icon-trash"></i>
-                          </button>
-                        </div>                
-                      </div>                  
-                    </div>                                                                        
-                  </div>          
-                </div>              
-              </div>
-            </div>
-            <!-- ------ Card-footer ------ -->
-            <footer class="card-footer">                    
-              <p><b>Peso total:</b> 100%</p>
-            </footer>
-          </div>            
-
+              <!-- ------ Card-footer ------ -->
+              <footer class="card-footer">                    
+                <p><b>Peso total:</b> 100%</p>
+              </footer>
+            </div>            
+          </div>         
         </section>
       </main>
 
