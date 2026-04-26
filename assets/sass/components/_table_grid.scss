@@ -1,0 +1,115 @@
+/* =====================
+# TABLE GRID BASE
+===================== */
+.tg-responsive {
+  overflow-x: auto;
+}
+
+.table-grid {
+  display: grid;
+  gap: 0.5rem;
+  --cols: 1fr; /* fallback */
+}
+
+/* Estructura */
+.tg-head,
+.tg-body,
+.tg-foot {
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* =====================
+# ROW (PANEL STYLE)
+===================== */
+.tg-row {
+  display: grid;
+  grid-template-columns: var(--cols);
+
+  padding: 1rem;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+
+  transition: all 0.2s ease;
+}
+
+/* =====================
+# HEADER
+===================== */
+.tg-head .tg-row {
+  background-color: var(--tertiary-color);
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+/* =====================
+# BODY STATES
+===================== */
+/* Zebra */
+.tg-body .tg-row:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+/* Hover */
+.tg-body .tg-row:hover {
+  background-color: var(--tertiary-color);
+}
+
+/* =====================
+# CELLS
+===================== */
+.tg-cell {
+  display: flex;
+  align-items: center;
+}
+
+/* Alineaciones */
+.tg-center { justify-content: center; }
+.tg-right  { justify-content: flex-end; }
+
+/* =====================
+# COLUMN SYSTEM
+===================== */
+.tg-cols-1 { --cols: 1fr; }
+.tg-cols-2 { --cols: repeat(2, 1fr); }
+.tg-cols-3 { --cols: repeat(3, 1fr); }
+.tg-cols-4 { --cols: repeat(4, 1fr); }
+.tg-cols-5 { --cols: repeat(5, 1fr); }
+.tg-cols-6 { --cols: repeat(6, 1fr); }
+
+/* ==============
+# COLUMN LAYOUTS
+============== */
+/* Tu layout original */
+.tg-layout-check {--cols: 50px 1fr 100px 80px;}
+
+/* Variantes útiles */
+.tg-layout-4-auto {--cols: auto 1fr auto auto;}
+.tg-layout-3-auto {--cols: auto 1fr auto;}
+.tg-layout-5-auto {--cols: 60px 2fr 1fr 100px 80px;}
+
+/* =========
+# COL SPAN
+========= */
+.tg-col-2 { grid-column: span 2; }
+.tg-col-3 { grid-column: span 3; }
+.tg-col-4 { grid-column: span 4; }
+.tg-col-full { grid-column: 1 / -1; }
+
+/* =========
+# STATES 
+========= */
+.tg-row.success {
+  background-color: rgba(0, 200, 100, 0.1);
+  border-color: var(--success-color, green);
+}
+
+.tg-row.warning {
+  background-color: rgba(255, 180, 0, 0.1);
+  border-color: var(--warning-color, orange);
+}
+
+/* Opcional: texto dentro del estado */
+.tg-row.success .tg-cell {color: var(--success-color, green);}
+.tg-row.warning .tg-cell {color: var(--warning-color, orange);}
