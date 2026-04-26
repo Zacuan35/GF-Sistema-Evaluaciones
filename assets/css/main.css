@@ -5256,6 +5256,198 @@ i {
   color: var(--warning-color, orange);
 }
 
+/* =====================
+# WHATSAPP LIST
+===================== */
+/* =====================
+# BASE LIST
+===================== */
+.wa-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px; /* opcional */
+  overflow-y: auto;
+}
+
+/* =====================
+# ITEM
+===================== */
+.wa-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hover */
+.wa-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Active */
+.wa-item.active {
+  background-color: #e9f5ff;
+}
+
+/* Click efecto */
+.wa-item:active {
+  transform: scale(0.98);
+}
+
+/* =====================
+# AVATAR (CHAT)
+===================== */
+.wa-avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.wa-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =====================
+# ICON (ACTIVITY)
+===================== */
+.wa-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1rem;
+  flex-shrink: 0;
+  background: #eee;
+}
+
+/* Estados icon */
+.wa-icon.success {
+  background: rgba(0, 200, 100, 0.15);
+  color: green;
+}
+
+.wa-icon.warning {
+  background: rgba(255, 180, 0, 0.15);
+  color: orange;
+}
+
+.wa-icon.info {
+  background: rgba(0, 120, 255, 0.15);
+  color: blue;
+}
+
+/* =====================
+# CONTENT
+===================== */
+.wa-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* =====================
+# TOP (nombre + hora)
+===================== */
+.wa-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wa-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.wa-time {
+  font-size: 0.75rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* =====================
+# BOTTOM (mensaje + badge)
+===================== */
+.wa-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wa-message {
+  font-size: 0.875rem;
+  color: #555;
+  /* truncado */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =====================
+# BADGE
+===================== */
+.wa-badge {
+  background-color: #25d366;
+  color: white;
+  font-size: 0.7rem;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+/* =====================
+# VARIANTES ÚTILES
+===================== */
+/* Sin borde (cards limpias) */
+.wa-list.clean .wa-item {
+  border-bottom: none;
+}
+
+/* Compacto */
+.wa-list.compact .wa-item {
+  padding: 0.5rem 0.75rem;
+}
+
+.wa-list.compact .wa-avatar {
+  width: 36px;
+  height: 36px;
+}
+
+/* Separación tipo cards */
+.wa-list.cards {
+  gap: 0.5rem;
+}
+
+.wa-list.cards .wa-item {
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+/* =====================
+# RESPONSIVE (OPCIONAL)
+===================== */
+@media (max-width: 640px) {
+  .wa-list {
+    max-height: none;
+  }
+  .wa-message {
+    white-space: normal;
+  }
+}
 /*Forms*/
 /* =====================
 # FORM GROUP

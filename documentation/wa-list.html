@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Table-grid</title>
+    <title>Wa-List</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <!-- Styles -->
@@ -263,115 +263,125 @@
         <!-- Title
         ========================================== -->               
         <div class="content-header">
-          <h1>Table grid</h1>
+          <h1>Wa-list</h1>
         </div>         
         <!-- Content-body
         ========================================== -->               
         <section class="content-body">  
           <div class="grid gap-5">
-            <!-- TABLE-GRID -->
-            <div class="tg-responsive">
-              <div class="table-grid tg-layout-check">
-                <!-- HEADER -->
-                <div class="tg-head">
-                  <!-- tg-row -->
-                  <div class="tg-row">
-                    <div class="tg-cell"><input type="checkbox"></div>
-                    <div class="tg-cell">Objetivo</div>
-                    <div class="tg-cell">Peso %</div>
-                    <div class="tg-cell tg-center">Acción</div>
-                  </div>
+            <div class="wa-list">
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-avatar">
+                  <img src="https://i.pravatar.cc/100?img=1" alt="">
                 </div>
-                <!-- BODY -->
-                <div class="tg-body">
-                  <!-- tg-row -->
-                  <div class="tg-row">
-                    <div class="tg-cell"><input type="checkbox"></div>
-                    <div class="tg-cell">Texto normal...</div>
-                    <div class="tg-cell">25%</div>
-                    <div class="tg-cell tg-center">Lorem</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Juan Pérez</span>
+                    <span class="wa-time">10:30 AM</span>
                   </div>
-                  <!-- tg-row -->
-                  <div class="tg-row success">
-                    <div class="tg-cell"><input type="checkbox"></div>
-                    <div class="tg-cell">Fila success</div>
-                    <div class="tg-cell">30%</div>
-                    <div class="tg-cell tg-center">Lorem</div>
-                  </div>
-                  <!-- tg-row -->
-                  <div class="tg-row warning">
-                    <div class="tg-cell"><input type="checkbox"></div>
-                    <div class="tg-cell">Fila warning</div>
-                    <div class="tg-cell">10%</div>
-                    <div class="tg-cell tg-center">Lorem</div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Hola 👋 ¿Cómo estás?</span>
+                    <span class="wa-badge">2</span>
                   </div>
                 </div>
               </div>
-            </div>      
-            
-            <!-- TABLE-GRID -->
-            <div class="tg-responsive">
-              <div class="table-grid tg-cols-3">
-                <!-- HEADER -->
-                <div class="tg-head">
-                  <div class="tg-row">
-                    <div class="tg-cell">Nombre</div>
-                    <div class="tg-cell">Correo</div>
-                    <div class="tg-cell tg-right">Edad</div>
-                  </div>
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-avatar">
+                  <img src="https://i.pravatar.cc/100?img=2" alt="">
                 </div>
-                <!-- BODY -->
-                <div class="tg-body">
-                  <!-- tg-row -->
-                  <div class="tg-row">
-                    <div class="tg-cell">Juan Pérez</div>
-                    <div class="tg-cell">juan@email.com</div>
-                    <div class="tg-cell tg-right">28</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Ana López</span>
+                    <span class="wa-time">Ayer</span>
                   </div>
-                  <!-- tg-row -->
-                  <div class="tg-row">
-                    <div class="tg-cell">Ana López</div>
-                    <div class="tg-cell">ana@email.com</div>
-                    <div class="tg-cell tg-right">32</div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Te mandé el archivo 📄</span>
                   </div>
                 </div>
               </div>
-            </div>   
-            
-            <!-- TABLE-GRID -->
-            <div class="tg-responsive">
-              <div class="table-grid tg-cols-4">
-                <!-- HEADER -->
-                <div class="tg-head">
-                  <!-- tg-row -->
-                  <div class="tg-row">
-                    <div class="tg-cell">Producto</div>
-                    <div class="tg-cell">Categoría</div>
-                    <div class="tg-cell tg-right">Precio</div>
-                    <div class="tg-cell tg-center">Stock</div>
-                  </div>
+  
+              <!-- ITEM (activo) -->
+              <div class="wa-item active">
+                <div class="wa-avatar">
+                  <img src="https://i.pravatar.cc/100?img=3" alt="">
                 </div>
-                <!-- BODY -->
-                <div class="tg-body">
-                  <!-- tg-row -->
-                  <div class="tg-row">
-                    <div class="tg-cell">Laptop</div>
-                    <div class="tg-cell">Electrónica</div>
-                    <div class="tg-cell tg-right">$15,000</div>
-                    <div class="tg-cell tg-center">✔</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Carlos Ruiz</span>
+                    <span class="wa-time">09:15 AM</span>
                   </div>
-                  <!-- tg-row -->
-                  <div class="tg-row">
-                    <div class="tg-cell">Mouse</div>
-                    <div class="tg-cell">Accesorios</div>
-                    <div class="tg-cell tg-right">$300</div>
-                    <div class="tg-cell tg-center">✖</div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Perfecto, gracias 👍</span>
+                    <span class="wa-badge">1</span>
                   </div>
                 </div>
               </div>
-            </div>           
+            </div>
+  
+            <div class="wa-list">
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-icon success">✔</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Pago recibido</span>
+                    <span class="wa-time">Hace 5 min</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Recibiste $1,200 de Juan Pérez</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-icon warning">⚠</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Acción requerida</span>
+                    <span class="wa-time">Hace 20 min</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Completa tu perfil para continuar</span>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- ITEM -->
+              <div class="wa-item">
+                <div class="wa-icon info">ℹ</div>
+  
+                <div class="wa-content">
+                  <div class="wa-top">
+                    <span class="wa-name">Actualización</span>
+                    <span class="wa-time">Ayer</span>
+                  </div>
+  
+                  <div class="wa-bottom">
+                    <span class="wa-message">Se actualizó el sistema correctamente</span>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
           </div>
-    
+          
+
+
         </section>
       </main>
 
