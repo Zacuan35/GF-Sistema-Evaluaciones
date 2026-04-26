@@ -3378,75 +3378,6 @@ main {
 }
 
 /* =====================
-# BOX LINK
-===================== */
-.box-link {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  /* Opcional: cambiar el cursor al pasar por el enlace */
-  /* Tarjeta principal */
-}
-.box-link:hover {
-  cursor: pointer;
-}
-.box-link .box-icon {
-  position: relative;
-  width: 100%;
-  padding: 50px 20px 20px;
-  border-radius: 10px;
-  background-color: var(--primary-color);
-  border: 1px solid var(--tertiary-color);
-  text-align: center;
-  font-family: sans-serif;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
-  /* Círculo con ícono */
-  /* Hover sobre la tarjeta: cambia color del icono */
-}
-.box-link .box-icon p {
-  font-family: "Roboto", serif;
-  font-size: 1rem;
-  color: var(--primary-text-color);
-  font-weight: bold;
-  margin-bottom: 0;
-}
-.box-link .box-icon:hover {
-  border: 1px solid var(--highlight-color);
-}
-.box-link .box-icon .icon-circle {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  background-color: var(--primary-color);
-  transition: background-color 0.3s;
-  color: var(--highlight-color);
-}
-.box-link .box-icon .icon-circle i {
-  color: var(--highlight-color);
-}
-.box-link .box-icon:hover .icon-circle {
-  background-color: var(--highlight-color);
-  border-color: var(--highlight-color);
-  color: var(--primary-color);
-}
-.box-link .box-icon:hover .icon-circle i {
-  color: #ffffff;
-}
-.box-link .box-icon:hover p {
-  color: var(--highlight-color);
-}
-
-/* =====================
 # BREADCRUMB
 ===================== */
 .breadcrumb ol {
@@ -4012,26 +3943,6 @@ canvas {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* =====================
-# FILE-BOX
-===================== */
-.file-box {
-  display: flex;
-  gap: 0.5rem;
-  padding: 15px 25px;
-  background-color: var(--secondary-color);
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.5rem;
-  font-family: "Roboto", serif;
-  font-size: 1rem;
-  color: var(--primary-text-color);
-  font-weight: bold;
-  cursor: pointer;
-}
-.file-box:hover {
-  background-color: var(--tertiary-color);
 }
 
 /* =====================
@@ -5181,119 +5092,6 @@ i {
 
 .icon-x-mark:before {
   content: "\e917";
-}
-
-/* =====================
-# SISTEMA EVALUACIONES
-===================== */
-.face-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-.face-item i {
-  color: var(--fourth-color);
-  font-size: 2rem;
-}
-.face-item p {
-  color: var(--fourth-color);
-  font-weight: bold;
-  font-size: 90%;
-  margin: 0;
-}
-.face-item.danger i, .face-item.danger p {
-  color: #b92214;
-}
-.face-item.warning i, .face-item.warning p {
-  color: #db9a17;
-}
-.face-item.highlight i, .face-item.highlight p {
-  color: var(--highlight-color);
-}
-.face-item.success i, .face-item.success p {
-  color: #35a038;
-}
-
-.moods {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-}
-.moods button {
-  all: unset;
-  cursor: pointer;
-}
-.moods .face-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.moods .face-item i {
-  transition: color 0.2s ease;
-  color: var(--fourth-color);
-  font-size: 2rem;
-}
-.moods .face-item p {
-  color: var(--fourth-color);
-  transition: color 0.2s ease;
-  font-weight: bold;
-  font-size: 90%;
-  margin: 0;
-}
-.moods .face-item.danger:hover i, .moods .face-item.danger:hover p, .moods .face-item.danger.active i, .moods .face-item.danger.active p {
-  color: #b92214;
-}
-.moods .face-item.warning:hover i, .moods .face-item.warning:hover p, .moods .face-item.warning.active i, .moods .face-item.warning.active p {
-  color: #db9a17;
-}
-.moods .face-item.highlight:hover i, .moods .face-item.highlight:hover p, .moods .face-item.highlight.active i, .moods .face-item.highlight.active p {
-  color: var(--highlight-color);
-}
-.moods .face-item.success:hover i, .moods .face-item.success:hover p, .moods .face-item.success.active i, .moods .face-item.success.active p {
-  color: #35a038;
-}
-
-/* =====================
-# Contributor-ratings
-===================== */
-.contributor-ratings {
-  display: flex;
-}
-.contributor-ratings .contributor-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0 1rem;
-  border-right: 1px solid var(--fourth-color);
-}
-.contributor-ratings .contributor-item:last-child {
-  border-right: none;
-  /*
-  background-color: var(--highlight-color);
-  h5{color:var(--primary-color);}
-  .contributor-text{
-    p{color:var(--primary-color);}
-  }
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  */
-}
-.contributor-ratings .contributor-item .contributor-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contributor-ratings .contributor-item .contributor-text p {
-  font-size: 80%;
-  line-height: 0.85rem;
-  color: var(--primary-text-color);
-  font-weight: 400;
 }
 
 /*Forms*/
@@ -7153,6 +6951,209 @@ Colour theme
 .user-panel > .info,
 .user-panel > .info > a {
   color: #ffffff;
+}
+
+/*Current-projectProyect*/
+/* =====================
+# SISTEMA EVALUACIONES
+===================== */
+.face-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.face-item i {
+  color: var(--fourth-color);
+  font-size: 2rem;
+}
+.face-item p {
+  color: var(--fourth-color);
+  font-weight: bold;
+  font-size: 90%;
+  margin: 0;
+}
+.face-item.danger i, .face-item.danger p {
+  color: #b92214;
+}
+.face-item.warning i, .face-item.warning p {
+  color: #db9a17;
+}
+.face-item.highlight i, .face-item.highlight p {
+  color: var(--highlight-color);
+}
+.face-item.success i, .face-item.success p {
+  color: #35a038;
+}
+
+.moods {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+.moods button {
+  all: unset;
+  cursor: pointer;
+}
+.moods .face-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.moods .face-item i {
+  transition: color 0.2s ease;
+  color: var(--fourth-color);
+  font-size: 2rem;
+}
+.moods .face-item p {
+  color: var(--fourth-color);
+  transition: color 0.2s ease;
+  font-weight: bold;
+  font-size: 90%;
+  margin: 0;
+}
+.moods .face-item.danger:hover i, .moods .face-item.danger:hover p, .moods .face-item.danger.active i, .moods .face-item.danger.active p {
+  color: #b92214;
+}
+.moods .face-item.warning:hover i, .moods .face-item.warning:hover p, .moods .face-item.warning.active i, .moods .face-item.warning.active p {
+  color: #db9a17;
+}
+.moods .face-item.highlight:hover i, .moods .face-item.highlight:hover p, .moods .face-item.highlight.active i, .moods .face-item.highlight.active p {
+  color: var(--highlight-color);
+}
+.moods .face-item.success:hover i, .moods .face-item.success:hover p, .moods .face-item.success.active i, .moods .face-item.success.active p {
+  color: #35a038;
+}
+
+/* =====================
+# Contributor-ratings
+===================== */
+.contributor-ratings {
+  display: flex;
+}
+.contributor-ratings .contributor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  border-right: 1px solid var(--fourth-color);
+}
+.contributor-ratings .contributor-item:last-child {
+  border-right: none;
+  /*
+  background-color: var(--highlight-color);
+  h5{color:var(--primary-color);}
+  .contributor-text{
+    p{color:var(--primary-color);}
+  }
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  */
+}
+.contributor-ratings .contributor-item .contributor-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contributor-ratings .contributor-item .contributor-text p {
+  font-size: 80%;
+  line-height: 0.85rem;
+  color: var(--primary-text-color);
+  font-weight: 400;
+}
+
+/* =====================
+# BOX LINK
+===================== */
+.box-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  /* Opcional: cambiar el cursor al pasar por el enlace */
+  /* Tarjeta principal */
+}
+.box-link:hover {
+  cursor: pointer;
+}
+.box-link .box-icon {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px 20px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--tertiary-color);
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  /* Círculo con ícono */
+  /* Hover sobre la tarjeta: cambia color del icono */
+}
+.box-link .box-icon p {
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  color: var(--primary-text-color);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.box-link .box-icon:hover {
+  border: 1px solid var(--highlight-color);
+}
+.box-link .box-icon .icon-circle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s;
+  color: var(--highlight-color);
+}
+.box-link .box-icon .icon-circle i {
+  color: var(--highlight-color);
+}
+.box-link .box-icon:hover .icon-circle {
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+  color: var(--primary-color);
+}
+.box-link .box-icon:hover .icon-circle i {
+  color: #ffffff;
+}
+.box-link .box-icon:hover p {
+  color: var(--highlight-color);
+}
+
+/* =====================
+# FILE-BOX
+===================== */
+.file-box {
+  display: flex;
+  gap: 0.5rem;
+  padding: 15px 25px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--tertiary-color);
+  border-radius: 0.5rem;
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  color: var(--primary-text-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+.file-box:hover {
+  background-color: var(--tertiary-color);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -14,50 +14,52 @@
 @import 'base/bajar_footer';
 
 /*Components*/
-@import 'components/_accordion';
-@import 'components/_banner_alerts';
-@import 'components/_box_link';
-@import 'components/_breadcrumb';
-@import 'components/_buttons';
-@import 'components/_card';
-@import 'components/_panel';
-@import 'components/_charts';
-@import 'components/_files';
-@import 'components/_gallery';
-@import 'components/_modal';
-@import 'components/_pagination_area';
-@import 'components/_table';
+@import 'components/accordion';
+@import 'components/banner_alerts';
+@import 'components/breadcrumb';
+@import 'components/buttons';
+@import 'components/card';
+@import 'components/panel';
+@import 'components/charts';
+@import 'components/gallery';
+@import 'components/modal';
+@import 'components/pagination_area';
+@import 'components/table';
 @import 'components/data_table';
-@import 'components/_tabs';
-@import 'components/_tooltips';
-@import 'components/_vertical_tabs';
-@import 'components/_sweet_alert';
-@import 'components/_icons';
-@import 'components/_icomoon';
-@import 'components/_sistema-evaluaciones';
+@import 'components/tabs';
+@import 'components/tooltips';
+@import 'components/vertical_tabs';
+@import 'components/sweet_alert';
+@import 'components/icons';
+@import 'components/icomoon';
 
 /*Forms*/
-@import 'form/_form';
-@import 'form/_password'; 
-@import 'form/_search';
-@import 'form/_switch';
-@import 'form/_upload_files';
-@import 'form/_date_group'; 
-@import 'form/_multiple_select';
+@import 'form/form';
+@import 'form/password'; 
+@import 'form/search';
+@import 'form/switch';
+@import 'form/upload_files';
+@import 'form/date_group'; 
+@import 'form/multiple_select';
 
 /*Navigation*/
-@import 'navigation/_standar_navbar';//Revisar que sus estilos no choquen con el main_header y sidebar_menu del sidebar
-@import 'navigation/_social_links';
-@import 'navigation/_secondary_menu';
-@import 'navigation/_back_to_top';
+@import 'navigation/standar_navbar';//Revisar que sus estilos no choquen con el main_header y sidebar_menu del sidebar
+@import 'navigation/social_links';
+@import 'navigation/secondary_menu';
+@import 'navigation/back_to_top';
 
 /*Website layout*/
-@import 'layouts/_sections';
-@import 'layouts/_login'; 
+@import 'layouts/sections';
+@import 'layouts/login'; 
 
 /*Dashboard layout*/
-@import 'dashboard/_layout_sidebar';
-@import 'dashboard/_main_header';
-@import 'dashboard/_sidebar_menu';
-@import 'dashboard/_quicklinks_menu';
-@import 'dashboard/_user_panel';
+@import 'dashboard/layout_sidebar';
+@import 'dashboard/main_header';
+@import 'dashboard/sidebar_menu';
+@import 'dashboard/quicklinks_menu';
+@import 'dashboard/user_panel';
+
+/*Current-projectProyect*/
+@import 'evaluaciones/sistema-evaluaciones';
+@import 'evaluaciones/box_link';
+@import 'evaluaciones/files';
