@@ -193,14 +193,14 @@
                 <h4 class="m-0">Autorización de objetivos 2026</h4>
                 <div class="flex flex-row gap-4">
                   <button 
-                    class="btn btn-default-inverse"
+                    class="btn btn-default-inverse btn-rechazar"
                     data-title="¡Felicidades!"
                     data-text="El objetivo se rechazó con éxito"
                     data-icon="success"> <!--successs/error/warning/info/question-->
                     <i class="icon-hand-thumb-up"></i> Rechazar
                   </button>                  
                   <button 
-                    class="btn btn-default"
+                    class="btn btn-default btn-autorizar"
                     data-title="¡Felicidades!"
                     data-text="El objetivo se autorizó con éxito"
                     data-icon="success"> <!--successs/error/warning/info/question-->
@@ -213,10 +213,9 @@
             <div class="card-body grid gap-5">
               <!-- TABLE-GRID -->
               <div class="tg-responsive">
-                <div class="table-grid tg-layout-check">
+                <div class="table-grid tg-layout-check">                  
                   <!-- HEADER -->
                   <div class="tg-head">
-                    <!-- tg-row -->
                     <div class="tg-row">
                       <input class="tg-cell tg-check-all" type="checkbox">
                       <span class="tg-cell">Objetivo</span>
@@ -226,54 +225,49 @@
                   </div>
                   <!-- BODY -->
                   <div class="tg-body">
-                    <!-- tg-row -->
-                    <div class="tg-row">
-                      <input class="tg-cell tg-check-item" type="checkbox">
-                      <div class="tg-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, optio officiis explicabo ipsum exercitationem error ducimus eum fuga, sequi placeat incidunt suscipit beatae amet natus nostrum, fugiat qui magni iusto!</div>
+                    <div class="tg-row" data-id="obj-1">
+                      <input class="tg-cell tg-check-item" type="checkbox" value="obj-1">
+                      <div class="tg-cell">Lorem ipsum dolor sit amet...</div>
                       <div class="tg-cell">25%</div>
                       <div class="tg-cell tg-center">
                         <button class="btn-circle btn-default-inverse" data-modal="modal-01">
                           <i class="icon-chat-bubble-oval-left"></i>
-                        </button>                                 
+                        </button>
                       </div>
                     </div>
-                    <!-- tg-row -->
-                    <div class="tg-row">
-                      <input class="tg-cell tg-check-item" type="checkbox">
-                      <div class="tg-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, optio officiis explicabo ipsum exercitationem error ducimus eum fuga, sequi placeat incidunt suscipit beatae amet natus nostrum, fugiat qui magni iusto!</div>
+                    <div class="tg-row" data-id="obj-2">
+                      <input class="tg-cell tg-check-item" type="checkbox" value="obj-2">
+                      <div class="tg-cell">Lorem ipsum dolor sit amet...</div>
                       <div class="tg-cell">25%</div>
                       <div class="tg-cell tg-center">
                         <button class="btn-circle btn-default-inverse" data-modal="modal-01">
                           <i class="icon-chat-bubble-oval-left"></i>
-                        </button>                                 
+                        </button>
                       </div>
-                    </div>   
-                    <!-- tg-row -->
-                    <div class="tg-row">
-                      <input class="tg-cell tg-check-item" type="checkbox">
-                      <div class="tg-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, optio officiis explicabo ipsum exercitationem error ducimus eum fuga, sequi placeat incidunt suscipit beatae amet natus nostrum, fugiat qui magni iusto!</div>
+                    </div>
+                    <div class="tg-row" data-id="obj-3">
+                      <input class="tg-cell tg-check-item" type="checkbox" value="obj-3">
+                      <div class="tg-cell">Lorem ipsum dolor sit amet...</div>
                       <div class="tg-cell">25%</div>
                       <div class="tg-cell tg-center">
                         <button class="btn-circle btn-default-inverse" data-modal="modal-01">
                           <i class="icon-chat-bubble-oval-left"></i>
-                        </button>                                 
+                        </button>
                       </div>
-                    </div>                                      
-                    <!-- tg-row -->
-                    <div class="tg-row">
-                      <input class="tg-cell tg-check-item" type="checkbox">
-                      <div class="tg-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, optio officiis explicabo ipsum exercitationem error ducimus eum fuga, sequi placeat incidunt suscipit beatae amet natus nostrum, fugiat qui magni iusto!</div>
+                    </div>
+                    <div class="tg-row" data-id="obj-4">
+                      <input class="tg-cell tg-check-item" type="checkbox" value="obj-4">
+                      <div class="tg-cell">Lorem ipsum dolor sit amet...</div>
                       <div class="tg-cell">25%</div>
                       <div class="tg-cell tg-center">
                         <button class="btn-circle btn-default-inverse" data-modal="modal-01">
                           <i class="icon-chat-bubble-oval-left"></i>
-                        </button>                                 
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>                    
-
+              </div>                
             </div>
             <!-- ------ Card-footer ------ -->
             <footer class="card-footer">
