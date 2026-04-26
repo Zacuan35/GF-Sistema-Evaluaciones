@@ -3875,69 +3875,77 @@ a.card.card-warning:hover {
 }
 
 /* =====================
-# Panel
+# Panel-List
 ===================== */
-.panel {
-  display: grid;
-  gap: 0.5rem;
-}
-
 /* # Box-body
 ----------------------------------------------- */
-.panel-body {
+.panel-list {
   display: grid;
   gap: 0.5rem;
 }
-.panel-body .panel-item {
-  padding: 1rem;
+.panel-list .panel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
   background-color: var(--primary-color);
   background-clip: border-box;
   border: 1px solid var(--tertiary-color);
   border-radius: 0.5rem;
 }
-.panel-body .panel-item p {
+.panel-list .panel-item p {
   margin: 0;
 }
-.panel-body .panel-item:nth-child(even) {
+.panel-list .panel-item:nth-child(even) {
   background-color: var(--secondary-color);
 }
-.panel-body .panel-item:hover {
+.panel-list .panel-item:hover {
   background-color: var(--tertiary-color);
 }
-.panel-body .panel-item.success {
+.panel-list .panel-item.success {
   background-color: #b9e8ba;
   border-color: #35a038;
 }
-.panel-body .panel-item.success p {
+.panel-list .panel-item.success p {
   color: #35a038;
   font-weight: 400;
 }
-.panel-body .panel-item.warning {
+.panel-list .panel-item.warning {
   background-color: #f9e8c5;
   border-color: #db9a17;
 }
-.panel-body .panel-item.warning p {
+.panel-list .panel-item.warning p {
   color: #db9a17;
   font-weight: 400;
 }
 
-/* # Box-header
------------------------------------------------ */
-/*
-.panel-header {
-  padding:1rem;  
-  background-color:var(--tertiary-color);
-  background-clip: border-box;  
-  border:1px solid var(--tertiary-color);  
-  border-radius: 0.5rem;
-  //white-space: nowrap;
-
-  p{
-    font-weight: bold;
-    color:var(--highlight-color);
+/* =====================
+# MEDIAQUERIES
+===================== */
+/* # Mobile ------------------------------------------
+A partir de 640px se aplicarán estos estilos => 640px
+Celulares horizontales
+--------------------------------------------------- */
+@media (min-width: 640px) {
+  .panel-list .panel-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
   }
-} 
-*/
+}
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+/* # Desktop
+---------------------------------------------------- */
+/*A partir de 1280px se aplicarán estos estilos => 1280px
+Tabletas horizontales */
+/*A partir de 1536px se aplicarán estos estilos => 1536px
+Tabletas horizontales */
 canvas {
   width: 100%;
   max-width: 1500px;
@@ -5270,9 +5278,6 @@ i {
 
 /* =====================
 # WHATSAPP LIST
-===================== */
-/* =====================
-# BASE LIST
 ===================== */
 .wa-list {
   display: flex;
@@ -7361,6 +7366,7 @@ Colour theme
   flex-direction: row;
   gap: 1rem;
   justify-content: center;
+  min-width: 30%;
 }
 .moods button {
   all: unset;

@@ -1,10 +1,6 @@
 /* =====================
 # WHATSAPP LIST
 ===================== */
-/* =====================
-# BASE LIST
-===================== */
-
 .wa-list {
   display: flex;
   flex-direction: column;
@@ -15,7 +11,6 @@
 /* =====================
 # ITEM
 ===================== */
-
 .wa-item {
   display: flex;
   gap: 0.75rem;
@@ -45,7 +40,6 @@
 /* =====================
 # AVATAR (CHAT)
 ===================== */
-
 .wa-avatar {
   width: 48px;
   height: 48px;
@@ -62,7 +56,6 @@
 /* =====================
 # ICON (ACTIVITY)
 ===================== */
-
 .wa-icon {
   width: 40px;
   height: 40px;
@@ -97,7 +90,6 @@
 /* =====================
 # CONTENT
 ===================== */
-
 .wa-content {
   flex: 1;
   display: flex;
@@ -108,7 +100,6 @@
 /* =====================
 # TOP (nombre + hora)
 ===================== */
-
 .wa-top {
   display: flex;
   justify-content: space-between;
@@ -129,7 +120,6 @@
 /* =====================
 # BOTTOM (mensaje + badge)
 ===================== */
-
 .wa-bottom {
   display: flex;
   justify-content: space-between;
@@ -150,7 +140,6 @@
 /* =====================
 # BADGE
 ===================== */
-
 .wa-badge {
   background-color: #25d366;
   color: white;
@@ -170,7 +159,6 @@
 /* =====================
 # VARIANTES ÚTILES
 ===================== */
-
 /* Sin borde (cards limpias) */
 .wa-list.clean .wa-item {
   border-bottom: none;
@@ -200,7 +188,6 @@
 /* =====================
 # RESPONSIVE (OPCIONAL)
 ===================== */
-
 @media (max-width: 640px) {
   .wa-list {
     max-height: none;

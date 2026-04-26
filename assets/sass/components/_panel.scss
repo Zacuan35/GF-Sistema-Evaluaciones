@@ -1,24 +1,24 @@
 /* =====================
-# Panel
+# Panel-List
 ===================== */
-.panel{
-  display: grid;
-  gap: 0.5rem;
-  //p{margin:0;}  
-}
-
 /* # Box-body
 ----------------------------------------------- */
-.panel-body{
+.panel-list{
   display: grid;
   gap: 0.5rem;
 
   .panel-item {
-    padding:1rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
     background-color:var(--primary-color);
     background-clip: border-box;  
     border:1px solid var(--tertiary-color);  
     border-radius: 0.5rem;
+
     p{
       margin:0;
     }    
@@ -46,20 +46,38 @@
   }     
 }
 
-/* # Box-header
------------------------------------------------ */
-/*
-.panel-header {
-  padding:1rem;  
-  background-color:var(--tertiary-color);
-  background-clip: border-box;  
-  border:1px solid var(--tertiary-color);  
-  border-radius: 0.5rem;
-  //white-space: nowrap;
-
-  p{
-    font-weight: bold;
-    color:var(--highlight-color);
+/* =====================
+# MEDIAQUERIES
+===================== */
+/* # Mobile ------------------------------------------
+A partir de 640px se aplicarán estos estilos => 640px
+Celulares horizontales
+--------------------------------------------------- */
+@media (min-width: 640px) {
+  .panel-list{
+    .panel-item {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;    
+    }  
   }
-} 
-*/
+}
+
+/* # Tablet ------------------------------------------ */
+/*A partir de 768px se aplicarán estos estilos => 768px
+Tabletas verticales o celulares horizontales*/
+@media (min-width: 768px) {}
+
+/*A partir de 1024px se aplicarán estos estilos => 1024px
+Tabletas horizontales*/
+@media (min-width: 1024px) {}
+
+/* # Desktop
+---------------------------------------------------- */
+/*A partir de 1280px se aplicarán estos estilos => 1280px
+Tabletas horizontales */
+@media (min-width: 1280px) {}
+
+/*A partir de 1536px se aplicarán estos estilos => 1536px
+Tabletas horizontales */
+@media (min-width: 1536px) {}
