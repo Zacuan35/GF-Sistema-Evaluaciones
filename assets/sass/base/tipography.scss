@@ -1,61 +1,18 @@
 /* =====================
-# STYLES
+# TYPOGRAPHY
 ===================== */
 
-/* # Reset
+/* # Imported files and fonts
 ----------------------------------------------- */
-html, body {
-  /*height: 100%;*/
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*, *::before, *::after {box-sizing: border-box;}
-a {
-  text-decoration: none;
-  outline: none;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-}
+/* # Variables
+----------------------------------------------- */
+$primary-font: "Montserrat", serif;
+$secondary-font: "Roboto", serif;
 
-/*Para realizar desplazamientos suaves*/
-/*html {scroll-behavior: smooth;}*/
-
-.no-scroll {overflow: hidden;}
-
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-
-ul, ol{
-  margin:0; 
-  padding:0; 
-  list-style:none;
-}
-
-.label {
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
-}
-
-/*Transition*/
-/* *, *::before, *::after{transition:all .2s ease-in-out;} */ 
-
-/* # Fonts
+/* # Tipography
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn{
   font-family:$secondary-font;
@@ -148,11 +105,6 @@ h2.teaser {
 .fa-9x {font-size: 9em;}
 .fa-10x {font-size: 10em;}
 
-/*Icons*/
-i.icon{
-    line-height: 1.4rem;
-}
-
 /* # Text styles
 ----------------------------------------------- */
 .text-left {text-align:left;}
@@ -161,52 +113,6 @@ i.icon{
 .text-lowercase {text-transform: lowercase;}
 .text-uppercase {text-transform: uppercase;}
 .text-capitalize {text-transform: capitalize;}
-
-/* # Image styles
------------------------------------------------ */
-img, object, embed, video {max-width: 100%;}
-
-img{
-    width:auto;
-    height:auto;
-    margin:0;
-    vertical-align:middle;
-}
-.ie6 img {width:100%;}
-.img-hover:hover {opacity: 0.8;}
-
-/* # Background images
------------------------------------------------ */
-.bg-img{
-  background-position:center center;
-  background-repeat:no-repeat;
-  background-size:cover;
-}
-.bg-attach{background-attachment: fixed;}
-
-/* # Container filter with background image
------------------------------------------------ */
-.overlay {
-  position: relative;
-  z-index: 1;
-  color: var(--primary-color);
-  background-color: inherit;
-  &::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    z-index: -1;
-    color: inherit;
-    background-color: rgba(0, 0, 0, 0.65);
-  }
-}
-.overlay.light::after{
-  background-color:rgba(255,255,255,.55);
-}
 
 /* =====================
 # MEDIAQUERIES
