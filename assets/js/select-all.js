@@ -1,7 +1,7 @@
 /* =====================
 # SELECT ALL (por tabla)
 ===================== */
-const tables = document.querySelectorAll('.table-grid');
+const tables = document.querySelectorAll('[data-checkable]');
 
 tables.forEach(table => {
   const checkAll = table.querySelector('.tg-check-all');
@@ -15,7 +15,6 @@ tables.forEach(table => {
     });
   });
 });
-
 
 /* =====================
 # GET SELECTED ROWS
@@ -32,19 +31,18 @@ function getSelectedRows(table) {
   });
 }
 
-
 /* =====================
 # ACTION BUTTONS (por card)
 ===================== */
 document.querySelectorAll('.card').forEach(card => {
 
-  const table = card.querySelector('.table-grid');
+  const table = card.querySelector('[data-checkable]');
   if (!table) return;
 
   const btnAutorizar = card.querySelector('.btn-autorizar');
   const btnRechazar = card.querySelector('.btn-rechazar');
 
-  // 👉 AUTORIZAR
+  // AUTORIZAR
   if (btnAutorizar) {
     btnAutorizar.addEventListener('click', () => {
       const selected = getSelectedRows(table);
@@ -58,7 +56,7 @@ document.querySelectorAll('.card').forEach(card => {
 
       console.log('Autorizar:', ids);
 
-      // 👉 SweetAlert (opcional)
+      // SweetAlert (opcional)
       const { title, text, icon } = btnAutorizar.dataset;
 
       if (typeof Swal !== 'undefined') {
@@ -71,7 +69,11 @@ document.querySelectorAll('.card').forEach(card => {
       }
 
       // Aquí puedes mandar al backend
-      // fetch('/autorizar.php', { method: 'POST', body: JSON.stringify(ids) })
+      // fetch('/autorizar.php', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(ids)
+      // });
     });
   }
 
@@ -102,7 +104,11 @@ document.querySelectorAll('.card').forEach(card => {
       }
 
       // Aquí puedes mandar al backend
-      // fetch('/rechazar.php', { method: 'POST', body: JSON.stringify(ids) })
+      // fetch('/rechazar.php', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(ids)
+      // });
     });
   }
 
