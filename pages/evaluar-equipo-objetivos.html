@@ -233,58 +233,40 @@
               <!-- ------ Card-body ------ -->
               <div class="card-body grid gap-5">
                 <h4>Evaluación objetivos</h4>
-                <div class="table-responsive">
-                  <!-- --------
-                  panel
-                  --------- -->
-                  <div class="panel">
-                    <!-- panel-header
-                    ------------------------------------------ -->
-                    <div class="panel-header grid grid-cols-12">
-                      <p class="col-span-4">Objetivo</p>
-                      <p class="col-span-4">Comentarios</p>
-                      <p class="col-span-2">Peso %</p>
-                      <p class="col-span-1">Calif.Auto</p>
-                      <p class="col-span-1">Calif.Jefe</p>
-                    </div>                            
-                    <!-- panel-body
-                    ------------------------------------------ -->
-                    <div class="panel-body">
-                      <!-- ------ panel-item ------ --> 
-                      <div class="panel-item grid grid-cols-12">                                
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                <!-- TABLE-GRID -->
+                <div class="tg-responsive">
+                  <div class="table-grid tg-layout-inp">
+                    <!-- HEADER -->
+                    <div class="tg-head">
+                      <div class="tg-row">
+                        <div class="tg-cell">Objetivo</div>
+                        <div class="tg-cell">Comentarios</div>
+                        <div class="tg-cell">Peso %</div>
+                        <div class="tg-cell">Calif.Auto</div>
+                        <div class="tg-cell">Calif.Jefe</div>
                       </div>
-                      <!-- ------ panel-item ------ --> 
-                      <div class="panel-item grid grid-cols-12">                                
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                    </div>
+                    <!-- BODY -->
+                    <div class="tg-body">
+                      <!-- tg-row -->
+                      <div class="tg-row gap-2">
+                        <textarea class="form-control tg-cell" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                        <textarea class="form-control tg-cell" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                        <input class="form-control tg-cell" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                        <input class="form-control tg-cell" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                        <input class="form-control tg-cell" type="number" name="number-example" min="1" max="100" step="5" value="0">
                       </div>
-                      <!-- ------ panel-item ------ --> 
-                      <div class="panel-item grid grid-cols-12">                                
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                      <!-- tg-row -->
+                      <div class="tg-row gap-2">
+                        <textarea class="form-control tg-cell" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
+                        <textarea class="form-control tg-cell" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
+                        <input class="form-control tg-cell" type="number" name="number-example" min="1" max="100" step="5" value="25">
+                        <input class="form-control tg-cell" type="number" name="number-example" min="1" max="100" step="5" value="0">
+                        <input class="form-control tg-cell" type="number" name="number-example" min="1" max="100" step="5" value="0">
                       </div>
-                      <!-- ------ panel-item ------ --> 
-                      <div class="panel-item grid grid-cols-12">                                
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu objetivo."></textarea>
-                        <textarea class="form-control col-span-4" name="example-textarea" rows="1" cols="50" placeholder="Escribe tu comentario."></textarea>
-                        <input class="form-control col-span-2" type="number" name="number-example" min="1" max="100" step="5" value="25">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                        <input class="form-control col-span-1" type="number" name="number-example" min="1" max="100" step="5" value="0">
-                      </div>
-                    </div>          
-                  </div>                            
-                </div>
+                    </div>
+                  </div>
+                </div>                                   
               </div>
               <!-- ------ Card-footer ------ -->
               <footer class="card-footer">

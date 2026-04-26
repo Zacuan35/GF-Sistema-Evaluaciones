@@ -5206,6 +5206,10 @@ i {
   --cols: 1fr 50px 100px;
 }
 
+.tg-layout-inp {
+  --cols: 1fr 1fr 100px 100px 100px;
+}
+
 /* Variantes útiles */
 .tg-layout-3-auto {
   --cols: auto 1fr auto;
