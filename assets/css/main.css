@@ -6957,6 +6957,8 @@ Colour theme
 /* =====================
 # SISTEMA EVALUACIONES
 ===================== */
+/* # Face-item
+----------------------------------------------- */
 .face-item {
   display: flex;
   flex-direction: column;
@@ -6986,6 +6988,8 @@ Colour theme
   color: #35a038;
 }
 
+/* # Moods
+----------------------------------------------- */
 .moods {
   display: flex;
   flex-direction: row;
