@@ -211,87 +211,69 @@
             </header>
             <!-- ------ Card-body ------ -->
             <div class="card-body grid gap-5">
-              <div class="table-responsive">
-                <!-- --------
-                panel
-                --------- -->
-                <div class="panel">
-                  <!-- panel-header
-                  ------------------------------------------ -->
-                  <div class="panel-header grid grid-cols-12 items-center">
-                    <div class="col-span-1">
-                      <input type="checkbox" id="checkbox2">
+              <!-- TABLE-GRID -->
+              <div class="tg-responsive">
+                <div class="table-grid tg-layout-check">
+                  <!-- HEADER -->
+                  <div class="tg-head">
+                    <!-- tg-row -->
+                    <div class="tg-row">
+                      <div class="tg-cell"><input type="checkbox"></div>
+                      <div class="tg-cell">Objetivo</div>
+                      <div class="tg-cell">Peso %</div>
+                      <div class="tg-cell tg-center">Acción</div>
                     </div>
-                    <p class="col-span-9">Objetivo</p>
-                    <p class="col-span-1">Peso %</p>                     
-                    <p class="col-span-1">Comentar</p>
                   </div>
-                  <!-- panel-body
-                  ------------------------------------------ -->
-                  <div class="panel-body">
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12 items-center">
-                      <div class="col-span-1">                      
-                        <input type="checkbox" id="checkbox2">                      
+                  <!-- BODY -->
+                  <div class="tg-body">
+                    <!-- tg-row -->
+                    <div class="tg-row">
+                      <div class="tg-cell"><input type="checkbox"></div>
+                      <div class="tg-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, optio officiis explicabo ipsum exercitationem error ducimus eum fuga, sequi placeat incidunt suscipit beatae amet natus nostrum, fugiat qui magni iusto!</div>
+                      <div class="tg-cell">25%</div>
+                      <div class="tg-cell tg-center">
+                        <button class="btn-circle btn-default-inverse" data-modal="modal-01">
+                          <i class="icon-chat-bubble-oval-left"></i>
+                        </button>                                 
                       </div>
-                      <p class="col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex md:justify-center">       
-                          <button class="btn-circle btn-default-inverse" data-modal="modal-01">
-                            <i class="icon-chat-bubble-oval-left"></i>
-                          </button>         
-                        </div>                
-                      </div>                  
                     </div>
-                    <!-- ------ panel-item ------ -->
-                    <div class="panel-item grid grid-cols-12 items-center">                                
-                      <div class="col-span-1">
-                        <input type="checkbox" id="checkbox2">
+                    <!-- tg-row -->
+                    <div class="tg-row">
+                      <div class="tg-cell"><input type="checkbox"></div>
+                      <div class="tg-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, optio officiis explicabo ipsum exercitationem error ducimus eum fuga, sequi placeat incidunt suscipit beatae amet natus nostrum, fugiat qui magni iusto!</div>
+                      <div class="tg-cell">25%</div>
+                      <div class="tg-cell tg-center">
+                        <button class="btn-circle btn-default-inverse" data-modal="modal-01">
+                          <i class="icon-chat-bubble-oval-left"></i>
+                        </button>                                 
                       </div>
-                      <p class="col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex md:justify-center">       
-                          <button class="btn-circle btn-default-inverse" data-modal="modal-01">
-                            <i class="icon-chat-bubble-oval-left"></i>
-                          </button>         
-                        </div>                
-                      </div>                  
+                    </div>      
+                    <!-- tg-row -->
+                    <div class="tg-row">
+                      <div class="tg-cell"><input type="checkbox"></div>
+                      <div class="tg-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, optio officiis explicabo ipsum exercitationem error ducimus eum fuga, sequi placeat incidunt suscipit beatae amet natus nostrum, fugiat qui magni iusto!</div>
+                      <div class="tg-cell">25%</div>
+                      <div class="tg-cell tg-center">
+                        <button class="btn-circle btn-disable">
+                          <i class="icon-chat-bubble-oval-left"></i>
+                        </button>                                 
+                      </div>
+                    </div>                                        
+                    <!-- tg-row -->
+                    <div class="tg-row success">
+                      <div class="tg-cell"><input type="checkbox"></div>
+                      <div class="tg-cell">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, sed nobis totam suscipit nemo provident officiis odit reiciendis, natus doloremque facere nam quae consectetur ullam at aliquid error harum nulla.</div>
+                      <div class="tg-cell">30%</div>
+                      <div class="tg-cell tg-center">
+                        <button class="btn-circle btn-disable">
+                          <i class="icon-chat-bubble-oval-left"></i>
+                        </button>                                 
+                      </div>
                     </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item grid grid-cols-12 items-center">                                
-                      <div class="col-span-1">
-                        <input type="checkbox" id="checkbox2">
-                      </div>
-                      <p class="col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex md:justify-center">       
-                          <button class="btn-circle btn-disable">
-                            <i class="icon-chat-bubble-oval-left"></i>
-                          </button>         
-                        </div>                
-                      </div>                  
-                    </div>
-                    <!-- ------ panel-item ------ --> 
-                    <div class="panel-item success grid grid-cols-12 items-center">                                
-                      <div class="col-span-1">
-                        <input type="checkbox" id="checkbox2">
-                      </div>
-                      <p class="col-span-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptates sit exercitationem, praesentium facilis iusto veritatis! Et voluptates neque quasi atque magnam incidunt. Nisi assumenda aut quos eos!</p>
-                      <p class="col-span-1">25%</p>
-                      <div class="col-span-1">
-                        <div class="flex md:justify-center">       
-                          <button class="btn-circle btn-disable">
-                            <i class="icon-chat-bubble-oval-left"></i>
-                          </button>         
-                        </div>                
-                      </div>                  
-                    </div>                                                         
-                  </div>          
-                </div>                            
-              </div>
+                  </div>
+                </div>
+              </div>                    
+
             </div>
             <!-- ------ Card-footer ------ -->
             <footer class="card-footer">

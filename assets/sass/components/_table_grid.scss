@@ -82,11 +82,12 @@
 # COLUMN LAYOUTS
 ============== */
 /* Tu layout original */
-.tg-layout-check {--cols: 50px 1fr 100px 80px;}
+.tg-layout-check {--cols: 40px 1fr 100px 80px;}
+.tg-layout-obj {--cols: 1fr 50px 100px;}
 
 /* Variantes útiles */
-.tg-layout-4-auto {--cols: auto 1fr auto auto;}
 .tg-layout-3-auto {--cols: auto 1fr auto;}
+.tg-layout-4-auto {--cols: auto 1fr auto auto;}
 .tg-layout-5-auto {--cols: 60px 2fr 1fr 100px 80px;}
 
 /* =========
