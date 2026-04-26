@@ -25,6 +25,7 @@
 .tg-row {
   display: grid;
   grid-template-columns: var(--cols);
+  align-items: center;
 
   padding: 1rem;
   border: 1px solid var(--tertiary-color);
@@ -82,7 +83,7 @@
 # COLUMN LAYOUTS
 ============== */
 /* Tu layout original */
-.tg-layout-check {--cols: 40px 1fr 100px 80px;}
+.tg-layout-check {--cols: 40px 1fr 80px 80px;}
 .tg-layout-obj {--cols: 1fr 50px 100px;}
 .tg-layout-inp {--cols: 1fr 1fr 100px 100px 100px;}
 

@@ -7,22 +7,6 @@
   //p{margin:0;}  
 }
 
-/* # Box-header
------------------------------------------------ */
-.panel-header {
-  padding:1rem;  
-  background-color:var(--tertiary-color);
-  background-clip: border-box;  
-  border:1px solid var(--tertiary-color);  
-  border-radius: 0.5rem;
-  //white-space: nowrap;
-
-  p{
-    font-weight: bold;
-    color:var(--highlight-color);
-  }
-} 
-
 /* # Box-body
 ----------------------------------------------- */
 .panel-body{
@@ -61,3 +45,21 @@
 
   }     
 }
+
+/* # Box-header
+----------------------------------------------- */
+/*
+.panel-header {
+  padding:1rem;  
+  background-color:var(--tertiary-color);
+  background-clip: border-box;  
+  border:1px solid var(--tertiary-color);  
+  border-radius: 0.5rem;
+  //white-space: nowrap;
+
+  p{
+    font-weight: bold;
+    color:var(--highlight-color);
+  }
+} 
+*/

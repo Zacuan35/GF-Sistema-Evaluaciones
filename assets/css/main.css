@@ -3882,20 +3882,6 @@ a.card.card-warning:hover {
   gap: 0.5rem;
 }
 
-/* # Box-header
------------------------------------------------ */
-.panel-header {
-  padding: 1rem;
-  background-color: var(--tertiary-color);
-  background-clip: border-box;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.5rem;
-}
-.panel-header p {
-  font-weight: bold;
-  color: var(--highlight-color);
-}
-
 /* # Box-body
 ----------------------------------------------- */
 .panel-body {
@@ -3935,6 +3921,23 @@ a.card.card-warning:hover {
   font-weight: 400;
 }
 
+/* # Box-header
+----------------------------------------------- */
+/*
+.panel-header {
+  padding:1rem;  
+  background-color:var(--tertiary-color);
+  background-clip: border-box;  
+  border:1px solid var(--tertiary-color);  
+  border-radius: 0.5rem;
+  //white-space: nowrap;
+
+  p{
+    font-weight: bold;
+    color:var(--highlight-color);
+  }
+} 
+*/
 canvas {
   width: 100%;
   max-width: 1500px;
@@ -5121,6 +5124,7 @@ i {
 .tg-row {
   display: grid;
   grid-template-columns: var(--cols);
+  align-items: center;
   padding: 1rem;
   border: 1px solid var(--tertiary-color);
   border-radius: 0.5rem;
@@ -5199,7 +5203,7 @@ i {
 ============== */
 /* Tu layout original */
 .tg-layout-check {
-  --cols: 40px 1fr 100px 80px;
+  --cols: 40px 1fr 80px 80px;
 }
 
 .tg-layout-obj {
