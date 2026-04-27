@@ -104,15 +104,15 @@
 # STATES 
 ========= */
 .tg-row.success {
-  background-color: rgba(0, 200, 100, 0.1);
-  border-color: var(--success-color, green);
+  background-color: rgba($success-color, 0.1);
+  border-color: $success-color;
 }
 
 .tg-row.warning {
-  background-color: rgba(255, 180, 0, 0.1);
-  border-color: var(--warning-color, orange);
+  background-color: rgba($warning-color, 0.1);
+  border-color: $warning-color;
 }
 
 /* Opcional: texto dentro del estado */
-.tg-row.success .tg-cell {color: var(--success-color, green);}
-.tg-row.warning .tg-cell {color: var(--warning-color, orange);}
+.tg-row.success .tg-cell {color: $success-color;}
+.tg-row.warning .tg-cell {color: $warning-color;}

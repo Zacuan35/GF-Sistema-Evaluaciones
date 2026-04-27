@@ -3894,6 +3894,9 @@ a.card.card-warning:hover {
   background-clip: border-box;
   border: 1px solid var(--tertiary-color);
   border-radius: 0.5rem;
+  /* =========
+  # STATES 
+  ========= */
 }
 .panel-list .panel-item p {
   margin: 0;
@@ -3905,19 +3908,23 @@ a.card.card-warning:hover {
   background-color: var(--tertiary-color);
 }
 .panel-list .panel-item.success {
-  background-color: #b9e8ba;
+  background-color: rgba(53, 160, 56, 0.1);
   border-color: #35a038;
 }
-.panel-list .panel-item.success p {
+.panel-list .panel-item.success h6, .panel-list .panel-item.success p {
   color: #35a038;
+}
+.panel-list .panel-item.success p {
   font-weight: 400;
 }
 .panel-list .panel-item.warning {
-  background-color: #f9e8c5;
+  background-color: rgba(219, 154, 23, 0.1);
   border-color: #db9a17;
 }
-.panel-list .panel-item.warning p {
+.panel-list .panel-item.warning h6, .panel-list .panel-item.warning p {
   color: #db9a17;
+}
+.panel-list .panel-item.warning p {
   font-weight: 400;
 }
 
@@ -5258,22 +5265,22 @@ i {
 # STATES 
 ========= */
 .tg-row.success {
-  background-color: rgba(0, 200, 100, 0.1);
-  border-color: var(--success-color, green);
+  background-color: rgba(53, 160, 56, 0.1);
+  border-color: #35a038;
 }
 
 .tg-row.warning {
-  background-color: rgba(255, 180, 0, 0.1);
-  border-color: var(--warning-color, orange);
+  background-color: rgba(219, 154, 23, 0.1);
+  border-color: #db9a17;
 }
 
 /* Opcional: texto dentro del estado */
 .tg-row.success .tg-cell {
-  color: var(--success-color, green);
+  color: #35a038;
 }
 
 .tg-row.warning .tg-cell {
-  color: var(--warning-color, orange);
+  color: #db9a17;
 }
 
 /*Forms*/
