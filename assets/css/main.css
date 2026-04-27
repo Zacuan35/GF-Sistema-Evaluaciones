@@ -3330,7 +3330,7 @@ main {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .banner_alert.alert-success {
-  background-color: #b9e8ba;
+  background-color: rgba(53, 160, 56, 0.1);
   border: 1px solid #35a038;
 }
 .banner_alert.alert-success p, .banner_alert.alert-success i {
@@ -3338,7 +3338,7 @@ main {
   font-weight: 500;
 }
 .banner_alert.alert-warning {
-  background-color: #f9e8c5;
+  background-color: rgba(219, 154, 23, 0.1);
   border: 1px solid #db9a17;
 }
 .banner_alert.alert-warning p, .banner_alert.alert-warning i {
@@ -3346,7 +3346,7 @@ main {
   font-weight: 500;
 }
 .banner_alert.alert-danger {
-  background-color: #f5aba4;
+  background-color: rgba(185, 34, 20, 0.1);
   border: 1px solid #b92214;
 }
 .banner_alert.alert-danger p, .banner_alert.alert-danger i {
@@ -3939,7 +3939,7 @@ Celulares horizontales
   .panel-list .panel-item {
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
+    align-items: end;
   }
 }
 /* # Tablet ------------------------------------------ */
@@ -7200,11 +7200,11 @@ Colour theme
 }
 .moods .face-item i {
   transition: color 0.2s ease;
-  color: var(--fourth-color);
+  color: var(--fifth-color);
   font-size: 2rem;
 }
 .moods .face-item p {
-  color: var(--fourth-color);
+  color: var(--fifth-color);
   transition: color 0.2s ease;
   font-weight: bold;
   font-size: 90%;
