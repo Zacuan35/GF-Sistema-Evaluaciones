@@ -267,141 +267,143 @@
         </div>         
         <!-- Content-body
         ========================================== -->               
-        <section class="content-body">         
-          <!-- ====== Card ====== --> 
-          <div class="card">
-            <!-- ------ Card-header ------ -->
-            <header class="card-header">
-              <h4>Inputs</h4>
-            </header>
-            <!-- ------ Card-body ------ -->
-            <div class="card-body">                    
-              <!-- Search-container -->      
-              <div class="flex items-center flex-row mb-2">
-                <div class="search-container">
-                  <input type="text" class="search form-control" placeholder="No. de empleado">
-                  <button type="submit" class="search-button">
-                    <i class="icon-Home"></i>
-                  </button>
-                </div>                     
-              </div>      
-              <!-- Form -->
-              <form class="grid gap-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                  <div class="item">                    
-                    <label for="name">Nombre <span>*</span></label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Escribe tu nombre aquí" required>
-                  </div>        
-                  <div class="item">
-                    <label for="email">Correo electrónico <span>*</span></label>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Escribe tu correo electrónico aquí" required>
-                  </div>
-                  <div class="item">
-                    <label for="phone">Teléfono <span>*</span></label>
-                    <input class="form-control" type="tel" id="phone" name="phone" placeholder="Escribe tu número de celular aquí" required>
-                  </div>  
-                  <div class="item">
-                    <label for="password">Contraseña</label>
-                    <div class="input-wrapper"> 
-                      <input class="form-control" type="password" id="password" name="password" required placeholder="Escribe tu contraseña">
-                      <i class="fa-regular fa-eye toggle-password" id="togglePassword" aria-label="Mostrar u ocultar contraseña"></i>
+        <section class="content-body">  
+          <div class="grid gap-5">
+            <!-- ====== Card ====== --> 
+            <div class="card">
+              <!-- ------ Card-header ------ -->
+              <header class="card-header">
+                <h4>Inputs</h4>
+              </header>
+              <!-- ------ Card-body ------ -->
+              <div class="card-body">                    
+                <!-- Search-container -->      
+                <div class="flex items-center flex-row mb-2">
+                  <div class="search-container">
+                    <input type="text" class="search form-control" placeholder="No. de empleado">
+                    <button type="submit" class="search-button">
+                      <i class="icon-Home"></i>
+                    </button>
+                  </div>                     
+                </div>      
+                <!-- Form -->
+                <form class="grid gap-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <div class="item">                    
+                      <label for="name">Nombre <span>*</span></label>
+                      <input class="form-control" type="text" id="name" name="name" placeholder="Escribe tu nombre aquí" required>
+                    </div>        
+                    <div class="item">
+                      <label for="email">Correo electrónico <span>*</span></label>
+                      <input class="form-control" type="email" id="email" name="email" placeholder="Escribe tu correo electrónico aquí" required>
                     </div>
-                  </div>                                                                                        
-                  <div class="item">
-                    <label for="example-select">Example select <span>*</span></label>
-                    <select id="example-select" name="example-select" class="form-control" required>
-                      <option value="" disabled selected>-- Selecciona --</option>
-                      <option value="One">One</option>
-                      <option value="Two">Two</option>
-                      <option value="Three">Three</option>                      
-                      <option value="Four">Four</option>
-                      <option value="Five">Five</option>
-                    </select> 
-                  </div>
-                  <div class="item">
-                    <label for="datetime-01">Date and time example <span>*</span></label>
-                    <input id="datetime-01" type="datetime-local" name="datetime" class="form-control" required>
-                  </div>  
-                  <div class="item">
-                    <label for="number-example">Number</label>
-                    <input class="form-control" type="number" id="number-example" name="number-example" min="1" max="100" step="5" value="20">              
+                    <div class="item">
+                      <label for="phone">Teléfono <span>*</span></label>
+                      <input class="form-control" type="tel" id="phone" name="phone" placeholder="Escribe tu número de celular aquí" required>
+                    </div>  
+                    <div class="item">
+                      <label for="password">Contraseña</label>
+                      <div class="input-wrapper"> 
+                        <input class="form-control" type="password" id="password" name="password" required placeholder="Escribe tu contraseña">
+                        <i class="fa-regular fa-eye toggle-password" id="togglePassword" aria-label="Mostrar u ocultar contraseña"></i>
+                      </div>
+                    </div>                                                                                        
+                    <div class="item">
+                      <label for="example-select">Example select <span>*</span></label>
+                      <select id="example-select" name="example-select" class="form-control" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="One">One</option>
+                        <option value="Two">Two</option>
+                        <option value="Three">Three</option>                      
+                        <option value="Four">Four</option>
+                        <option value="Five">Five</option>
+                      </select> 
+                    </div>
+                    <div class="item">
+                      <label for="datetime-01">Date and time example <span>*</span></label>
+                      <input id="datetime-01" type="datetime-local" name="datetime" class="form-control" required>
+                    </div>  
+                    <div class="item">
+                      <label for="number-example">Number</label>
+                      <input class="form-control" type="number" id="number-example" name="number-example" min="1" max="100" step="5" value="20">              
+                    </div>                
+                    <div class="form-group-inline">
+                      <label for="select-inline">Elementos </label>
+                      <select class="form-control" id="select-inline">
+                        <option selected>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>                                                        
+                      </select>
+                    </div>  
                   </div>                
-                  <div class="form-group-inline">
-                    <label for="select-inline">Elementos </label>
-                    <select class="form-control" id="select-inline">
-                      <option selected>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>                                                        
-                    </select>
-                  </div>  
-                </div>                
-                <div class="grid grid-cols-1">
-                  <div class="item">
-                    <label for="example-textarea">Example textarea<span>*</span></label>
-                    <textarea class="form-control" id="example-textarea" name="example-textarea" rows="5" cols="50" placeholder="Escribe tu comentario." required></textarea>                
-                  </div>                                
-                </div> 
-                <div class="grid grid-cols-1">
-                  <div class="file_upload">
-                    <label for="archivo">Selecciona un archivo:</label>
-                    <input type="file" id="archivo" name="archivo" accept="image/*,application/pdf,.doc,.docx" required>
-                  </div>
-                </div>                                               
-              </form>            
+                  <div class="grid grid-cols-1">
+                    <div class="item">
+                      <label for="example-textarea">Example textarea<span>*</span></label>
+                      <textarea class="form-control" id="example-textarea" name="example-textarea" rows="5" cols="50" placeholder="Escribe tu comentario." required></textarea>                
+                    </div>                                
+                  </div> 
+                  <div class="grid grid-cols-1">
+                    <div class="file_upload">
+                      <label for="archivo">Selecciona un archivo:</label>
+                      <input type="file" id="archivo" name="archivo" accept="image/*,application/pdf,.doc,.docx" required>
+                    </div>
+                  </div>                                               
+                </form>            
+              </div>
             </div>
-          </div>
-          <!-- ====== Card ====== --> 
-          <div class="card">
-            <!-- ------ Card-header ------ -->
-            <header class="card-header">
-              <h4>Switch, Radio and checkboxes</h4>
-            </header>
-            <!-- ------ Card-body ------ -->
-            <div class="card-body">                    
-              <!-- Form -->
-              <form class="grid gap-4"> 
-                <div class="flex gap-4">                    
-                  <div class="switch-group">              
-                    <p>Destacar:</p>
-                    <span class="switch-label">No</span>
-                    <label class="switch">
-                      <input type="checkbox" class="switch-input">
-                      <span class="slider"></span>
-                    </label>
-                  </div>                          
-                  <div class="switch-group">
-                    <p>Estado:</p>
-                    <span class="switch-label">Inactivo</span>
-                    <label class="switch">
-                      <input type="checkbox" class="switch-input state-switch-note">
-                      <span class="slider"></span>
-                    </label>
-                  </div>                                   
-                </div>                     
-                <fieldset class="form-group-inline">
-                  <legend>Radio and checkboxes</legend>
-                  <label class="radio-label">
-                    <input type="radio" name="opcion" id="radio1">
-                    Opción A
-                  </label>                  
-                  <label class="radio-label">
-                    <input type="radio" name="opcion" id="radio2">
-                    Opción B
-                  </label>                                    
-                  <label class="checkbox-label">
-                    <input type="checkbox" id="checkbox1">
-                    Opción 1
-                  </label>                  
-                  <label class="checkbox-label">
-                    <input type="checkbox" id="checkbox2">
-                    Opción 2
-                  </label>              
-                </fieldset>    
-              </form>            
-            </div>
-          </div> 
+            <!-- ====== Card ====== --> 
+            <div class="card">
+              <!-- ------ Card-header ------ -->
+              <header class="card-header">
+                <h4>Switch, Radio and checkboxes</h4>
+              </header>
+              <!-- ------ Card-body ------ -->
+              <div class="card-body">                    
+                <!-- Form -->
+                <form class="grid gap-4"> 
+                  <div class="flex gap-4">                    
+                    <div class="switch-group">              
+                      <p>Destacar:</p>
+                      <span class="switch-label">No</span>
+                      <label class="switch">
+                        <input type="checkbox" class="switch-input">
+                        <span class="slider"></span>
+                      </label>
+                    </div>                          
+                    <div class="switch-group">
+                      <p>Estado:</p>
+                      <span class="switch-label">Inactivo</span>
+                      <label class="switch">
+                        <input type="checkbox" class="switch-input state-switch-note">
+                        <span class="slider"></span>
+                      </label>
+                    </div>                                   
+                  </div>                     
+                  <fieldset class="form-group-inline">
+                    <legend>Radio and checkboxes</legend>
+                    <label class="radio-label">
+                      <input type="radio" name="opcion" id="radio1">
+                      Opción A
+                    </label>                  
+                    <label class="radio-label">
+                      <input type="radio" name="opcion" id="radio2">
+                      Opción B
+                    </label>                                    
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox1">
+                      Opción 1
+                    </label>                  
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox2">
+                      Opción 2
+                    </label>              
+                  </fieldset>    
+                </form>            
+              </div>
+            </div> 
+          </div>       
         </section>
       </main>
 
