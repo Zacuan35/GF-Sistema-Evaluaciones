@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Grid</title>
+    <title>Data-toast</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <!-- Styles -->
@@ -122,7 +122,7 @@
               <a href="#"><i class="icon-Home"></i> Link</a>
             </li>
             <!-- Dropdown -->
-            <li class="treeview active">
+            <li class="treeview">
               <a href="#">
                 <i class="icon-wrench-screwdriver"></i>
                 <span>Utilities</span>
@@ -202,7 +202,7 @@
               </ul>
             </li> 
             <!-- Dropdown -->
-            <li class="treeview">
+            <li class="treeview active">
               <a href="#">
                 <i class="icon-table-cells"></i>
                 <span>Componentes</span>
@@ -278,45 +278,26 @@
         <!-- Title
         ========================================== -->               
         <div class="content-header">
-          <h1>Grid</h1>          
+          <h1>Data-toast</h1>          
         </div>         
         <!-- Content-body
         ========================================== -->               
-        <section class="content-body">
-          <div class="grid gap-5">
-            <!-- ====== Grid ====== -->                      
-            <div class="grid grid-cols-1">
-              <div class="grid-item">Columna 1</div>
-            </div>                           
-            <!-- ====== Grid ====== -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
-              <div class="grid-item">Columna 1</div>
-              <div class="grid-item">Columna 2</div>
-            </div>                 
-            <!-- ====== Grid ====== -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
-              <div class="grid-item">Columna 1</div>
-              <div class="grid-item">Columna 2</div>
-              <div class="grid-item">Columna 3</div>
-            </div>
-            <!-- ====== Grid ====== -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4">
-              <div class="grid-item">Columna 1</div>
-              <div class="grid-item">Columna 2</div>
-              <div class="grid-item">Columna 3</div>
-              <div class="grid-item">Columna 4</div>            
-            </div>          
-            <!-- ====== Diferent sizes ====== -->
-            <div class="grid grid-cols-12">
-              <div class="grid-item col-span-12 md:col-span-4">Columna 1</div>
-              <div class="grid-item col-span-12 md:col-span-8">Columna 2</div>                      
-            </div>                  
-            <!-- ====== Diferent sizes ====== -->
-            <div class="grid grid-cols-12">
-              <div class="grid-item col-span-12 md:col-span-9">Columna 1</div>
-              <div class="grid-item col-span-12 md:col-span-3">Columna 2</div>                        
-            </div>
-          </div>
+        <section class="content-body">       
+          <!-- Contenedor de toasts -->
+          <div class="toast-container" id="toastContainer"></div>
+
+          <!-- Botones de ejemplo -->
+          <button class="btn btn-success" data-toast="Guardado correctamente" data-type="success">
+            Mostrar éxito
+          </button>
+
+          <button class="btn btn-danger" data-toast="Ocurrió un error" data-type="error">
+            Mostrar error
+          </button>
+
+          <button class="btn btn-default" data-toast="Información general" data-type="info">
+            Mostrar info
+          </button>
         </section>
       </main>
 
@@ -344,6 +325,7 @@
     <script src="../assets/js/navigation/sidebar_layout.js" type="text/javascript"></script>
     <!-- Components -->    
     <script src="../assets/js/theme_toggle.js"></script>	 
+    <script src="../assets/js/data_toast.js"></script>	 
 
   </body>
 </html>
