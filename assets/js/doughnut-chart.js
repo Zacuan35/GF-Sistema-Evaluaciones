@@ -1,21 +1,23 @@
-const ctxDoughnut = document.getElementById('doughnutChart');
+const objectivesChart = document.getElementById('objectivesChart');
 
-new Chart(ctxDoughnut, {
+new Chart(objectivesChart, {
   type: 'doughnut',
-
   data: {
-    labels: ['Rojo', 'Azul', 'Amarillo'],
-
+    labels: ['Completado', 'Pendiente'],
     datasets: [{
-      label: 'Colores',
+      data: [80, 20]
+    }]
+  }
+});
 
-      data: [300, 50, 100],
+const skillsChart = document.getElementById('skillsChart');
 
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.7)',
-        'rgba(54, 162, 235, 0.7)',
-        'rgba(255, 206, 86, 0.7)'
-      ]
+new Chart(skillsChart, {
+  type: 'doughnut',
+  data: {
+    labels: ['Aprobado', 'Faltante'],
+    datasets: [{
+      data: [60, 40]
     }]
   }
 });

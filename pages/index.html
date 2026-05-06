@@ -6,7 +6,26 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <!-- Styles -->
-    <link href="../assets/css/main.css" rel="stylesheet" type="text/css" />         
+    <link href="../assets/css/main.css" rel="stylesheet" type="text/css" /> 
+      <style>
+        /*
+        .chart-container {
+          width: 100%;
+          max-width: 500px;
+          height: 400px;
+          margin: 40px auto;
+        }
+        */
+        canvas {
+          width: 100%;
+          max-width: 1500px;
+          display: block;
+          background: inherit;
+          padding: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }        
+      </style>
   </head>
   <body>
 
@@ -192,12 +211,15 @@
                 <h4>Promedio de evaluación del equipo 2025</h4>
               </header>
               <div class="card-body grid grid-cols-1 md:grid-cols-3">
-                <!-- Objetivos -->
+                <!-- Objetivos -->                  
                 <div>
                   <h6>Objetivos</h6>
-                  <canvas id="doughnutChart"></canvas>
+                  <canvas id="objectivesChart"></canvas>
+                </div>                
+                <div>
+                  <h6>Competencias</h6>
+                  <canvas id="skillsChart"></canvas>
                 </div>                                
-                <h6>Competencias</h6>
                 <h6>Calificación final</h6>
               </div>
             </div>
