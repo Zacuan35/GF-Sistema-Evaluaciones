@@ -31,7 +31,8 @@
         #SkillsChart {
           width: 200px !important;
           height: 200px !important;
-        }                                  
+        }       
+        Pau Peach                           
         */
         canvas {
           width: 100%;
@@ -228,16 +229,35 @@
                 <h4>Promedio de evaluación del equipo 2025</h4>
               </header>
               <div class="card-body grid grid-cols-1 md:grid-cols-3">
-                <!-- Objetivos -->                  
-                <div>
-                  <h6>Objetivos</h6>
-                  <canvas id="objectivesChart" width="100px" height="100px"></canvas>
+                <!-- Card Objetivos -->                  
+                <div class="card">
+                  <div class="card-body flex flex-row justify-between items-center">
+                    <div class="flex flex-col items-center">
+                      <h6>Objetivos</h6>
+                      <h1 class="display-4">67.2</h1>
+                      <p class="small">Valor total 70%</p>
+                    </div>
+                    <canvas id="objectivesChart" width="100px" height="100px"></canvas>
+                  </div>                
+                </div>
+                <!-- Card Competencias -->                  
+                <div class="card">
+                  <div class="card-body flex flex-row justify-between items-center">
+                    <div class="flex flex-col items-center">
+                      <h6>Competencias</h6>
+                      <h1 class="display-4">67.2</h1>
+                      <p class="small">Valor total 70%</p>
+                    </div>                  
+                    <canvas id="skillsChart" width="100px" height="100px"></canvas>
+                  </div>                    
+                </div>        
+                <!-- Card Calificación -->                          
+                <div class="card">
+                  <div class="card-body flex flex-col justify-center items-center h-full" >
+                    <h6>Calificación final</h6>
+                    <h1 class="display-4">95.7-A</h1>
+                  </div>                                              
                 </div>                
-                <div>
-                  <h6>Competencias</h6>
-                  <canvas id="skillsChart" width="100px" height="100px"></canvas>
-                </div>                                
-                <h6>Calificación final</h6>
               </div>
             </div>
             <!-- ====== Card ====== --> 
