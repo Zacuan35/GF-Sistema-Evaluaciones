@@ -62,7 +62,7 @@ body {
 p, ul, ol, small {
   color: var(--primary-text-color);
   &.small{
-    color: var(--primary-text-color);
+    color: $gray-color;
   }
 }
 

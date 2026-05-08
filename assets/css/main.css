@@ -61,7 +61,7 @@ p, ul, ol, small {
   color: var(--primary-text-color);
 }
 p.small, ul.small, ol.small, small.small {
-  color: var(--primary-text-color);
+  color: #5c5c5c;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7348,6 +7348,20 @@ canvas {
   padding: 0;
   border-radius: 0;
   box-shadow: none;
+}
+
+/* # Title-success
+----------------------------------------------- */
+.StatusTitle-Success i, .StatusTitle-Success h5 {
+  color: #35a038;
+}
+
+.StatusTitle-Danger i, .StatusTitle-Danger h5 {
+  color: #b92214;
+}
+
+.StatusTitle-Warning i, .StatusTitle-Warning h5 {
+  color: #db9a17;
 }
 
 /* =====================
