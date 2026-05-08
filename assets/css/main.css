@@ -4900,6 +4900,10 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-exclamation-circle:before {
+  content: "\e936";
+}
+
 .icon-arrow-long-down:before {
   content: "\e900";
 }
