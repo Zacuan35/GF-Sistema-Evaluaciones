@@ -102,15 +102,15 @@ b {
 
 /* # StatusTitle
 ----------------------------------------------- */
-.StatusTitle-Success i, .StatusTitle-Success h5 {
+.StatusTitle-Success i, .StatusTitle-Success h1, .StatusTitle-Success h2, .StatusTitle-Success h3, .StatusTitle-Success h4, .StatusTitle-Success h5 {
   color: #16A34A;
 }
 
-.StatusTitle-Danger i, .StatusTitle-Danger h5 {
+.StatusTitle-Danger i, .StatusTitle-Danger h1, .StatusTitle-Danger h2, .StatusTitle-Danger h3, .StatusTitle-Danger h4, .StatusTitle-Danger h5 {
   color: #DC2626;
 }
 
-.StatusTitle-Warning i, .StatusTitle-Warning h5 {
+.StatusTitle-Warning i, .StatusTitle-Warning h1, .StatusTitle-Warning h2, .StatusTitle-Warning h3, .StatusTitle-Warning h4, .StatusTitle-Warning h5 {
   color: #db9a17;
 }
 
