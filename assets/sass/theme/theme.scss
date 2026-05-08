@@ -93,6 +93,18 @@ b {
 .text-danger { color: $danger-color; }
 .text-warning { color: $warning-color; }
 
+/* # StatusTitle
+----------------------------------------------- */
+.StatusTitle-Success{
+  i,h5{color:$success-color;}
+}
+.StatusTitle-Danger{
+  i,h5{color:$danger-color;}
+}
+.StatusTitle-Warning{
+  i,h5{color:$warning-color;}
+}
+
 /* # Background colors
 ----------------------------------------------- */
 .bg-default {

@@ -100,6 +100,20 @@ b {
   color: #db9a17;
 }
 
+/* # StatusTitle
+----------------------------------------------- */
+.StatusTitle-Success i, .StatusTitle-Success h5 {
+  color: #16A34A;
+}
+
+.StatusTitle-Danger i, .StatusTitle-Danger h5 {
+  color: #DC2626;
+}
+
+.StatusTitle-Warning i, .StatusTitle-Warning h5 {
+  color: #db9a17;
+}
+
 /* # Background colors
 ----------------------------------------------- */
 .bg-default {
@@ -7352,20 +7366,6 @@ canvas {
   padding: 0;
   border-radius: 0;
   box-shadow: none;
-}
-
-/* # Title-success
------------------------------------------------ */
-.StatusTitle-Success i, .StatusTitle-Success h5 {
-  color: #16A34A;
-}
-
-.StatusTitle-Danger i, .StatusTitle-Danger h5 {
-  color: #DC2626;
-}
-
-.StatusTitle-Warning i, .StatusTitle-Warning h5 {
-  color: #db9a17;
 }
 
 /* =====================
