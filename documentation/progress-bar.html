@@ -284,50 +284,40 @@
         ========================================== -->               
         <section class="content-body">                 
           <!-- Progress bar -->
-          <!-- Progress Success -->
-          <div
-            id="progressUpload"
-            class="dac-progress"
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            aria-valuenow="25"
-            data-value="25"
-            data-color="#16a34a"
-            data-width="300px"
-            data-height="18px"
-            data-label="true"
-          ></div>
+          <div class="grid gap-2">            
+            <div
+              id="progressUpload"
+              class="dac-progress bg-success"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="25"
+              data-value="25"
+              data-label="true">
+            </div>
 
-          <!-- Progress Warning -->
-          <div
-            id="progressDownload"
-            class="dac-progress"
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            aria-valuenow="60"
-            data-value="60"
-            data-color="#db9a17"
-            data-width="300px"
-            data-height="18px"
-            data-label="true"
-          ></div>
+            <div
+              id="progressDownload"
+              class="dac-progress bg-warning"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="60"
+              data-value="60"
+              data-label="true">
+            </div>
 
-          <!-- Progress Danger -->
-          <div
-            id="progressError"
-            class="dac-progress"
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            aria-valuenow="90"
-            data-value="90"
-            data-color="#dc2626"
-            data-width="300px"
-            data-height="18px"
-            data-label="true"
-          ></div>
+            <div
+              id="progressError"
+              class="dac-progress bg-danger"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="90"
+              data-value="90"
+              data-label="true">
+            </div>
+          </div>
         </section>
       </main>
 

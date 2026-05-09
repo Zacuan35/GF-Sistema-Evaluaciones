@@ -9,28 +9,13 @@ class DacProgressBar {
   init() {
 
     const value = this.element.dataset.value || 0;
-    const color = this.element.dataset.color || "#16a34a";
-    const width = this.element.dataset.width || "100%";
-    const height = this.element.dataset.height || "18px";
-    const showLabel = this.element.dataset.label !== "false";
 
-    this.element.style.setProperty(
-      "--progress-color",
-      color
-    );
-
-    this.element.style.setProperty(
-      "--progress-width",
-      width
-    );
-
-    this.element.style.setProperty(
-      "--progress-height",
-      height
-    );
+    const showLabel =
+      this.element.dataset.label !== "false";
 
     this.element.innerHTML = `
       <div class="dac-progress__bar"></div>
+
       ${
         showLabel
           ? `<span class="dac-progress__label">${value}%</span>`
@@ -60,9 +45,10 @@ class DacProgressBar {
       safeValue
     );
 
-    const label = this.element.querySelector(
-      ".dac-progress__label"
-    );
+    const label =
+      this.element.querySelector(
+        ".dac-progress__label"
+      );
 
     if (label) {
       label.textContent = `${safeValue}%`;
@@ -70,6 +56,11 @@ class DacProgressBar {
   }
 
 }
+
+
+/* =========================
+   Inicialización automática
+========================= */
 
 const progressBars = {};
 
@@ -85,11 +76,37 @@ document
   });
 
 
-// Ejemplo dinámico
+/* =========================
+   Ejemplo dinámico
+========================= */
+
 /*
+
+HTML:
+
+<div
+  id="progressUpload"
+  class="dac-progress bg-success"
+  role="progressbar"
+  aria-valuemin="0"
+  aria-valuemax="100"
+  aria-valuenow="25"
+  data-value="25"
+  data-label="true"
+></div>
+
+
+JavaScript:
+
+progressBars.progressUpload.setValue(80);
+
+
+También puedes usarlo dinámicamente:
+
 setTimeout(() => {
 
-  progressBars.progressUpload.setValue(80);
+  progressBars.progressUpload.setValue(100);
 
 }, 2000);
+
 */

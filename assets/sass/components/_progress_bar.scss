@@ -1,25 +1,21 @@
-/* =====================
-# PROGRESS BAR
-===================== */
 .dac-progress {
   --progress-value: 0%;
   --progress-color: #16a34a;
-  --progress-width: 100%;
-  --progress-height: 18px;
-  --progress-bg: #e5e7eb;
-  --progress-radius: 999px;
+
+  width: 100%;
+  height: 18px;
 
   position: relative;
 
-  width: var(--progress-width);
-  height: var(--progress-height);
+  background: #e5e7eb;
 
-  background: var(--progress-bg);
-
-  border-radius: var(--progress-radius);
+  border-radius: 999px;
 
   overflow: hidden;
 }
+
+
+/* Barra */
 
 .dac-progress__bar {
   width: var(--progress-value);
@@ -31,6 +27,9 @@
 
   transition: width 0.4s ease;
 }
+
+
+/* Texto */
 
 .dac-progress__label {
   position: absolute;
@@ -47,4 +46,34 @@
   color: #111827;
 
   pointer-events: none;
+}
+
+
+/* Colores */
+
+.bg-success {
+  --progress-color: #16a34a;
+}
+
+.bg-info {
+  --progress-color: #0ea5e9;
+}
+
+.bg-warning {
+  --progress-color: #db9a17;
+}
+
+.bg-danger {
+  --progress-color: #dc2626;
+}
+
+
+/* Tamaños opcionales */
+
+.progress-sm {
+  height: 10px;
+}
+
+.progress-lg {
+  height: 26px;
 }
