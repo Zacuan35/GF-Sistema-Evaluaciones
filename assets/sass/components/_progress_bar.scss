@@ -1,0 +1,50 @@
+/* =====================
+# PROGRESS BAR
+===================== */
+.dac-progress {
+  --progress-value: 0%;
+  --progress-color: #16a34a;
+  --progress-width: 100%;
+  --progress-height: 18px;
+  --progress-bg: #e5e7eb;
+  --progress-radius: 999px;
+
+  position: relative;
+
+  width: var(--progress-width);
+  height: var(--progress-height);
+
+  background: var(--progress-bg);
+
+  border-radius: var(--progress-radius);
+
+  overflow: hidden;
+}
+
+.dac-progress__bar {
+  width: var(--progress-value);
+  height: 100%;
+
+  background: var(--progress-color);
+
+  border-radius: inherit;
+
+  transition: width 0.4s ease;
+}
+
+.dac-progress__label {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #111827;
+
+  pointer-events: none;
+}
