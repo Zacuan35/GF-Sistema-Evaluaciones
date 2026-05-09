@@ -3941,6 +3941,16 @@ a.card.card-warning:hover {
 .panel-list .panel-item.warning p {
   font-weight: 400;
 }
+.panel-list .panel-item.disabled {
+  background-color: var(--secondary-color);
+  border-color: var(--tertiary-color);
+}
+.panel-list .panel-item.disabled h6, .panel-list .panel-item.disabled p {
+  color: var(--fifth-color);
+}
+.panel-list .panel-item.disabled p {
+  font-weight: 400;
+}
 
 /* =====================
 # MEDIAQUERIES

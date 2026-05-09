@@ -31,16 +31,23 @@
     &.success{
     background-color: rgba($success-color, 0.1);
     border-color: $success-color;
-      h6,p{color:$success-color;}          
-      p{font-weight:400;}                
+    h6,p{color:$success-color;}          
+    p{font-weight:400;}                
     }
 
     &.warning{
     background-color: rgba($warning-color, 0.1);
     border-color: $warning-color;
-      h6,p{color:$warning-color;}          
-      p{font-weight:400;}                      
-    }    
+    h6,p{color:$warning-color;}          
+    p{font-weight:400;}                      
+    }
+   
+    &.disabled{
+    background-color: var(--secondary-color);
+    border-color: var(--tertiary-color);
+    h6,p{color:var(--fifth-color);}          
+    p{font-weight:400;}                      
+    }        
 
   }     
 }
