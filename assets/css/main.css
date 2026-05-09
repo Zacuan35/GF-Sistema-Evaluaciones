@@ -3942,14 +3942,18 @@ a.card.card-warning:hover {
   font-weight: 400;
 }
 .panel-list .panel-item.disabled {
-  background-color: var(--secondary-color);
-  border-color: var(--tertiary-color);
+  background-color: gainsboro;
+  border-color: #c2c2c2;
+  cursor: not-allowed;
 }
 .panel-list .panel-item.disabled h6, .panel-list .panel-item.disabled p {
-  color: var(--fifth-color);
+  color: #5c5c5c;
 }
 .panel-list .panel-item.disabled p {
   font-weight: 400;
+}
+.panel-list .panel-item.disabled img {
+  filter: grayscale(100%);
 }
 
 /* =====================

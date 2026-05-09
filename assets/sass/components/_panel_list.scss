@@ -43,10 +43,12 @@
     }
    
     &.disabled{
-    background-color: var(--secondary-color);
-    border-color: var(--tertiary-color);
-    h6,p{color:var(--fifth-color);}          
-    p{font-weight:400;}                      
+    background-color: lighten($gray-color, 50%);
+    border-color: lighten($gray-color, 40%);
+    h6,p{color:$gray-color;}          
+    p{font-weight:400;}              
+    cursor:not-allowed;        
+    img{filter: grayscale(100%);}
     }        
 
   }     
