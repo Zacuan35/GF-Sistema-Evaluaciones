@@ -14,13 +14,15 @@ class DacProgressBar {
       this.element.dataset.label !== "false";
 
     this.element.innerHTML = `
-      <div class="dac-progress__bar"></div>
+      <div class="dac-progress__bar">
 
-      ${
-        showLabel
-          ? `<span class="dac-progress__label">${value}%</span>`
-          : ""
-      }
+        ${
+          showLabel
+            ? `<span class="dac-progress__label">${value}%</span>`
+            : ""
+        }
+
+      </div>
     `;
 
     this.setValue(value);
