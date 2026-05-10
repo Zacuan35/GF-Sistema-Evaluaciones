@@ -5632,6 +5632,75 @@ i {
   height: 26px;
 }
 
+/* =====================
+# BOX LINK
+===================== */
+.box-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  /* Opcional: cambiar el cursor al pasar por el enlace */
+  /* Tarjeta principal */
+}
+.box-link:hover {
+  cursor: pointer;
+}
+.box-link .box-icon {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px 20px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--tertiary-color);
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  /* Círculo con ícono */
+  /* Hover sobre la tarjeta: cambia color del icono */
+}
+.box-link .box-icon p {
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  color: var(--primary-text-color);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.box-link .box-icon:hover {
+  border: 1px solid var(--highlight-color);
+}
+.box-link .box-icon .icon-circle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s;
+  color: var(--highlight-color);
+}
+.box-link .box-icon .icon-circle i {
+  color: var(--highlight-color);
+}
+.box-link .box-icon:hover .icon-circle {
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+  color: var(--primary-color);
+}
+.box-link .box-icon:hover .icon-circle i {
+  color: #ffffff;
+}
+.box-link .box-icon:hover p {
+  color: var(--highlight-color);
+}
+
 /*Forms*/
 /* =====================
 # FORM GROUP
@@ -7633,75 +7702,8 @@ canvas {
   box-shadow: none;
 }
 
-/* =====================
-# BOX LINK
-===================== */
-.box-link {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  /* Opcional: cambiar el cursor al pasar por el enlace */
-  /* Tarjeta principal */
-}
-.box-link:hover {
-  cursor: pointer;
-}
-.box-link .box-icon {
-  position: relative;
-  width: 100%;
-  padding: 50px 20px 20px;
-  border-radius: 10px;
-  background-color: var(--primary-color);
-  border: 1px solid var(--tertiary-color);
-  text-align: center;
-  font-family: sans-serif;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
-  /* Círculo con ícono */
-  /* Hover sobre la tarjeta: cambia color del icono */
-}
-.box-link .box-icon p {
-  font-family: "Roboto", serif;
-  font-size: 1rem;
-  color: var(--primary-text-color);
-  font-weight: bold;
-  margin-bottom: 0;
-}
-.box-link .box-icon:hover {
-  border: 1px solid var(--highlight-color);
-}
-.box-link .box-icon .icon-circle {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  background-color: var(--primary-color);
-  transition: background-color 0.3s;
-  color: var(--highlight-color);
-}
-.box-link .box-icon .icon-circle i {
-  color: var(--highlight-color);
-}
-.box-link .box-icon:hover .icon-circle {
-  background-color: var(--highlight-color);
-  border-color: var(--highlight-color);
-  color: var(--primary-color);
-}
-.box-link .box-icon:hover .icon-circle i {
-  color: #ffffff;
-}
-.box-link .box-icon:hover p {
-  color: var(--highlight-color);
-}
-
+/* # Evaluation_progress
+----------------------------------------------- */
 /* =====================
 # FILE-BOX
 ===================== */

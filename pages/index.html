@@ -178,21 +178,35 @@
             <!-- ====== Card ====== --> 
             <div class="card">
               <header class="card-header">
-                <div
-                  id="progressUpload"
-                  class="dac-progress bg-info"
-                  role="progressbar"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  aria-valuenow="25"
-                  data-value="25"
-                  data-label="true">
+                <div class="flex gap-2">
+                  <h6>Avance</h6>
+                  <div
+                    id="progressUpload"
+                    class="dac-progress bg-info"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="25"
+                    data-value="25"
+                    data-label="true">
+                  </div>
                 </div>
               </header>
-              <div class="card-body grid grid-cols-1 md:grid-cols-3">
-                <h6>Carga de objetivos</h6>
-                <h6>Feedback</h6>
-                <h6>Evaluación</h6>
+              <div class="card-body">
+                <div class="evaluation_progress grid flex flex-col md:flex-row justify-between">
+                  <div class="grid gap-2">
+                    <h6>1.- Carga de objetivos</h6>
+                    <p>50% del proceso de evaluación</p>
+                  </div>
+                  <div class="grid gap-2">
+                    <h6>2.- Feedback</h6>
+                    <p>25% del proceso de evaluación</p>
+                  </div>
+                  <div class="grid gap-2">
+                    <h6>3.- Evaluación</h6>
+                    <p>25% del proceso de evaluación</p>
+                  </div>
+                </div>
               </div>
             </div>              
             <!-- ====== Card ====== --> 
