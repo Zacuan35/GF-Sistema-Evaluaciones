@@ -31,7 +31,7 @@ new Chart(skillsChart, {
     labels: ['Aprobado', 'Faltante'],
 
     datasets: [{
-      data: [60, 40]
+      data: [90, 10]
     }]
   },
 
