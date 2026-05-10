@@ -7719,7 +7719,7 @@ canvas {
   position: relative;
   padding-left: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.35rem;
   /* Bullet base */
   /* Línea vertical mobile */
@@ -7746,8 +7746,26 @@ canvas {
   background: #9c9c9c;
   transition: background 0.2s ease;
 }
-.evaluation_progress .evaluation-item h6,
-.evaluation_progress .evaluation-item p {
+.evaluation_progress .evaluation-item .step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  background: darkgray;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  z-index: 2;
+}
+.evaluation_progress .evaluation-item .step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.evaluation_progress .evaluation-item .step-content h6, .evaluation_progress .evaluation-item .step-content p {
   color: darkgray;
 }
 .evaluation_progress .evaluation-item.completed::before {
