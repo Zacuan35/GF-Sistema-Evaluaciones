@@ -175,6 +175,8 @@ canvas {
 
 /* # Evaluation_progress
 ----------------------------------------------- */
+/* # Evaluation_progress
+----------------------------------------------- */
 .evaluation_progress {
   display: flex;
   flex-direction: column;
@@ -182,41 +184,10 @@ canvas {
 
   .evaluation-item {
     position: relative;
-    padding-left: 2rem;
 
     display: flex;
     flex-direction: row;
     gap: 0.35rem;
-
-    /* Bullet base */
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0.35rem;
-      left: 0;
-
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-
-      background: lighten($gray-color, 30%);
-      z-index: 2;
-      transition: all 0.2s ease;
-    }
-
-    /* Línea vertical mobile */
-    &:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      top: 1rem;
-      left: 5px;
-
-      width: 2px;
-      height: calc(100% + 1rem);
-
-      background: lighten($gray-color, 25%);
-      transition: background 0.2s ease;
-    }
 
     .step-number {
       width: 48px;
@@ -234,31 +205,25 @@ canvas {
       color: var(--primary-color);
 
       flex-shrink: 0;
-      z-index: 2;
-    }       
-
-    .step-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-
-      h6,p {
-        color: lighten($gray-color, 30%);
-      }    
-    }    
-    
-  }
-
-  /* =====================
-     COMPLETADO (VERDE)
-  ===================== */
-  .evaluation-item.completed {
-    &::before {
-      background: $success-color;
     }
 
-    &:not(:last-child)::after {
+    .step-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+
+      h6,
+      p {
+        color: lighten($gray-color, 30%);
+      }
+    }
+  }
+
+  /* COMPLETADO */
+  .evaluation-item.completed {
+    .step-number {
       background: $success-color;
+      color: #fff;
     }
 
     h6 {
@@ -270,13 +235,12 @@ canvas {
     }
   }
 
-  /* =====================
-     ACTIVO (VERDE DESTACADO)
-  ===================== */
+  /* ACTIVO */
   .evaluation-item.active {
-    &::before {
+    .step-number {
       background: $success-color;
-      transform: scale(1.15);
+      color: #fff;
+      transform: scale(1.05);
     }
 
     h6 {
@@ -302,25 +266,14 @@ canvas {
       flex: 1;
 
       padding-left: 0;
-      padding-right: 1rem;
-      padding-bottom: 2rem;
+      padding-bottom: 0;
 
-      /* Bullet abajo en desktop */
-      &::before {
-        top: auto;
-        bottom: 0;
-        left: 0;
+      .step-content {
+        text-align: center;
       }
 
-      /* Línea horizontal */
-      &:not(:last-child)::after {
-        top: auto;
-        bottom: 5px;
-        left: 6px;
-        right: 0;
-
-        width: auto;
-        height: 2px;
+      .step-number {
+        margin: 0 auto;
       }
     }
   }

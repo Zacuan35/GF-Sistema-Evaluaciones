@@ -7704,47 +7704,20 @@ canvas {
 
 /* # Evaluation_progress
 ----------------------------------------------- */
+/* # Evaluation_progress
+----------------------------------------------- */
 .evaluation_progress {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  /* =====================
-     COMPLETADO (VERDE)
-  ===================== */
-  /* =====================
-     ACTIVO (VERDE DESTACADO)
-  ===================== */
+  /* COMPLETADO */
+  /* ACTIVO */
 }
 .evaluation_progress .evaluation-item {
   position: relative;
-  padding-left: 2rem;
   display: flex;
   flex-direction: row;
   gap: 0.35rem;
-  /* Bullet base */
-  /* Línea vertical mobile */
-}
-.evaluation_progress .evaluation-item::before {
-  content: "";
-  position: absolute;
-  top: 0.35rem;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: darkgray;
-  z-index: 2;
-  transition: all 0.2s ease;
-}
-.evaluation_progress .evaluation-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  left: 5px;
-  width: 2px;
-  height: calc(100% + 1rem);
-  background: #9c9c9c;
-  transition: background 0.2s ease;
 }
 .evaluation_progress .evaluation-item .step-number {
   width: 48px;
@@ -7758,21 +7731,19 @@ canvas {
   background: darkgray;
   color: var(--primary-color);
   flex-shrink: 0;
-  z-index: 2;
 }
 .evaluation_progress .evaluation-item .step-content {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
-.evaluation_progress .evaluation-item .step-content h6, .evaluation_progress .evaluation-item .step-content p {
+.evaluation_progress .evaluation-item .step-content h6,
+.evaluation_progress .evaluation-item .step-content p {
   color: darkgray;
 }
-.evaluation_progress .evaluation-item.completed::before {
+.evaluation_progress .evaluation-item.completed .step-number {
   background: #16A34A;
-}
-.evaluation_progress .evaluation-item.completed:not(:last-child)::after {
-  background: #16A34A;
+  color: #fff;
 }
 .evaluation_progress .evaluation-item.completed h6 {
   color: #16A34A;
@@ -7780,9 +7751,10 @@ canvas {
 .evaluation_progress .evaluation-item.completed p {
   color: var(--primary-text-color);
 }
-.evaluation_progress .evaluation-item.active::before {
+.evaluation_progress .evaluation-item.active .step-number {
   background: #16A34A;
-  transform: scale(1.15);
+  color: #fff;
+  transform: scale(1.05);
 }
 .evaluation_progress .evaluation-item.active h6 {
   color: #16A34A;
@@ -7803,23 +7775,13 @@ canvas {
   .evaluation_progress .evaluation-item {
     flex: 1;
     padding-left: 0;
-    padding-right: 1rem;
-    padding-bottom: 2rem;
-    /* Bullet abajo en desktop */
-    /* Línea horizontal */
+    padding-bottom: 0;
   }
-  .evaluation_progress .evaluation-item::before {
-    top: auto;
-    bottom: 0;
-    left: 0;
+  .evaluation_progress .evaluation-item .step-content {
+    text-align: center;
   }
-  .evaluation_progress .evaluation-item:not(:last-child)::after {
-    top: auto;
-    bottom: 5px;
-    left: 6px;
-    right: 0;
-    width: auto;
-    height: 2px;
+  .evaluation_progress .evaluation-item .step-number {
+    margin: 0 auto;
   }
 }
 /* =====================
