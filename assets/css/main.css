@@ -7704,6 +7704,89 @@ canvas {
 
 /* # Evaluation_progress
 ----------------------------------------------- */
+.evaluation_progress {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.evaluation_progress .evaluation-item {
+  position: relative;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  /* Bullet */
+  /* Línea vertical mobile */
+}
+.evaluation_progress .evaluation-item::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: darkgray;
+  z-index: 2;
+}
+.evaluation_progress .evaluation-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 5px;
+  width: 2px;
+  height: calc(100% + 1rem);
+  background: #9c9c9c;
+}
+.evaluation_progress .evaluation-item h6, .evaluation_progress .evaluation-item p {
+  color: darkgray;
+}
+.evaluation_progress .evaluation-item.success::before {
+  background: #16A34A;
+}
+.evaluation_progress .evaluation-item.success:not(:last-child)::after {
+  background: #16A34A;
+}
+.evaluation_progress .evaluation-item.success h6 {
+  color: #16A34A;
+}
+.evaluation_progress .evaluation-item.success p {
+  color: var(--primary-text-color);
+}
+
+/* =====================
+# DESKTOP
+===================== */
+@media (min-width: 768px) {
+  .evaluation_progress {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .evaluation_progress .evaluation-item {
+    flex: 1;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 1rem;
+    /* Bullet debajo */
+    /* Línea horizontal inferior */
+  }
+  .evaluation_progress .evaluation-item::before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  .evaluation_progress .evaluation-item:not(:last-child)::after {
+    top: auto;
+    bottom: 5px;
+    left: 18px;
+    width: calc(100% - 24px);
+    height: 2px;
+  }
+}
 /* =====================
 # FILE-BOX
 ===================== */

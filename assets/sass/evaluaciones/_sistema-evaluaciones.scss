@@ -176,5 +176,110 @@ canvas {
 /* # Evaluation_progress
 ----------------------------------------------- */
 .evaluation_progress{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
+  .evaluation-item{
+    position: relative;
+    padding-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    /* Bullet */
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0.35rem;
+      left: 0;
+
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+
+      background: lighten($gray-color, 30%);
+      z-index: 2;
+    }
+
+    /* Línea vertical mobile */
+    &:not(:last-child)::after{
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 5px;
+
+      width: 2px;
+      height: calc(100% + 1rem);
+
+      background: lighten($gray-color, 25%);
+    }
+
+    h6,p{
+      color: lighten($gray-color, 30%);
+    }
+
+    &.success{
+
+      &::before{
+        background: $success-color;
+      }
+
+      &:not(:last-child)::after{
+        background: $success-color;
+      }
+
+      h6{
+        color: $success-color;
+      }
+
+      p{
+        color: var(--primary-text-color);
+      }
+    }
+  }
+}
+
+/* =====================
+# DESKTOP
+===================== */
+@media (min-width: 768px){
+
+  .evaluation_progress{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+
+    .evaluation-item{
+      flex: 1;
+
+      padding-top: 0;
+      padding-bottom: 2rem;
+      padding-left: 0;
+      padding-right: 1rem;
+
+      /* Bullet debajo */
+      &::before{
+        top: auto;
+        bottom: 0;
+
+        left: 0;
+
+        width: 12px;
+        height: 12px;
+      }
+
+      /* Línea horizontal inferior */
+      &:not(:last-child)::after{
+        top: auto;
+        bottom: 5px;
+
+        left: 18px;
+
+        width: calc(100% - 24px);
+        height: 2px;
+      }
+    }
+  }
 }
