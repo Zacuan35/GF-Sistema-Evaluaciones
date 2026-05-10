@@ -4,7 +4,7 @@
   width: 100%;
   height: 18px;
   position: relative;
-  background: #e5e7eb;
+  background: var(--tertiary-color); //#e5e7eb
   border-radius: 999px;
   overflow: hidden;
 }
@@ -26,7 +26,7 @@
 .dac-progress__label {
   font-size: 12px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--primary-color);
   white-space: nowrap;
   pointer-events: none;
 }
