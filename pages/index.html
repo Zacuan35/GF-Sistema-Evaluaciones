@@ -178,7 +178,16 @@
             <!-- ====== Card ====== --> 
             <div class="card">
               <header class="card-header">
-                <h4>Avance</h4>
+                <div
+                  id="progressUpload"
+                  class="dac-progress bg-info"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="25"
+                  data-value="25"
+                  data-label="true">
+                </div>
               </header>
               <div class="card-body grid grid-cols-1 md:grid-cols-3">
                 <h6>Carga de objetivos</h6>
@@ -677,7 +686,7 @@
     <!-- Chart -->    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../assets/js/home-charts.js"></script>
-
+    <script src="../assets/js/progress-bar.js"></script>	 
 
   </body>
 </html>
