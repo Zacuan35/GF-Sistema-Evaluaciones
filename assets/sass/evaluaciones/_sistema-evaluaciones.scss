@@ -1,8 +1,6 @@
 /* =====================
-# SISTEMA EVALUACIONES
+# Face-Item
 ===================== */
-/* # Face-item
------------------------------------------------ */
   .face-item {
     display: flex;
     flex-direction:column;
@@ -42,8 +40,9 @@
     }
   }
 
-/* # Moods
------------------------------------------------ */
+/* =====================
+# Moods
+===================== */
 .moods {
   display: flex;
   flex-direction: row;
@@ -150,8 +149,9 @@
   }
 }
 
-/* # Charts
------------------------------------------------ */
+/* =====================
+# Charts
+===================== */
 /*
 #objectivesChart {
   width: 200px !important;
@@ -173,10 +173,9 @@ canvas {
   box-shadow: none;
 }      
 
-/* # Evaluation_progress
------------------------------------------------ */
-/* # Evaluation_progress
------------------------------------------------ */
+/* =====================
+# Evaluation_progress
+===================== */
 .evaluation_progress {
   display: flex;
   flex-direction: column;
@@ -184,26 +183,21 @@ canvas {
 
   .evaluation-item {
     position: relative;
-
     display: flex;
     flex-direction: row;
-    gap: 0.35rem;
+    gap: 1rem;
 
     .step-number {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       font-size: 24px;
-      font-weight: 600;
-
+      font-weight: 900;
       background: lighten($gray-color, 30%);
       color: var(--primary-color);
-
       flex-shrink: 0;
     }
 
@@ -219,23 +213,17 @@ canvas {
     }
   }
 
-  /* COMPLETADO */
+  /* Completado */
   .evaluation-item.completed {
     .step-number {
       background: $success-color;
       color: #fff;
     }
-
-    h6 {
-      color: $success-color;
-    }
-
-    p {
-      color: var(--primary-text-color);
-    }
+    h6 {color: $success-color;}
+    p {color: var(--primary-text-color);}
   }
 
-  /* ACTIVO */
+  /* Activo */
   .evaluation-item.active {
     .step-number {
       background: $success-color;
@@ -243,19 +231,13 @@ canvas {
       transform: scale(1.05);
     }
 
-    h6 {
-      color: $success-color;
-    }
-
-    p {
-      color: var(--primary-text-color);
-    }
+    h6 {color: $success-color;}
+    p {color: var(--primary-text-color);}
   }
 }
 
-/* =========================
-   DESKTOP
-========================= */
+/* # Desktop
+----------------------------------------------- */
 @media (min-width: 768px) {
   .evaluation_progress {
     flex-direction: row;
@@ -264,17 +246,8 @@ canvas {
 
     .evaluation-item {
       flex: 1;
-
-      padding-left: 0;
-      padding-bottom: 0;
-
-      .step-content {
-        text-align: center;
-      }
-
-      .step-number {
-        margin: 0 auto;
-      }
+      .step-content {text-align: left;}
     }
+
   }
 }

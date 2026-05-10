@@ -7562,10 +7562,8 @@ Colour theme
 
 /*Current-projectProyect*/
 /* =====================
-# SISTEMA EVALUACIONES
+# Face-Item
 ===================== */
-/* # Face-item
------------------------------------------------ */
 .face-item {
   display: flex;
   flex-direction: column;
@@ -7595,8 +7593,9 @@ Colour theme
   color: #16A34A;
 }
 
-/* # Moods
------------------------------------------------ */
+/* =====================
+# Moods
+===================== */
 .moods {
   display: flex;
   flex-direction: row;
@@ -7679,8 +7678,9 @@ Colour theme
   font-weight: 400;
 }
 
-/* # Charts
------------------------------------------------ */
+/* =====================
+# Charts
+===================== */
 /*
 #objectivesChart {
   width: 200px !important;
@@ -7702,22 +7702,21 @@ canvas {
   box-shadow: none;
 }
 
-/* # Evaluation_progress
------------------------------------------------ */
-/* # Evaluation_progress
------------------------------------------------ */
+/* =====================
+# Evaluation_progress
+===================== */
 .evaluation_progress {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  /* COMPLETADO */
-  /* ACTIVO */
+  /* Completado */
+  /* Activo */
 }
 .evaluation_progress .evaluation-item {
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 0.35rem;
+  gap: 1rem;
 }
 .evaluation_progress .evaluation-item .step-number {
   width: 48px;
@@ -7727,7 +7726,7 @@ canvas {
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 900;
   background: darkgray;
   color: var(--primary-color);
   flex-shrink: 0;
@@ -7763,9 +7762,8 @@ canvas {
   color: var(--primary-text-color);
 }
 
-/* =========================
-   DESKTOP
-========================= */
+/* # Desktop
+----------------------------------------------- */
 @media (min-width: 768px) {
   .evaluation_progress {
     flex-direction: row;
@@ -7774,14 +7772,9 @@ canvas {
   }
   .evaluation_progress .evaluation-item {
     flex: 1;
-    padding-left: 0;
-    padding-bottom: 0;
   }
   .evaluation_progress .evaluation-item .step-content {
-    text-align: center;
-  }
-  .evaluation_progress .evaluation-item .step-number {
-    margin: 0 auto;
+    text-align: left;
   }
 }
 /* =====================
