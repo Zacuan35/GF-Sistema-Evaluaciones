@@ -1,79 +1,42 @@
 .dac-progress {
   --progress-value: 0%;
   --progress-color: #16a34a;
-
   width: 100%;
   height: 18px;
-
   position: relative;
-
   background: #e5e7eb;
-
   border-radius: 999px;
-
   overflow: hidden;
 }
 
-
 /* Barra */
-
 .dac-progress__bar {
   width: var(--progress-value);
   height: 100%;
-
   background: var(--progress-color);
-
   border-radius: inherit;
-
   transition: width 0.4s ease;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: relative;
 }
 
-
 /* Texto */
-
 .dac-progress__label {
   font-size: 12px;
   font-weight: 600;
-
   color: #ffffff;
-
   white-space: nowrap;
-
   pointer-events: none;
 }
 
-
 /* Colores */
-
-.bg-success {
-  --progress-color: #16a34a;
-}
-
-.bg-info {
-  --progress-color: #0ea5e9;
-}
-
-.bg-warning {
-  --progress-color: #db9a17;
-}
-
-.bg-danger {
-  --progress-color: #dc2626;
-}
-
+.bg-success {--progress-color: #16a34a;}
+.bg-info {--progress-color: #0ea5e9;}
+.bg-warning {--progress-color: #db9a17;}
+.bg-danger {--progress-color: #dc2626;}
 
 /* Tamaños opcionales */
-
-.progress-sm {
-  height: 10px;
-}
-
-.progress-lg {
-  height: 26px;
-}
+.progress-sm {height: 10px;}
+.progress-lg {height: 26px;}
