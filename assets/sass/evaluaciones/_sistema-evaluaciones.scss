@@ -175,12 +175,12 @@ canvas {
 
 /* # Evaluation_progress
 ----------------------------------------------- */
-.evaluation_progress{
+.evaluation_progress {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 
-  .evaluation-item{
+  .evaluation-item {
     position: relative;
     padding-left: 2rem;
 
@@ -188,8 +188,8 @@ canvas {
     flex-direction: column;
     gap: 0.35rem;
 
-    /* Bullet */
-    &::before{
+    /* Bullet base */
+    &::before {
       content: "";
       position: absolute;
       top: 0.35rem;
@@ -201,10 +201,11 @@ canvas {
 
       background: lighten($gray-color, 30%);
       z-index: 2;
+      transition: all 0.2s ease;
     }
 
     /* Línea vertical mobile */
-    &:not(:last-child)::after{
+    &:not(:last-child)::after {
       content: "";
       position: absolute;
       top: 1rem;
@@ -214,70 +215,86 @@ canvas {
       height: calc(100% + 1rem);
 
       background: lighten($gray-color, 25%);
+      transition: background 0.2s ease;
     }
 
-    h6,p{
+    h6,
+    p {
       color: lighten($gray-color, 30%);
     }
+  }
 
-    &.success{
+  /* =====================
+     COMPLETADO (VERDE)
+  ===================== */
+  .evaluation-item.completed {
+    &::before {
+      background: $success-color;
+    }
 
-      &::before{
-        background: $success-color;
-      }
+    &:not(:last-child)::after {
+      background: $success-color;
+    }
 
-      &:not(:last-child)::after{
-        background: $success-color;
-      }
+    h6 {
+      color: $success-color;
+    }
 
-      h6{
-        color: $success-color;
-      }
+    p {
+      color: var(--primary-text-color);
+    }
+  }
 
-      p{
-        color: var(--primary-text-color);
-      }
+  /* =====================
+     ACTIVO (VERDE DESTACADO)
+  ===================== */
+  .evaluation-item.active {
+    &::before {
+      background: $success-color;
+      transform: scale(1.15);
+    }
+
+    h6 {
+      color: $success-color;
+    }
+
+    p {
+      color: var(--primary-text-color);
     }
   }
 }
 
-/* =====================
-# DESKTOP
-===================== */
-@media (min-width: 768px){
-
-  .evaluation_progress{
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 768px) {
+  .evaluation_progress {
     flex-direction: row;
     align-items: flex-start;
     gap: 0;
 
-    .evaluation-item{
+    .evaluation-item {
       flex: 1;
 
-      padding-top: 0;
-      padding-bottom: 2rem;
       padding-left: 0;
       padding-right: 1rem;
+      padding-bottom: 2rem;
 
-      /* Bullet debajo */
-      &::before{
+      /* Bullet abajo en desktop */
+      &::before {
         top: auto;
         bottom: 0;
-
         left: 0;
-
-        width: 12px;
-        height: 12px;
       }
 
-      /* Línea horizontal inferior */
-      &:not(:last-child)::after{
+      /* Línea horizontal */
+      &:not(:last-child)::after {
         top: auto;
         bottom: 5px;
+        left: 6px;
+        right: 0;
 
-        left: 18px;
-
-        width: calc(100% - 24px);
+        width: auto;
         height: 2px;
       }
     }

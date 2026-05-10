@@ -7708,6 +7708,12 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  /* =====================
+     COMPLETADO (VERDE)
+  ===================== */
+  /* =====================
+     ACTIVO (VERDE DESTACADO)
+  ===================== */
 }
 .evaluation_progress .evaluation-item {
   position: relative;
@@ -7715,7 +7721,7 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  /* Bullet */
+  /* Bullet base */
   /* Línea vertical mobile */
 }
 .evaluation_progress .evaluation-item::before {
@@ -7728,6 +7734,7 @@ canvas {
   border-radius: 50%;
   background: darkgray;
   z-index: 2;
+  transition: all 0.2s ease;
 }
 .evaluation_progress .evaluation-item:not(:last-child)::after {
   content: "";
@@ -7737,26 +7744,38 @@ canvas {
   width: 2px;
   height: calc(100% + 1rem);
   background: #9c9c9c;
+  transition: background 0.2s ease;
 }
-.evaluation_progress .evaluation-item h6, .evaluation_progress .evaluation-item p {
+.evaluation_progress .evaluation-item h6,
+.evaluation_progress .evaluation-item p {
   color: darkgray;
 }
-.evaluation_progress .evaluation-item.success::before {
+.evaluation_progress .evaluation-item.completed::before {
   background: #16A34A;
 }
-.evaluation_progress .evaluation-item.success:not(:last-child)::after {
+.evaluation_progress .evaluation-item.completed:not(:last-child)::after {
   background: #16A34A;
 }
-.evaluation_progress .evaluation-item.success h6 {
+.evaluation_progress .evaluation-item.completed h6 {
   color: #16A34A;
 }
-.evaluation_progress .evaluation-item.success p {
+.evaluation_progress .evaluation-item.completed p {
+  color: var(--primary-text-color);
+}
+.evaluation_progress .evaluation-item.active::before {
+  background: #16A34A;
+  transform: scale(1.15);
+}
+.evaluation_progress .evaluation-item.active h6 {
+  color: #16A34A;
+}
+.evaluation_progress .evaluation-item.active p {
   color: var(--primary-text-color);
 }
 
-/* =====================
-# DESKTOP
-===================== */
+/* =========================
+   DESKTOP
+========================= */
 @media (min-width: 768px) {
   .evaluation_progress {
     flex-direction: row;
@@ -7765,25 +7784,23 @@ canvas {
   }
   .evaluation_progress .evaluation-item {
     flex: 1;
-    padding-top: 0;
-    padding-bottom: 2rem;
     padding-left: 0;
     padding-right: 1rem;
-    /* Bullet debajo */
-    /* Línea horizontal inferior */
+    padding-bottom: 2rem;
+    /* Bullet abajo en desktop */
+    /* Línea horizontal */
   }
   .evaluation_progress .evaluation-item::before {
     top: auto;
     bottom: 0;
     left: 0;
-    width: 12px;
-    height: 12px;
   }
   .evaluation_progress .evaluation-item:not(:last-child)::after {
     top: auto;
     bottom: 5px;
-    left: 18px;
-    width: calc(100% - 24px);
+    left: 6px;
+    right: 0;
+    width: auto;
     height: 2px;
   }
 }
