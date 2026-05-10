@@ -5576,11 +5576,10 @@ i {
 }
 .dac-progress {
   --progress-value: 0%;
-  --progress-color: #16a34a;
   width: 100%;
   height: 18px;
   position: relative;
-  background: var(--tertiary-color); /*#e5e7eb*/
+  background: var(--tertiary-color);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -5589,7 +5588,6 @@ i {
 .dac-progress__bar {
   width: var(--progress-value);
   height: 100%;
-  background: var(--progress-color);
   border-radius: inherit;
   transition: width 0.4s ease;
   display: flex;
@@ -5605,23 +5603,24 @@ i {
   color: var(--primary-color);
   white-space: nowrap;
   pointer-events: none;
+  padding: 0 8px;
 }
 
-/* Colores */
-.bg-success {
-  --progress-color: #16a34a;
+/* Estados */
+.bg-success .dac-progress__bar {
+  background: #16A34A;
 }
 
-.bg-info {
-  --progress-color: #0ea5e9;
+.bg-info .dac-progress__bar {
+  background: var(--highlight-color);
 }
 
-.bg-warning {
-  --progress-color: #db9a17;
+.bg-warning .dac-progress__bar {
+  background: #db9a17;
 }
 
-.bg-danger {
-  --progress-color: #dc2626;
+.bg-danger .dac-progress__bar {
+  background: #DC2626;
 }
 
 /* Tamaños opcionales */

@@ -1,10 +1,9 @@
 .dac-progress {
   --progress-value: 0%;
-  --progress-color: #16a34a;
   width: 100%;
   height: 18px;
   position: relative;
-  background: var(--tertiary-color); /*#e5e7eb*/
+  background: var(--tertiary-color);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -13,7 +12,6 @@
 .dac-progress__bar {
   width: var(--progress-value);
   height: 100%;
-  background: var(--progress-color);
   border-radius: inherit;
   transition: width 0.4s ease;
   display: flex;
@@ -29,13 +27,14 @@
   color: var(--primary-color);
   white-space: nowrap;
   pointer-events: none;
+  padding: 0 8px;
 }
 
-/* Colores */
-.bg-success {--progress-color: #16a34a;}
-.bg-info {--progress-color: #0ea5e9;}
-.bg-warning {--progress-color: #db9a17;}
-.bg-danger {--progress-color: #dc2626;}
+/* Estados */
+.bg-success .dac-progress__bar {background: $success-color;}
+.bg-info .dac-progress__bar {background: var(--highlight-color);}
+.bg-warning .dac-progress__bar {background: $warning-color;}
+.bg-danger .dac-progress__bar {background: $danger-color;}
 
 /* Tamaños opcionales */
 .progress-sm {height: 10px;}
