@@ -7794,27 +7794,44 @@ canvas {
 .smart {
   display: flex;
   gap: 0.5rem;
+  /* =====================
+  # MOBILE
+  ===================== */
 }
 .smart .item {
-  width: 6rem;
-  height: 6rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: var(--primary-color);
   border: 1px solid var(--highlight-color);
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Montserrat", serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2rem;
   color: var(--highlight-color);
   transition: transform 0.2s ease;
   cursor: pointer;
 }
 .smart .item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   background-color: var(--highlight-color);
   color: var(--primary-color);
+}
+@media (min-width: 1024px) {
+  .smart {
+    gap: 0.35rem;
+  }
+  .smart .item {
+    width: 6rem;
+    height: 6rem;
+    font-size: 4rem;
+    border-radius: 0.5rem;
+  }
+  .smart .item:hover {
+    transform: translateY(-5px);
+  }
 }
 
 /* =====================
