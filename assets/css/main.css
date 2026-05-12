@@ -7819,6 +7819,10 @@ canvas {
   background-color: var(--highlight-color);
   color: var(--primary-color);
 }
+.smart .item.active {
+  background-color: var(--highlight-color);
+  color: var(--primary-color);
+}
 @media (min-width: 1024px) {
   .smart {
     gap: 0.35rem;
