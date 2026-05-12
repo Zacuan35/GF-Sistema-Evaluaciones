@@ -2,7 +2,6 @@
 # SIDEBAR LAYOUT
 ===================== */
 
-// Make sure jQuery has been loaded before app.js
 if (typeof jQuery === "undefined") {
   throw new Error("AdminLTE requires jQuery");
 }
@@ -16,57 +15,30 @@ $.AdminLTE = {};
  * -------------------- */
 
 $.AdminLTE.options = {
-  // Add slimscroll to navbar menus
+
   navbarMenuSlimscroll: true,
   navbarMenuSlimscrollWidth: "3px",
   navbarMenuHeight: "200px",
 
-  // Sidebar push menu toggle button selector
   sidebarToggleSelector: "[data-toggle='offcanvas']",
 
-  // Activate sidebar push menu
   sidebarPushMenu: true,
 
-  // Activate sidebar slimscroll if fixed layout is enabled
-  sidebarSlimScroll: true,
-
-  // Global colors
-  colors: {
-    lightBlue: "#3c8dbc",
-    red: "#f56954",
-    green: "#00a65a",
-    aqua: "#00c0ef",
-    yellow: "#f39c12",
-    blue: "#0073b7",
-    navy: "#001F3F",
-    teal: "#39CCCC",
-    olive: "#3D9970",
-    lime: "#01FF70",
-    orange: "#FF851B",
-    fuchsia: "#F012BE",
-    purple: "#8E24AA",
-    maroon: "#D81B60",
-    black: "#222222",
-    gray: "#d2d6de"
-  }
+  sidebarSlimScroll: true
 };
 
 /* ------------------
- * - Implementation -
+ * - Init -
  * ------------------ */
 
 $(function () {
 
-  // Easy access to options
   var o = $.AdminLTE.options;
 
-  // Activate layout
   $.AdminLTE.layout.activate();
 
-  // Enable sidebar tree view
   $.AdminLTE.tree('.sidebar');
 
-  // Navbar slimscroll
   if (o.navbarMenuSlimscroll && typeof $.fn.slimscroll !== 'undefined') {
 
     $(".navbar .menu")
@@ -78,14 +50,9 @@ $(function () {
       .css("width", "100%");
   }
 
-  // Activate sidebar push menu
   if (o.sidebarPushMenu) {
     $.AdminLTE.pushMenu(o.sidebarToggleSelector);
   }
-
-  /* ------------------------
-   * INITIALIZE BUTTON TOGGLE
-   * ------------------------ */
 
   $('.btn-group[data-toggle="btn-toggle"]').each(function () {
 
@@ -103,7 +70,7 @@ $(function () {
 });
 
 /* ----------------------
- * - AdminLTE Functions -
+ * - Layout -
  * ---------------------- */
 
 $.AdminLTE.layout = {
@@ -123,21 +90,19 @@ $.AdminLTE.layout = {
 
   fix: function () {
 
-    // Get dimensions
-    var headerHeight = $('.main-header').outerHeight() || 0;
-    var footerHeight = $('.main-footer').outerHeight() || 0;
+    var header = $('.main-header').outerHeight() || 0;
+    var footer = $('.main-footer').outerHeight() || 0;
 
-    var neg = headerHeight + footerHeight;
+    var neg = header + footer;
 
     var windowHeight = $(window).height();
     var sidebarHeight = $(".sidebar").height();
 
-    // Fixed layout
     if ($("body").hasClass("fixed")) {
 
       $(".content-wrapper, .right-side").css(
-        'min-height',
-        windowHeight - footerHeight
+        "min-height",
+        windowHeight - footer
       );
 
     } else {
@@ -145,14 +110,14 @@ $.AdminLTE.layout = {
       if (windowHeight >= sidebarHeight) {
 
         $(".content-wrapper, .right-side").css(
-          'min-height',
+          "min-height",
           windowHeight - neg
         );
 
       } else {
 
         $(".content-wrapper, .right-side").css(
-          'min-height',
+          "min-height",
           sidebarHeight
         );
       }
@@ -161,44 +126,30 @@ $.AdminLTE.layout = {
 
   fixSidebar: function () {
 
-    // Non fixed layout
     if (!$("body").hasClass("fixed")) {
 
       if (typeof $.fn.slimScroll !== 'undefined') {
-        $(".sidebar").slimScroll({
-          destroy: true
-        }).height("auto");
+        $(".sidebar").slimScroll({ destroy: true }).height("auto");
       }
 
       return;
     }
 
-    // Fixed layout requires slimscroll
     if (typeof $.fn.slimScroll === 'undefined') {
-
       if (window.console) {
-        console.error(
-          "Error: the fixed layout requires the slimscroll plugin!"
-        );
+        console.error("SlimScroll is required for fixed layout");
       }
-
       return;
     }
 
-    // Enable slimscroll
     if ($.AdminLTE.options.sidebarSlimScroll) {
 
       $(".sidebar")
-        .slimScroll({
-          destroy: true
-        })
+        .slimScroll({ destroy: true })
         .height("auto");
 
       $(".sidebar").slimscroll({
-        height: (
-          $(window).height() - $(".main-header").height()
-        ) + "px",
-
+        height: ($(window).height() - $(".main-header").height()) + "px",
         color: "rgba(0,0,0,0.2)",
         size: "3px"
       });
@@ -206,79 +157,69 @@ $.AdminLTE.layout = {
   }
 };
 
-/* =====================
- * PushMenu
- * ===================== */
+/* ----------------------
+ * - Push Menu -
+ * ---------------------- */
 
 $.AdminLTE.pushMenu = function (toggleBtn) {
 
-  // Sidebar toggle
   $(toggleBtn).on("click", function (e) {
 
     e.preventDefault();
 
-    $("body").toggleClass('sidebar-collapse');
-    $("body").toggleClass('sidebar-open');
+    $("body").toggleClass("sidebar-collapse");
+    $("body").toggleClass("sidebar-open");
   });
 
-  // Close sidebar on mobile when clicking content
   $(".content-wrapper").on("click", function () {
 
     if (
       $(window).width() <= 767 &&
       $("body").hasClass("sidebar-open")
     ) {
-      $("body").removeClass('sidebar-open');
+      $("body").removeClass("sidebar-open");
     }
   });
 };
 
-/* =====================
- * Tree Menu
- * ===================== */
+/* ----------------------
+ * - Tree Menu -
+ * ---------------------- */
 
 $.AdminLTE.tree = function (menu) {
 
   $("li a", $(menu)).on("click", function (e) {
 
     var $this = $(this);
-    var checkElement = $this.next();
+    var next = $this.next();
 
-    // Open/close only treeview menus
-    if (checkElement.is('.treeview-menu')) {
+    if (next.is(".treeview-menu")) {
 
       e.preventDefault();
 
-      // Menu already open
-      if (checkElement.is(':visible')) {
+      if (next.is(":visible")) {
 
-        checkElement.slideUp('normal', function () {
-          checkElement.removeClass('menu-open');
+        next.slideUp("normal", function () {
+          next.removeClass("menu-open");
         });
 
-        checkElement.parent("li").removeClass("active");
+        next.parent("li").removeClass("active");
 
       } else {
 
-        // Parent menu
-        var parent = $this.parents('ul').first();
+        var parent = $this.parents("ul").first();
 
-        // Close other opened menus
-        var ul = parent.find('ul:visible').slideUp('normal');
+        parent.find("ul:visible").slideUp("normal").removeClass("menu-open");
 
-        ul.removeClass('menu-open');
-
-        // Current parent li
         var parentLi = $this.parent("li");
 
-        // Open current menu
-        checkElement.slideDown('normal', function () {
+        next.slideDown("normal", function () {
 
-          checkElement.addClass('menu-open');
+          next.addClass("menu-open");
 
-          parent.find('li.active').removeClass('active');
+          parent.find("li.active").removeClass("active");
 
-          parentLi.addClass('active');
+          parentLi.addClass("active");
         });
       }
     }
