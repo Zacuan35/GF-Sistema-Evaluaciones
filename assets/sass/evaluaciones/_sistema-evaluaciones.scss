@@ -251,3 +251,43 @@ canvas {
 
   }
 }
+
+/* =====================
+# Box
+===================== */
+.box{
+  padding: 1rem;
+  background-color: lighten($gray-color, 50%);
+  border-radius: 1rem;
+}
+
+/* =====================
+# Smart
+===================== */
+.smart {
+  display: flex;
+  gap: 0.5rem;
+
+  .item {
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--highlight-color);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 4rem;
+    color:var(--highlight-color);    
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      background-color: var(--highlight-color);
+      color:var(--primary-color);
+    }
+  }
+}
