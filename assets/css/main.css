@@ -7794,9 +7794,8 @@ canvas {
 .smart {
   display: flex;
   gap: 0.5rem;
-  /* =====================
-  # MOBILE
-  ===================== */
+  /* # Mobile
+  ----------------------------------------------- */
 }
 .smart .item {
   width: 3.5rem;
@@ -7836,6 +7835,25 @@ canvas {
   .smart .item:hover {
     transform: translateY(-5px);
   }
+}
+
+/* =====================
+# Tutorial-link
+===================== */
+.tutorial_link {
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--fifth-color);
+}
+.tutorial_link i {
+  color: var(--fifth-color);
+}
+.tutorial_link:hover {
+  color: var(--highlight-color);
+}
+.tutorial_link:hover i {
+  color: var(--highlight-color);
 }
 
 /* =====================

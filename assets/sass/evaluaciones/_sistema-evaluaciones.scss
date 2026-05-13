@@ -296,9 +296,8 @@ canvas {
     }
   }
 
-  /* =====================
-  # MOBILE
-  ===================== */
+  /* # Mobile
+  ----------------------------------------------- */
   @media (min-width: 1024px) {
     gap: 0.35rem;
 
@@ -312,5 +311,20 @@ canvas {
         transform: translateY(-5px);
       }
     }
+  }
+}
+
+/* =====================
+# Tutorial-link
+===================== */
+.tutorial_link{
+  font-family:$primary-font;
+  font-size:1rem;
+  font-weight: 700;
+  color:var(--fifth-color);
+  i{color:var(--fifth-color);}
+  &:hover{
+    color: var(--highlight-color);
+    i{color:var(--highlight-color);}
   }
 }
