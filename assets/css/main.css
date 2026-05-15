@@ -7877,4 +7877,92 @@ canvas {
   background-color: var(--tertiary-color);
 }
 
+/* =====================
+# MODAL
+===================== */
+.modal-objetive {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+.modal-objetive .modal-content {
+  background-color: var(--primary-color);
+  padding: 0;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-objetive .modal-content .modal-header,
+.modal-objetive .modal-content .modal-body,
+.modal-objetive .modal-content .modal-footer {
+  padding: 1rem;
+}
+.modal-objetive .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.modal-objetive .modal-content .modal-header i {
+  color: var(--highlight-color);
+}
+.modal-objetive .modal-content .modal-header h2 {
+  margin: 0;
+}
+.modal-objetive .modal-content .modal-header .btn-close {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--tertiary-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.modal-objetive .modal-content .modal-header .btn-close:hover {
+  color: var(--primary-text-color);
+}
+.modal-objetive .modal-content .modal-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.modal-objetive .modal-content .modal-footer {
+  border-top: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* # Sólo para este proyecto
+----------------------------------------------- */
+/*
+.modal {
+  .tabs-container {
+    margin-bottom: 0;
+  }
+}
+*/
+/* =====================
+# MEDIAQUERIES
+===================== */
+/* # Mobile
+----------------------------------------------- */
+/*A partir de 576px se aplicarán estos estilos*/
+/* # Tablet
+----------------------------------------------- */
+/*A partir de 768px se aplicarán estos estilos*/
+@media (min-width: 768px) {
+  .modal-objetive .modal-content {
+    max-width: 1000px;
+  }
+}
+/* # Desktop
+----------------------------------------------- */
+/*A partir de 992px y 1200 se aplicarán estos estilos*/
+
 /*# sourceMappingURL=main.css.map */
