@@ -7892,6 +7892,13 @@ canvas {
   overflow: auto;
   justify-content: center;
   align-items: center;
+  /*
+  .modal-info{
+    background-color: red;
+    padding: 2rem;
+    width: 50%;
+  }
+  */
 }
 .modal-objetive .modal-content {
   background-color: var(--primary-color);
@@ -7910,9 +7917,6 @@ canvas {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--secondary-color);
-}
-.modal-objetive .modal-content .modal-header i {
-  color: var(--highlight-color);
 }
 .modal-objetive .modal-content .modal-header h2 {
   margin: 0;
