@@ -7922,7 +7922,8 @@ canvas {
   width: 100%;
   max-width: 1000px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .modal-objetive .modal-content .modal-header,
 .modal-objetive .modal-content .modal-body,
@@ -7951,6 +7952,7 @@ canvas {
 .modal-objetive .modal-content .modal-body {
   max-height: 70vh;
   overflow-y: auto;
+  flex: 1;
 }
 .modal-objetive .modal-content .modal-footer {
   border-top: 1px solid var(--secondary-color);
@@ -7958,8 +7960,12 @@ canvas {
   justify-content: flex-end;
   gap: 1rem;
 }
+.modal-objetive.has-panel {
+  align-items: stretch;
+}
 .modal-objetive.has-panel .modal-info {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .modal-objetive.has-panel .modal-content {
   max-width: 700px;
@@ -7979,16 +7985,16 @@ canvas {
 ===================== */
 /* # Mobile
 ----------------------------------------------- */
-/*A partir de 576px se aplicarán estos estilos*/
 /* # Tablet
 ----------------------------------------------- */
-/*A partir de 768px se aplicarán estos estilos*/
 @media (min-width: 768px) {
   .modal-objetive.has-panel {
     flex-direction: row;
+    align-items: stretch;
   }
   .modal-objetive.has-panel .modal-info {
-    display: block;
+    display: flex;
+    width: 320px;
   }
   .modal-objetive.has-panel .modal-content {
     max-width: 700px;
@@ -8017,6 +8023,5 @@ canvas {
 }
 /* # Desktop
 ----------------------------------------------- */
-/*A partir de 992px y 1200 se aplicarán estos estilos*/
 
 /*# sourceMappingURL=main.css.map */
