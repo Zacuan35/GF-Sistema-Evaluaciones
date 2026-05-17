@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-eye:before {
+  content: "\e937";
+}
+.icon-eye-slash:before {
+  content: "\e939";
+}
 .icon-face-sad-tear:before {
   content: "\e917";
 }
