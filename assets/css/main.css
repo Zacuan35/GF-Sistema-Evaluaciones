@@ -7900,13 +7900,10 @@ canvas {
   overflow: auto;
   justify-content: center;
   align-items: center;
-  /*
-  .modal-info{
-    background-color: red;
-    padding: 2rem;
-    width: 50%;
-  }
-  */
+}
+.modal-objetive .modal-info {
+  background-color: red;
+  padding: 2rem;
 }
 .modal-objetive .modal-content {
   background-color: var(--primary-color);
