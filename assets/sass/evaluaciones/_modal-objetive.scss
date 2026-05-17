@@ -30,6 +30,11 @@
     background-color: var(--secondary-color);
     color: var(--primary-text-color);
     padding: 2rem;
+    
+    .modal-info-text {
+      transition: all 0.2s ease;
+      line-height: 1.4;
+    }    
   }
 
   /* ===== Contenido principal ===== */

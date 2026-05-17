@@ -7918,6 +7918,10 @@ canvas {
   color: var(--primary-text-color);
   padding: 2rem;
 }
+.modal-objetive .modal-info .modal-info-text {
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
 .modal-objetive .modal-content {
   background-color: var(--primary-color);
   width: 100%;
