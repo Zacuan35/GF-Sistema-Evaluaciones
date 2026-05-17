@@ -5,73 +5,94 @@
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0;
-  top: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
+  padding: 1rem;
   background-color: rgba(0, 0, 0, 0.7);
-  overflow: auto;
-  //display: flex;
-  justify-content: center; 
+  overflow-y: auto;
+
+  justify-content: center;
   align-items: center;
 
-  .modal-info{
-    background-color: red;
-    padding: 2rem;
-    
+  /* ===== Layout ===== */
+  gap: 0;
+
+  .modal-info,
+  .modal-content {
+    border-radius: 0;
   }
 
+  /* ===== Panel lateral ===== */
+  .modal-info {
+    display: none;
+    width: 320px;
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+    padding: 2rem;
+  }
+
+  /* ===== Contenido principal ===== */
   .modal-content {
     background-color: var(--primary-color);
-    //margin: 5% auto;
-    padding: 0;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 
     .modal-header,
     .modal-body,
     .modal-footer {
-      padding: 1rem; 
-    } 
-    
+      padding: 1rem;
+    }
+
     .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--secondary-color); 
-    
-      h2{
-        margin:0;
+      border-bottom: 1px solid var(--secondary-color);
+
+      h2 {
+        margin: 0;
       }
-    
+
       .btn-close {
         font-size: 24px;
         font-weight: bold;
         color: var(--tertiary-color);
         cursor: pointer;
         transition: color 0.3s;
-      
+
         &:hover {
           color: var(--primary-text-color);
-        }  
-      }  
-    } 
+        }
+      }
+    }
 
     .modal-body {
-      max-height: 400px;
+      max-height: 70vh;
       overflow-y: auto;
     }
-    
+
     .modal-footer {
       border-top: 1px solid var(--secondary-color);
       display: flex;
-      justify-content: flex-end; 
+      justify-content: flex-end;
       gap: 1rem;
     }
+  }
 
-  }  
-  
+  /* ===== Modal con panel ===== */
+  &.has-panel {
+
+    .modal-info {
+      display: block;
+    }
+
+    .modal-content {
+      max-width: 700px;
+    }
+  }
 }
 
 /* # Sólo para este proyecto
@@ -87,22 +108,63 @@
 /* =====================
 # MEDIAQUERIES
 ===================== */
+
 /* # Mobile
 ----------------------------------------------- */
 /*A partir de 576px se aplicarán estos estilos*/
 @media (min-width: 576px) {}
+
 /* # Tablet
 ----------------------------------------------- */
 /*A partir de 768px se aplicarán estos estilos*/
 @media (min-width: 768px) {
 
   .modal-objetive {
-    .modal-content {    
-      max-width: 1000px;
-    }    
-  }
 
+    &.has-panel {
+      flex-direction: row;
+
+      .modal-info {
+        display: block;
+      }
+
+      .modal-content {
+        max-width: 700px;
+      }
+    }
+
+    &:not(.has-panel) {
+
+      .modal-content {
+        max-width: 1000px;
+      }
+    }
+  }
 }
+
+/* # Mobile layout para panel
+----------------------------------------------- */
+@media (max-width: 767px) {
+
+  .modal-objetive {
+    align-items: flex-start;
+    padding-top: 2rem;
+
+    &.has-panel {
+      flex-direction: column;
+
+      .modal-info {
+        width: 100%;
+      }
+
+      .modal-content {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
 /* # Desktop
 ----------------------------------------------- */
 /*A partir de 992px y 1200 se aplicarán estos estilos*/
