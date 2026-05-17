@@ -15,12 +15,12 @@
   justify-content: center;
   align-items: center;
 
-  /* ===== Layout ===== */
-  gap: 0;
-
-  .modal-info,
-  .modal-content {
-    border-radius: 0;
+  .modal-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
   }
 
   /* ===== Panel lateral ===== */
@@ -74,7 +74,6 @@
     .modal-body {
       max-height: 70vh;
       overflow-y: auto;
-      flex: 1;
     }
 
     .modal-footer {
@@ -87,11 +86,9 @@
 
   /* ===== Modal con panel ===== */
   &.has-panel {
-    align-items: stretch;
 
     .modal-info {
-      display: flex;
-      flex-direction: column;
+      display: block;
     }
 
     .modal-content {
@@ -100,37 +97,21 @@
   }
 }
 
-/* # Sólo para este proyecto
------------------------------------------------ */
-/*
-.modal {
-  .tabs-container {
-    margin-bottom: 0;
-  }
-}
-*/
-
 /* =====================
-# MEDIAQUERIES
+# TABLET+
 ===================== */
-
-/* # Mobile
------------------------------------------------ */
-@media (min-width: 576px) {}
-
-/* # Tablet
------------------------------------------------ */
 @media (min-width: 768px) {
 
   .modal-objetive {
 
     &.has-panel {
-      flex-direction: row;
-      align-items: stretch;
+
+      .modal-wrapper {
+        flex-direction: row;
+      }
 
       .modal-info {
-        display: flex;
-        width: 320px;
+        display: block;
       }
 
       .modal-content {
@@ -147,16 +128,20 @@
   }
 }
 
-/* # Mobile layout para panel
------------------------------------------------ */
+/* =====================
+# MOBILE
+===================== */
 @media (max-width: 767px) {
 
   .modal-objetive {
     align-items: flex-start;
     padding-top: 2rem;
 
-    &.has-panel {
+    .modal-wrapper {
       flex-direction: column;
+    }
+
+    &.has-panel {
 
       .modal-info {
         width: 100%;
@@ -169,9 +154,3 @@
     }
   }
 }
-
-/* # Desktop
------------------------------------------------ */
-@media (min-width: 992px) {}
-
-@media (min-width: 1200px) {}

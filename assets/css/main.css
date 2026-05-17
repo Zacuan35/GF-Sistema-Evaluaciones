@@ -7900,15 +7900,16 @@ canvas {
   overflow-y: auto;
   justify-content: center;
   align-items: center;
-  /* ===== Layout ===== */
-  gap: 0;
   /* ===== Panel lateral ===== */
   /* ===== Contenido principal ===== */
   /* ===== Modal con panel ===== */
 }
-.modal-objetive .modal-info,
-.modal-objetive .modal-content {
-  border-radius: 0;
+.modal-objetive .modal-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 .modal-objetive .modal-info {
   display: none;
@@ -7952,7 +7953,6 @@ canvas {
 .modal-objetive .modal-content .modal-body {
   max-height: 70vh;
   overflow-y: auto;
-  flex: 1;
 }
 .modal-objetive .modal-content .modal-footer {
   border-top: 1px solid var(--secondary-color);
@@ -7960,41 +7960,22 @@ canvas {
   justify-content: flex-end;
   gap: 1rem;
 }
-.modal-objetive.has-panel {
-  align-items: stretch;
-}
 .modal-objetive.has-panel .modal-info {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 .modal-objetive.has-panel .modal-content {
   max-width: 700px;
 }
 
-/* # Sólo para este proyecto
------------------------------------------------ */
-/*
-.modal {
-  .tabs-container {
-    margin-bottom: 0;
-  }
-}
-*/
 /* =====================
-# MEDIAQUERIES
+# TABLET+
 ===================== */
-/* # Mobile
------------------------------------------------ */
-/* # Tablet
------------------------------------------------ */
 @media (min-width: 768px) {
-  .modal-objetive.has-panel {
+  .modal-objetive.has-panel .modal-wrapper {
     flex-direction: row;
-    align-items: stretch;
   }
   .modal-objetive.has-panel .modal-info {
-    display: flex;
-    width: 320px;
+    display: block;
   }
   .modal-objetive.has-panel .modal-content {
     max-width: 700px;
@@ -8003,14 +7984,15 @@ canvas {
     max-width: 1000px;
   }
 }
-/* # Mobile layout para panel
------------------------------------------------ */
+/* =====================
+# MOBILE
+===================== */
 @media (max-width: 767px) {
   .modal-objetive {
     align-items: flex-start;
     padding-top: 2rem;
   }
-  .modal-objetive.has-panel {
+  .modal-objetive .modal-wrapper {
     flex-direction: column;
   }
   .modal-objetive.has-panel .modal-info {
@@ -8021,7 +8003,5 @@ canvas {
     max-width: 100%;
   }
 }
-/* # Desktop
------------------------------------------------ */
 
 /*# sourceMappingURL=main.css.map */
