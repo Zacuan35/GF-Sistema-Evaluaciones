@@ -225,30 +225,40 @@
       </footer>
 
       <!-- ====== Modal-01 ====== -->
-      <div id="modal-01" class="modal">
-        <div class="modal-content">
-          <!-- ------ Modal-header ------ -->
-          <div class="modal-header">
-            <div class="flex items-center gap-2">
-              <i class="icon-question-mark-circle icon-xl"></i>
-              <h2>Agregar objetivo</h2>
-            </div>
-            <span class="btn-close" data-dismiss="modal">
-              <i class="icon-x-mark"></i>
-            </span>
+      <div id="modal-01" class="modal-objetive">
+        <div class="modal-wrapper">
+          <div class="modal-info">
+            <h5 class="modal-info-title">
+              Ayuda contextual
+            </h5>            
+            <p class="modal-info-text">
+              Selecciona un campo para ver ayuda contextual
+            </p>
           </div>
-          <!-- ------ Modal-body ------ -->
-          <div class="modal-body grid gap-5">                
-            <!-- Form -->
-            <form class="grid gap-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2">
+          <div class="modal-content">
+            <!-- ------ Modal-header ------ -->
+            <div class="modal-header">
+              <div class="flex items-center gap-2">
+                <button class="btn-circle btn-default-inverse btn-toggle-panel">
+                  <i class="icon-eye"></i>
+                </button>              
+                <h2>Agregar objetivo</h2>
+              </div>
+              <span class="btn-close" data-dismiss="modal">
+                <i class="fa-solid fa-xmark"></i>
+              </span>
+            </div>
+            <!-- ------ Modal-body ------ -->
+            <div class="modal-body grid gap-5">
+              <!-- Form -->
+              <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">                
                 <div class="item">                    
                   <label for="object">Objetivo <span>*</span></label>
-                  <input class="form-control" type="text" id="object" name="object" placeholder="Establece un objetivo de manera clara y concisa." required>
+                  <input class="form-control" id="object" type="text" name="object" placeholder="Establece un objetivo de manera clara y concisa." required>
                 </div>        
                 <div class="item">
                   <label for="business-approach">Enfoque de negocio <span>*</span></label>
-                  <select id="business-approach" name="business-approach" class="form-control" required>
+                  <select class="form-control" id="business-approach" name="business-approach" required>
                     <option value="" disabled selected>-- Selecciona --</option>
                     <option value="Enfoque-01">Enfoque-01</option>
                     <option value="Enfoque-01">Enfoque-02</option>
@@ -267,25 +277,25 @@
                 </div>                                                                        
                 <div class="item">
                   <label for="weight">Peso (%)</label>
-                  <input class="form-control" type="number" id="weight" name="weight" min="1" max="100" step="5" value="25">              
+                  <input class="form-control" id="weight" type="number" name="weight" min="1" max="100" step="5" value="25">              
                 </div>                                    
                 <div class="item">
                   <label for="compliance">Fecha de cumplimiento <span>*</span></label>
-                  <input id="compliance" type="datetime-local" name="compliance" class="form-control" required>
-                </div>  
-              </div>                                                    
-            </form> 
-            <p class="flex flex-row justify-end gap-2"><b>Evaluador:</b> Héctor Aguilar Cuevas</p>
-          </div>
-          <!-- ------ Modal-footer ------ -->
-          <div class="modal-footer">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center w-full">                  
-              <button class="btn btn-default-inverse" data-dismiss="modal">Cancelar</button>
-              <a href="carga-objetivos-agregado.html" class="btn btn-default" id="btnEnviar"><i class="icon icon-plus"></i> Agregar</a>          
+                  <input class="form-control" id="compliance" type="datetime-local" name="compliance" required>
+                </div>                                                      
+              </form> 
+              <p class="flex flex-row justify-end gap-2"><b>Evaluador:</b> Héctor Aguilar Cuevas</p>
+            </div>
+            <!-- ------ Modal-footer ------ -->
+            <div class="modal-footer">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center w-full">
+                <button type="reset" class="btn btn-default-inverse" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-default" id="btnEnviar">Guardar</button>          
+              </div>
             </div>
           </div>
         </div>
-      </div>      
+      </div>    
 
     </div>
 
@@ -298,7 +308,7 @@
     <script src="../assets/js/navigation/sidebar_layout.js" type="text/javascript"></script>
     <!-- Components -->    
     <script src="../assets/js/theme_toggle.js"></script>	 
-    <script src="../assets/js/modal.js" type="text/javascript"></script>    
+    <script src="../assets/js/modal-objetive.js" type="text/javascript"></script> 
 
   </body>
 </html>
