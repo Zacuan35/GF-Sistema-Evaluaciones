@@ -30,6 +30,10 @@
     background-color: var(--secondary-color);
     color: var(--primary-text-color);
     padding: 2rem;
+
+    .modal-info-title {
+      margin-bottom: 1rem;
+    }        
     
     .modal-info-text {
       transition: all 0.2s ease;

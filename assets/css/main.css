@@ -7918,6 +7918,9 @@ canvas {
   color: var(--primary-text-color);
   padding: 2rem;
 }
+.modal-objetive .modal-info .modal-info-title {
+  margin-bottom: 1rem;
+}
 .modal-objetive .modal-info .modal-info-text {
   transition: all 0.2s ease;
   line-height: 1.4;

@@ -75,23 +75,41 @@ document.querySelectorAll('.btn-toggle-panel').forEach(button => {
  * Aquí es donde tu equipo mantiene el contenido
  */
 const formHelp = {
-  object:
-    'Define un objetivo claro, específico y medible. Evita ambigüedades.',
+  object: {
+    title: 'Objetivo',
+    message:
+      'Define un objetivo claro, específico y medible. Evita ambigüedades.'
+  },
 
-  'business-approach':
-    'Selecciona el enfoque estratégico que mejor represente este objetivo.',
+  'business-approach': {
+    title: 'Enfoque de negocio',
+    message:
+      'Selecciona el enfoque estratégico que mejor represente este objetivo.'
+  },
 
-  kpi:
-    'Describe cómo se medirá el éxito del objetivo con indicadores concretos.',
+  kpi: {
+    title: 'Indicador de medición',
+    message:
+      'Describe cómo se medirá el éxito del objetivo con indicadores concretos.'
+  },
 
-  activities:
-    'Detalla las acciones paso a paso necesarias para lograr el objetivo.',
+  activities: {
+    title: 'Actividades',
+    message:
+      'Detalla las acciones paso a paso necesarias para lograr el objetivo.'
+  },
 
-  weight:
-    'Indica qué tan importante es este objetivo dentro del total (0–100%).',
+  weight: {
+    title: 'Peso (%)',
+    message:
+      'Indica qué tan importante es este objetivo dentro del total (0–100%).'
+  },
 
-  compliance:
-    'Selecciona la fecha límite en la que debe cumplirse este objetivo.'
+  compliance: {
+    title: 'Fecha de cumplimiento',
+    message:
+      'Selecciona la fecha límite en la que debe cumplirse este objetivo.'
+  }
 };
 
 /**
@@ -100,15 +118,22 @@ const formHelp = {
 function updateHelpPanel(modal, fieldId) {
   if (!modal) return;
 
-  const panel = modal.querySelector('.modal-info-text');
+  const title = modal.querySelector('.modal-info-title');
+  const text = modal.querySelector('.modal-info-text');
 
-  if (!panel) return;
+  if (!title || !text) return;
 
-  const message =
-    formHelp[fieldId] ||
-    'Selecciona un campo para ver ayuda contextual.';
+  const help = formHelp[fieldId];
 
-  panel.textContent = message;
+  if (!help) {
+    title.textContent = 'Ayuda contextual';
+    text.textContent =
+      'Selecciona un campo para ver ayuda contextual.';
+    return;
+  }
+
+  title.textContent = help.title;
+  text.textContent = help.message;
 }
 
 /* =====================
