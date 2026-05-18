@@ -70,10 +70,7 @@ document.querySelectorAll('.btn-toggle-panel').forEach(button => {
 # HELP SYSTEM (CORE)
 ===================== */
 
-/**
- * Diccionario editable de ayuda contextual
- * Aquí es donde tu equipo mantiene el contenido
- */
+/* Diccionario editable de ayuda contextual*/
 const formHelp = {
   object: {
     title: 'Objetivo',
@@ -90,7 +87,7 @@ const formHelp = {
   kpi: {
     title: 'Indicador de medición',
     message:
-      'Describe cómo se medirá el éxito del objetivo con indicadores concretos.'
+      'Describe cómo se medirá el éxito del objetivo con indicadores concretos, para cuantificar y medir el avance de tu objetivo'
   },
 
   activities: {
@@ -112,9 +109,7 @@ const formHelp = {
   }
 };
 
-/**
- * Actualiza el panel de ayuda
- */
+/*Actualiza el panel de ayuda*/
 function updateHelpPanel(modal, fieldId) {
   if (!modal) return;
 
