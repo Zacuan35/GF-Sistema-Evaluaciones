@@ -37,6 +37,7 @@ function closeModal(modalId) {
 /* =====================
 # CLOSE MODAL (BACKDROP)
 ===================== */
+
 window.addEventListener('click', function (event) {
   if (event.target.classList.contains('modal-objetive')) {
     closeModal(event.target.id);
@@ -46,6 +47,7 @@ window.addEventListener('click', function (event) {
 /* =====================
 # PANEL TOGGLE
 ===================== */
+
 document.querySelectorAll('.btn-toggle-panel').forEach(button => {
   button.addEventListener('click', function () {
     const modal = this.closest('.modal-objetive');
@@ -70,7 +72,7 @@ document.querySelectorAll('.btn-toggle-panel').forEach(button => {
 # HELP SYSTEM (CORE)
 ===================== */
 
-/* Diccionario editable de ayuda contextual*/
+/* Diccionario editable de ayuda contextual */
 const formHelp = {
   object: {
     title: 'Objetivo',
@@ -109,8 +111,11 @@ const formHelp = {
   }
 };
 
-/*Actualiza el panel de ayuda*/
-function updateHelpPanel(modal, fieldId) {
+/* =====================
+# HELP PANEL UPDATE
+===================== */
+
+function updateHelpPanel(modal, fieldKey) {
   if (!modal) return;
 
   const title = modal.querySelector('.modal-info-title');
@@ -118,7 +123,7 @@ function updateHelpPanel(modal, fieldId) {
 
   if (!title || !text) return;
 
-  const help = formHelp[fieldId];
+  const help = formHelp[fieldKey];
 
   if (!help) {
     title.textContent = 'Ayuda contextual';
@@ -132,8 +137,9 @@ function updateHelpPanel(modal, fieldId) {
 }
 
 /* =====================
-# EVENT DELEGATION
+# EVENT DELEGATION (FOCUS)
 ===================== */
+
 document.addEventListener('focusin', function (e) {
   const field = e.target;
 
@@ -145,5 +151,9 @@ document.addEventListener('focusin', function (e) {
 
   if (!modal) return;
 
-  updateHelpPanel(modal, field.id);
+  const helpKey = field.dataset.help;
+
+  if (!helpKey) return;
+
+  updateHelpPanel(modal, helpKey);
 });

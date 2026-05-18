@@ -332,11 +332,11 @@
               <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">                
                 <div class="item">                    
                   <label for="object">Objetivo <span>*</span></label>
-                  <input class="form-control" id="object" type="text" name="object" placeholder="Establece un objetivo de manera clara y concisa." required>
+                  <input class="form-control" id="object" data-help="object" type="text" name="object" placeholder="Establece un objetivo de manera clara y concisa." required>
                 </div>        
                 <div class="item">
                   <label for="business-approach">Enfoque de negocio <span>*</span></label>
-                  <select class="form-control" id="business-approach" name="business-approach" required>
+                  <select class="form-control" id="business-approach" data-help="business-approach" name="business-approach" required>
                     <option value="" disabled selected>-- Selecciona --</option>
                     <option value="Enfoque-01">Enfoque-01</option>
                     <option value="Enfoque-01">Enfoque-02</option>
@@ -347,19 +347,19 @@
                 </div>
                 <div class="item">
                   <label for="kpi">Indicador de medición<span>*</span></label>
-                  <textarea class="form-control" id="kpi" name="kpi" rows="2" cols="50" placeholder="Escribe un indicador de medición para poder evaluar de manera objetiva el cumplimiento de tu objetivo." required></textarea>                
+                  <textarea class="form-control" id="kpi" data-help="kpi" name="kpi" rows="2" cols="50" placeholder="Escribe un indicador de medición para poder evaluar de manera objetiva el cumplimiento de tu objetivo." required></textarea>                
                 </div>                                                    
                 <div class="item">
                   <label for="activities">Actividades<span>*</span></label>
-                  <textarea class="form-control" id="activities" name="activities" rows="2" cols="50" placeholder="Detalla los pasos que realizarás para lograr tu objetivo." required></textarea>                
+                  <textarea class="form-control" id="activities" data-help="activities" name="activities" rows="2" cols="50" placeholder="Detalla los pasos que realizarás para lograr tu objetivo." required></textarea>                
                 </div>                                                                        
                 <div class="item">
                   <label for="weight">Peso (%)</label>
-                  <input class="form-control" id="weight" type="number" name="weight" min="1" max="100" step="5" value="25">              
+                  <input class="form-control" id="weight" data-help="weight" name="weight" type="number" min="1" max="100" step="5" value="25">              
                 </div>                                    
                 <div class="item">
                   <label for="compliance">Fecha de cumplimiento <span>*</span></label>
-                  <input class="form-control" id="compliance" type="datetime-local" name="compliance" required>
+                  <input class="form-control" id="compliance" data-help="compliance" type="datetime-local" name="compliance" required>
                 </div>                                                      
               </form> 
               <p class="flex flex-row justify-end gap-2"><b>Evaluador:</b> Héctor Aguilar Cuevas</p>
