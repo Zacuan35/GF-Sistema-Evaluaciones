@@ -5361,10 +5361,13 @@ i {
 .table-grid {
   display: grid;
   gap: 0.5rem;
-  --cols: 1fr; /* fallback */
+  /* fallback seguro */
+  --cols: repeat(1, minmax(120px, 1fr));
 }
 
-/* Estructura */
+/* =====================
+# STRUCTURE
+===================== */
 .tg-head,
 .tg-body,
 .tg-foot {
@@ -5373,17 +5376,19 @@ i {
 }
 
 /* =====================
-# ROW (PANEL STYLE)
+# ROW (FIX CLAVE AQUÍ)
 ===================== */
 .tg-row {
   display: grid;
-  grid-template-columns: var(--cols);
+  /* FIX IMPORTANTE */
+  grid-template-columns: var(--cols, 1fr);
   align-items: center;
   padding: 1rem;
   border: 1px solid var(--tertiary-color);
   border-radius: 0.5rem;
   background-color: var(--primary-color);
   transition: all 0.2s ease;
+  min-width: 0; /* 🔥 IMPORTANTE para que no se expanda el grid */
 }
 
 /* =====================
@@ -5398,12 +5403,10 @@ i {
 /* =====================
 # BODY STATES
 ===================== */
-/* Zebra */
 .tg-body .tg-row:nth-child(even) {
   background-color: var(--secondary-color);
 }
 
-/* Hover */
 .tg-body .tg-row:hover {
   background-color: var(--tertiary-color);
 }
@@ -5414,9 +5417,12 @@ i {
 .tg-cell {
   display: flex;
   align-items: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-/* Alineaciones */
+/* ALIGNMENTS */
 .tg-center {
   justify-content: center;
 }
@@ -5429,37 +5435,36 @@ i {
 # COLUMN SYSTEM
 ===================== */
 .tg-cols-1 {
-  --cols: 1fr;
+  --cols: repeat(1, minmax(120px, 1fr));
 }
 
 .tg-cols-2 {
-  --cols: repeat(2, 1fr);
+  --cols: repeat(2, minmax(120px, 1fr));
 }
 
 .tg-cols-3 {
-  --cols: repeat(3, 1fr);
+  --cols: repeat(3, minmax(120px, 1fr));
 }
 
 .tg-cols-4 {
-  --cols: repeat(4, 1fr);
+  --cols: repeat(4, minmax(120px, 1fr));
 }
 
 .tg-cols-5 {
-  --cols: repeat(5, 1fr);
+  --cols: repeat(5, minmax(120px, 1fr));
 }
 
 .tg-cols-6 {
-  --cols: repeat(6, 1fr);
+  --cols: repeat(6, minmax(120px, 1fr));
 }
 
 .tg-cols-7 {
-  --cols: repeat(7, 1fr);
+  --cols: repeat(7, minmax(120px, 1fr));
 }
 
-/* ==============
-# COLUMN LAYOUTS
-============== */
-/* Tu layout original */
+/* =====================
+# LAYOUTS ESPECÍFICOS
+===================== */
 .tg-layout-check {
   --cols: 40px 1fr 80px 80px;
 }
@@ -5472,7 +5477,6 @@ i {
   --cols: 1fr 1fr 100px 100px 100px;
 }
 
-/* Variantes útiles */
 .tg-layout-3-auto {
   --cols: auto 1fr auto;
 }
@@ -5485,9 +5489,9 @@ i {
   --cols: 60px 2fr 1fr 100px 80px;
 }
 
-/* =========
+/* =====================
 # COL SPAN
-========= */
+===================== */
 .tg-col-2 {
   grid-column: span 2;
 }
@@ -5504,26 +5508,25 @@ i {
   grid-column: 1/-1;
 }
 
-/* =========
-# STATES 
-========= */
+/* =====================
+# STATES (CSS PURO)
+===================== */
 .tg-row.success {
-  background-color: rgba(22, 163, 74, 0.1);
-  border-color: #16A34A;
+  background-color: rgba(46, 125, 50, 0.1);
+  border-color: #2e7d32;
 }
 
 .tg-row.warning {
-  background-color: rgba(219, 154, 23, 0.1);
-  border-color: #db9a17;
+  background-color: rgba(237, 108, 2, 0.1);
+  border-color: #ed6c02;
 }
 
-/* Opcional: texto dentro del estado */
 .tg-row.success .tg-cell {
-  color: #16A34A;
+  color: #2e7d32;
 }
 
 .tg-row.warning .tg-cell {
-  color: #db9a17;
+  color: #ed6c02;
 }
 
 .toast-container {

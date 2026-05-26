@@ -1,6 +1,7 @@
 /* =====================
 # TABLE GRID BASE
 ===================== */
+
 .tg-responsive {
   overflow-x: auto;
 }
@@ -8,10 +9,15 @@
 .table-grid {
   display: grid;
   gap: 0.5rem;
-  --cols: 1fr; /* fallback */
+
+  /* fallback seguro */
+  --cols: repeat(1, minmax(120px, 1fr));
 }
 
-/* Estructura */
+/* =====================
+# STRUCTURE
+===================== */
+
 .tg-head,
 .tg-body,
 .tg-foot {
@@ -20,11 +26,15 @@
 }
 
 /* =====================
-# ROW (PANEL STYLE)
+# ROW (FIX CLAVE AQUÍ)
 ===================== */
+
 .tg-row {
   display: grid;
-  grid-template-columns: var(--cols);
+
+  /* FIX IMPORTANTE */
+  grid-template-columns: var(--cols, 1fr);
+
   align-items: center;
 
   padding: 1rem;
@@ -33,11 +43,15 @@
   background-color: var(--primary-color);
 
   transition: all 0.2s ease;
+
+  //min-width: max-content;
+  min-width: 0; /* 🔥 IMPORTANTE para que no se expanda el grid */
 }
 
 /* =====================
 # HEADER
 ===================== */
+
 .tg-head .tg-row {
   background-color: var(--tertiary-color);
   color: var(--highlight-color);
@@ -47,12 +61,11 @@
 /* =====================
 # BODY STATES
 ===================== */
-/* Zebra */
+
 .tg-body .tg-row:nth-child(even) {
   background-color: var(--secondary-color);
 }
 
-/* Hover */
 .tg-body .tg-row:hover {
   background-color: var(--tertiary-color);
 }
@@ -60,60 +73,76 @@
 /* =====================
 # CELLS
 ===================== */
+
 .tg-cell {
   display: flex;
   align-items: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-/* Alineaciones */
-.tg-center { justify-content: center; }
-.tg-right  { justify-content: flex-end; }
+/* ALIGNMENTS */
+
+.tg-center {
+  justify-content: center;
+}
+
+.tg-right {
+  justify-content: flex-end;
+}
 
 /* =====================
 # COLUMN SYSTEM
 ===================== */
-.tg-cols-1 { --cols: 1fr; }
-.tg-cols-2 { --cols: repeat(2, 1fr); }
-.tg-cols-3 { --cols: repeat(3, 1fr); }
-.tg-cols-4 { --cols: repeat(4, 1fr); }
-.tg-cols-5 { --cols: repeat(5, 1fr); }
-.tg-cols-6 { --cols: repeat(6, 1fr); }
-.tg-cols-7 { --cols: repeat(7, 1fr); }
 
-/* ==============
-# COLUMN LAYOUTS
-============== */
-/* Tu layout original */
-.tg-layout-check {--cols: 40px 1fr 80px 80px;}
-.tg-layout-obj {--cols: 1fr 50px 100px;}
-.tg-layout-inp {--cols: 1fr 1fr 100px 100px 100px;}
+.tg-cols-1 { --cols: repeat(1, minmax(120px, 1fr)); }
+.tg-cols-2 { --cols: repeat(2, minmax(120px, 1fr)); }
+.tg-cols-3 { --cols: repeat(3, minmax(120px, 1fr)); }
+.tg-cols-4 { --cols: repeat(4, minmax(120px, 1fr)); }
+.tg-cols-5 { --cols: repeat(5, minmax(120px, 1fr)); }
+.tg-cols-6 { --cols: repeat(6, minmax(120px, 1fr)); }
+.tg-cols-7 { --cols: repeat(7, minmax(120px, 1fr)); }
 
-/* Variantes útiles */
-.tg-layout-3-auto {--cols: auto 1fr auto;}
-.tg-layout-4-auto {--cols: auto 1fr auto auto;}
-.tg-layout-5-auto {--cols: 60px 2fr 1fr 100px 80px;}
+/* =====================
+# LAYOUTS ESPECÍFICOS
+===================== */
 
-/* =========
+.tg-layout-check { --cols: 40px 1fr 80px 80px; }
+.tg-layout-obj { --cols: 1fr 50px 100px; }
+.tg-layout-inp { --cols: 1fr 1fr 100px 100px 100px; }
+
+.tg-layout-3-auto { --cols: auto 1fr auto; }
+.tg-layout-4-auto { --cols: auto 1fr auto auto; }
+.tg-layout-5-auto { --cols: 60px 2fr 1fr 100px 80px; }
+
+/* =====================
 # COL SPAN
-========= */
+===================== */
+
 .tg-col-2 { grid-column: span 2; }
 .tg-col-3 { grid-column: span 3; }
 .tg-col-4 { grid-column: span 4; }
 .tg-col-full { grid-column: 1 / -1; }
 
-/* =========
-# STATES 
-========= */
+/* =====================
+# STATES (CSS PURO)
+===================== */
+
 .tg-row.success {
-  background-color: rgba($success-color, 0.1);
-  border-color: $success-color;
+  background-color: rgba(46, 125, 50, 0.1);
+  border-color: #2e7d32;
 }
 
 .tg-row.warning {
-  background-color: rgba($warning-color, 0.1);
-  border-color: $warning-color;
+  background-color: rgba(237, 108, 2, 0.1);
+  border-color: #ed6c02;
 }
 
-/* Opcional: texto dentro del estado */
-.tg-row.success .tg-cell {color: $success-color;}
-.tg-row.warning .tg-cell {color: $warning-color;}
+.tg-row.success .tg-cell {
+  color: #2e7d32;
+}
+
+.tg-row.warning .tg-cell {
+  color: #ed6c02;
+}
