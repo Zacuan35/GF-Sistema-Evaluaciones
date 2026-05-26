@@ -5512,21 +5512,21 @@ i {
 # STATES
 ===================== */
 .tg-row.success {
-  background-color: rgba(46, 125, 50, 0.1);
-  border-color: #2e7d32;
+  background-color: rgba(22, 163, 74, 0.1);
+  border-color: #16A34A;
 }
 
 .tg-row.warning {
-  background-color: rgba(237, 108, 2, 0.1);
-  border-color: #ed6c02;
+  background-color: rgba(219, 154, 23, 0.1);
+  border-color: #db9a17;
 }
 
 .tg-row.success .tg-cell {
-  color: #2e7d32;
+  color: #16A34A;
 }
 
 .tg-row.warning .tg-cell {
-  color: #ed6c02;
+  color: #db9a17;
 }
 
 .toast-container {
