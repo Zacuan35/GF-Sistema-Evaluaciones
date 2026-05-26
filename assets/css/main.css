@@ -5496,6 +5496,10 @@ i {
   grid-column: span 4;
 }
 
+.tg-col-7 {
+  grid-column: span 7;
+}
+
 .tg-col-full {
   grid-column: 1/-1;
 }
