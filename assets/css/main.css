@@ -5376,11 +5376,10 @@ i {
 }
 
 /* =====================
-# ROW (FIX CLAVE AQUÍ)
+# ROW
 ===================== */
 .tg-row {
   display: grid;
-  /* FIX IMPORTANTE */
   grid-template-columns: var(--cols, 1fr);
   align-items: center;
   padding: 1rem;
@@ -5388,7 +5387,8 @@ i {
   border-radius: 0.5rem;
   background-color: var(--primary-color);
   transition: all 0.2s ease;
-  min-width: 0; /* 🔥 IMPORTANTE para que no se expanda el grid */
+  min-width: 0; /* 🔥 clave real para evitar overflow */
+  width: 100%;
 }
 
 /* =====================
@@ -5417,7 +5417,7 @@ i {
 .tg-cell {
   display: flex;
   align-items: center;
-  min-width: 0;
+  min-width: 0; /* 🔥 clave real */
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -5509,7 +5509,7 @@ i {
 }
 
 /* =====================
-# STATES (CSS PURO)
+# STATES
 ===================== */
 .tg-row.success {
   background-color: rgba(46, 125, 50, 0.1);

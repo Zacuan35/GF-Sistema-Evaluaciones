@@ -26,13 +26,12 @@
 }
 
 /* =====================
-# ROW (FIX CLAVE AQUÍ)
+# ROW
 ===================== */
 
 .tg-row {
   display: grid;
 
-  /* FIX IMPORTANTE */
   grid-template-columns: var(--cols, 1fr);
 
   align-items: center;
@@ -44,8 +43,8 @@
 
   transition: all 0.2s ease;
 
-  //min-width: max-content;
-  min-width: 0; /* 🔥 IMPORTANTE para que no se expanda el grid */
+  min-width: 0;     /* 🔥 clave real para evitar overflow */
+  width: 100%;
 }
 
 /* =====================
@@ -77,7 +76,8 @@
 .tg-cell {
   display: flex;
   align-items: center;
-  min-width: 0;
+
+  min-width: 0;              /* 🔥 clave real */
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -126,7 +126,7 @@
 .tg-col-full { grid-column: 1 / -1; }
 
 /* =====================
-# STATES (CSS PURO)
+# STATES
 ===================== */
 
 .tg-row.success {
