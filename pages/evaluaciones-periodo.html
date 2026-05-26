@@ -458,81 +458,167 @@
             </span>
           </div>
           <!-- ------ Modal-body ------ -->
-          <div class="modal-body">                
-            <!-- Form -->
-            <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">                
-              <div class="item">
-                <label for="kind">Tipo <span>*</span></label>
-                <select class="form-control" id="kind" name="kind" required>
-                  <option value="" disabled selected>-- Selecciona --</option>
-                  <option value="Objetivo">Objetivo</option>
-                  <option value="Medición">Medición</option>
-                </select> 
-              </div>              
-              <div class="item">                    
-                <label for="description">Descripción <span>*</span></label>
-                <input class="form-control" id="description" data-help="description" type="text" name="description" placeholder="Agrega una descripción." required>
-              </div>        
-              <div class="item">
-                <label for="min.objetives">Min. Objetivos</label>
-                <input class="form-control" type="number" id="min.objetives" name="min.objetives" min="1" max="5" step="5" value="2">              
-              </div>                                                                  
-              <div class="item">
-                <label for="max.objetives">Max. Objetivos</label>
-                <input class="form-control" type="number" id="max.objetives" name="max.objetives" min="1" max="10" step="5" value="10">
-              </div>                                                                        
-              <div class="item">
-                <label for="temporality">Temporalidad <span>*</span></label>
-                <select class="form-control" id="temporality" name="temporality" required>
-                  <option value="" disabled selected>-- Selecciona --</option>
-                  <option value="Mensual">Mensual</option>
-                  <option value="Bimestral">Bimestral</option>
-                  <option value="Trimestral">Trimestral</option>
-                  <option value="Semestral">Semestral</option>
-                  <option value="Anual">Anual</option>
-                  <option value="Cuatrimestre">Cuatrimestre</option>
-                </select> 
-              </div>              
-              <div class="item">
-                <label for="rh">Recursos humanos <span>*</span></label>
-                <select class="form-control" id="rh" name="rh" required>
-                  <option value="" disabled selected>-- Selecciona --</option>
-                  <option value="Value-01">Value-01</option>
-                  <option value="Value-02">Value-02</option>
-                  <option value="Value-03">Value-03</option>            
-                </select> 
-              </div>                            
-              <div class="item">
-                <label for="evaluator-01">Evaluador 1 <span>*</span></label>
-                <select class="form-control" id="evaluator-01" name="evaluator-01" required>
-                  <option value="" disabled selected>-- Selecciona --</option>
-                  <option value="Value-01">Value-01</option>
-                  <option value="Value-02">Value-02</option>
-                  <option value="Value-03">Value-03</option>            
-                </select> 
-              </div>                                          
-              <div class="item">
-                <label for="evaluator-02">Evaluador 2 <span>*</span></label>
-                <select class="form-control" id="evaluator-02" name="evaluator-02" required>
-                  <option value="" disabled selected>-- Selecciona --</option>
-                  <option value="Value-01">Value-01</option>
-                  <option value="Value-02">Value-02</option>
-                  <option value="Value-03">Value-03</option>            
-                </select> 
-              </div>    
-              <div class="item">
-                <label for="type-of-review">Tipo de revisión <span>*</span></label>
-                <select class="form-control" id="type-of-review" name="type-of-review" required>
-                  <option value="" disabled selected>-- Selecciona --</option>
-                  <option value="Retroalimentación">Retroalimentación</option>
-                  <option value="Calificación">Calificación</option>
-                </select> 
-              </div> 
-              <label class="checkbox-label">
-                <input type="checkbox" id="checkbox1">
-                Justificación
-              </label>                                                                                       
-            </form> 
+          <div class="modal-body">              
+
+            <!-- Tab-container -->
+            <div class="tabs-container">
+              <!-- --------
+              Buttons
+              --------- -->    
+              <div class="tabs">
+                <button class="tab-button active" data-target="tab-01" aria-controls="tab-01" role="tab">Evaluaciones</button>
+                <button class="tab-button" data-target="tab-02" aria-controls="tab-02" role="tab">Colaboradores</button>
+              </div>
+              <!-- --------
+              Content
+              --------- -->    
+              <div class="tab-content">
+                <!-- Tab-pane-01
+                ------------------------------------------ -->
+                <div class="tab-pane active" id="tab-01" role="tabpanel">                                                         
+                  <!-- Form -->
+                  <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">                
+                    <div class="item">
+                      <label for="kind">Tipo <span>*</span></label>
+                      <select class="form-control" id="kind" name="kind" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="Objetivo">Objetivo</option>
+                        <option value="Medición">Medición</option>
+                      </select> 
+                    </div>              
+                    <div class="item">                    
+                      <label for="description">Descripción <span>*</span></label>
+                      <input class="form-control" id="description" data-help="description" type="text" name="description" placeholder="Agrega una descripción." required>
+                    </div>        
+                    <div class="item">
+                      <label for="min.objetives">Min. Objetivos</label>
+                      <input class="form-control" type="number" id="min.objetives" name="min.objetives" min="1" max="5" step="5" value="2">              
+                    </div>                                                                  
+                    <div class="item">
+                      <label for="max.objetives">Max. Objetivos</label>
+                      <input class="form-control" type="number" id="max.objetives" name="max.objetives" min="1" max="10" step="5" value="10">
+                    </div>                                                                        
+                    <div class="item">
+                      <label for="temporality">Temporalidad <span>*</span></label>
+                      <select class="form-control" id="temporality" name="temporality" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="Mensual">Mensual</option>
+                        <option value="Bimestral">Bimestral</option>
+                        <option value="Trimestral">Trimestral</option>
+                        <option value="Semestral">Semestral</option>
+                        <option value="Anual">Anual</option>
+                        <option value="Cuatrimestre">Cuatrimestre</option>
+                      </select> 
+                    </div>              
+                    <div class="item">
+                      <label for="rh">Recursos humanos <span>*</span></label>
+                      <select class="form-control" id="rh" name="rh" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="Value-01">Value-01</option>
+                        <option value="Value-02">Value-02</option>
+                        <option value="Value-03">Value-03</option>            
+                      </select> 
+                    </div>                            
+                    <div class="item">
+                      <label for="evaluator-01">Evaluador 1 <span>*</span></label>
+                      <select class="form-control" id="evaluator-01" name="evaluator-01" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="Value-01">Value-01</option>
+                        <option value="Value-02">Value-02</option>
+                        <option value="Value-03">Value-03</option>            
+                      </select> 
+                    </div>                                          
+                    <div class="item">
+                      <label for="evaluator-02">Evaluador 2 <span>*</span></label>
+                      <select class="form-control" id="evaluator-02" name="evaluator-02" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="Value-01">Value-01</option>
+                        <option value="Value-02">Value-02</option>
+                        <option value="Value-03">Value-03</option>            
+                      </select> 
+                    </div>    
+                    <div class="item">
+                      <label for="type-of-review">Tipo de revisión <span>*</span></label>
+                      <select class="form-control" id="type-of-review" name="type-of-review" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="Retroalimentación">Retroalimentación</option>
+                        <option value="Calificación">Calificación</option>
+                      </select> 
+                    </div> 
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox1">
+                      Justificación
+                    </label>                                                                                       
+                  </form> 
+                </div>
+                <!-- Tab-pane-02
+                ------------------------------------------ -->                  
+                <div class="tab-pane" id="tab-02" role="tabpanel">            
+
+                  <div class="flex flex-row justify-end mb-4">
+                    <button class="btn btn-default-inverse">
+                      <i class="icon-plus"></i> Agregar empleados
+                    </button>  
+                  </div>
+
+                  <!-- TABLE-GRID -->
+                  <div class="tg-responsive mb-4">
+                    <div class="table-grid tg-cols-4">
+                      <!-- HEADER -->
+                      <div class="tg-head">
+                        <!-- tg-row -->
+                        <div class="tg-row">
+                          <div class="tg-cell">Selecciona</div>
+                          <div class="tg-cell">Empleado</div>
+                          <div class="tg-cell">Compañía</div>
+                          <div class="tg-cell">Departamento</div>
+                        </div>
+                      </div>
+                      <!-- BODY -->
+                      <div class="tg-body">
+                        <!-- tg-row -->
+                        <div class="tg-row">
+                          <input class="tg-cell" type="checkbox" value="employ">
+                          <div class="tg-cell">Nombre empleado</div>
+                          <div class="tg-cell">00</div>
+                          <div class="tg-cell">Nombre de departamento</div>
+                        </div>
+                        <!-- tg-row -->
+                        <div class="tg-row">
+                          <input class="tg-cell" type="checkbox" value="employ">
+                          <div class="tg-cell">Nombre empleado</div>
+                          <div class="tg-cell">00</div>
+                          <div class="tg-cell">Nombre de departamento</div>
+                        </div>
+                        <!-- tg-row -->
+                        <div class="tg-row">
+                          <input class="tg-cell" type="checkbox" value="employ">
+                          <div class="tg-cell">Nombre empleado</div>
+                          <div class="tg-cell">00</div>
+                          <div class="tg-cell">Nombre de departamento</div>
+                        </div>                  
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pagination -->                                                          
+                  <div class="flex flex-row justify-end">
+                    <nav class="pagination">
+                      <span>Página 2 de 16</span>
+                      <ul>
+                        <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+                        <li><a href="#">1</a></li>
+                        <li class="current"><strong>2</strong></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+
+                </div>
+              </div>
+            </div>               
+
           </div>
           <!-- ------ Modal-footer ------ -->
           <div class="modal-footer">
@@ -556,6 +642,7 @@
     <script src="../assets/js/modal.js" type="text/javascript"></script>       
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>        
     <script src="../assets/js/sweet-alert.js" type="text/javascript"></script>    
+    <script src="../assets/js/tabs.js"></script>	
 
   </body>
 </html>
