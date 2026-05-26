@@ -78,6 +78,7 @@
 .tg-cols-4 { --cols: repeat(4, 1fr); }
 .tg-cols-5 { --cols: repeat(5, 1fr); }
 .tg-cols-6 { --cols: repeat(6, 1fr); }
+.tg-cols-7 { --cols: repeat(7, 1fr); }
 
 /* ==============
 # COLUMN LAYOUTS
@@ -98,8 +99,6 @@
 .tg-col-2 { grid-column: span 2; }
 .tg-col-3 { grid-column: span 3; }
 .tg-col-4 { grid-column: span 4; }
-.tg-col-5 { grid-column: span 5; }
-.tg-col-7 { grid-column: span 7; }
 .tg-col-full { grid-column: 1 / -1; }
 
 /* =========
