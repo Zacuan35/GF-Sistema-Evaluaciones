@@ -5387,7 +5387,7 @@ i {
   border-radius: 0.5rem;
   background-color: var(--primary-color);
   transition: all 0.2s ease;
-  min-width: 0; /* 🔥 clave real para evitar overflow */
+  min-width: 0; /* para evitar overflow */
   width: 100%;
 }
 
@@ -5417,7 +5417,7 @@ i {
 .tg-cell {
   display: flex;
   align-items: center;
-  min-width: 0; /* 🔥 clave real */
+  min-width: 0; /* clave real */
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -8016,108 +8016,6 @@ canvas {
     width: 100%;
     max-width: 100%;
   }
-}
-/* =====================
-# TABLE GRID 7
-===================== */
-.tg7-responsive {
-  width: 100%;
-  overflow-x: auto;
-}
-
-.tg7-table {
-  display: grid;
-  gap: 0.5rem;
-  /* fallback */
-  --tg7-cols: repeat(7, minmax(120px, 1fr));
-}
-
-/* =====================
-# STRUCTURE
-===================== */
-.tg7-head,
-.tg7-body,
-.tg7-foot {
-  display: grid;
-  gap: 0.5rem;
-}
-
-/* =====================
-# ROW
-===================== */
-.tg7-row {
-  display: grid;
-  grid-template-columns: var(--tg7-cols);
-  align-items: center;
-  gap: 1rem;
-  min-width: max-content;
-  padding: 1rem;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.5rem;
-  background-color: var(--primary-color);
-  transition: all 0.2s ease;
-}
-
-/* =====================
-# HEADER
-===================== */
-.tg7-head .tg7-row {
-  background-color: var(--tertiary-color);
-  color: var(--highlight-color);
-  font-weight: 700;
-}
-
-/* =====================
-# BODY
-===================== */
-.tg7-body .tg7-row:nth-child(even) {
-  background-color: var(--secondary-color);
-}
-
-.tg7-body .tg7-row:hover {
-  background-color: var(--tertiary-color);
-}
-
-/* =====================
-# CELLS
-===================== */
-.tg7-cell {
-  display: flex;
-  align-items: center;
-  min-width: 0;
-  word-break: break-word;
-}
-
-/* =====================
-# ALIGNMENTS
-===================== */
-.tg7-center {
-  justify-content: center;
-}
-
-.tg7-right {
-  justify-content: flex-end;
-}
-
-/* =====================
-# STATES
-===================== */
-.tg7-row.success {
-  border-color: #16A34A;
-  background-color: rgba(22, 163, 74, 0.1);
-}
-
-.tg7-row.warning {
-  border-color: #db9a17;
-  background-color: rgba(219, 154, 23, 0.1);
-}
-
-.tg7-row.success .tg7-cell {
-  color: #16A34A;
-}
-
-.tg7-row.warning .tg7-cell {
-  color: #db9a17;
 }
 
 /*# sourceMappingURL=main.css.map */

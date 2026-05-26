@@ -43,7 +43,7 @@
 
   transition: all 0.2s ease;
 
-  min-width: 0;     /* 🔥 clave real para evitar overflow */
+  min-width: 0; /* para evitar overflow */
   width: 100%;
 }
 
@@ -76,8 +76,7 @@
 .tg-cell {
   display: flex;
   align-items: center;
-
-  min-width: 0;              /* 🔥 clave real */
+  min-width: 0; /* clave real */
   overflow-wrap: anywhere;
   word-break: break-word;
 }
