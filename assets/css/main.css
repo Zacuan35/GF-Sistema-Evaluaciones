@@ -5461,6 +5461,10 @@ i {
   --cols: repeat(7, minmax(120px, 1fr));
 }
 
+.tg-cols-8 {
+  --cols: repeat(8, minmax(120px, 1fr));
+}
+
 /* =====================
 # LAYOUTS ESPECÍFICOS
 ===================== */
@@ -5474,6 +5478,10 @@ i {
 
 .tg-layout-inp {
   --cols: 1fr 1fr 100px 100px 100px;
+}
+
+.tg-layout-reports {
+  --cols: 120px 1fr 1fr 1fr 1fr 80px 80px 80px;
 }
 
 .tg-layout-3-auto {

@@ -102,6 +102,7 @@
 .tg-cols-5 { --cols: repeat(5, minmax(120px, 1fr)); }
 .tg-cols-6 { --cols: repeat(6, minmax(120px, 1fr)); }
 .tg-cols-7 { --cols: repeat(7, minmax(120px, 1fr)); }
+.tg-cols-8 { --cols: repeat(8, minmax(120px, 1fr)); }
 
 /* =====================
 # LAYOUTS ESPECÍFICOS
@@ -110,6 +111,7 @@
 .tg-layout-check { --cols: 40px 1fr 80px 80px; }
 .tg-layout-obj { --cols: 1fr 50px 100px; }
 .tg-layout-inp { --cols: 1fr 1fr 100px 100px 100px; }
+.tg-layout-reports { --cols: 120px 1fr 1fr 1fr 1fr 80px 80px 80px; }
 
 .tg-layout-3-auto { --cols: auto 1fr auto; }
 .tg-layout-4-auto { --cols: auto 1fr auto auto; }
