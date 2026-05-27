@@ -329,3 +329,25 @@ canvas {
     i{color:var(--highlight-color);}
   }
 }
+
+/* # Imprimir tabla
+----------------------------------------------- */
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  .table-responsive,
+  .table-responsive * {
+    visibility: visible;
+  }
+
+  .table-responsive {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+}

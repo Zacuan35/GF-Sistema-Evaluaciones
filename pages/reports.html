@@ -236,15 +236,18 @@
               <div class="card-header flex flex-col items-center md:flex-row md:justify-between gap-4">
                 <h5>Datos</h5>
                 <div class="flex gap-2">
-                  <button class="btn btn-default">
+                  <!--Button-->
+                  <button type="button" class="btn btn-default">
                     Print
-                  </button>                  
-                  <button class="btn btn-default-inverse">
+                  </button>
+                  <!--Button-->
+                  <button type="button" class="btn btn-default-inverse">
                     PDF
-                  </button>                  
-                  <button class="btn btn-default-inverse">
+                  </button>
+                  <!--Button-->
+                  <button type="button" class="btn btn-default-inverse">
                     CSV
-                  </button>                                                  
+                  </button>
                 </div>
               </div>            
               <div class="card-body">                    
@@ -258,74 +261,52 @@
                 <h5>Datos</h5>
                 <div class="flex gap-2">
                   <!--Button-->
-                  <button id="btnPrint" class="btn btn-default">
+                  <button type="button" id="btnPrint" class="btn btn-default">
                     Print
                   </button>
                   <!--Button-->
-                  <button id="btnPDF" class="btn btn-default-inverse">
+                  <button type="button" id="btnPDF" class="btn btn-default-inverse">
                     PDF
                   </button>
                   <!--Button-->
-                  <button id="btnCSV" class="btn btn-default-inverse">
+                  <button type="button" id="btnCSV" class="btn btn-default-inverse">
                     CSV
                   </button>
                 </div>
               </div>
-              <div class="card-body flex flex-col items-end gap-4">
-                <!-- TABLE-GRID -->
-                <div class="tg-responsive">
-                  <div id="reportTable" class="table-grid tg-layout-reports">
-                    <!-- HEADER -->
-                    <div class="tg-head">
-                      <div class="tg-row">
-                        <div class="tg-cell">No.Empleado</div>
-                        <div class="tg-cell">Nombre</div>
-                        <div class="tg-cell">Objetivo</div>
-                        <div class="tg-cell">Como</div>
-                        <div class="tg-cell">Medición</div>
-                        <div class="tg-cell tg-center">Peso(%)</div>
-                        <div class="tg-cell tg-center">Calif.</div>
-                        <div class="tg-cell tg-center">Calif. Jefe</div>
-                      </div>
-                    </div>
-                    <!-- BODY -->
-                    <div class="tg-body">
-                      <!-- ROW 1 -->
-                      <div class="tg-row">
-                        <div class="tg-cell">0000</div>
-                        <div class="tg-cell">Nombre de empleado</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell tg-center">20</div>
-                        <div class="tg-cell tg-center">20</div>
-                        <div class="tg-cell tg-center">20</div>
-                      </div>
-                      <!-- ROW 2 -->
-                      <div class="tg-row">
-                        <div class="tg-cell">0000</div>
-                        <div class="tg-cell">Nombre de empleado</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell tg-center">20</div>
-                        <div class="tg-cell tg-center">20</div>
-                        <div class="tg-cell tg-center">20</div>
-                      </div>
-                      <!-- ROW 3 (SUCCESS STATE) -->
-                      <div class="tg-row">
-                        <div class="tg-cell">0000</div>
-                        <div class="tg-cell">Nombre de empleado</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</div>
-                        <div class="tg-cell tg-center">20</div>
-                        <div class="tg-cell tg-center">20</div>
-                        <div class="tg-cell tg-center">20</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <!-- Card-body -->   
+              <div class="card-body flex flex-col gap-4">
+                <!-- ====== Table ====== -->       
+                <div class="table-responsive">
+                  <table id="reportTable">
+                    <!-- ------ Table head ------ -->
+                    <thead>
+                      <tr>
+                        <th>No.Empleado</th>
+                        <th>Nombre</th>
+                        <th>Objetivo</th>
+                        <th>Como</th>
+                        <th>Medición</th>
+                        <th>Peso (%)</th>
+                        <th>Calif.</th>
+                        <th>Calif.Jefe</th>
+                      </tr>
+                    </thead>
+                    <!-- ------ Table body ------ -->
+                    <tbody>
+                      <tr>
+                        <td>0000</td>
+                        <td>Nombre de colaborador</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores recusandae.</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>00</td>                    
+                      </tr>                                                                           
+                    </tbody>
+                  </table>
+                </div>                  
 
                 <!-- Pagination -->                                                          
                 <nav class="pagination">
@@ -370,6 +351,7 @@
     <!-- Components -->    
     <script src="../assets/js/theme_toggle.js"></script>	 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
     <script src="../assets/js/reportTable.js"></script>	 
     
 

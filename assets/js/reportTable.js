@@ -10,91 +10,12 @@ const table = document.getElementById('reportTable');
 
 
 /* =====================
-# GET TABLE DATA
-===================== */
-
-function getTableData() {
-
-  const rows = table.querySelectorAll('.tg-row');
-
-  let data = [];
-
-  rows.forEach(row => {
-
-    const cells = row.querySelectorAll('.tg-cell');
-
-    let rowData = [];
-
-    cells.forEach(cell => {
-      rowData.push(
-        cell.innerText.trim()
-      );
-    });
-
-    data.push(rowData);
-
-  });
-
-  return data;
-
-}
-
-
-/* =====================
 # PRINT
 ===================== */
 
 btnPrint.addEventListener('click', () => {
 
-  const printWindow = window.open('', '', 'width=1200,height=800');
-
-  printWindow.document.write(`
-    <html>
-      <head>
-        <title>Print Table</title>
-
-        <style>
-
-          body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-          }
-
-          table {
-            width: 100%;
-            border-collapse: collapse;
-          }
-
-          th,
-          td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-            vertical-align: top;
-          }
-
-          th {
-            background: #f5f5f5;
-          }
-
-        </style>
-      </head>
-
-      <body>
-
-        ${convertToHTMLTable()}
-
-      </body>
-    </html>
-  `);
-
-  printWindow.document.close();
-
-  printWindow.focus();
-
-  printWindow.print();
-
-  printWindow.close();
+  window.print();
 
 });
 
@@ -111,17 +32,31 @@ btnPDF.addEventListener('click', () => {
     orientation: 'landscape'
   });
 
-  const data = getTableData();
+  doc.setFontSize(16);
 
-  let y = 10;
+  doc.text('Reporte', 14, 15);
 
-  data.forEach(row => {
+  doc.autoTable({
 
-    let line = row.join(' | ');
+    html: '#reportTable',
 
-    doc.text(line, 10, y);
+    startY: 25,
 
-    y += 10;
+    styles: {
+      fontSize: 8,
+      cellPadding: 3,
+      valign: 'middle'
+    },
+
+    headStyles: {
+      fillColor: [40, 40, 40]
+    },
+
+    columnStyles: {
+      5: { halign: 'center' },
+      6: { halign: 'center' },
+      7: { halign: 'center' }
+    }
 
   });
 
@@ -136,91 +71,59 @@ btnPDF.addEventListener('click', () => {
 
 btnCSV.addEventListener('click', () => {
 
-  const data = getTableData();
-
   let csv = [];
 
-  data.forEach(row => {
+  const rows = table.querySelectorAll('tr');
 
-    let cols = row.map(col => {
+  rows.forEach(row => {
 
-      return `"${col.replace(/"/g, '""')}"`;
+    const cols = row.querySelectorAll('th, td');
+
+    let rowData = [];
+
+    cols.forEach(col => {
+
+      let text = col.innerText
+        .trim()
+        .replace(/"/g, '""');
+
+      rowData.push(`"${text}"`);
 
     });
 
-    csv.push(cols.join(','));
+    csv.push(rowData.join(','));
 
   });
 
-  downloadFile(
+  downloadCSV(
     csv.join('\n'),
-    'reporte.csv',
-    'text/csv'
+    'reporte.csv'
   );
 
 });
 
 
 /* =====================
-# DOWNLOAD FILE
+# DOWNLOAD CSV
 ===================== */
 
-function downloadFile(content, filename, type) {
+function downloadCSV(content, fileName) {
 
-  const file = new Blob(
+  const blob = new Blob(
     [content],
-    { type }
+    { type: 'text/csv;charset=utf-8;' }
   );
 
   const link = document.createElement('a');
 
-  link.href = URL.createObjectURL(file);
+  link.href = URL.createObjectURL(blob);
 
-  link.download = filename;
+  link.download = fileName;
 
   document.body.appendChild(link);
 
   link.click();
 
   document.body.removeChild(link);
-
-}
-
-
-/* =====================
-# CONVERT TO HTML TABLE
-===================== */
-
-function convertToHTMLTable() {
-
-  const data = getTableData();
-
-  let html = '<table>';
-
-  data.forEach((row, index) => {
-
-    html += '<tr>';
-
-    row.forEach(col => {
-
-      if (index === 0) {
-
-        html += `<th>${col}</th>`;
-
-      } else {
-
-        html += `<td>${col}</td>`;
-
-      }
-
-    });
-
-    html += '</tr>';
-
-  });
-
-  html += '</table>';
-
-  return html;
 
 }
