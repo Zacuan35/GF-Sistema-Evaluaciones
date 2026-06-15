@@ -333,13 +333,13 @@
               </button>
             </div>    
             <!-- Table -->
-            <div class="table-responsive oy-scroll max-h-250">
-              <table>
+            <div class="table-responsive max-h-250 oy-scroll">
+              <table id="miTabla" class="display">
                 <!-- ------ Table head ------ -->
                 <thead>
                   <tr>
-                    <th width="80px">Elegir</th>
-                    <th width="130px">No. empleado</th>
+                    <th>Elegir</th>
+                    <th>No.Empleado</th>
                     <th>Nombre de colaborador</th>
                   </tr>
                 </thead>
@@ -347,80 +347,43 @@
                 <tbody>
                   <tr>
                     <td>
-                      <label class="checkbox-label">
+                      <label class="checkbox-label ">
                         <input type="checkbox" id="checkbox1">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
+                      </label>                                        
+                    </td>
+                    <td>1</td>
+                    <td>Luis</td>
                   </tr>
                   <tr>
                     <td>
-                      <label class="checkbox-label">
+                      <label class="checkbox-label ">
                         <input type="checkbox" id="checkbox2">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
+                      </label>                                        
+                    </td>
+                    <td>2</td>
+                    <td>Ana</td>
                   </tr>
                   <tr>
                     <td>
-                      <label class="checkbox-label">
+                      <label class="checkbox-label ">
                         <input type="checkbox" id="checkbox3">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
+                      </label>                                        
+                    </td>
+                    <td>3</td>
+                    <td>Carlos</td>
                   </tr>
-
                   <tr>
                     <td>
-                      <label class="checkbox-label">
+                      <label class="checkbox-label ">
                         <input type="checkbox" id="checkbox4">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
+                      </label>                                        
+                    </td>
+                    <td>4</td>
+                    <td>María</td>
                   </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label">
-                        <input type="checkbox" id="checkbox5">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label">
-                        <input type="checkbox" id="checkbox6">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label">
-                        <input type="checkbox" id="checkbox7">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label">
-                        <input type="checkbox" id="checkbox8">
-                      </label>                  
-                    </td>                    
-                    <td>0000</td>
-                    <th>Fernando Conner Robinson</th>
-                  </tr>                                                                                          
                 </tbody>
               </table>
-            </div>           
+            </div> 
           </div>
           <!-- ------ Modal-footer ------ -->
           <div class="modal-footer">
@@ -442,7 +405,14 @@
     <!-- Components -->    
     <script src="../assets/js/theme_toggle.js"></script>	
     <script src="../assets/js/modal.js" type="text/javascript"></script> 
-    <script src="../assets/js/badge.js" type="text/javascript"></script>                     
+    <script src="../assets/js/badge.js" type="text/javascript"></script>    
+    <!-- Librería de DataTables -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#miTabla').DataTable(); // Inicializa DataTables
+      });
+    </script>                            
 
   </body>
 </html>
