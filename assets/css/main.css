@@ -8052,6 +8052,22 @@ td .checkbox-label {
   max-height: 300px;
 }
 
+/* ==========================
+# Badge
+========================== */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.remove-badge {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
 /* =====================
 # FILE-BOX
 ===================== */
