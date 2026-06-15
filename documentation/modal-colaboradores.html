@@ -326,57 +326,40 @@
               </div>    
             -->
             <!-- Table -->
-            <div class="table-responsive max-h-250 oy-scroll">
-              <table id="miTabla" class="display">
-                <!-- ------ Table head ------ -->
-                <thead>
-                  <tr>
-                    <th>Elegir</th>
-                    <th>No.Empleado</th>
-                    <th>Nombre de colaborador</th>
-                  </tr>
-                </thead>
-                <!-- ------ Table body ------ -->
-                <tbody>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label ">
-                        <input type="checkbox" id="checkbox1">
-                      </label>                                        
-                    </td>
-                    <td>1</td>
-                    <td>Luis</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label ">
-                        <input type="checkbox" id="checkbox2">
-                      </label>                                        
-                    </td>
-                    <td>2</td>
-                    <td>Ana</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label ">
-                        <input type="checkbox" id="checkbox3">
-                      </label>                                        
-                    </td>
-                    <td>3</td>
-                    <td>Carlos</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox-label ">
-                        <input type="checkbox" id="checkbox4">
-                      </label>                                        
-                    </td>
-                    <td>4</td>
-                    <td>María</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div> 
+            <table id="miTabla" class="display">
+              <thead>
+                <tr>
+                  <th>
+                    <input type="checkbox" id="checkAll">
+                  </th>
+                  <th>No.Empleado</th>
+                  <th>Nombre de colaborador</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="row-check">
+                  </td>
+                  <td>1</td>
+                  <td>Luis</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="row-check">
+                  </td>
+                  <td>2</td>
+                  <td>Ana</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="row-check">
+                  </td>
+                  <td>3</td>
+                  <td>Carlos</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <!-- ------ Modal-footer ------ -->
           <div class="modal-footer">
@@ -403,9 +386,78 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script>
       $(document).ready(function() {
-        $('#miTabla').DataTable(); // Inicializa DataTables
-      });
-    </script>                            
+
+
+        let tabla = $('#miTabla').DataTable();
+
+
+        // Seleccionar todos
+        $('#checkAll').on('change', function(){
+
+          $('.row-check').prop(
+            'checked',
+            this.checked
+          );
+
+        });
+
+
+        // Si desmarco uno, quitar check general
+        $('.row-check').on('change', function(){
+
+          if(!this.checked){
+
+            $('#checkAll').prop('checked', false);
+
+          }
+
+
+          // Si todos están seleccionados
+          if($('.row-check:checked').length === $('.row-check').length){
+
+            $('#checkAll').prop('checked', true);
+
+          }
+
+        });
+
+
+
+        // Obtener seleccionados
+        $('#miBoton').on('click', function(){
+
+
+          let seleccionados = [];
+
+
+          $('.row-check:checked').each(function(){
+
+
+            let fila = tabla
+              .row($(this).closest('tr'))
+              .data();
+
+
+            seleccionados.push({
+
+              empleado: fila[1],
+              nombre: fila[2]
+
+            });
+
+
+          });
+
+
+          console.log(seleccionados);
+
+
+        });
+
+
+
+      });      
+    </script>    
 
   </body>
 </html>
