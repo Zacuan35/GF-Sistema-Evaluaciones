@@ -5776,6 +5776,88 @@ i {
   display: none;
 }
 
+/* =====================
+# BADGE
+===================== */
+.badge {
+  --badge-bg: var(--tertiary-color);
+  --badge-border: var(--fourty-color);
+  --badge-color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background-color: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-color);
+  font-size: 0.8rem;
+  line-height: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.badge .badge-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.badge .badge-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+.badge .badge-close:hover {
+  opacity: 1;
+}
+.badge:hover {
+  transform: translateY(-1px);
+}
+.badge.is-hidden {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* =====================
+# BADGE VARIANTS
+===================== */
+.badge-success {
+  --badge-bg: #dcfce7;
+  --badge-border: #86efac;
+  --badge-color: #166534;
+}
+
+.badge-warning {
+  --badge-bg: #fef3c7;
+  --badge-border: #fcd34d;
+  --badge-color: #92400e;
+}
+
+.badge-danger {
+  --badge-bg: #fee2e2;
+  --badge-border: #fca5a5;
+  --badge-color: #991b1b;
+}
+
+/* =====================
+# BADGE SIZES
+===================== */
+.badge-sm {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.7rem;
+}
+
+.badge-lg {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+}
+
 /*Forms*/
 /* =====================
 # FORM GROUP
@@ -7947,6 +8029,24 @@ canvas {
     width: 100%;
   }
 }
+/* ==========================
+# Checkbox-label inside table
+========================== */
+td .checkbox-label {
+  margin: 0;
+}
+
+/* ==========================
+# Table inside modal
+========================== */
+.oy-scroll {
+  overflow-y: scroll;
+}
+
+.max-h-300 {
+  max-height: 300px;
+}
+
 /* =====================
 # FILE-BOX
 ===================== */

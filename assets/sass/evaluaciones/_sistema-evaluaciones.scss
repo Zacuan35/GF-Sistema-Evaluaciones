@@ -351,3 +351,16 @@ canvas {
   }
 
 }
+
+/* ==========================
+# Checkbox-label inside table
+========================== */
+td .checkbox-label {
+  margin: 0;
+}
+
+/* ==========================
+# Table inside modal
+========================== */
+.oy-scroll{overflow-y: scroll;}
+.max-h-300 { max-height: 300px;}
