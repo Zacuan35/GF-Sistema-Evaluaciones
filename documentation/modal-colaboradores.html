@@ -6,7 +6,40 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <!-- Styles -->
-    <link href="../assets/css/main.css" rel="stylesheet" type="text/css" />         
+    <link href="../assets/css/main.css" rel="stylesheet" type="text/css" />  
+    <style>
+      .badges-container{
+        display:flex;
+        flex-wrap:wrap;
+        gap:.5rem;
+        margin-bottom:1rem;
+      }
+
+
+      .badge{
+
+        display:inline-flex;
+        align-items:center;
+        gap:.5rem;
+
+        padding:.35rem .75rem;
+
+        border-radius:999px;
+
+        background:#eee;
+
+      }
+
+
+      .remove-badge{
+
+        border:0;
+        background:none;
+
+        cursor:pointer;
+
+      }      
+    </style>       
   </head>
   <body>
 
@@ -325,6 +358,7 @@
                 </button>
               </div>    
             -->
+            <div id="seleccionados" class="badges-container"></div>              
             <!-- Table -->
             <table id="miTabla" class="display">
               <thead>
@@ -387,74 +421,89 @@
     <script>
       $(document).ready(function() {
 
-
         let tabla = $('#miTabla').DataTable();
+        let seleccionados = [];
 
+        $('#miTabla tbody').on('change', '.row-check', function(){
+          let fila = tabla
+            .row($(this).closest('tr'))
+            .data();
 
-        // Seleccionar todos
-        $('#checkAll').on('change', function(){
+          let empleado = fila[1];
+          let nombre = fila[2];
 
-          $('.row-check').prop(
-            'checked',
-            this.checked
+          if(this.checked){
+
+            seleccionados.push({
+              id: empleado,
+              nombre: nombre
+            });
+
+          }else{
+
+            seleccionados = seleccionados.filter(
+              item => item.id !== empleado
+            );
+
+          }
+
+          renderBadges();
+
+        });
+
+        function renderBadges(){
+          let contenedor = $('#seleccionados');
+
+          contenedor.html('');
+
+          seleccionados.forEach(item => {
+
+            contenedor.append(`
+
+              <span class="badge">
+
+                ${item.nombre}
+
+                <button 
+                  class="remove-badge"
+                  data-id="${item.id}">
+                  ×
+                </button>
+
+              </span>
+
+            `);
+
+          });
+
+        }
+
+        // Quitar desde el badge
+        $('#seleccionados').on('click','.remove-badge',function(){
+
+          let id = $(this).data('id');
+
+          seleccionados = seleccionados.filter(
+            item => item.id != id
           );
 
-        });
-
-
-        // Si desmarco uno, quitar check general
-        $('.row-check').on('change', function(){
-
-          if(!this.checked){
-
-            $('#checkAll').prop('checked', false);
-
-          }
-
-
-          // Si todos están seleccionados
-          if($('.row-check:checked').length === $('.row-check').length){
-
-            $('#checkAll').prop('checked', true);
-
-          }
-
-        });
-
-
-
-        // Obtener seleccionados
-        $('#miBoton').on('click', function(){
-
-
-          let seleccionados = [];
-
-
-          $('.row-check:checked').each(function(){
-
+          $('.row-check').each(function(){
 
             let fila = tabla
               .row($(this).closest('tr'))
               .data();
 
+            if(fila[1] == id){
 
-            seleccionados.push({
+              $(this).prop('checked', false);
 
-              empleado: fila[1],
-              nombre: fila[2]
-
-            });
-
+            }
 
           });
 
-
-          console.log(seleccionados);
-
+          renderBadges();
 
         });
-
-
 
       });      
     </script>    
