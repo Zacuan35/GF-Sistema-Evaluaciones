@@ -5791,7 +5791,7 @@ i {
   color: var(--text-color);
   font-size: 0.8rem;
   line-height: 1;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, margin 0.3s ease, padding 0.3s ease;
 }
 .badge .badge-text {
   overflow: hidden;
@@ -5818,7 +5818,11 @@ i {
 }
 .badge.is-hidden {
   opacity: 0;
-  transform: scale(0.9);
+  transform: scale(0.8);
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  pointer-events: none;
 }
 
 /* =====================
@@ -5826,19 +5830,19 @@ i {
 ===================== */
 .badge-success {
   background-color: rgba(22, 163, 74, 0.1);
-  border: 1px solid #16A34A;
+  border-color: #16A34A;
   color: #16A34A;
 }
 
 .badge-warning {
   background-color: rgba(219, 154, 23, 0.1);
-  border: 1px solid #db9a17;
+  border-color: #db9a17;
   color: #db9a17;
 }
 
 .badge-danger {
   background-color: rgba(220, 38, 38, 0.1);
-  border: 1px solid #DC2626;
+  border-color: #DC2626;
   color: #DC2626;
 }
 
@@ -8038,6 +8042,10 @@ td .checkbox-label {
 ========================== */
 .oy-scroll {
   overflow-y: scroll;
+}
+
+.max-h-250 {
+  max-height: 250px;
 }
 
 .max-h-300 {

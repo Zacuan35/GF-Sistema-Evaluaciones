@@ -14,8 +14,10 @@
   font-size: 0.8rem;
   line-height: 1;
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+    opacity .3s ease,
+    transform .3s ease,
+    margin .3s ease,
+    padding .3s ease;
 
   .badge-text {
     overflow: hidden;
@@ -46,7 +48,11 @@
 
   &.is-hidden {
     opacity: 0;
-    transform: scale(.9);
+    transform: scale(.8);
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    pointer-events: none;
   }
 }
 
@@ -55,19 +61,19 @@
 ===================== */
 .badge-success {
     background-color: rgba($success-color, 0.1);
-    border: 1px solid $success-color;  
+    border-color: $success-color;  
     color:$success-color;
 }
 
 .badge-warning {
     background-color: rgba($warning-color, 0.1);
-    border: 1px solid $warning-color;  
+    border-color: $warning-color;    
     color:$warning-color;
 }
 
 .badge-danger {
     background-color: rgba($danger-color, 0.1);
-    border: 1px solid $danger-color;  
+    border-color: $danger-color;     
     color:$danger-color;
 }
 
