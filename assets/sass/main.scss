@@ -13,32 +13,40 @@
 @import 'base/others';
 @import 'base/bajar_footer';
 
-/*Components*/
-@import 'components/accordion';
-@import 'components/banner_alerts';
-@import 'components/breadcrumb';
-@import 'components/buttons';
-@import 'components/card';
-@import 'components/panel_list';
-@import 'components/wa_list';
-@import 'components/charts';
-@import 'components/gallery';
-@import 'components/modal';
-@import 'components/pagination_area';
-@import 'components/table';
-@import 'components/data_table';
-@import 'components/tabs';
-@import 'components/tooltips';
-@import 'components/vertical_tabs';
-@import 'components/sweet_alert';
+/*Components - General*/
+@import 'components/general/accordion';
+@import 'components/general/buttons';
+@import 'components/general/card';
+@import 'components/general/panel_list';
+@import 'components/general/wa_list';
+@import 'components/general/gallery';
+@import 'components/general/progress_bar';
+@import 'components/general/box_link';
+@import 'components/general/loader';
+@import 'components/general/badge';
+
+/*Components - Feedback*/
+@import 'components/feedback/banner_alerts';
+@import 'components/feedback/modal';
+@import 'components/feedback/sweet_alert';
+@import 'components/feedback/tooltips';
+@import 'components/feedback/data-toast.scss';
+
+/*Components - Data display*/
+@import 'components/data-display/charts';
+@import 'components/data-display/table';
+@import 'components/data-display/data_table';
+@import 'components/data-display/table_grid';
+
+/*Components - Navigation*/
+@import 'components/navigation/breadcrumb';
+@import 'components/navigation/pagination_area';
+@import 'components/navigation/tabs';
+@import 'components/navigation/vertical_tabs';
+
+/*Components - Otros*/
 @import 'components/icons';
 @import 'components/icomoon';
-@import 'components/table_grid';
-@import 'components/data-toast.scss';
-@import 'components/progress_bar';
-@import 'components/box_link';
-@import 'components/loader';
-@import 'components/badge';
 
 /*Forms*/
 @import 'form/form';
