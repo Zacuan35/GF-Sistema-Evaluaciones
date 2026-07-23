@@ -43,25 +43,23 @@
 @import 'components/navigation/pagination_area';
 @import 'components/navigation/tabs';
 @import 'components/navigation/vertical_tabs';
+@import 'components/navigation/standar_navbar';//Revisar que sus estilos no choquen con el main_header y sidebar_menu del sidebar
+@import 'components/navigation/social_links';
+@import 'components/navigation/secondary_menu';
+@import 'components/navigation/back_to_top';
+
+/*Components - Form*/
+@import 'components/form/form';
+@import 'components/form/password';
+@import 'components/form/search';
+@import 'components/form/switch';
+@import 'components/form/upload_files';
+@import 'components/form/date_group';
+@import 'components/form/multiple_select';
 
 /*Components - Otros*/
 @import 'components/icons';
 @import 'components/icomoon';
-
-/*Forms*/
-@import 'form/form';
-@import 'form/password'; 
-@import 'form/search';
-@import 'form/switch';
-@import 'form/upload_files';
-@import 'form/date_group'; 
-@import 'form/multiple_select';
-
-/*Navigation*/
-@import 'navigation/standar_navbar';//Revisar que sus estilos no choquen con el main_header y sidebar_menu del sidebar
-@import 'navigation/social_links';
-@import 'navigation/secondary_menu';
-@import 'navigation/back_to_top';
 
 /*Website layout*/
 @import 'layouts/sections';
