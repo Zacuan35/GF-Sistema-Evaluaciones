@@ -7,14 +7,14 @@
 .topbar{
   padding:0.75rem 0;
 
-  p{color:var(--primary-color);}
+  p{color:var(--color-surface);}
 
   .contact{
     gap:0.25rem;
 
     a,p{
       font-size: 0.875rem;
-      color:var(--primary-text-color);
+      color:var(--color-text-primary);
     }
   }  
 
@@ -46,14 +46,14 @@
       }		
 
       a {
-        color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+        color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
 
         &:hover {
           color:$white-color;
           .icon{color: $white-color;}		
         }	
 
-        .icon{color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);}		
+        .icon{color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);}		
 
       }
 
@@ -68,7 +68,7 @@ header.hero{
   background-image: url(https://placehold.co/1200x800);
   background-size: cover;
   background-attachment: fixed;    
-  background-color:var(--primary-text-color);
+  background-color:var(--color-text-primary);
   width: 100%;
   height: auto;
   display: flex;

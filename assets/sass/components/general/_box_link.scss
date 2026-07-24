@@ -17,8 +17,8 @@
     width: 100%;
     padding: 50px 20px 20px;
     border-radius: 10px;
-    background-color: var(--primary-color);
-    border: 1px solid var(--tertiary-color);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-strong);
     text-align: center;
     font-family: sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -27,13 +27,13 @@
     p{
       font-family:$secondary-font;
       font-size: 1rem; 
-      color:var(--primary-text-color);
+      color:var(--color-text-primary);
       font-weight: bold;  
       margin-bottom: 0;
     }
 
     &:hover{
-      border:1px solid var(--highlight-color);
+      border:1px solid var(--brand-primary);
     }
 
     /* Círculo con ícono */
@@ -44,29 +44,29 @@
       transform: translateX(-50%);
       width: 50px;
       height: 50px;
-      border: 1px solid var(--tertiary-color);
+      border: 1px solid var(--color-border-strong);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 18px;
-      background-color: var(--primary-color);
+      background-color: var(--color-surface);
       transition: background-color 0.3s;
-      color:var(--highlight-color);
+      color:var(--brand-primary);
 
-      i{color:var(--highlight-color);}
+      i{color:var(--brand-primary);}
     }   
     
     /* Hover sobre la tarjeta: cambia color del icono */
     &:hover .icon-circle {
-      background-color: var(--highlight-color); 
-      border-color: var(--highlight-color);
-      color:var(--primary-color);
+      background-color: var(--brand-primary); 
+      border-color: var(--brand-primary);
+      color:var(--color-surface);
       i{color:$white-color;}
     }
     
     &:hover p {
-      color:var(--highlight-color);
+      color:var(--brand-primary);
     }    
 
   }

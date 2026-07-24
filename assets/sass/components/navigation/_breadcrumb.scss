@@ -10,7 +10,7 @@
 	align-items: center;
 
 	li {
-		color:var(--primary-text-color);
+		color:var(--color-text-primary);
 		font-size: 0.75rem;
 		text-transform:uppercase;
 		font-weight: bold;
@@ -18,7 +18,7 @@
 		&::after {
 			content: "/";
 			margin: 0 0.5rem;
-			color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+			color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
 		}		
 
 		&:last-child::after {
@@ -26,17 +26,17 @@
 		}		
 
 		a {
-			color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+			color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
 			font-size: 0.75rem;
 		
 			&:hover {
 				text-decoration: underline;
-				color:var(--highlight-color);
-				.icon{color:var(--highlight-color);}
+				color:var(--brand-primary);
+				.icon{color:var(--brand-primary);}
 			}	
 
 			.icon{
-				color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+				color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
 				margin-right: 0.25rem;
 			}			
 			

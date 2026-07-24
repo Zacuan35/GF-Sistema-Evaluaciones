@@ -6,7 +6,7 @@
   justify-content:center;
   align-items:center;
   height: 100vh; 
-  background-color:var(--secondary-color);
+  background-color:var(--color-canvas);
 }
 
 .login-box {
@@ -28,7 +28,7 @@
   .login-body {
     padding: 25px;
     width:100%;
-    background-color: var(--primary-color);
+    background-color: var(--color-surface);
     footer {
       margin-top: 1.5rem;
       text-align: center;

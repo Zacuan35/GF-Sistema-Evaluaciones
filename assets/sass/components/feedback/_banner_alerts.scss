@@ -3,7 +3,7 @@
 ===================== */
 .banner_alert {
   padding: 0.5rem 1rem;
-  border-radius: .25rem;
+  border-radius: var(--radius-xs);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,13 +42,13 @@
 
   p{
     margin: 0;
-    color:var(--primary-color);
+    color:var(--color-surface);
   }
 
   .btn-close {
     box-sizing: content-box;
     background-color: inherit;
-    color: var(--primary-color);
+    color: var(--color-surface);
     padding: 0.5rem;
     border: 0;
     opacity: .5;

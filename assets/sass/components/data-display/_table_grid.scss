@@ -37,9 +37,9 @@
   align-items: center;
 
   padding: 1rem;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.5rem;
-  background-color: var(--primary-color);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
 
   transition: all 0.2s ease;
 
@@ -52,8 +52,8 @@
 ===================== */
 
 .tg-head .tg-row {
-  background-color: var(--tertiary-color);
-  color: var(--highlight-color);
+  background-color: var(--color-border-strong);
+  color: var(--brand-primary);
   font-weight: bold;
 }
 
@@ -62,11 +62,11 @@
 ===================== */
 
 .tg-body .tg-row:nth-child(even) {
-  background-color: var(--secondary-color);
+  background-color: var(--color-canvas);
 }
 
 .tg-body .tg-row:hover {
-  background-color: var(--tertiary-color);
+  background-color: var(--color-border-strong);
 }
 
 /* =====================

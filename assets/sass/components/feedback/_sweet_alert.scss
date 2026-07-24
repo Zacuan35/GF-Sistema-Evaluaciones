@@ -11,7 +11,7 @@
 
 .swal2-styled.swal2-confirm {
     border-radius: .25em;
-    background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color) !important; 
+    background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color) !important; 
     color: #fff;
     font-weight: 500;
     font-size: 1em;

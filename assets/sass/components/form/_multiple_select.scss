@@ -13,24 +13,24 @@
 }
 .multi-select_field, 
 .multi-select_option {
-  background: var(--primary-color);
+  background: var(--color-surface);
   //padding-left: 2px;
 }
 .multi-select_field {
   position: relative;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  background-color: var(--primary-color);
-  color:var(--primary-text-color);
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.25rem;
+  background-color: var(--color-surface);
+  color:var(--color-text-primary);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-xs);
   font-size:0.875rem;  
   line-height: 1.5;
   cursor: default;
   transition: border-color 0.15s ease-in-out;
 
   &:hover {
-    border-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+    border-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   }  
 
   &:after {
@@ -42,20 +42,20 @@
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900; 
     font-size: 11px; 
-    color:var(--primary-text-color);
+    color:var(--color-text-primary);
   }  
 }
 .multi-select_field.is-empty {
-  color: var(--fourth-color);
+  color: var(--brand-tint-100);
 }
 .multi-select_options {
   display: none;
   width: 100%;
   max-height: 170px;
-  border-left: 1px solid var(--tertiary-color);
-  border-bottom: 1px solid var(--tertiary-color);
-  border-right: 1px solid var(--tertiary-color);
-  background: var(--primary-color);
+  border-left: 1px solid var(--color-border-strong);
+  border-bottom: 1px solid var(--color-border-strong);
+  border-right: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   overflow-x: hidden;
   z-index: 9999;
@@ -71,10 +71,10 @@
   line-height: 30px;
 
   &:hover {
-    background: var(--secondary-color);
+    background: var(--color-canvas);
   }
   &:not(:last-child) {
-    border-bottom: 1px solid var(--tertiary-color);
+    border-bottom: 1px solid var(--color-border-strong);
   }  
 }
 .multi-select_label {

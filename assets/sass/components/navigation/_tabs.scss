@@ -4,14 +4,14 @@
 .tabs-container {
   width: 100%;
   margin: auto;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.5rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
   
   .tabs{
     display: flex; 
     flex-wrap: wrap;
-    background-color: var(--secondary-color);
-    border-bottom: 1px solid var(--tertiary-color);
+    background-color: var(--color-canvas);
+    border-bottom: 1px solid var(--color-border-strong);
     border-radius: 0.5rem 0.5rem 0 0 ;
   
     &.tabs-center{
@@ -31,8 +31,8 @@
 .tab-button {
   padding: 10px 20px;
   border: none;
-  background: var(--secondary-color);
-  color: var(--primary-text-color);
+  background: var(--color-canvas);
+  color: var(--color-text-primary);
   cursor: pointer;
   text-align: center;
   transition: background 0.3s;
@@ -44,8 +44,8 @@
   &.active,
   &:hover, 
   &:focus {
-    background-color: color-mix(in srgb, var(--seventy-color) 90%, $white-color); 
-    color:var(--primary-color);  
+    background-color: color-mix(in srgb, var(--brand-tint-400) 90%, $white-color); 
+    color:var(--color-surface);  
     font-weight: 600;
   }  
 }
@@ -53,9 +53,9 @@
 /* # Tab-content
 ----------------------------------------------- */
 .tab-content {
-  background-color:var(--primary-color);
+  background-color:var(--color-surface);
   padding: 20px;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   
   .tab-pane {
     display: none;

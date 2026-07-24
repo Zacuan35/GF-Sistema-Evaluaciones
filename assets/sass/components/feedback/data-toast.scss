@@ -12,13 +12,13 @@
   min-width: 250px;
   max-width: 320px;
   padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  color: var(--primary-color);
+  border-radius: var(--radius-sm);
+  color: var(--color-surface);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-md);
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -32,12 +32,12 @@
 
 .toast.success {background-color: $success-color;}
 .toast.error {background-color: $danger-color;}
-.toast.info {background-color: var(--highlight-color);}
+.toast.info {background-color: var(--brand-primary);}
 
 .toast button {
   background: none;
   border: none;
-  color: var(--primary-color);
+  color: var(--color-surface);
   font-size: 1rem;
   cursor: pointer;
 }

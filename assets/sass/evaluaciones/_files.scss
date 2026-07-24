@@ -5,16 +5,16 @@
   display: flex;
   gap:0.5rem;
   padding: 15px 25px;
-  background-color: var(--secondary-color);
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.5rem;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
   font-family:$secondary-font;
   font-size: 1rem;  
-  color:var(--primary-text-color);
+  color:var(--color-text-primary);
   font-weight: bold;
   cursor: pointer;
 
   &:hover{
-    background-color: var(--tertiary-color);
+    background-color: var(--color-border-strong);
   }
 }

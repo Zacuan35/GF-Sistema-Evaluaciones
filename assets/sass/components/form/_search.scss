@@ -21,8 +21,8 @@
 /* # Search button
 ----------------------------------------------- */
 .search-button {
-  background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
-  border: 1px solid color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+  background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   color: $white-color;
   padding: 10px;
   border-radius: 0 0.25rem 0.25rem 0;
@@ -34,8 +34,8 @@
   width: 40px;
   i{color: $white-color;}
   &:hover {
-    background-color: var(--highlight-color);
-    border: 1px solid var(--highlight-color);
+    background-color: var(--brand-primary);
+    border: 1px solid var(--brand-primary);
   }
 } 
 

@@ -7,50 +7,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* # Variables
------------------------------------------------ */
-$primary-font: "Montserrat", serif;
-$secondary-font: "Roboto", serif;
-
 /* # Tipography
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn{
-  font-family:$secondary-font;
-  font-size: 1rem; /*font-size:16px;*/
+  font-family: var(--font-body);
+  font-size: var(--fs-text); /*font-size:16px;*/
   line-height: 1.1875rem;
-  font-weight: 300;  
+  font-weight: var(--fw-light);
 }
 p,ul,ol {
-  font-family:$secondary-font;
-  font-size: 1rem;  
-  font-weight: 300;  
+  font-family: var(--font-body);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-light);
   padding: 0;
 }
 p{
   line-height: 1.4rem;
-  //margin: 0 0 20px;  
+  //margin: 0 0 20px;
   margin: 0;
 }
 p:last-child {margin-bottom: 0;}
 p.lead{
-  font-size: 1.5rem;
+  font-size: var(--fs-lead);
   line-height: 1.5rem;
-  font-weight: 300;
+  font-weight: var(--fw-light);
 }
 th,td {
-  font-family:$secondary-font;
-  font-weight: 300;  
-  font-size:1rem;  
+  font-family: var(--font-body);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-text);
 }
 
-a{font-size:1rem;}
+a{font-size: var(--fs-text);}
 
-small, .small {  
-  font-family:$secondary-font;
+small, .small {
+  font-family: var(--font-body);
   font-weight: normal;
   line-height: 1;
-  //color: var(--fifth-color);
-  font-size: 80%;  
+  //color: var(--brand-tint-200);
+  font-size: 80%;
 }
 
 b,strong {font-weight: bold;}
@@ -58,8 +53,8 @@ b,strong {font-weight: bold;}
 /*Títulos*/
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
-  font-family:$primary-font;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
   //margin: 0 0 0.25rem 0;
   margin: 0;
   padding: 0;
@@ -67,18 +62,18 @@ h1,h2,h3,h4,h5,h6,
   text-transform:initial;
 }
 /*Sólo si se requiere títulos H1 más grandes en el home */
-h1.home ,h2.home{font-size: 2.3rem;}
+h1.home ,h2.home{font-size: var(--fs-3xl);}
 
-h1, .h1 { font-size: 1.8rem; }
-h2, .h2 { font-size: 1.4rem; }
-h3, .h3 { font-size: 1.2rem; }
-h4, .h4 { font-size: 1.1rem; }
-h5, .h5 { font-size: 1rem; }
-h6, .h6 { font-size: 0.9rem; }
+h1, .h1 { font-size: var(--fs-2xl); }
+h2, .h2 { font-size: var(--fs-xl); }
+h3, .h3 { font-size: var(--fs-lg); }
+h4, .h4 { font-size: var(--fs-md); }
+h5, .h5 { font-size: var(--fs-base); }
+h6, .h6 { font-size: var(--fs-sm); }
 h2.teaser {
-  font-family:$secondary-font;
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: var(--fs-display-3);
+  font-weight: var(--fw-bold);
   font-style: italic;
   margin-top: 0px;
   text-transform: capitalize;
@@ -86,14 +81,14 @@ h2.teaser {
 
 .display{
   line-height: 1.2;
-  font-weight: 300;  
+  font-weight: var(--fw-light);
 }
-.display-1{font-size: 3rem;}
-.display-2{font-size: 2.5rem;}
-.display-3{font-size: 2rem;}
-.display-4{font-size: 1.5rem;}
+.display-1{font-size: var(--fs-display-1);}
+.display-2{font-size: var(--fs-display-2);}
+.display-3{font-size: var(--fs-display-3);}
+.display-4{font-size: var(--fs-display-4);}
 
-.font-xs{font-size:.75rem;}
+.font-xs{font-size: var(--fs-xs);}
 .fa-sm {font-size: .875em;}
 .fa-1x {font-size: 1em;}
 .fa-2x {font-size: 2em;}
@@ -140,18 +135,22 @@ Tabletas horizontales*/
   }
   */
 
-  h1.home ,h2.home{font-size: 3.8rem;}
-  h1, .h1 {font-size: 2.5rem;}
-  h2, .h2 {font-size: 2rem;}
-  h3, .h3 {font-size: 1.75rem;}
-  h4, .h4 {font-size: 1.5rem;}
-  h5, .h5 {font-size: 1.25rem;}
-  h6, .h6 {font-size: 1rem;}  
+  /* Un solo lugar redefine la escala completa de headings; h1-h6 y
+  .display-* la heredan automáticamente por leerla de estas variables. */
+  :root {
+    --fs-sm: 1rem;
+    --fs-base: 1.25rem;
+    --fs-md: 1.5rem;
+    --fs-lg: 1.75rem;
+    --fs-xl: 2rem;
+    --fs-2xl: 2.5rem;
+    --fs-3xl: 3.8rem;
 
-  .display-1{font-size: 6rem;}
-  .display-2{font-size: 5.5rem;}
-  .display-3{font-size: 4.5rem;}
-  .display-4{font-size: 3.5rem;}  
+    --fs-display-4: 3.5rem;
+    --fs-display-3: 4.5rem;
+    --fs-display-2: 5.5rem;
+    --fs-display-1: 6rem;
+  }
 }
 
 /* # Desktop

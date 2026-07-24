@@ -2,7 +2,7 @@
 # STANDAR NAVBAR
 ===================== */
 .navbar {
-  background-color:var(--primary-color);
+  background-color:var(--color-surface);
   padding: 10px;
   position: relative;
 }
@@ -37,7 +37,7 @@
   display: block;
   background: none;
   border: none;
-  color:var(--primary-text-color);
+  color:var(--color-text-primary);
   font-size: 24px;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@
 /* # Navbar menu
 ----------------------------------------------- */
 .navbar-menu {
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
   display: none;
   flex-direction: column;
   position: absolute;
@@ -67,14 +67,14 @@
 /* Navbar-link */
 /*No usado en este ejemplo de menu*/
 .navbar-link {
-  color:var(--primary-text-color);
+  color:var(--color-text-primary);
   text-decoration: none;
   padding: 20px 15px;
   display: block;
-  .navbar-link:hover {background-color: var(--tertiary-color);}
+  .navbar-link:hover {background-color: var(--color-border-strong);}
 
   &.active {
-    color: var(--sixty-color); 
+    color: var(--brand-tint-300); 
     font-weight: bold;
   }
 }
@@ -87,23 +87,23 @@
 }
 /* Only for mobile */
 .dropdown.active{
-  .dropdown-toggle {background-color: var(--fourth-color);}
+  .dropdown-toggle {background-color: var(--brand-tint-100);}
   .dropdown-menu {display: block;}  
 }
 
 /*Enlace principal del dropdown*/
 .dropdown-toggle {
-  color: var(--secondary-color);
+  color: var(--color-canvas);
   text-decoration: none;
   padding: 20px 15px;
   display: block;
   font-size:0.875rem;
 }
-.dropdown:hover .dropdown-toggle {background-color: var(--fourth-color);}
+.dropdown:hover .dropdown-toggle {background-color: var(--brand-tint-100);}
 /*Si se utiliza imagen de usuario*/
 .dropdown-toggle img.user{
   width:20px;
-  border-radius:1rem;
+  border-radius: var(--radius-lg);
   margin-bottom:-6px;
   margin-right:0.25rem;
 }
@@ -113,7 +113,7 @@
   display: none;
   position: static; 
   width: 100%;
-  background-color: var(--fourth-color);
+  background-color: var(--brand-tint-100);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -124,7 +124,7 @@
     text-decoration: none;
     color: #eee;
     font-size:0.875rem;
-    &:hover {background-color: var(--tertiary-color);}
+    &:hover {background-color: var(--color-border-strong);}
   }
 }
 
@@ -182,7 +182,7 @@
   /* # Dropdown toggle
   ----------------------------------------------- */
   .dropdown:hover .dropdown-toggle {
-    color:var(--highlight-color); 
+    color:var(--brand-primary); 
     background-color: inherit; 
   }
   
@@ -194,10 +194,10 @@
     top: 100%;
     left: 0;
     min-width: 200px;
-    background-color: var(--fifth-color);
+    background-color: var(--brand-tint-200);
     a {
-      color: var(--primary-color);
-      &:hover {background-color: var(--fourth-color);}
+      color: var(--color-surface);
+      &:hover {background-color: var(--brand-tint-100);}
     }
   }
 }

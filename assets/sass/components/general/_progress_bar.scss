@@ -3,8 +3,8 @@
   width: 100%;
   height: 18px;
   position: relative;
-  background: var(--tertiary-color);
-  border-radius: 999px;
+  background: var(--color-border-strong);
+  border-radius: var(--radius-full);
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@
 .dac-progress__label {
   font-size: 12px;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--color-surface);
   white-space: nowrap;
   pointer-events: none;
   padding: 0 8px;
@@ -32,7 +32,7 @@
 
 /* Estados */
 .bg-success .dac-progress__bar {background: $success-color;}
-.bg-info .dac-progress__bar {background: var(--highlight-color);}
+.bg-info .dac-progress__bar {background: var(--brand-primary);}
 .bg-warning .dac-progress__bar {background: $warning-color;}
 .bg-danger .dac-progress__bar {background: $danger-color;}
 

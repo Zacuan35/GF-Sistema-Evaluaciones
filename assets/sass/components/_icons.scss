@@ -3,7 +3,7 @@
 ===================== */
 i{
   font-size: 1rem;
-  color: var(--highlight-color);
+  color: var(--brand-primary);
 }
 
 .icon-xs {font-size: 1rem;}      /*16px*/
@@ -25,9 +25,9 @@ i{
 
 /* # Background colors
 ----------------------------------------------- */
-.bg-default i{color: var(--highlight-color);}
-.bg-light i{color: var(--highlight-color);}
-.bg-dark i{color: var(--highlight-color);}
-.bg-darker i{color: var(--highlight-color);}
-.bg-success i{color: var(--highlight-color);}
-.bg-danger i{color: var(--highlight-color);}
+.bg-default i{color: var(--brand-primary);}
+.bg-light i{color: var(--brand-primary);}
+.bg-dark i{color: var(--brand-primary);}
+.bg-darker i{color: var(--brand-primary);}
+.bg-success i{color: var(--brand-primary);}
+.bg-danger i{color: var(--brand-primary);}

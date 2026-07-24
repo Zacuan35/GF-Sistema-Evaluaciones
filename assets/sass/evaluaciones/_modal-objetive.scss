@@ -27,8 +27,8 @@
   .modal-info {
     display: none;
     width: 320px;
-    background-color: var(--secondary-color);
-    color: var(--primary-text-color);
+    background-color: var(--color-canvas);
+    color: var(--color-text-primary);
     padding: 2rem;
 
     .modal-info-title {
@@ -43,7 +43,7 @@
 
   /* ===== Contenido principal ===== */
   .modal-content {
-    background-color: var(--primary-color);
+    background-color: var(--color-surface);
     width: 100%;
     max-width: 1000px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
@@ -61,7 +61,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--secondary-color);
+      border-bottom: 1px solid var(--color-canvas);
 
       h2 {
         margin: 0;
@@ -70,12 +70,12 @@
       .btn-close {
         font-size: 24px;
         font-weight: bold;
-        color: var(--tertiary-color);
+        color: var(--color-border-strong);
         cursor: pointer;
         transition: color 0.3s;
 
         &:hover {
-          color: var(--primary-text-color);
+          color: var(--color-text-primary);
         }
       }
     }
@@ -86,7 +86,7 @@
     }
 
     .modal-footer {
-      border-top: 1px solid var(--secondary-color);
+      border-top: 1px solid var(--color-canvas);
       display: flex;
       justify-content: flex-end;
       gap: 1rem;

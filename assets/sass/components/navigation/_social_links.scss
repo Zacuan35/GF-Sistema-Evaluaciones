@@ -12,14 +12,14 @@ ul.social-links {
   justify-content: center;
   width:2rem; 
   height:2rem; 
-  border-radius: 1rem;
+  border-radius: var(--radius-lg);
   font-size:1rem; 
   text-align:center;
   color:red; 
   background-color:transparent;
 
   i{
-    color: var(--highlight-color);
+    color: var(--brand-primary);
   }
 
   &:hover{    
@@ -42,7 +42,7 @@ ul.social-links {
 .bg-darker {
   .social-links a{
     i{
-      color: var(--fifth-color);
+      color: var(--brand-tint-200);
     }
   }  
 }

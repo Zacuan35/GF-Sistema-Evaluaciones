@@ -14,16 +14,16 @@
     align-items: center;
     gap: 1rem;
     padding: 0.75rem 1rem;
-    background-color:var(--primary-color);
+    background-color:var(--color-surface);
     background-clip: border-box;  
-    border:1px solid var(--tertiary-color);  
-    border-radius: 0.5rem;
+    border:1px solid var(--color-border-strong);  
+    border-radius: var(--radius-sm);
 
     p{
       margin:0;
     }    
-    &:nth-child(even) {background-color: var(--secondary-color); }
-    &:hover {background-color: var(--tertiary-color); } 
+    &:nth-child(even) {background-color: var(--color-canvas); }
+    &:hover {background-color: var(--color-border-strong); } 
 
     /* =========
     # STATES 
@@ -45,7 +45,7 @@
     &.disabled{
     background-color: lighten($gray-color, 50%);
     border-color: lighten($gray-color, 40%);
-    h6,p{color:$gray-color;}          
+    h6,p{color:var(--color-text-muted);}          
     p{font-weight:400;}              
     cursor:not-allowed;        
     img{filter: grayscale(100%);}

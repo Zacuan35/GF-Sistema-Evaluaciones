@@ -16,7 +16,7 @@ label {
 
 /* # Colour
 ----------------------------------------------- */
-label{color:var(--primary-text-color);}
+label{color:var(--color-text-primary);}
 label span {color: $danger-color; }
 
 form, 
@@ -26,7 +26,7 @@ select,
 legend,
 .form-control,
 .custom-select {
-  color:var(--primary-text-color);
+  color:var(--color-text-primary);
 }
 
 /* # Select & input styles
@@ -36,22 +36,22 @@ legend,
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  background-color: var(--secondary-color);
+  background-color: var(--color-canvas);
   background-clip: padding-box;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.25rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-xs);
   font-size:0.875rem;  
   line-height: 1.5;
   transition: border-color 0.15s ease-in-out;
   &:hover, &:focus {
-    border-color:color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+    border-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
     outline: 0;
   }
   &::placeholder {
-    color: var(--primary-text-color);
+    color: var(--color-text-primary);
   }
   &:disabled{
-    background-color:var(--fourth-color);
+    background-color:var(--brand-tint-100);
     //opacity: 1;
   }  
 }
@@ -74,15 +74,15 @@ input[type="radio"] {
   width: 20px; 
   height: 20px; 
   margin-right: 10px;
-  accent-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
-  border: 2px solid var(--tertiary-color); 
-  border-radius: 4px; 
+  accent-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
+  border: 2px solid var(--color-border-strong); 
+  border-radius: var(--radius-xs); 
 }
 input[type="radio"] {
   border-radius: 50%; 
 }
 fieldset {
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--color-border-strong);
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -110,7 +110,7 @@ input[type="range"] {
   appearance: none;         
   width: 90%; 
   height: 10px; 
-  background: var(--tertiary-color); 
+  background: var(--color-border-strong); 
   border-radius: 5px; 
   outline: none; 
   transition: background 0.3s ease; 
@@ -118,7 +118,7 @@ input[type="range"] {
 
 /* Cambio de color al pasar el mouse */
 input[type="range"]:hover {
-  background: var(--fourth-color);
+  background: var(--brand-tint-100);
 }
 
 /* Pulgar (thumb) del slider */
@@ -127,7 +127,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
   border-radius: 50%; 
   cursor: pointer; 
   transition: background 0.3s ease, transform 0.2s ease; 
@@ -136,7 +136,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
   border-radius: 50%;
   border: 2px solid #fff;
   cursor: pointer;
@@ -145,23 +145,23 @@ input[type="range"]::-moz-range-thumb {
 
 /* Efecto de "agrandamiento" al hacer hover sobre el pulgar */
 input[type="range"]:hover::-webkit-slider-thumb {
-  background: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   transform: scale(1.1); 
 }
 
 input[type="range"]:hover::-moz-range-thumb {
-  background: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
   transform: scale(1.1);
 }
 
 /* Tooltip (output) */
 output {
   position: absolute;
-  background-color: color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+  background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
   width: 50px;
   height: 30px;
   text-align: center;
-  color: var(--primary-color);
+  color: var(--color-surface);
   border-radius: 5px;
   display: inline-block;
   font-size: 1rem;
@@ -176,7 +176,7 @@ output:after {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid color-mix(in srgb, var(--highlight-color) 90%, $white-color); 
+  border-top: 10px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;

@@ -16,24 +16,24 @@ ul.secondary_menu {
     a {
       display: block;  
       padding: 5px 10px; 
-      color: var(--primary-text-color);
+      color: var(--color-text-primary);
       text-decoration: none; 
     }    
 
     &:hover {
-      border-bottom: 2px solid var(--highlight-color);
+      border-bottom: 2px solid var(--brand-primary);
 
       a {
-        color: var(--highlight-color);
+        color: var(--brand-primary);
         font-weight: bold;
       }
     }
 
     &.active {
-      border-bottom: 2px solid var(--highlight-color);
+      border-bottom: 2px solid var(--brand-primary);
 
       a {
-        color: var(--highlight-color);
+        color: var(--brand-primary);
         font-weight: bold;
       }
     }

@@ -29,7 +29,7 @@
   left: 0;
   padding-top: 50px;
   height: 100%;
-  width: 230px;
+  width: var(--sidebar-width);
   z-index: 800;
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
   -moz-transition: -moz-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
@@ -38,18 +38,18 @@
 }
 @media (max-width: 767px) {
   .main-sidebar {
-    -webkit-transform: translate(-230px, 0);
-    -ms-transform: translate(-230px, 0);
-    -o-transform: translate(-230px, 0);
-    transform: translate(-230px, 0);
+    -webkit-transform: translate(calc(var(--sidebar-width) * -1), 0);
+    -ms-transform: translate(calc(var(--sidebar-width) * -1), 0);
+    -o-transform: translate(calc(var(--sidebar-width) * -1), 0);
+    transform: translate(calc(var(--sidebar-width) * -1), 0);
   }
 }
 @media (min-width: 768px) {
   .sidebar-collapse .main-sidebar {
-    -webkit-transform: translate(-230px, 0);
-    -ms-transform: translate(-230px, 0);
-    -o-transform: translate(-230px, 0);
-    transform: translate(-230px, 0);
+    -webkit-transform: translate(calc(var(--sidebar-width) * -1), 0);
+    -ms-transform: translate(calc(var(--sidebar-width) * -1), 0);
+    -o-transform: translate(calc(var(--sidebar-width) * -1), 0);
+    transform: translate(calc(var(--sidebar-width) * -1), 0);
   }
 }
 @media (max-width: 767px) {
@@ -87,7 +87,7 @@
 * Content
 ============== */
 .content-wrapper {
-  margin-left: 230px;
+  margin-left: var(--sidebar-width);
   z-index: 800;
   min-height: 100%;
 }
@@ -108,10 +108,10 @@
 
 @media (max-width: 767px) {
   .sidebar-open .content-wrapper {
-    -webkit-transform: translate(230px, 0);
-    -ms-transform: translate(230px, 0);
-    -o-transform: translate(230px, 0);
-    transform: translate(230px, 0);
+    -webkit-transform: translate(var(--sidebar-width), 0);
+    -ms-transform: translate(var(--sidebar-width), 0);
+    -o-transform: translate(var(--sidebar-width), 0);
+    transform: translate(var(--sidebar-width), 0);
   }
 }
 @media (min-width: 768px) {
@@ -149,7 +149,7 @@
 * Dashboard-footer
 =============== */
 .dashboard-footer {
-  margin-left: 230px;
+  margin-left: var(--sidebar-width);
   z-index: 100;
 
   p,a{font-size: 0.850rem;}
@@ -166,10 +166,10 @@
 }
 @media (max-width: 767px) {
   .sidebar-open .dashboard-footer {
-    -webkit-transform: translate(230px, 0);
-    -ms-transform: translate(230px, 0);
-    -o-transform: translate(230px, 0);
-    transform: translate(230px, 0);
+    -webkit-transform: translate(var(--sidebar-width), 0);
+    -ms-transform: translate(var(--sidebar-width), 0);
+    -o-transform: translate(var(--sidebar-width), 0);
+    transform: translate(var(--sidebar-width), 0);
   }
 }
 
@@ -177,21 +177,21 @@
 Colour theme
 ========================== */
  .wrapper {
-  background: var(--sixty-color);
+  background: var(--brand-tint-300);
 }
 
 /* ===========
  Sidebar
  ========== */
 .main-sidebar {
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
 }
 
 /* # Sidebar-footer
 ----------------------------------------------- */
 .sidebar-footer{
-  background-color: var(--primary-text-color);
-  color:var(--primary-color);
+  background-color: var(--color-text-primary);
+  color:var(--color-surface);
 }
 
 /* ===========
@@ -199,7 +199,7 @@ Colour theme
  ========== */
  .content-wrapper {
   /*background-color: #ecf0f5;*/
-  background-color: var(--secondary-color);
+  background-color: var(--color-canvas);
 }
 
 /* ===========
@@ -207,8 +207,8 @@ Colour theme
  ========== */
  /*
  .dashboard-footer {
-    background: var(--primary-color);
-    color: var(--seventy-color);
+    background: var(--color-surface);
+    color: var(--brand-tint-400);
     padding: 15px;
     border-top: 1px solid #eee;    
   }

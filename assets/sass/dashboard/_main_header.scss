@@ -12,7 +12,7 @@
 
 .main-header {
   position: relative;
-  max-height: 100px;
+  max-height: var(--topbar-height);
   z-index: 900;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 230px;
+  width: var(--sidebar-width);
   float: left;
   height: 50px;
   text-align: center;
@@ -52,7 +52,7 @@
 ----------------------------------------------- */
 .main-header > .sidebar-navbar {
   margin-bottom: 0;
-  margin-left: 230px;
+  margin-left: var(--sidebar-width);
   border: none;
   min-height: 50px;
   border-radius: 0;
@@ -77,7 +77,7 @@
 }
 @media (min-width: 768px) {
   .sidebar-navbar {
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
   }
 }
 .navbar-static-top {
@@ -115,25 +115,25 @@
 /* # Logo
 ----------------------------------------------- */
 .main-header .logo {
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
   border-bottom: 0px solid transparent;
 }
 .main-header .logo:hover {
-  background: var(--secondary-color);
+  background: var(--color-canvas);
 }
 
 /* # Sidebar-navbar
 ----------------------------------------------- */
  .main-header .sidebar-navbar {
-  background-color: var(--primary-color);
+  background-color: var(--color-surface);
 }
 /* # Sidebar-toggle
 ----------------------------------------------- */
 .main-header .sidebar-navbar .sidebar-toggle {
-  color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+  color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
 }
 .main-header .sidebar-navbar .sidebar-toggle:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--color-canvas);
 }
 
 /* # Search-field
@@ -146,12 +146,12 @@
   max-width: 420px;
   margin: 0 20px;
   padding: 8px 14px;
-  background-color: var(--secondary-color);
-  border: 1px solid var(--tertiary-color);
-  border-radius: 4px;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-xs);
 
   i {
-    color: $gray-color;
+    color: var(--color-text-muted);
     flex-shrink: 0;
   }
 
@@ -161,11 +161,11 @@
     outline: none;
     font-family: inherit;
     font-size: 14px;
-    color: var(--primary-text-color);
+    color: var(--color-text-primary);
     width: 100%;
 
     &::placeholder {
-      color: $gray-color;
+      color: var(--color-text-muted);
     }
   }
 }

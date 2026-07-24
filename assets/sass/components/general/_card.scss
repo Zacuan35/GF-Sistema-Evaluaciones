@@ -2,17 +2,17 @@
 # CARD
 ===================== */
 .card {
-  background-color:var(--primary-color);
+  background-color:var(--color-surface);
   background-clip: border-box;
-  border-radius: 0.5rem;
-  border:1px solid var(--tertiary-color);
+  border-radius: var(--radius-sm);
+  border:1px solid var(--color-border-strong);
   transition: background-color 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
 
   .card-header {
     padding: 1rem 1rem;
     border-radius:0.5rem 0.5rem 0 0;
-    border-bottom: 1px solid var(--tertiary-color);
+    border-bottom: 1px solid var(--color-border-strong);
   }    
 
   .card-body {
@@ -23,27 +23,27 @@
     padding:1rem;
     border-radius:0 0 0.5rem 0.5rem ;      
     text-align: left;
-    border-top: 1px solid var(--tertiary-color);
+    border-top: 1px solid var(--color-border-strong);
 
     p{word-break: break-all;}      
   }     
 
   &.card-highlight {
-    background-color:color-mix(in srgb, var(--highlight-color) 90%, $white-color);
-    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
-    p{color:var(--primary-color);}
-    i {color: var(--primary-color);}
-    border-color:var(--highlight-color);
+    background-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+    p{color:var(--color-surface);}
+    i {color: var(--color-surface);}
+    border-color:var(--brand-primary);
     .card-header,
     .card-footer {
-      border-color: var(--highlight-color);
+      border-color: var(--brand-primary);
     } 
   }  
   &.card-success {
     background-color:lighten($success-color, 10%);
-    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
-    p{color:var(--primary-color);}
-    i {color: var(--primary-color);}
+    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+    p{color:var(--color-surface);}
+    i {color: var(--color-surface);}
     border-color:$success-color;    
     .card-header,
     .card-footer {
@@ -52,9 +52,9 @@
   }
   &.card-danger {
     background-color:lighten($danger-color, 10%);
-    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
-    p{color:var(--primary-color);}
-    i {color: var(--primary-color);}
+    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+    p{color:var(--color-surface);}
+    i {color: var(--color-surface);}
     border-color:$danger-color;    
     .card-header,
     .card-footer {
@@ -63,9 +63,9 @@
   }    
 &.card-warning {
     background-color:lighten($warning-color, 10%);
-    h1,h2,h3,h4,h5,h6{color:var(--primary-color);}
-    p{color:var(--primary-color);}
-    i {color: var(--primary-color);}
+    h1,h2,h3,h4,h5,h6{color:var(--color-surface);}
+    p{color:var(--color-surface);}
+    i {color: var(--color-surface);}
     border-color:$warning-color;    
     .card-header,
     .card-footer {
@@ -76,10 +76,10 @@
 
 //Si la tarjeta tiene enlace
 a.card {
-  &:hover{background-color: var(--tertiary-color);}     
+  &:hover{background-color: var(--color-border-strong);}     
 
   &.card-highlight {
-    &:hover{background-color: var(--highlight-color);}
+    &:hover{background-color: var(--brand-primary);}
   }  
   &.card-success {
     &:hover{background-color: var(--success-color);}    
