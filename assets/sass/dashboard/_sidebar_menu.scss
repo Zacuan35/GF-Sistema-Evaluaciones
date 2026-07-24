@@ -15,7 +15,7 @@
 }
 .sidebar-menu {
 	list-style: none;
-	margin: 0;
+	margin: 12px 0 0;
 	padding: 0;
 }
 .sidebar-menu > li {
@@ -27,7 +27,8 @@
 	padding: 12px 5px 12px 15px;
 	display: block;
 	border-left: 3px solid transparent;
-	margin-right: 1px;  
+	margin-right: 1px;
+	font-weight: 500;
 }
 .sidebar-menu > li > a > i {
 	width: 20px;
@@ -80,6 +81,16 @@
 	display: block;
 	font-size: 14px;
 }
+/* Bullet en vez del guion (icon-minus) que traían los sub-enlaces */
+.sidebar-menu .treeview-menu > li > a > i.icon-minus {
+	display: none;
+}
+.sidebar-menu .treeview-menu > li > a::before {
+	content: "•";
+	display: inline-block;
+	width: 15px;
+	color: $gray-color;
+}
 .sidebar-menu .treeview-menu > li > a > i {
 	width: 15px;
 	font-size: 10px;
@@ -98,8 +109,9 @@
   }
 }
 
+/* Ícono discreto por defecto; solo se vuelve highlight-color con el enlace activo o en hover */
 .sidebar-menu > li > a > i {
-	color: var(--highlight-color);
+	color: $gray-color;
 }
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li.active > a {
@@ -119,5 +131,8 @@
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
   color: var(--highlight-color);
+}
+/* Solo el activo sube de peso; el hover solo cambia de color */
+.treeview-menu > li.active > a {
   font-weight: bold;
 }

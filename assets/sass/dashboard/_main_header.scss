@@ -69,6 +69,8 @@
 }
  .sidebar-navbar {
   position: relative;
+  display: flex;
+  align-items: center;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -132,4 +134,44 @@
 }
 .main-header .sidebar-navbar .sidebar-toggle:hover {
   background-color: var(--secondary-color);
+}
+
+/* # Search-field
+----------------------------------------------- */
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 420px;
+  margin: 0 20px;
+  padding: 8px 14px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--tertiary-color);
+  border-radius: 4px;
+
+  i {
+    color: $gray-color;
+    flex-shrink: 0;
+  }
+
+  input {
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--primary-text-color);
+    width: 100%;
+
+    &::placeholder {
+      color: $gray-color;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .search-field {
+    display: none;
+  }
 }

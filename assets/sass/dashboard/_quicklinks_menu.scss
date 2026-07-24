@@ -5,6 +5,7 @@
   list-style: none;
   padding: 0;
   margin: 0 15px 0 0;
+  margin-left: auto;
   float: right;
 }
 .quicklinks-menu > li {
@@ -76,6 +77,8 @@
 .quicklinks-menu .dropdown-menu li.dm-footer a {
   text-align: center;
   font-size: 12px;
+  font-weight: bold;
+  color: var(--highlight-color);
 }
 
 @media (max-width: 767px) {
@@ -124,8 +127,8 @@
 ----------------------------------------------- */  
 .dropdown-menu .message-links {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 .dropdown-menu .message-links img{
   width: 40px;
@@ -133,7 +136,7 @@
   border-radius: 50%;
 }
 .dropdown-menu .message-links h4{
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 0 0.25rem 0;
 }
 .dropdown-menu .message-links p{
