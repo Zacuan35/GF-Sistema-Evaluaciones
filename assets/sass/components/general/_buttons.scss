@@ -109,8 +109,7 @@
 ----------------------------------------------- */
 .btn-success {
   background-color: lighten($success-color, 10%);
-  color: var(--color-canvas);
-  i {color: var(--color-canvas);}    
+  color: $white-color;  
   
   &:hover{
     background:$success-color;
@@ -134,8 +133,7 @@
 ----------------------------------------------- */
 .btn-danger {
   background-color: lighten($danger-color, 10%);
-  color: var(--color-canvas);
-  i {color: var(--color-canvas);}    
+  color: $white-color; 
   
   &:hover{
     background:$danger-color;
@@ -160,8 +158,7 @@
 ----------------------------------------------- */
 .btn-warning {
   background-color: lighten($warning-color, 10%);
-  color: var(--color-canvas);
-  i {color: var(--color-canvas);}    
+  color: $white-color; 
   
   &:hover{
     background:$warning-color;

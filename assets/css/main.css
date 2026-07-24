@@ -3575,10 +3575,7 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-success {
   background-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
-  color: var(--color-canvas);
-}
-.btn-success i {
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .btn-success:hover {
   background: #22C55E;
@@ -3605,10 +3602,7 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-danger {
   background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
-  color: var(--color-canvas);
-}
-.btn-danger i {
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .btn-danger:hover {
   background: #F43F5E;
@@ -3635,10 +3629,7 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-warning {
   background-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
-  color: var(--color-canvas);
-}
-.btn-warning i {
-  color: var(--color-canvas);
+  color: #ffffff;
 }
 .btn-warning:hover {
   background: #F59E0B;
