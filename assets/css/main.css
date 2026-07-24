@@ -3517,10 +3517,7 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-default {
   background-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  color: var(--color-surface);
-}
-.btn-default i {
-  color: var(--color-surface);
+  color: #ffffff;
 }
 .btn-default:hover {
   background-color: var(--brand-primary);
@@ -6576,7 +6573,6 @@ input::-ms-reveal {
 ===================== */
 i {
   font-size: 1rem;
-  color: var(--brand-primary);
 }
 
 .icon-xs {
@@ -6636,30 +6632,14 @@ i {
 
 /* # Background colors
 ----------------------------------------------- */
-.bg-default i {
-  color: var(--brand-primary);
-}
-
-.bg-light i {
-  color: var(--brand-primary);
-}
-
-.bg-dark i {
-  color: var(--brand-primary);
-}
-
-.bg-darker i {
-  color: var(--brand-primary);
-}
-
-.bg-success i {
-  color: var(--brand-primary);
-}
-
-.bg-danger i {
-  color: var(--brand-primary);
-}
-
+/*
+.bg-default i{color: var(--brand-primary);}
+.bg-light i{color: var(--brand-primary);}
+.bg-dark i{color: var(--brand-primary);}
+.bg-darker i{color: var(--brand-primary);}
+.bg-success i{color: var(--brand-primary);}
+.bg-danger i{color: var(--brand-primary);}
+*/
 @font-face {
   font-family: "icomoon";
   src: url("../icons/icomoon.eot");

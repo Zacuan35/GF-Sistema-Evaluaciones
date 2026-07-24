@@ -83,8 +83,7 @@
 ----------------------------------------------- */
 .btn-default {
   background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-  color: var(--color-surface); 
-  i {color: var(--color-surface);}
+  color: $white-color; 
   
   &:hover {
     background-color: var(--brand-primary);
