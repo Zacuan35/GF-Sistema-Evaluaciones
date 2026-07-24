@@ -7230,9 +7230,6 @@ Tabletas horizontales*/
 ----------------------------------------------- */
 .content-header {
   padding: 15px 15px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 1rem;
 }
 .content-header h1 {
