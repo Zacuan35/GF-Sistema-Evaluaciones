@@ -1,6 +1,10 @@
 /* =====================
-# HORIZONTAL TABS
-===================== */  
+# TABS (horizontal y vertical)
+Un solo sistema .tabs-container > .tabs > .tab-button + .tab-content
+> .tab-pane; la variante vertical solo agrega .tabs-vertical al
+contenedor, reutilizando este mismo manejador (escoteado por
+contenedor, así que funciona igual para ambas orientaciones).
+===================== */
 document.addEventListener('DOMContentLoaded', () => {
   const tabContainers = document.querySelectorAll('.tabs-container');
 
@@ -22,30 +26,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
-
-/* =====================
-# VERTICAL TABS
-===================== */  
-document.addEventListener("DOMContentLoaded", () => {
-	const verticalTabs = document.querySelectorAll(".vertical-tab");
-	const verticalTabPanes = document.querySelectorAll(".vertical-tab-pane");
-  
-	verticalTabs.forEach(tab => {
-	  tab.addEventListener("click", () => {
-		// Desactivar las pestañas y los contenidos
-		verticalTabs.forEach(t => t.classList.remove("active"));
-		verticalTabPanes.forEach(pane => pane.classList.remove("active"));
-  
-		// Activar la pestaña seleccionada
-		tab.classList.add("active");
-		
-		// Mostrar el contenido correspondiente
-		const tabId = tab.getAttribute("data-tab");
-		document.getElementById(tabId).classList.add("active");
-	  });
-	});
-  
-	// Inicialmente mostrar el contenido de la primera pestaña
-	verticalTabs[0].classList.add("active");
-	verticalTabPanes[0].classList.add("active");
-  });

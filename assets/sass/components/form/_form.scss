@@ -1,63 +1,111 @@
 /* =====================
 # FORM GROUP
+.form-control se mantiene (además de .input/.select/.textarea) porque
+ya está en uso en pages/ y login/; las reglas de estilo son las mismas
+para ambos, así que el marcado existente no necesita tocarse.
 ===================== */
+/* .field agrupa label + control con flex + gap: la separación entre
+ambos ya no depende del margin-bottom del label (evita doble espacio
+y permite alinear más de dos elementos sin reglas sueltas). Sin
+margin-bottom propio: siempre vive dentro de un .grid, que ya trae
+su propio gap -- agregarlo aquí duplicaría el espacio entre filas. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  /* bold + color primario en vez del secundario/muted del label
+  base: en un formulario el label necesita más contraste que el resto
+  del texto de apoyo, para que se lea de un vistazo qué pide cada campo. */
+  label {
+    margin-bottom: 0;
+    font-weight: var(--fw-bold);
+    color: var(--color-text-primary);
+  }
+}
+
 .form-group-inline {
   display: flex;
-  align-items: center; 
-  gap: 0.5rem; 
+  align-items: center;
+  gap: 0.5rem;
   label {margin: 0;}
-  select.form-control {flex: 1;}
+  select.form-control, .select {flex: 1;}
 }
 
 label {
   display: inline-block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem; /* fallback para labels sueltos, fuera de .item/.field */
+  font-size: var(--fs-sm);
 }
 
 /* # Colour
 ----------------------------------------------- */
-label{color:var(--color-text-primary);}
-label span {color: $danger-color; }
+label{color:var(--color-text-secondary);}
+label span {color: var(--color-danger-text); }
 
-form, 
-input, 
-textarea, 
+form,
+input,
+textarea,
 select,
 legend,
 .form-control,
+.input,
+.select,
+.textarea,
 .custom-select {
   color:var(--color-text-primary);
 }
 
 /* # Select & input styles
 ----------------------------------------------- */
-.form-control {
+.form-control, .input, .select, .textarea {
   display: inline-block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  background-color: var(--color-canvas);
+  height: calc(1.5em + 1.125rem + 2px);
+  padding: 0.625rem 0.875rem;
+  background-color: var(--color-surface);
   background-clip: padding-box;
   border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-xs);
-  font-size:0.875rem;  
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
   line-height: 1.5;
-  transition: border-color 0.15s ease-in-out;
-  &:hover, &:focus {
-    border-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover {
+    border-color:color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  }
+  &:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-primary) 20%, transparent);
     outline: 0;
   }
   &::placeholder {
-    color: var(--color-text-primary);
+    color: var(--color-text-muted);
   }
   &:disabled{
-    background-color:color-mix(in srgb, var(--brand-primary) 20%, $white-color);
+    background-color:var(--color-border-strong);
     //opacity: 1;
-  }  
+  }
+  &.is-invalid {
+    border-color: $danger-color;
+    &:focus {
+      box-shadow: 0 0 0 3px color-mix(in srgb, $danger-color 20%, transparent);
+    }
+  }
 }
 
-textarea.form-control{
+textarea.form-control, .textarea {
   height: auto;
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Flecha propia para <select>: la nativa del sistema operativo no
+combina con el resto del kit y varía entre navegadores. */
+select.form-control, .select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238A8FB3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
 }
 
 /* # Check and radio buttons
@@ -66,25 +114,23 @@ textarea.form-control{
 .radio-label {
   display: flex;
   align-items: center;
+  gap: 0.6rem;
   margin: 0.5rem 0;
   cursor: pointer;
 }
+/* Solo tamaño + accent-color: forzar border/border-radius sobre un
+checkbox/radio nativo no se renderiza igual entre navegadores y es
+la causa de que antes se vieran inconsistentes. */
 input[type="checkbox"],
 input[type="radio"] {
-  width: 20px; 
-  height: 20px; 
-  margin-right: 10px;
-  accent-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-  border: 2px solid var(--color-border-strong); 
-  border-radius: var(--radius-xs); 
-}
-input[type="radio"] {
-  border-radius: 50%; 
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand-primary);
 }
 fieldset {
   border: 1px solid var(--color-border-strong);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   margin-bottom: 1rem;
 }
 legend {
@@ -94,8 +140,8 @@ legend {
 /* # Range selector
 ----------------------------------------------- */
 div.range-selector {
-  position: relative;  
-  margin: 30px 0 0;  
+  position: relative;
+  margin: 30px 0 0;
 }
 
 div.range-selector label{
@@ -105,20 +151,20 @@ div.range-selector label{
 
 /* Barra de rango */
 input[type="range"] {
-  -webkit-appearance: none; 
-  -moz-appearance: none;    
-  appearance: none;         
-  width: 90%; 
-  height: 10px; 
-  background: var(--color-border-strong); 
-  border-radius: 5px; 
-  outline: none; 
-  transition: background 0.3s ease; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 90%;
+  height: 10px;
+  background: $fill-subtle;
+  border-radius: var(--radius-xs);
+  outline: none;
+  transition: background 0.3s ease;
 }
 
 /* Cambio de color al pasar el mouse */
 input[type="range"]:hover {
-  background: color-mix(in srgb, var(--brand-primary) 20%, $white-color);
+  background: var(--color-border-strong);
 }
 
 /* Pulgar (thumb) del slider */
@@ -127,17 +173,17 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-  border-radius: 50%; 
-  cursor: pointer; 
-  transition: background 0.3s ease, transform 0.2s ease; 
+  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
-  border-radius: 50%;
+  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+  border-radius: var(--radius-full);
   border: 2px solid #fff;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -146,25 +192,25 @@ input[type="range"]::-moz-range-thumb {
 /* Efecto de "agrandamiento" al hacer hover sobre el pulgar */
 input[type="range"]:hover::-webkit-slider-thumb {
   background: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 input[type="range"]:hover::-moz-range-thumb {
-  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
+  background: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   transform: scale(1.1);
 }
 
 /* Tooltip (output) */
 output {
   position: absolute;
-  background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
+  background-color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   width: 50px;
   height: 30px;
   text-align: center;
   color: var(--color-surface);
-  border-radius: 5px;
+  border-radius: var(--radius-xs);
   display: inline-block;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 2;
   bottom: 100%;
   left: 0;
@@ -176,7 +222,7 @@ output:after {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color); 
+  border-top: 10px solid color-mix(in srgb, var(--brand-primary) 90%, $white-color);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;
@@ -199,7 +245,7 @@ output:after {
 @media (min-width: 768px) {
   /* Barra de rango */
   input[type="range"] {
-    width: 480px; 
+    width: 480px;
   }
 
 }

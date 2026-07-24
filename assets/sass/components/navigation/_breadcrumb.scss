@@ -6,42 +6,51 @@
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	//gap: 0.5rem;
 	align-items: center;
 
 	li {
-		color:var(--color-text-primary);
-		font-size: 0.75rem;
-		text-transform:uppercase;
-		font-weight: bold;
+		color: var(--color-text-primary);
+		font-size: var(--fs-sm);
+		font-weight: 600;
 
 		&::after {
 			content: "/";
 			margin: 0 0.5rem;
-			color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-		}		
+			color: var(--color-text-muted);
+		}
 
 		&:last-child::after {
 			content: "";
-		}		
+		}
 
 		a {
-			color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
-			font-size: 0.75rem;
-		
-			&:hover {
-				text-decoration: underline;
-				color:var(--brand-primary);
-				.icon{color:var(--brand-primary);}
-			}	
+			color: var(--color-text-muted);
+			font-size: var(--fs-sm);
+			font-weight: 400;
+			transition: color var(--transition-base);
 
-			.icon{
-				color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+			&:hover {
+				color: var(--brand-primary);
+				.icon { color: var(--brand-primary); }
+			}
+
+			.icon {
+				color: var(--color-text-muted);
 				margin-right: 0.25rem;
-			}			
-			
+				transition: color var(--transition-base);
+			}
 		}
 
 	}
 
+}
+
+/* # Variante con separador chevron
+----------------------------------------------- */
+.breadcrumb.breadcrumb-chevron ol li::after {
+	content: "\e90c";
+	font-family: 'icomoon';
+	font-size: 0.65rem;
+	margin: 0 0.375rem;
+	vertical-align: middle;
 }

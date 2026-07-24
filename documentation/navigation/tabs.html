@@ -358,91 +358,100 @@
           <h1>Tabs</h1>          
         </div>         
         <!-- Content-body
-        ========================================== -->               
-        <section class="content-body">  
-          <div class="grid gap-5">
-            <h4>Horizontal tab</h4>
-            <div class="doc-preview">
-                <!-- Tab-container -->
-                <div class="tabs-container">
-                  <!-- --------
-                  Buttons
-                  --------- -->    
-                  <div class="tabs tabs-center">
-                    <button class="tab-button active" data-target="tab-01" aria-controls="tab-01" role="tab">Pestaña 01</button>
-                    <button class="tab-button" data-target="tab-02" aria-controls="tab-02" role="tab">Pestaña 02</button>
-                    <button class="tab-button" data-target="tab-03" aria-controls="tab-03" role="tab">Pestaña 03</button>
-                    <button class="tab-button" data-target="tab-04" aria-controls="tab-04" role="tab">Pestaña 04</button>
-                  </div>
-                  <!-- --------
-                  Content
-                  --------- -->    
-                  <div class="tab-content">
-                    <!-- Tab-pane-01
-                    ------------------------------------------ -->
-                    <div class="tab-pane active" id="tab-01" role="tabpanel">                                                         
-                      <p>Contenido de tab 01</p>
-                    </div>
-                    <!-- Tab-pane-02
-                    ------------------------------------------ -->                  
-                    <div class="tab-pane" id="tab-02" role="tabpanel">            
-                      <p>Contenido de tab 02</p>
-                    </div>
-                    <!-- Tab-pane-03
-                    ------------------------------------------ -->
-                    <div class="tab-pane" id="tab-03" role="tabpanel">              
-                      <p>Contenido de tab 03</p>
-                    </div>            
-                    <!-- Tab-pane-04
-                    ------------------------------------------ -->
-                    <div class="tab-pane" id="tab-04" role="tabpanel">
-                      <p>Contenido de tab 04</p>
-                    </div> 
-                  </div>
-                </div>                                   
+        ========================================== -->
+        <section class="content-body grid gap-5">
+          <div class="grid gap-1">
+            <h2 class="text-lg">Horizontal tab</h2>
+            <p>Pestañas acomodadas en fila; solo se muestra el contenido de la pestaña activa.</p>
+          </div>
+          <div class="doc-preview">
+            <!-- Tab-container -->
+            <div class="tabs-container">
+              <!-- --------
+              Buttons
+              --------- -->
+              <div class="tabs tabs-center">
+                <button class="tab-button active" data-target="tab-01" aria-controls="tab-01" role="tab">Pestaña 01</button>
+                <button class="tab-button" data-target="tab-02" aria-controls="tab-02" role="tab">Pestaña 02</button>
+                <button class="tab-button" data-target="tab-03" aria-controls="tab-03" role="tab">Pestaña 03</button>
+                <button class="tab-button" data-target="tab-04" aria-controls="tab-04" role="tab">Pestaña 04</button>
+              </div>
+              <!-- --------
+              Content
+              --------- -->
+              <div class="tab-content">
+                <!-- Tab-pane-01
+                ------------------------------------------ -->
+                <div class="tab-pane active" id="tab-01" role="tabpanel">
+                  <p>Contenido de tab 01</p>
+                </div>
+                <!-- Tab-pane-02
+                ------------------------------------------ -->
+                <div class="tab-pane" id="tab-02" role="tabpanel">
+                  <p>Contenido de tab 02</p>
+                </div>
+                <!-- Tab-pane-03
+                ------------------------------------------ -->
+                <div class="tab-pane" id="tab-03" role="tabpanel">
+                  <p>Contenido de tab 03</p>
+                </div>
+                <!-- Tab-pane-04
+                ------------------------------------------ -->
+                <div class="tab-pane" id="tab-04" role="tabpanel">
+                  <p>Contenido de tab 04</p>
+                </div>
+              </div>
             </div>
+          </div>
+          <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"tabs-container"</span>&gt;
+  &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"tabs"</span>&gt;
+    &lt;<span class="tok-tag">button</span> <span class="tok-attr">class</span>=<span class="tok-string">"tab-button active"</span> <span class="tok-attr">data-target</span>=<span class="tok-string">"tab-01"</span> <span class="tok-attr">role</span>=<span class="tok-string">"tab"</span>&gt;Pestaña 01&lt;/<span class="tok-tag">button</span>&gt;
+  &lt;/<span class="tok-tag">div</span>&gt;
+  &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"tab-content"</span>&gt;
+    &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"tab-pane active"</span> <span class="tok-attr">id</span>=<span class="tok-string">"tab-01"</span> <span class="tok-attr">role</span>=<span class="tok-string">"tabpanel"</span>&gt;…&lt;/<span class="tok-tag">div</span>&gt;
+  &lt;/<span class="tok-tag">div</span>&gt;
+&lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* .tabs-vertical en el contenedor para orientación vertical */</span></pre>
 
-            
-            <h4>Vertical tab</h4>
-            <div class="doc-preview">
-                <!-- Vertical tabs -->
-                <div class="vertical-tabs-container">
-                  <div class="vertical-tabs">
-                    <div class="vertical-tab" data-tab="vertical-tab-1">Tab 01</div>
-                    <div class="vertical-tab" data-tab="vertical-tab-2">Tab 02</div>
-                    <div class="vertical-tab" data-tab="vertical-tab-3">Tab 03</div>
-                    <div class="vertical-tab" data-tab="vertical-tab-4">Tab 04</div>
-                    <div class="vertical-tab" data-tab="vertical-tab-5">Tab 05</div>
-                    <div class="vertical-tab" data-tab="vertical-tab-6">Tab 06</div>
-                    <div class="vertical-tab" data-tab="vertical-tab-7">Tab 07</div>
-                  </div>
-                  <div class="vertical-tab-content">
-                    <div id="vertical-tab-1" class="vertical-tab-pane">
-                      <p>Contenido de tab 01</p>
-                    </div>
-                    <div id="vertical-tab-2" class="vertical-tab-pane">
-                      <p>Contenido de tab 02</p>
-                    </div>
-                    <div id="vertical-tab-3" class="vertical-tab-pane">
-                      <p>Contenido de tab 03</p>
-                    </div>
-                    <div id="vertical-tab-4" class="vertical-tab-pane">
-                      <p>Contenido de tab 04</p>
-                    </div>
-                    <div id="vertical-tab-5" class="vertical-tab-pane">
-                      <p>Contenido de tab 05</p>
-                    </div>
-                    <div id="vertical-tab-6" class="vertical-tab-pane">
-                      <p>Contenido de tab 06</p>
-                    </div>
-                    <div id="vertical-tab-7" class="vertical-tab-pane">
-                      <p>Contenido de tab 07</p>
-                    </div>
-                  </div>
-                </div>                                             
+          <div class="grid gap-1">
+            <h2 class="text-lg">Vertical tab</h2>
+            <p>Igual que las pestañas horizontales, pero acomodadas en columna; útil cuando hay muchas pestañas.</p>
+          </div>
+          <div class="doc-preview">
+            <div class="tabs-container tabs-vertical">
+              <div class="tabs">
+                <button class="tab-button active" data-target="tab-v1" aria-controls="tab-v1" role="tab">Tab 01</button>
+                <button class="tab-button" data-target="tab-v2" aria-controls="tab-v2" role="tab">Tab 02</button>
+                <button class="tab-button" data-target="tab-v3" aria-controls="tab-v3" role="tab">Tab 03</button>
+                <button class="tab-button" data-target="tab-v4" aria-controls="tab-v4" role="tab">Tab 04</button>
+                <button class="tab-button" data-target="tab-v5" aria-controls="tab-v5" role="tab">Tab 05</button>
+                <button class="tab-button" data-target="tab-v6" aria-controls="tab-v6" role="tab">Tab 06</button>
+                <button class="tab-button" data-target="tab-v7" aria-controls="tab-v7" role="tab">Tab 07</button>
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane active" id="tab-v1" role="tabpanel">
+                  <p>Contenido de tab 01</p>
+                </div>
+                <div class="tab-pane" id="tab-v2" role="tabpanel">
+                  <p>Contenido de tab 02</p>
+                </div>
+                <div class="tab-pane" id="tab-v3" role="tabpanel">
+                  <p>Contenido de tab 03</p>
+                </div>
+                <div class="tab-pane" id="tab-v4" role="tabpanel">
+                  <p>Contenido de tab 04</p>
+                </div>
+                <div class="tab-pane" id="tab-v5" role="tabpanel">
+                  <p>Contenido de tab 05</p>
+                </div>
+                <div class="tab-pane" id="tab-v6" role="tabpanel">
+                  <p>Contenido de tab 06</p>
+                </div>
+                <div class="tab-pane" id="tab-v7" role="tabpanel">
+                  <p>Contenido de tab 07</p>
+                </div>
+              </div>
             </div>
-  
-          </div>       
+          </div>
         </section>
       </main>
 

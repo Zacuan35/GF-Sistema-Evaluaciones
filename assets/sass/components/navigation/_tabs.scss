@@ -1,66 +1,116 @@
 /* =====================
 # TABS
+Un solo sistema (.tabs-container > .tabs > .tab-button + .tab-content
+> .tab-pane) para horizontal y vertical; la variante vertical solo
+agrega el modificador .tabs-vertical sobre el mismo contenedor.
+
+.tabs-container y .tab-content conservan su fondo/borde/padding propios
+(a diferencia de GF-Framework-apps, que los quita porque siempre envuelve
+sus tabs en un .card externo) porque este proyecto ya usa .tabs-container
+suelto dentro de modales sin ese wrapper (ej. evaluations_period.html).
 ===================== */
 .tabs-container {
   width: 100%;
   margin: auto;
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-sm);
-  
-  .tabs{
-    display: flex; 
-    flex-wrap: wrap;
-    background-color: var(--color-canvas);
-    border-bottom: 1px solid var(--color-border-strong);
-    border-radius: 0.5rem 0.5rem 0 0 ;
-  
-    &.tabs-center{
-      justify-content: center;
-    }
+}
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: stretch;
-    } 
-    
-  }  
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid $border-subtle;
+  padding: 0 8px;
+
+  &.tabs-center {
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 /* # Tabs button
 ----------------------------------------------- */
 .tab-button {
-  padding: 10px 20px;
+  padding: 10px 16px;
   border: none;
-  background: var(--color-canvas);
-  color: var(--color-text-primary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--color-text-muted);
   cursor: pointer;
   text-align: center;
-  transition: background 0.3s;
-  outline: none;
-  font-family: $secondary-font;
-  font-size: 1rem;
-  font-weight: 300;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  transition: color var(--transition-base), border-color var(--transition-base);
 
-  &.active,
-  &:hover, 
-  &:focus {
-    background-color: color-mix(in srgb, var(--brand-primary) 81%, $white-color); 
-    color:var(--color-surface);  
-    font-weight: 600;
-  }  
+  &:hover {
+    color: var(--color-text-primary);
+  }
+
+  &.active {
+    color: var(--brand-primary);
+    border-color: var(--brand-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+  }
 }
 
 /* # Tab-content
 ----------------------------------------------- */
 .tab-content {
-  background-color:var(--color-surface);
+  background-color: var(--color-surface);
   padding: 20px;
-  border-radius: var(--radius-sm);
-  
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+
   .tab-pane {
     display: none;
-    &.active {display: block;}  
-  }  
+    &.active { display: block; }
+  }
 }
 
+/* # Variante vertical
+----------------------------------------------- */
+.tabs-container.tabs-vertical {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
 
+  .tabs {
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 1px solid $border-subtle;
+    gap: 2px;
+    min-width: 180px;
+    flex-shrink: 0;
+    padding: 8px;
+  }
+
+  .tab-button {
+    border-bottom: none;
+    border-right: 2px solid transparent;
+    margin-bottom: 0;
+    margin-right: -1px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .tab-button.active {
+    border-color: var(--brand-primary);
+    background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
+  }
+
+  .tab-content {
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    flex: 1;
+    min-width: 0;
+  }
+}

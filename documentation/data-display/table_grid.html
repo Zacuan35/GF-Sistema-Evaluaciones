@@ -356,11 +356,11 @@
         ========================================== -->               
         <div class="content-header">
           <h1>Table grid</h1>
-        </div>         
+          <p>Para listas donde el estado de cada elemento es el dato más importante visualmente: listas de aprobación, tickets, o reportes con acciones. A diferencia de <a href="tables.html">Tables</a>, no es una tabla real (no hay relación semántica de encabezado/celda) — cada fila es una tarjeta independiente que se puede colorear por completo según su estado.</p>
+        </div>
         <!-- Content-body
-        ========================================== -->               
-        <section class="content-body">  
-          <div class="grid gap-5">
+        ========================================== -->
+        <section class="content-body grid gap-5">
             <!-- TABLE-GRID -->
             <div class="tg-responsive">
               <div class="table-grid tg-layout-check">
@@ -399,8 +399,13 @@
                   </div>
                 </div>
               </div>
-            </div>      
-            
+            </div>
+            <pre class="code-block">&lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"table-grid tg-layout-check"</span>&gt;
+  &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"tg-row"</span>&gt;
+    &lt;<span class="tok-tag">div</span> <span class="tok-attr">class</span>=<span class="tok-string">"tg-cell"</span>&gt;Objetivo&lt;/<span class="tok-tag">div</span>&gt;
+  &lt;/<span class="tok-tag">div</span>&gt;
+&lt;/<span class="tok-tag">div</span>&gt;   <span class="tok-comment">/* .tg-row.success/.warning/.danger/.info para variantes */</span></pre>
+
             <!-- TABLE-GRID -->
             <div class="tg-responsive">
               <div class="table-grid tg-cols-3">
@@ -469,9 +474,6 @@
                 </div>
               </div>
             </div>
-                      
-          </div>
-    
         </section>
       </main>
 

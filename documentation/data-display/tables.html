@@ -355,14 +355,18 @@
         <!-- Title
         ========================================== -->               
         <div class="content-header">
-          <h1>Tables</h1>          
-        </div>         
+          <h1>Tables</h1>
+          <p>Para datos tabulares y relacionales: información que se lee mejor organizada en filas y columnas, con accesibilidad nativa (relación semántica entre encabezados y celdas) y soporte para librerías como DataTables. Si lo que necesitas es una lista donde el estado de cada elemento es el dato más importante visualmente, revisa <a href="table_grid.html">Table_grid</a>.</p>
+        </div>
         <!-- Content-body
-        ========================================== -->               
-        <section class="content-body">   
-          <div class="grid gap-5">
-            <!-- ====== Table ====== -->  
-            <h2>Default table</h2>                    
+        ========================================== -->
+        <section class="content-body grid gap-5">
+          <!-- ====== Table ====== -->
+          <div class="grid gap-1">
+            <h2 class="text-lg">Tabla de datos</h2>
+            <p>Encabezado neutro, hover de fila, rayado por defecto y primera columna en <code>.cell-strong</code>.</p>
+          </div>
+          <div class="card" style="overflow-x: auto;">
             <div class="table-responsive">
               <table>
                 <!-- ------ Table head ------ -->
@@ -371,46 +375,56 @@
                     <th>Nombre</th>
                     <th>Usuario</th>
                     <th>Fecha y hora</th>
-                    <th>Correo</th>                  
+                    <th>Correo</th>
                   </tr>
                 </thead>
                 <!-- ------ Table body ------ -->
                 <tbody>
                   <tr>
-                    <td>Shane Howell</td>
+                    <td class="cell-strong">Shane Howell</td>
                     <td>Shane</td>
                     <td>26/11/2024 15:08</td>
-                    <td>shane@correo.com</td>                     
+                    <td>shane@correo.com</td>
                   </tr>
                   <tr>
-                    <td>Aubrey Luna</td>
+                    <td class="cell-strong">Aubrey Luna</td>
                     <td>Aubrey</td>
                     <td>26/11/2024 15:08</td>
-                    <td>aubrey@correo.com</td>                         
-                  </tr> 
+                    <td>aubrey@correo.com</td>
+                  </tr>
                   <tr>
-                    <td>Cassidy Vargas</td>
+                    <td class="cell-strong">Cassidy Vargas</td>
                     <td>Cassidy</td>
                     <td>26/11/2024 15:08</td>
-                    <td>cassidy@correo.com</td>                         
-                  </tr> 
+                    <td>cassidy@correo.com</td>
+                  </tr>
                   <tr>
-                    <td>Ashlee Robinson</td>
+                    <td class="cell-strong">Ashlee Robinson</td>
                     <td>Ashlee</td>
                     <td>26/11/2024 15:08</td>
-                    <td>ashlee@correo.com</td>                         
-                  </tr> 
+                    <td>ashlee@correo.com</td>
+                  </tr>
                   <tr>
-                    <td>Alfred Medina</td>
+                    <td class="cell-strong">Alfred Medina</td>
                     <td>Alfred</td>
                     <td>26/11/2024 15:08</td>
-                    <td>alfred@correo.com</td>                         
-                  </tr>                                                                                     
+                    <td>alfred@correo.com</td>
+                  </tr>
                 </tbody>
               </table>
-            </div>       
-            <!-- ====== Table ====== -->                    
-            <h2>Align right</h2>           
+            </div>
+          </div>
+          <pre class="code-block">&lt;<span class="tok-tag">table</span>&gt;
+  &lt;<span class="tok-tag">thead</span>&gt;&lt;<span class="tok-tag">tr</span>&gt;&lt;<span class="tok-tag">th</span>&gt;Nombre&lt;/<span class="tok-tag">th</span>&gt;&lt;/<span class="tok-tag">tr</span>&gt;&lt;/<span class="tok-tag">thead</span>&gt;
+  &lt;<span class="tok-tag">tbody</span>&gt;&lt;<span class="tok-tag">tr</span>&gt;&lt;<span class="tok-tag">td</span> <span class="tok-attr">class</span>=<span class="tok-string">"cell-strong"</span>&gt;Shane Howell&lt;/<span class="tok-tag">td</span>&gt;&lt;/<span class="tok-tag">tr</span>&gt;&lt;/<span class="tok-tag">tbody</span>&gt;
+&lt;/<span class="tok-tag">table</span>&gt;   <span class="tok-comment">/* .clickable en &lt;tr&gt; para cursor:pointer solo si la fila es clickeable */</span></pre>
+
+          <!-- ====== Table ====== -->
+          <div class="grid gap-1">
+            <h2 class="text-lg">Alineación a la derecha</h2>
+            <p>Usa la utilidad <code>.text-right</code> por columna, y <code>.justify-end</code> en <code>.switch-group</code> cuando el contenido de la celda es un control flex.</p>
+          </div>
+          <div class="card" style="overflow-x: auto;">
             <div class="table-responsive">
               <table class="align-right">
                 <!-- ------ Table head ------ -->
@@ -418,111 +432,112 @@
                   <tr>
                     <th>Nombre</th>
                     <th>Descripción</th>
-                    <th>Estado</th>
+                    <th>Enviado</th>
                     <th>Editar</th>
                   </tr>
                 </thead>
                 <!-- ------ Table body ------ -->
                 <tbody>
                   <tr class="new">
-                    <td><small>Se agregó</small>Shane Howell</td>
+                    <td class="cell-strong"><small>Se agregó</small> Shane Howell</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing ...</td>
                     <td>
-                      <div class="switch-group">              
+                      <div class="switch-group">
                         <p>Enviado:</p>
                         <span class="switch-label">No</span>
                         <label class="switch">
                           <input type="checkbox" class="switch-input">
                           <span class="slider"></span>
                         </label>
-                      </div>                                                                                                                            
+                      </div>
                     </td>
                     <td>
-                      <button class="btn-circle btn-default">
+                      <button class="btn btn-icon-only btn-circle btn-primary">
                         <i class="icon-solid-pencil-square"></i>
-                      </button>                           
-                    </td>                  
+                      </button>
+                    </td>
                   </tr>
                   <tr>
-                    <td>Aubrey Luna</td>
+                    <td class="cell-strong">Aubrey Luna</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing ...</td>
                     <td>
-                      <div class="switch-group">              
+                      <div class="switch-group">
                         <p>Enviado:</p>
                         <span class="switch-label">No</span>
                         <label class="switch">
                           <input type="checkbox" class="switch-input">
                           <span class="slider"></span>
                         </label>
-                      </div>                                                                                                        
+                      </div>
                     </td>
                     <td>
-                      <button class="btn-circle btn-default">
+                      <button class="btn btn-icon-only btn-circle btn-primary">
                         <i class="icon-solid-pencil-square"></i>
-                      </button>                                             
-                    </td>                  
-                  </tr> 
-                  <tr>
-                    <td>Cassidy Vargas</td>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="clickable">
+                    <td class="cell-strong">Cassidy Vargas</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing ...</td>
                     <td>
-                      <div class="switch-group">              
+                      <div class="switch-group">
                         <p>Enviado:</p>
                         <span class="switch-label">No</span>
                         <label class="switch">
                           <input type="checkbox" class="switch-input">
                           <span class="slider"></span>
                         </label>
-                      </div>                                                                                                        
+                      </div>
                     </td>
                     <td>
-                      <button class="btn-circle btn-default">
+                      <button class="btn btn-icon-only btn-circle btn-primary">
                         <i class="icon-solid-pencil-square"></i>
-                      </button>                                      
-                    </td>                  
-                  </tr>                                                                                     
-                </tbody>
-              </table>
-            </div> 
-            <!-- ====== Table ====== -->     
-            <h2>DataTables</h2>                     
-            <div class="table-responsive">
-              <table id="miTabla" class="display">
-                <!-- ------ Table head ------ -->
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Ciudad</th>
-                  </tr>
-                </thead>
-                <!-- ------ Table body ------ -->
-                <!-- Comentar lo siguiente para traer los datos dinámicos-->               
-                <tbody>
-                  <tr>
-                    <td>Luis</td>
-                    <td>28</td>
-                    <td>Ciudad de México</td>
-                  </tr>
-                  <tr>
-                    <td>Ana</td>
-                    <td>34</td>
-                    <td>Guadalajara</td>
-                  </tr>
-                  <tr>
-                    <td>Carlos</td>
-                    <td>22</td>
-                    <td>Monterrey</td>
-                  </tr>
-                  <tr>
-                    <td>María</td>
-                    <td>45</td>
-                    <td>Puebla</td>
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
-            </div> 
-          </div>      
+            </div>
+          </div>
+
+          <!-- ====== Table ====== -->
+          <h2 class="text-lg">DataTables</h2>
+          <div class="table-responsive">
+            <table id="miTabla" class="display">
+              <!-- ------ Table head ------ -->
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Edad</th>
+                  <th>Ciudad</th>
+                </tr>
+              </thead>
+              <!-- ------ Table body ------ -->
+              <!-- Comentar lo siguiente para traer los datos dinámicos-->
+              <tbody>
+                <tr>
+                  <td>Luis</td>
+                  <td>28</td>
+                  <td>Ciudad de México</td>
+                </tr>
+                <tr>
+                  <td>Ana</td>
+                  <td>34</td>
+                  <td>Guadalajara</td>
+                </tr>
+                <tr>
+                  <td>Carlos</td>
+                  <td>22</td>
+                  <td>Monterrey</td>
+                </tr>
+                <tr>
+                  <td>María</td>
+                  <td>45</td>
+                  <td>Puebla</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </main>
 

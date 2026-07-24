@@ -355,87 +355,101 @@
         <!-- Title
         ========================================== -->               
         <div class="content-header">
-          <h1>Panel list</h1>          
-        </div>         
+          <h1>Panel list</h1>
+        </div>
         <!-- Content-body
-        ========================================== -->               
-        <section class="content-body">       
+        ========================================== -->
+        <section class="content-body">
+          <p>Lista de elementos independientes que acepta casi cualquier contenido a los lados: un contacto con foto de perfil, un documento con acciones rápidas, una notificación de sistema… Agrega <code>.success</code>, <code>.warning</code>, <code>.danger</code>, <code>.info</code> o <code>.disabled</code> cuando el estado de un elemento sea el dato más importante a comunicar.</p>
           <div class="panel-list">
-            <!-- ------ panel-item ------ --> 
+            <!-- ------ panel-item: default, sin estado ------ -->
             <a class="panel-item" href="#">
-              <div class="flex gap-4">
+              <div class="flex items-center gap-4">
                 <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
                 <div class="flex flex-col gap-1">
-                  <h6>Here goes the title</h6>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <h4 class="text-base">Ana Martínez</h4>
+                  <p>Perfecto, nos vemos mañana a las 10.</p>
                 </div>
-              </div>                    
-              <span class="d-none">
-                5 de 5 autorizados.
-              </span>
-            </a>                                                                   
-            <!-- ------ panel-item ------ --> 
-            <a class="panel-item" href="#">
-              <div class="flex gap-4">
-                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                <div class="flex flex-col gap-1">
-                  <h6>Here goes the title</h6>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>                    
-              <span class="d-none">
-                5 de 5 autorizados.
-              </span>
-            </a>                            
-            <!-- ------ panel-item ------ -->                                        
-            <a class="panel-item" href="#">
-              <div class="flex gap-4">
-                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                <div class="flex flex-col gap-1">
-                  <h6>Here goes the title</h6>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>                    
-              <span class="d-none">
-                5 de 5 autorizados.
-              </span>
-            </a>  
-            <!-- ------ panel-item ------ -->                                                                  
-            <a class="panel-item disabled" href="#">
-              <div class="flex gap-4">
-                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                <div class="flex flex-col gap-1">
-                  <h6>Here goes the title</h6>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>                    
-              <span class="d-none">
-                5 de 5 autorizados.
-              </span>
-            </a>  
-            <!-- ------ panel-item ------ -->   
-            <a class="panel-item warning" href="#">
-              <div class="flex gap-4">
-                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
-                <div class="flex flex-col gap-1">
-                  <h6>Here goes the title</h6>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>                    
-              <p>Lorem ipsum</p>
-            </a>                                
-            <!-- ------ panel-item ------ -->   
+              </div>
+              <div class="badge badge-info">3</div>
+            </a>
+            <!-- ------ panel-item: acciones circulares a la derecha ------ -->
             <a class="panel-item success" href="#">
-              <div class="flex gap-4">
-                <img src="../../assets/img/user-image.jpg" alt="" class="rounded-full size-10">
+              <div class="flex items-center gap-4">
+                <i class="icon-document-check icon-lg text-success"></i>
                 <div class="flex flex-col gap-1">
-                  <h6>Here goes the title</h6>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <h4 class="text-base">Contrato_2024.pdf</h4>
+                  <p>Firmado y aprobado por ambas partes.</p>
                 </div>
-              </div>                    
-              <p>Lorem ipsum</p>
-            </a>                                                                                                                                                                                                                                    
-          </div>  
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-icon-only btn-circle btn-secondary">
+                  <i class="icon-eye"></i>
+                </button>
+                <button class="btn btn-icon-only btn-circle btn-secondary">
+                  <i class="icon-document-arrow-up"></i>
+                </button>
+              </div>
+            </a>
+            <!-- ------ panel-item: sin ícono, solo texto ------ -->
+            <a class="panel-item info" href="#">
+              <div class="flex flex-col gap-1">
+                <h4 class="text-base">Respaldo automático</h4>
+                <p>Sincronizando archivos con la nube…</p>
+              </div>
+              <p>En proceso</p>
+            </a>
+            <!-- ------ panel-item ------ -->
+            <a class="panel-item warning" href="#">
+              <div class="flex items-center gap-4">
+                <i class="icon-exclamation-triangle icon-lg text-warning"></i>
+                <div class="flex flex-col gap-1">
+                  <h4 class="text-base">Solicitud de vacaciones</h4>
+                  <p>Esperando aprobación de tu jefe directo.</p>
+                </div>
+              </div>
+              <p>Pendiente</p>
+            </a>
+            <!-- ------ panel-item ------ -->
+            <a class="panel-item danger" href="#">
+              <div class="flex items-center gap-4">
+                <i class="icon-exclamation-circle icon-lg text-danger"></i>
+                <div class="flex flex-col gap-1">
+                  <h4 class="text-base">Pago con tarjeta •••• 4482</h4>
+                  <p>No se pudo procesar el cargo.</p>
+                </div>
+              </div>
+              <p>Rechazado</p>
+            </a>
+            <!-- ------ panel-item ------ -->
+            <a class="panel-item disabled" href="#">
+              <div class="flex items-center gap-4">
+                <i class="icon-bell icon-lg"></i>
+                <div class="flex flex-col gap-1">
+                  <h4 class="text-base">Notificaciones push</h4>
+                  <p>Actívalas desde configuración cuando quieras.</p>
+                </div>
+              </div>
+              <p>Desactivado</p>
+            </a>
+            <!-- ------ panel-item: encabezado con hora en línea ------ -->
+            <a class="panel-item success" href="#">
+              <div class="flex items-center gap-4">
+                <i class="icon-check-circle icon-lg text-success"></i>
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center justify-between gap-2">
+                    <h4 class="text-base">Pago recibido</h4>
+                    <span class="text-xs">Hace 5 min</span>
+                  </div>
+                  <p>Recibiste $1,200 de Juan Pérez</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <pre class="code-block">&lt;<span class="tok-tag">a</span> <span class="tok-attr">class</span>=<span class="tok-string">"panel-item"</span> <span class="tok-attr">href</span>=<span class="tok-string">"#"</span>&gt;
+  &lt;<span class="tok-tag">img</span> <span class="tok-attr">class</span>=<span class="tok-string">"rounded-full size-10"</span> <span class="tok-attr">src</span>=<span class="tok-string">"…"</span>&gt;
+  &lt;<span class="tok-tag">h4</span>&gt;Title&lt;/<span class="tok-tag">h4</span>&gt;
+&lt;/<span class="tok-tag">a</span>&gt;   <span class="tok-comment">/* agrega .success · .warning · .danger · .info · .disabled */</span></pre>
         </section>
       </main>
 

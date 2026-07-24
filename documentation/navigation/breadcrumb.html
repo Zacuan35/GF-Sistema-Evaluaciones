@@ -358,50 +358,52 @@
           <h1>Breadcrumb</h1>
         </div>         
         <!-- Content-body
-        ========================================== -->               
-        <section class="content-body">     
-          <div class="grid gap-5">
-            <!-- ====== Banner ====== -->          
-            <header class="banner bg-img overlay bg-attach" style="background-image:url('https://placehold.co/750x400')">
-              <div class="container">
-                <!-- ------ Pagetitle ------ -->
-                <div id="pagetitle"> 
-                  <h1>Example banner</h1>
-                </div>
-                <!-- ------ Breadcrumb ------ -->
-                <div aria-label="breadcrumb" class="breadcrumb">
-                  <ol>
-                    <li>
-                      <a href="../index.html">
-                        <i class="icon fa-solid fa-house"></i> Home
-                      </a>
-                    </li>
-                    <li aria-current="page">Link</li>
-                  </ol>
-                </div>
-              </div>
-            </header>                   
-            <!-- ====== Section ====== -->        
-            <article class="bg-dark py-4">
-              <div class="container">
-                <!-- ------ Pagetitle ------ -->
-                <div id="pagetitle"> 
-                  <h1>Example section</h1>
-                </div>        
-                <!-- ------ Breadcrumb ------ -->
-                <div aria-label="breadcrumb" class="breadcrumb">
-                  <ol>
-                    <li>
-                      <a href="../index.html">
-                        <i class="icon fa-solid fa-house"></i> Home
-                      </a>
-                    </li>
-                    <li aria-current="page">Link</li>
-                  </ol>
-                </div>         
-              </div>     
-            </article>  
-          </div>    
+        ========================================== -->
+        <section class="content-body grid gap-5">
+
+          <div class="grid gap-1">
+            <h2 class="text-lg">Variante simple</h2>
+            <p>La misma usada en el encabezado de cada página del kit.</p>
+          </div>
+          <div class="doc-preview">
+            <div aria-label="breadcrumb" class="breadcrumb">
+              <ol>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Componentes</a></li>
+                <li aria-current="page">Cards</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="grid gap-1">
+            <h2 class="text-lg">Con ícono y separador chevron</h2>
+            <p>Versión con ícono de inicio y flechas en vez de "/", útil cuando hay más de 2-3 niveles.</p>
+          </div>
+          <div class="doc-preview">
+            <div aria-label="breadcrumb" class="breadcrumb breadcrumb-chevron">
+              <ol>
+                <li><a href="#"><i class="icon icon-Home"></i> Dashboard</a></li>
+                <li><a href="#">Navegación</a></li>
+                <li aria-current="page">Breadcrumb</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="grid gap-1">
+            <h2 class="text-lg">Truncado</h2>
+            <p>Cuando la ruta es muy larga, se colapsan los niveles intermedios.</p>
+          </div>
+          <div class="doc-preview">
+            <div aria-label="breadcrumb" class="breadcrumb">
+              <ol>
+                <li><a href="#">Dashboard</a></li>
+                <li>…</li>
+                <li><a href="#">Configuración</a></li>
+                <li aria-current="page">Seguridad</li>
+              </ol>
+            </div>
+          </div>
+
         </section>
       </main>
 

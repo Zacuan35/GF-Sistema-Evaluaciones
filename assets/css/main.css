@@ -3422,7 +3422,7 @@ Tabletas horizontales */
   color: var(--color-text-primary);
   padding: 15px;
   text-align: left;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   width: 100%;
   border: none;
   cursor: pointer;
@@ -3434,7 +3434,7 @@ Tabletas horizontales */
   transition: background-color 0.3s;
 }
 .acordeon .acordeon-item .acordeon-header:hover {
-  background-color: var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 .acordeon .acordeon-item .acordeon-header {
   /* Estilos para el ícono */
@@ -3452,7 +3452,7 @@ Tabletas horizontales */
   background-color: var(--color-surface);
   padding: 15px;
   display: none;
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 var(--radius-xs) var(--radius-xs);
 }
 .acordeon .acordeon-item .acordeon-body p {
   color: var(--color-text-primary);
@@ -3940,7 +3940,7 @@ a.card.card-warning:hover {
   padding: 0.75rem 1rem;
   background-color: var(--color-surface);
   background-clip: border-box;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   border-radius: var(--radius-sm);
 }
 .panel-list .panel-item p {
@@ -3950,38 +3950,61 @@ a.card.card-warning:hover {
   background-color: var(--color-canvas);
 }
 .panel-list .panel-item:hover {
-  background-color: var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 .panel-list .panel-item {
   /* =========
-  # STATES 
+  # STATES
+  Selector "h4, h6" (no solo h4 como en GF-Framework-apps) para no
+  romper páginas reales que ya usan h6 como título dentro de
+  .panel-item (ej. evaluar-equipo-competencias-resumen.html).
   ========= */
 }
 .panel-list .panel-item.success {
-  background-color: rgba(34, 197, 94, 0.1);
-  border-color: #22C55E;
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-text);
 }
-.panel-list .panel-item.success h6, .panel-list .panel-item.success p {
-  color: #22C55E;
+.panel-list .panel-item.success h4, .panel-list .panel-item.success h6, .panel-list .panel-item.success p {
+  color: var(--color-success-text);
 }
 .panel-list .panel-item.success p {
   font-weight: 400;
 }
 .panel-list .panel-item.warning {
-  background-color: rgba(245, 158, 11, 0.1);
-  border-color: #F59E0B;
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-text);
 }
-.panel-list .panel-item.warning h6, .panel-list .panel-item.warning p {
-  color: #F59E0B;
+.panel-list .panel-item.warning h4, .panel-list .panel-item.warning h6, .panel-list .panel-item.warning p {
+  color: var(--color-warning-text);
 }
 .panel-list .panel-item.warning p {
+  font-weight: 400;
+}
+.panel-list .panel-item.danger {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger-text);
+}
+.panel-list .panel-item.danger h4, .panel-list .panel-item.danger h6, .panel-list .panel-item.danger p {
+  color: var(--color-danger-text);
+}
+.panel-list .panel-item.danger p {
+  font-weight: 400;
+}
+.panel-list .panel-item.info {
+  background-color: var(--color-info-bg);
+  border-color: var(--color-info-text);
+}
+.panel-list .panel-item.info h4, .panel-list .panel-item.info h6, .panel-list .panel-item.info p {
+  color: var(--color-info-text);
+}
+.panel-list .panel-item.info p {
   font-weight: 400;
 }
 .panel-list .panel-item.disabled {
   background-color: rgb(219.5, 219.5, 219.5);
   border-color: #c2c2c2;
 }
-.panel-list .panel-item.disabled h6, .panel-list .panel-item.disabled p {
+.panel-list .panel-item.disabled h4, .panel-list .panel-item.disabled h6, .panel-list .panel-item.disabled p {
   color: var(--color-text-muted);
 }
 .panel-list .panel-item.disabled p {
@@ -3990,7 +4013,7 @@ a.card.card-warning:hover {
 .panel-list .panel-item.disabled {
   cursor: not-allowed;
 }
-.panel-list .panel-item.disabled img {
+.panel-list .panel-item.disabled img, .panel-list .panel-item.disabled i {
   filter: grayscale(100%);
 }
 
@@ -5045,6 +5068,10 @@ canvas {
 
 /* =====================
 # TABLE
+El zebra-striping se mantiene por defecto (a diferencia de
+GF-Framework-apps, donde es opt-in vía table.zebra) porque
+pages/reports.html ya depende de que las filas pares se rayen sin
+necesidad de agregarle ninguna clase.
 ===================== */
 .table-responsive {
   overflow-x: auto;
@@ -5052,13 +5079,15 @@ canvas {
 
 table {
   width: 100%;
-  min-width: 800px;
   border-collapse: collapse;
 }
 
-thead {
-  background-color: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
-  color: #ffffff;
+thead th {
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 tbody tr {
@@ -5066,37 +5095,39 @@ tbody tr {
   cursor: pointer;
 }
 tbody tr:nth-child(even) {
-  background-color: var(--color-border-strong);
+  background-color: var(--color-canvas);
 }
 tbody tr:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+}
+tbody tr.clickable {
+  cursor: pointer;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
 }
 
 td, th {
   padding: 8px;
-  font-size: 0.75rem;
-  border: 1px solid var(--color-border-strong);
+  font-size: var(--fs-sm);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   text-align: left;
+}
+
+.cell-strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
 }
 
 /* # Mensaje de celda agregada
 ----------------------------------------------- */
 tr.new {
-  background-color: rgb(191.038961039, 243.961038961, 210.5194805195) !important;
-  color: #22C55E;
+  background-color: var(--color-success-bg) !important;
+  color: var(--color-success-text);
 }
 tr.new p {
-  color: #22C55E;
-}
-tr.new {
-  /*
-  td small{
-    color:$success-color;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-  }
-  */
+  color: var(--color-success-text);
 }
 
 /* # Tablas con contenido alineado hacia la derecha
@@ -5122,7 +5153,6 @@ table.align-right .switch-group {
 @media (min-width: 640px) {
   th, td {
     padding: 12px;
-    font-size: 1rem;
   }
 }
 /* # Tablet
@@ -5283,7 +5313,7 @@ table.dataTable thead th.sorting_desc:after {
   grid-template-columns: var(--cols, 1fr);
   align-items: center;
   padding: 1rem;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   border-radius: var(--radius-sm);
   background-color: var(--color-surface);
   transition: all 0.2s ease;
@@ -5295,7 +5325,7 @@ table.dataTable thead th.sorting_desc:after {
 # HEADER
 ===================== */
 .tg-head .tg-row {
-  background-color: var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
   color: var(--brand-primary);
   font-weight: bold;
 }
@@ -5308,7 +5338,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 
 .tg-body .tg-row:hover {
-  background-color: var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 
 /* =====================
@@ -5419,22 +5449,43 @@ table.dataTable thead th.sorting_desc:after {
 /* =====================
 # STATES
 ===================== */
-.tg-row.success {
-  background-color: rgba(34, 197, 94, 0.1);
-  border-color: #22C55E;
+/* Con el mismo nivel de especificidad que .tg-body .tg-row:nth-child(even)
+(arriba), para que el color de estado siempre gane sobre el rayado de
+filas pares en vez de perderlo por casualidad según la posición de la fila. */
+.tg-body .tg-row.success {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-text);
 }
 
-.tg-row.warning {
-  background-color: rgba(245, 158, 11, 0.1);
-  border-color: #F59E0B;
+.tg-body .tg-row.warning {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-text);
+}
+
+.tg-body .tg-row.danger {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger-text);
+}
+
+.tg-body .tg-row.info {
+  background-color: var(--color-info-bg);
+  border-color: var(--color-info-text);
 }
 
 .tg-row.success .tg-cell {
-  color: #22C55E;
+  color: var(--color-success-text);
 }
 
 .tg-row.warning .tg-cell {
-  color: #F59E0B;
+  color: var(--color-warning-text);
+}
+
+.tg-row.danger .tg-cell {
+  color: var(--color-danger-text);
+}
+
+.tg-row.info .tg-cell {
+  color: var(--color-info-text);
 }
 
 /*Components - Navigation*/
@@ -5450,32 +5501,43 @@ table.dataTable thead th.sorting_desc:after {
 }
 .breadcrumb ol li {
   color: var(--color-text-primary);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  font-weight: bold;
+  font-size: var(--fs-sm);
+  font-weight: 600;
 }
 .breadcrumb ol li::after {
   content: "/";
   margin: 0 0.5rem;
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: var(--color-text-muted);
 }
 .breadcrumb ol li:last-child::after {
   content: "";
 }
 .breadcrumb ol li a {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  transition: color var(--transition-base);
 }
 .breadcrumb ol li a:hover {
-  text-decoration: underline;
   color: var(--brand-primary);
 }
 .breadcrumb ol li a:hover .icon {
   color: var(--brand-primary);
 }
 .breadcrumb ol li a .icon {
-  color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+  color: var(--color-text-muted);
   margin-right: 0.25rem;
+  transition: color var(--transition-base);
+}
+
+/* # Variante con separador chevron
+----------------------------------------------- */
+.breadcrumb.breadcrumb-chevron ol li::after {
+  content: "\e90c";
+  font-family: "icomoon";
+  font-size: 0.65rem;
+  margin: 0 0.375rem;
+  vertical-align: middle;
 }
 
 /* =====================
@@ -5568,6 +5630,14 @@ Tabletas horizontales*/
 }
 /* =====================
 # TABS
+Un solo sistema (.tabs-container > .tabs > .tab-button + .tab-content
+> .tab-pane) para horizontal y vertical; la variante vertical solo
+agrega el modificador .tabs-vertical sobre el mismo contenedor.
+
+.tabs-container y .tab-content conservan su fondo/borde/padding propios
+(a diferencia de GF-Framework-apps, que los quita porque siempre envuelve
+sus tabs en un .card externo) porque este proyecto ya usa .tabs-container
+suelto dentro de modales sin ese wrapper (ej. evaluations_period.html).
 ===================== */
 .tabs-container {
   width: 100%;
@@ -5575,18 +5645,19 @@ Tabletas horizontales*/
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-sm);
 }
-.tabs-container .tabs {
+
+.tabs {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--color-canvas);
-  border-bottom: 1px solid var(--color-border-strong);
-  border-radius: 0.5rem 0.5rem 0 0;
+  gap: 4px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  padding: 0 8px;
 }
-.tabs-container .tabs.tabs-center {
+.tabs.tabs-center {
   justify-content: center;
 }
 @media (max-width: 768px) {
-  .tabs-container .tabs {
+  .tabs {
     flex-direction: column;
     align-items: stretch;
   }
@@ -5595,22 +5666,29 @@ Tabletas horizontales*/
 /* # Tabs button
 ----------------------------------------------- */
 .tab-button {
-  padding: 10px 20px;
+  padding: 10px 16px;
   border: none;
-  background: var(--color-canvas);
-  color: var(--color-text-primary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--color-text-muted);
   cursor: pointer;
   text-align: center;
-  transition: background 0.3s;
-  outline: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-}
-.tab-button.active, .tab-button:hover, .tab-button:focus {
-  background-color: color-mix(in srgb, var(--brand-primary) 81%, #ffffff);
-  color: var(--color-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
   font-weight: 600;
+  transition: color var(--transition-base), border-color var(--transition-base);
+}
+.tab-button:hover {
+  color: var(--color-text-primary);
+}
+.tab-button.active {
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.tab-button:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
 }
 
 /* # Tab-content
@@ -5618,7 +5696,7 @@ Tabletas horizontales*/
 .tab-content {
   background-color: var(--color-surface);
   padding: 20px;
-  border-radius: var(--radius-sm);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 }
 .tab-content .tab-pane {
   display: none;
@@ -5627,46 +5705,38 @@ Tabletas horizontales*/
   display: block;
 }
 
-/* =====================
-# VERTICAL-TABS
-===================== */
-.vertical-tabs-container {
+/* # Variante vertical
+----------------------------------------------- */
+.tabs-container.tabs-vertical {
   display: flex;
-  border: 1px solid var(--color-border-strong);
+  gap: 0;
+  align-items: stretch;
 }
-.vertical-tabs-container .vertical-tabs {
-  width: 200px;
-  padding-top: 20px;
-  background-color: var(--color-canvas);
-  border-right: 1px solid var(--color-border-strong);
+.tabs-container.tabs-vertical .tabs {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+  gap: 2px;
+  min-width: 180px;
+  flex-shrink: 0;
+  padding: 8px;
 }
-.vertical-tabs-container .vertical-tabs .vertical-tab {
-  padding: 10px 15px;
-  cursor: pointer;
-  background-color: var(--color-canvas);
-  color: var(--color-text-primary);
-  transition: background-color 0.3s ease;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 300;
+.tabs-container.tabs-vertical .tab-button {
+  border-bottom: none;
+  border-right: 2px solid transparent;
+  margin-bottom: 0;
+  margin-right: -1px;
+  text-align: left;
+  width: 100%;
 }
-.vertical-tabs-container .vertical-tabs .vertical-tab.active, .vertical-tabs-container .vertical-tabs .vertical-tab:hover {
-  background-color: color-mix(in srgb, var(--brand-primary) 81%, #ffffff);
-  color: var(--color-surface);
-  font-weight: 600;
+.tabs-container.tabs-vertical .tab-button.active {
+  border-color: var(--brand-primary);
+  background-color: color-mix(in srgb, var(--brand-primary) 10%, var(--color-surface));
 }
-
-.vertical-tab-content {
-  flex-grow: 1;
-  background-color: var(--color-surface);
-  padding: 20px;
-}
-.vertical-tab-content .vertical-tab-pane {
-  display: none;
-}
-.vertical-tab-content .vertical-tab-pane.active {
-  display: block;
+.tabs-container.tabs-vertical .tab-content {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  flex: 1;
+  min-width: 0;
 }
 
 /* =====================
@@ -6022,12 +6092,13 @@ ul.secondary_menu li.active a {
   z-index: 1000;
   transition: background-color 0.3s ease;
   opacity: 0.2;
-  color: var(--color-text-primary);
-  background-color: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
+  color: #ffffff;
+  background-color: var(--brand-primary);
+  border-radius: var(--radius-sm);
 }
 #back-to-top i {
   line-height: 45px;
-  font-size: 24px;
+  font-size: var(--fs-xl);
 }
 
 #back-to-top:hover {
@@ -6037,7 +6108,29 @@ ul.secondary_menu li.active a {
 /*Components - Form*/
 /* =====================
 # FORM GROUP
+.form-control se mantiene (además de .input/.select/.textarea) porque
+ya está en uso en pages/ y login/; las reglas de estilo son las mismas
+para ambos, así que el marcado existente no necesita tocarse.
 ===================== */
+/* .field agrupa label + control con flex + gap: la separación entre
+ambos ya no depende del margin-bottom del label (evita doble espacio
+y permite alinear más de dos elementos sin reglas sueltas). Sin
+margin-bottom propio: siempre vive dentro de un .grid, que ya trae
+su propio gap -- agregarlo aquí duplicaría el espacio entre filas. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  /* bold + color primario en vez del secundario/muted del label
+  base: en un formulario el label necesita más contraste que el resto
+  del texto de apoyo, para que se lea de un vistazo qué pide cada campo. */
+}
+.field label {
+  margin-bottom: 0;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+}
+
 .form-group-inline {
   display: flex;
   align-items: center;
@@ -6046,23 +6139,24 @@ ul.secondary_menu li.active a {
 .form-group-inline label {
   margin: 0;
 }
-.form-group-inline select.form-control {
+.form-group-inline select.form-control, .form-group-inline .select {
   flex: 1;
 }
 
 label {
   display: inline-block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem; /* fallback para labels sueltos, fuera de .item/.field */
+  font-size: var(--fs-sm);
 }
 
 /* # Colour
 ----------------------------------------------- */
 label {
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
 }
 
 label span {
-  color: #F43F5E;
+  color: var(--color-danger-text);
 }
 
 form,
@@ -6071,38 +6165,63 @@ textarea,
 select,
 legend,
 .form-control,
+.input,
+.select,
+.textarea,
 .custom-select {
   color: var(--color-text-primary);
 }
 
 /* # Select & input styles
 ----------------------------------------------- */
-.form-control {
+.form-control, .input, .select, .textarea {
   display: inline-block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  background-color: var(--color-canvas);
+  height: calc(1.5em + 1.125rem + 2px);
+  padding: 0.625rem 0.875rem;
+  background-color: var(--color-surface);
   background-clip: padding-box;
   border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-xs);
-  font-size: 0.875rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
   line-height: 1.5;
-  transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.form-control:hover, .form-control:focus {
+.form-control:hover, .input:hover, .select:hover, .textarea:hover {
   border-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
+}
+.form-control:focus, .input:focus, .select:focus, .textarea:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-primary) 20%, transparent);
   outline: 0;
 }
-.form-control::placeholder {
-  color: var(--color-text-primary);
+.form-control::placeholder, .input::placeholder, .select::placeholder, .textarea::placeholder {
+  color: var(--color-text-muted);
 }
-.form-control:disabled {
-  background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
+.form-control:disabled, .input:disabled, .select:disabled, .textarea:disabled {
+  background-color: var(--color-border-strong);
+}
+.form-control.is-invalid, .input.is-invalid, .select.is-invalid, .textarea.is-invalid {
+  border-color: #F43F5E;
+}
+.form-control.is-invalid:focus, .input.is-invalid:focus, .select.is-invalid:focus, .textarea.is-invalid:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, #F43F5E 20%, transparent);
 }
 
-textarea.form-control {
+textarea.form-control, .textarea {
   height: auto;
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Flecha propia para <select>: la nativa del sistema operativo no
+combina con el resto del kit y varía entre navegadores. */
+select.form-control, .select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238A8FB3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
 }
 
 /* # Check and radio buttons
@@ -6111,28 +6230,25 @@ textarea.form-control {
 .radio-label {
   display: flex;
   align-items: center;
+  gap: 0.6rem;
   margin: 0.5rem 0;
   cursor: pointer;
 }
 
+/* Solo tamaño + accent-color: forzar border/border-radius sobre un
+checkbox/radio nativo no se renderiza igual entre navegadores y es
+la causa de que antes se vieran inconsistentes. */
 input[type=checkbox],
 input[type=radio] {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  accent-color: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border: 2px solid var(--color-border-strong);
-  border-radius: var(--radius-xs);
-}
-
-input[type=radio] {
-  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand-primary);
 }
 
 fieldset {
   border: 1px solid var(--color-border-strong);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   margin-bottom: 1rem;
 }
 
@@ -6159,15 +6275,15 @@ input[type=range] {
   appearance: none;
   width: 90%;
   height: 10px;
-  background: var(--color-border-strong);
-  border-radius: 5px;
+  background: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  border-radius: var(--radius-xs);
   outline: none;
   transition: background 0.3s ease;
 }
 
 /* Cambio de color al pasar el mouse */
 input[type=range]:hover {
-  background: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
+  background: var(--color-border-strong);
 }
 
 /* Pulgar (thumb) del slider */
@@ -6177,7 +6293,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -6186,7 +6302,7 @@ input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
   background: color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   border: 2px solid #fff;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -6211,9 +6327,9 @@ output {
   height: 30px;
   text-align: center;
   color: var(--color-surface);
-  border-radius: 5px;
+  border-radius: var(--radius-xs);
   display: inline-block;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 2;
   bottom: 100%;
   left: 0;
@@ -6274,7 +6390,7 @@ output:after {
   position: absolute;
   right: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--fs-base);
   color: var(--color-text-primary);
   user-select: none;
   display: none; /* oculto por defecto */
@@ -6313,7 +6429,7 @@ input::-ms-reveal {
   height: 38px; /* Misma altura que el botón */
 }
 .search.form-control {
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 
 /* # Search button
@@ -6323,7 +6439,7 @@ input::-ms-reveal {
   border: 1px solid color-mix(in srgb, var(--brand-primary) 90%, #ffffff);
   color: #ffffff;
   padding: 10px;
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -6364,13 +6480,17 @@ input::-ms-reveal {
   margin: 0 0.25rem 0 0;
 }
 
+.switch-group.justify-end {
+  justify-content: flex-end;
+}
+
 /* # Switch
 ----------------------------------------------- */
 .switch {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 20px;
+  width: 36px;
+  height: 18px;
   margin: 0 0 0 0.25rem;
 }
 .switch input {
@@ -6385,26 +6505,27 @@ input::-ms-reveal {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
+  background-color: var(--color-border-strong);
   transition: 0.4s;
-  border-radius: 20px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
 }
 .switch .slider:before {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  border-radius: var(--radius-full);
   left: 2px;
   bottom: 2px;
   background-color: var(--color-surface);
   transition: 0.4s;
 }
 .switch input:checked + .slider {
-  background-color: #22C55E;
+  background-color: var(--brand-primary);
 }
 .switch input:checked + .slider:before {
-  transform: translateX(20px);
+  transform: translateX(18px);
 }
 
 /* =====================
@@ -6444,10 +6565,10 @@ input::-ms-reveal {
   width: 100%;
   padding: 10px;
   background-color: var(--color-canvas);
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   border-radius: var(--radius-xs);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
 }
 
 .file_upload input[type=file]:hover {
@@ -6469,10 +6590,10 @@ input::-ms-reveal {
   position: relative;
 }
 .date-container:first-child .text-input, .date-container:first-child .date-input {
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 .date-container:last-child .text-input, .date-container:last-child .date-input {
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
 .date-container .date-input {
   display: none;
@@ -6482,11 +6603,11 @@ input::-ms-reveal {
   width: 100%;
   height: 38px;
   padding: 0.375rem 0.75rem;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 55%, transparent);
   transition: border-color 0.15s ease-in-out;
   border-radius: 0;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   color: var(--color-text-primary);
 }

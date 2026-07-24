@@ -37,7 +37,7 @@
   align-items: center;
 
   padding: 1rem;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid $border-subtle;
   border-radius: var(--radius-sm);
   background-color: var(--color-surface);
 
@@ -52,7 +52,7 @@
 ===================== */
 
 .tg-head .tg-row {
-  background-color: var(--color-border-strong);
+  background-color: $fill-subtle;
   color: var(--brand-primary);
   font-weight: bold;
 }
@@ -66,7 +66,7 @@
 }
 
 .tg-body .tg-row:hover {
-  background-color: var(--color-border-strong);
+  background-color: $fill-subtle;
 }
 
 /* =====================
@@ -130,20 +130,41 @@
 # STATES
 ===================== */
 
-.tg-row.success {
-  background-color: rgba($success-color, 0.1);
-  border-color: $success-color;
+/* Con el mismo nivel de especificidad que .tg-body .tg-row:nth-child(even)
+(arriba), para que el color de estado siempre gane sobre el rayado de
+filas pares en vez de perderlo por casualidad según la posición de la fila. */
+.tg-body .tg-row.success {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-text);
 }
 
-.tg-row.warning {
-  background-color: rgba($warning-color, 0.1);
-  border-color: $warning-color;
+.tg-body .tg-row.warning {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-text);
+}
+
+.tg-body .tg-row.danger {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger-text);
+}
+
+.tg-body .tg-row.info {
+  background-color: var(--color-info-bg);
+  border-color: var(--color-info-text);
 }
 
 .tg-row.success .tg-cell {
-  color: $success-color;
+  color: var(--color-success-text);
 }
 
 .tg-row.warning .tg-cell {
-  color: $warning-color;
+  color: var(--color-warning-text);
+}
+
+.tg-row.danger .tg-cell {
+  color: var(--color-danger-text);
+}
+
+.tg-row.info .tg-cell {
+  color: var(--color-info-text);
 }
