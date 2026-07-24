@@ -1,0 +1,249 @@
+/* =====================
+# THEME
+Todo el sistema de diseño reutilizable vive aquí:
+Tipografía
+Radios,
+Sombras,
+Layout,
+Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados).
+Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
+===================== */
+/* --- Fuentes (usadas por --font-display / --font-body) --- */
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Roboto", sans-serif;
+
+:root {
+  /* --- Tipografía --- */
+  --font-display: #{$primary-font};
+  --font-body: #{$secondary-font};
+
+  /* Tamaño de texto de cuerpo (body, p, ul, th/td, a) y de p.lead. Son
+  variables aparte de la escala de headings de abajo porque nunca
+  crecen en el breakpoint desktop, a diferencia de --fs-sm a --fs-3xl. */
+  --fs-text: 1rem;
+  --fs-lead: 1.5rem;
+
+  /* Escala tipográfica de headings (mobile-first; --fs-sm a --fs-3xl
+  crecen en el breakpoint desktop de tipography.scss). Los valores son
+  los mismos que ya usaba cada heading, solo centralizados aquí. */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.1rem;
+  --fs-lg: 1.2rem;
+  --fs-xl: 1.4rem;
+  --fs-2xl: 1.8rem;
+  --fs-3xl: 2.3rem;
+
+  /* --- Display (tipos grandes de portada/hero) --- */
+  --fs-display-4: 1.5rem;
+  --fs-display-3: 2rem;
+  --fs-display-2: 2.5rem;
+  --fs-display-1: 3rem;
+
+  /* --- Peso tipográfico --- */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* --- Radios --- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* --- Sombras --- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  /* --- Layout --- */
+  --sidebar-width: 230px;
+  --topbar-height: 100px;
+  --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Marca (fija en ambos temas) --- */
+  --brand-primary: #1464C3;
+
+  /* Escala de tinte de marca (de más claro a más oscuro), usada en
+  botones, badges, hover states, etc. En modo oscuro deja de ser un
+  tinte de la marca y pasa a ser una escala neutra de superficie. */
+  --brand-tint-100: #A3B9F1;
+  --brand-tint-200: #7A99E1;
+  --brand-tint-300: #528BD7;
+  --brand-tint-400: #1A6AB4;
+
+  /* --- Modo claro (default) --- */
+  --color-canvas: #ebf5f8;
+  --color-surface: #ffffff;
+  --color-border-strong: #cedaf8;
+
+  --color-text-primary: #30363d;
+  --color-text-muted: #5c5c5c;
+
+  /* --- Estados --- */
+  --color-success-bg: #E6F7EC;
+  --color-success-text: #16A34A;
+  --color-danger-bg: #FCEAEA;
+  --color-danger-text: #DC2626;
+  --color-warning-bg: #FDF3E0;
+  --color-warning-text: #DB9A17;
+  --color-info-bg: #EAF1FB;
+  --color-info-text: #1464C3;
+
+  color-scheme: light;
+}
+
+/* Dark theme */
+body.dark-mode {
+  --brand-tint-100: #262C33;
+  --brand-tint-200: #2B3138;
+  --brand-tint-300: #313740;
+  --brand-tint-400: #383F48;
+
+  --color-canvas: #1C2026;
+  --color-surface: #0D0F12;
+  --color-border-strong: #21262C;
+
+  --color-text-primary: #cecece;
+  --color-text-muted: #9AA1AB;
+
+  --color-success-bg: rgba(22, 163, 74, 0.15);
+  --color-success-text: #4ADE80;
+  --color-danger-bg: rgba(220, 38, 38, 0.15);
+  --color-danger-text: #FB7185;
+  --color-warning-bg: rgba(219, 154, 23, 0.15);
+  --color-warning-text: #FBBF24;
+  --color-info-bg: rgba(56, 145, 255, 0.15);
+  --color-info-text: #3891FF;
+
+  color-scheme: dark;
+}
+
+/*Fixed colors (iguales en ambos temas, para fondos sólidos: botones, banners, labels)*/
+$white-color:#ffffff;
+$gray-color:#5c5c5c;
+$dark-color:#000000;
+$success-color:#16A34A;
+$warning-color:#db9a17;
+$danger-color:#DC2626;
+
+/* =================
+# COLOR DECLARATION
+================= */
+/* # Body Scrollbar
+----------------------------------------------- */
+/*Background color*/
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--color-surface);
+}
+
+/*Bar color*/
+body::-webkit-scrollbar-thumb {
+  background: var(--brand-tint-200);
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+
+}
+
+/* # General colors
+----------------------------------------------- */
+p, ul, ol, small {
+  color: var(--color-text-primary);
+  &.small{
+    color: var(--color-text-muted);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+  small{
+    color: var(--color-text-primary);
+  }
+}
+
+a {
+  color: color-mix(in srgb, var(--brand-primary) 90%, $white-color);
+
+  //Estados de botón
+  &:hover, &:active, &:focus {
+    color: var(--brand-primary);
+  }
+}
+
+b {
+  color: var(--brand-primary);
+}
+
+/* # Text-color
+----------------------------------------------- */
+.text-inverted { color: var(--color-surface); }
+.text-success { color: $success-color; }
+.text-danger { color: $danger-color; }
+.text-warning { color: $warning-color; }
+.text-info { color: var(--color-info-text); }
+
+/* # StatusTitle
+----------------------------------------------- */
+.StatusTitle-Success{
+  i,h1,h2,h3,h4,h5{color:$success-color;}
+}
+.StatusTitle-Danger{
+  i,h1,h2,h3,h4,h5{color:$danger-color;}
+}
+.StatusTitle-Warning{
+  i,h1,h2,h3,h4,h5{color:$warning-color;}
+}
+.StatusTitle-Info{
+  i,h1,h2,h3,h4,h5{color:var(--color-info-text);}
+}
+
+/* # Background colors
+----------------------------------------------- */
+.bg-default {
+  background-color: var(--color-surface);
+  p, ul { color: var(--color-text-primary); }
+  b { color:var(--brand-primary);}
+}
+
+.bg-light {
+  background-color: var(--color-canvas);
+  a, p, ul { color: var(--color-text-primary); }
+  b { color: var(--brand-tint-400); }
+}
+
+.bg-dark {
+  background-color: var(--color-border-strong);
+  a, p, ul { color: var(--color-text-primary); }
+  b { color: var(--brand-tint-400); }
+}
+
+.bg-darker {
+  background-color: var(--color-text-primary);
+  h1, h2, h3 { color: var(--color-surface); }
+  a, p, ul { color: var(--color-surface); }
+  b { color: var(--brand-tint-400); }
+}
+
+.bg-success {
+  background-color: $success-color;
+  p { color: $white-color; }
+}
+
+.bg-danger {
+  background-color: $danger-color;
+  p { color: $white-color; }
+}
+
+/* # Labes
+----------------------------------------------- */
+.label { color: $white-color; }
+.label-primary { background-color: var(--brand-tint-100); }
+.label-danger { background-color: $danger-color; }
+.label-success { background-color: $success-color; }
+.label-info { background-color: var(--color-info-text); }
