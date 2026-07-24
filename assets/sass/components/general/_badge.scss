@@ -73,8 +73,14 @@
 
 .badge-danger {
     background-color: rgba($danger-color, 0.1);
-    border-color: $danger-color;     
+    border-color: $danger-color;
     color:$danger-color;
+}
+
+.badge-info {
+    background-color: var(--color-info-bg);
+    color: var(--color-info-text);
+    border: none;
 }
 
 /* =====================

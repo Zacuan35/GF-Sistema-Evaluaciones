@@ -1,0 +1,23 @@
+/* =====================
+# CODE BLOCK
+Bloque para mostrar fragmentos de código con resaltado de sintaxis
+manual (vía spans .tok-*, no un parser). El fondo se mantiene oscuro
+fijo sin importar el tema claro/oscuro del sitio, como un editor de
+código.
+===================== */
+pre.code-block {
+  background: #12142A;
+  color: #C7CAEE;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  line-height: 1.6;
+  overflow-x: auto;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  margin-top: 12px;
+}
+pre.code-block .tok-tag { color: #7DD3FC; }
+pre.code-block .tok-attr { color: #FCD34D; }
+pre.code-block .tok-string { color: #86EFAC; }
+pre.code-block .tok-comment { color: #6D72A0; font-style: italic; }
+pre.code-block .tok-punct { color: #9599C4; }

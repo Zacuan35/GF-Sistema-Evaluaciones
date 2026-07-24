@@ -95,14 +95,17 @@
 
 /* # Rounded
 ----------------------------------------------- */
+/* .rounded (sin sufijo) se deja igual: la usan varias páginas reales
+de pages/ y no forma parte de la escala de --radius-* del framework */
 .rounded       { border-radius: 0.25rem; }  /* 4px */
-.rounded-sm    { border-radius: 0.125rem; } /* 2px */
-.rounded-md    { border-radius: 0.375rem; } /* 6px */
-.rounded-lg    { border-radius: 0.5rem; }   /* 8px */
-.rounded-xl    { border-radius: 0.75rem; }  /* 12px */
-.rounded-2xl   { border-radius: 1rem; }     /* 16px */
-.rounded-3xl   { border-radius: 1.5rem; }   /* 24px */
-.rounded-full  { border-radius: 9999px; }   /* círculo */
+.rounded-xs    { border-radius: var(--radius-xs); }  /* 4px */
+.rounded-sm    { border-radius: var(--radius-sm); }  /* 8px */
+.rounded-md    { border-radius: var(--radius-md); }  /* 12px */
+.rounded-lg    { border-radius: var(--radius-lg); }  /* 16px */
+.rounded-xl    { border-radius: 0.75rem; }  /* 12px, sin uso actual */
+.rounded-2xl   { border-radius: 1rem; }     /* 16px, sin uso actual */
+.rounded-3xl   { border-radius: 1.5rem; }   /* 24px, sin uso actual */
+.rounded-full  { border-radius: var(--radius-full); }   /* círculo */
 
 /* # Spacing
 ----------------------------------------------- */

@@ -929,29 +929,34 @@ Tabletas horizontales */
 
 /* # Rounded
 ----------------------------------------------- */
+/* .rounded (sin sufijo) se deja igual: la usan varias páginas reales
+de pages/ y no forma parte de la escala de --radius-* del framework */
 .rounded {
   border-radius: 0.25rem;
 } /* 4px */
+.rounded-xs {
+  border-radius: var(--radius-xs);
+} /* 4px */
 .rounded-sm {
-  border-radius: 0.125rem;
-} /* 2px */
-.rounded-md {
-  border-radius: 0.375rem;
-} /* 6px */
-.rounded-lg {
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
 } /* 8px */
+.rounded-md {
+  border-radius: var(--radius-md);
+} /* 12px */
+.rounded-lg {
+  border-radius: var(--radius-lg);
+} /* 16px */
 .rounded-xl {
   border-radius: 0.75rem;
-} /* 12px */
+} /* 12px, sin uso actual */
 .rounded-2xl {
   border-radius: 1rem;
-} /* 16px */
+} /* 16px, sin uso actual */
 .rounded-3xl {
   border-radius: 1.5rem;
-} /* 24px */
+} /* 24px, sin uso actual */
 .rounded-full {
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
 } /* círculo */
 /* # Spacing
 ----------------------------------------------- */
@@ -4585,6 +4590,12 @@ Tabletas verticales o celulares horizontales*/
   color: #F43F5E;
 }
 
+.badge-info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+  border: none;
+}
+
 /* =====================
 # BADGE SIZES
 ===================== */
@@ -6916,6 +6927,46 @@ i {
 
 .icon-facebook:before {
   content: "\e915";
+}
+
+/* =====================
+# CODE BLOCK
+Bloque para mostrar fragmentos de código con resaltado de sintaxis
+manual (vía spans .tok-*, no un parser). El fondo se mantiene oscuro
+fijo sin importar el tema claro/oscuro del sitio, como un editor de
+código.
+===================== */
+pre.code-block {
+  background: #12142A;
+  color: #C7CAEE;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  line-height: 1.6;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  margin-top: 12px;
+}
+
+pre.code-block .tok-tag {
+  color: #7DD3FC;
+}
+
+pre.code-block .tok-attr {
+  color: #FCD34D;
+}
+
+pre.code-block .tok-string {
+  color: #86EFAC;
+}
+
+pre.code-block .tok-comment {
+  color: #6D72A0;
+  font-style: italic;
+}
+
+pre.code-block .tok-punct {
+  color: #9599C4;
 }
 
 /*Website layout*/
