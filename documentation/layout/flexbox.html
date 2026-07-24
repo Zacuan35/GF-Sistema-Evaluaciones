@@ -344,60 +344,295 @@
         </div>         
         <!-- Content-body
         ========================================== -->               
-        <section class="content-body">         
-          <div class="grid gap-10">
-            <!-- ====== Div ====== -->
-            <div class="grid gap-2">
-              <h3 class="mb-0">Display:flex;</h3>
+        <section class="content-body grid gap-10">         
+
+          <!-- ====== Display: flex ====== -->
+          <div class="grid gap-2">
+            <div class="grid gap-1">
+              <h2 class="text-lg">Display: flex</h2>
               <p>Le indica al contenedor que tendrá propiedades flexibles, y que sus elementos secundarios también serán flexibles.</p>
-              <!-- ====== Flex ====== -->             
-              <div class="flex gap-4">
-                <div class="grid-item">Col 1</div>
-                <div class="grid-item">Col 1</div>
-                <div class="grid-item">Col 1</div>
-              </div>                             
-            </div>             
-            <!-- ====== Div ====== -->
-            <div>
-              <h3 class="mb-0">Flex direction</h3>
-              <p>Esta propiedad establece la dirección de los elementos al interior de un contenedor, y tiene cuatro valores:</p>
-            </div>       
-            <!-- ====== Grid ====== -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4"> 
-              <div class="flex flex-col gap-2">                
-                <h5 class="mb-0">row</h5>
-                <p>Este valor viene por defecto.</p>                
-                <div class="flex flex-row gap-4">
-                  <div class="grid-item">Col 1</div>
-                  <div class="grid-item">Col 2</div>
-                </div>                 
-              </div> 
-              <div class="flex flex-col gap-2">
-                <h5 class="mb-0">row-reverse</h5>
-                <p>Los elementos comienzan al revés.</p>
-                <div class="flex flex-row-reverse gap-4">
-                  <div class="grid-item">Col 1</div>
-                  <div class="grid-item">Col 2</div>
-                </div>                 
-              </div> 
-              <div class="flex flex-col gap-2">
-                <h5 class="mb-0">column</h5>
-                <p>Los elementos los pone en columnas.</p>
-                <div class="flex flex-col gap-4">
-                  <div class="grid-item">Col 1</div>
-                  <div class="grid-item">Col 2</div>
-                </div>                 
-              </div> 
-              <div class="flex flex-col gap-2">
-                <h5 class="mb-0">column-reverse</h5>
-                <p>Los elementos los pone en columnas.</p>
-                <div class="flex flex-col-reverse gap-4">
-                  <div class="grid-item">Col 1</div>
-                  <div class="grid-item">Col 2</div>
-                </div>                 
-              </div>            
             </div>
-          
+            <div class="doc-preview flex gap-4">
+              <div class="grid-item">1</div>
+              <div class="grid-item">2</div>
+              <div class="grid-item">3</div>
+            </div>
+          </div>
+
+          <!-- ====== Flex direction ====== -->
+          <div class="grid gap-2">
+            <h2 class="text-lg mb-0">Flex direction</h2>
+            <p>Establece en qué dirección se acomodan los elementos dentro del contenedor.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4">
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">row</h3>
+                  <p>Valor por defecto.</p>
+                </div>
+                <div class="doc-preview flex flex-row gap-2">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">row-reverse</h3>
+                  <p>Los elementos comienzan al revés.</p>
+                </div>
+                <div class="doc-preview flex flex-row-reverse gap-2">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">column</h3>
+                  <p>Los acomoda en columna.</p>
+                </div>
+                <div class="doc-preview flex flex-col gap-2">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">column-reverse</h3>
+                  <p>Columna, pero en orden inverso.</p>
+                </div>
+                <div class="doc-preview flex flex-col-reverse gap-2">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ====== Justify-content ====== -->
+          <div class="grid gap-2">
+            <h2 class="text-lg mb-0">Justify-content</h2>
+            <p>Distribuye los elementos a lo largo del eje principal cuando no ocupan todo el espacio disponible.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">start</h3>
+                  <p>Agrupa los elementos al inicio del eje principal.</p>
+                </div>
+                <div class="doc-preview flex justify-start gap-2">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">end</h3>
+                  <p>Agrupa los elementos al final del eje principal.</p>
+                </div>
+                <div class="doc-preview flex justify-end gap-2">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">center</h3>
+                  <p>Centra los elementos en el eje principal.</p>
+                </div>
+                <div class="doc-preview flex justify-center gap-2">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">between</h3>
+                  <p>Pega el primer y último elemento a los extremos y reparte el espacio sobrante entre los demás.</p>
+                </div>
+                <div class="doc-preview flex justify-between">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">around</h3>
+                  <p>Reparte el mismo espacio alrededor de cada elemento (los extremos quedan con la mitad de ese espacio).</p>
+                </div>
+                <div class="doc-preview flex justify-around">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">evenly</h3>
+                  <p>Reparte el espacio exactamente igual entre todos los elementos, incluyendo los extremos.</p>
+                </div>
+                <div class="doc-preview flex justify-evenly">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ====== Align-items ====== -->
+          <div class="grid gap-2">
+            <h2 class="text-lg mb-0">Align-items</h2>
+            <p>Alinea los elementos en el eje transversal; se nota mejor cuando tienen alturas distintas.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">start</h3>
+                  <p>Alinea los elementos contra el inicio del eje transversal.</p>
+                </div>
+                <div class="doc-preview flex items-start gap-2" style="min-height:120px">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item" style="padding:28px 12px">2</div>
+                  <div class="grid-item" style="padding:44px 12px">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">end</h3>
+                  <p>Alinea los elementos contra el final del eje transversal.</p>
+                </div>
+                <div class="doc-preview flex items-end gap-2" style="min-height:120px">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item" style="padding:28px 12px">2</div>
+                  <div class="grid-item" style="padding:44px 12px">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">center</h3>
+                  <p>Centra los elementos en el eje transversal.</p>
+                </div>
+                <div class="doc-preview flex items-center gap-2" style="min-height:120px">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item" style="padding:28px 12px">2</div>
+                  <div class="grid-item" style="padding:44px 12px">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">baseline</h3>
+                  <p>Alinea los elementos según la línea base de su texto, sin importar el tamaño de cada uno.</p>
+                </div>
+                <div class="doc-preview flex items-baseline gap-2" style="min-height:120px">
+                  <div class="grid-item" style="font-size:12px">1</div>
+                  <div class="grid-item" style="font-size:28px">2</div>
+                  <div class="grid-item" style="font-size:16px">3</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">stretch</h3>
+                  <p>Estira los elementos para que llenen todo el alto del contenedor (valor por defecto).</p>
+                </div>
+                <div class="doc-preview flex items-stretch gap-2" style="min-height:120px">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ====== Flex-wrap ====== -->
+          <div class="grid gap-2">
+            <h2 class="text-lg mb-0">Flex-wrap</h2>
+            <p>Decide si los elementos se acomodan en una sola línea o pasan a la siguiente cuando ya no hay espacio.</p>
+            <div class="grid gap-6">
+              <div class="grid gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">wrap</h3>
+                  <p>Cuando ya no hay espacio en la línea, los elementos pasan a la siguiente.</p>
+                </div>
+                <div class="doc-preview flex flex-wrap gap-2">
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">1</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">2</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">3</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">4</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">5</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">6</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">7</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">8</div>
+                </div>
+              </div>
+              <div class="grid gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">nowrap</h3>
+                  <p>Los elementos no bajan de línea y se salen del contenedor; desplázate para ver el resto.</p>
+                </div>
+                <div class="doc-preview flex flex-nowrap gap-2" style="overflow-x:auto">
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">1</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">2</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">3</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">4</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">5</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">6</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">7</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">8</div>
+                </div>
+              </div>
+              <div class="grid gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">wrap-reverse</h3>
+                  <p>Igual que wrap, pero las líneas se acomodan en orden inverso.</p>
+                </div>
+                <div class="doc-preview flex flex-wrap-reverse gap-2">
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">1</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">2</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">3</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">4</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">5</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">6</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">7</div>
+                  <div class="grid-item" style="min-width:100px;flex-shrink:0">8</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ====== Flex-grow / shrink / basis ====== -->
+          <div class="grid gap-2">
+            <h2 class="text-lg mb-0">Flex-grow, shrink y basis</h2>
+            <p>Reparten el espacio sobrante del contenedor: qué tanto puede crecer o achicarse cada elemento, y qué tamaño base ocupa antes de repartir ese espacio.</p>
+            <div class="grid gap-6">
+              <div class="grid gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">Sidebar fija + contenido flexible</h3>
+                  <p>La primera columna usa flex-none (no crece ni se achica); la segunda usa flex-1 y ocupa el espacio que sobra.</p>
+                </div>
+                <div class="doc-preview flex gap-2">
+                  <div class="grid-item flex-none" style="width:120px">Sidebar</div>
+                  <div class="grid-item flex-1">Contenido (flex-1)</div>
+                </div>
+              </div>
+              <div class="grid gap-2">
+                <div class="grid gap-1">
+                  <h3 class="text-base">Flex-basis</h3>
+                  <p>Define el tamaño base de cada elemento antes de repartir el espacio restante.</p>
+                </div>
+                <div class="doc-preview flex gap-2">
+                  <div class="grid-item flex-basis-one_quarter">25%</div>
+                  <div class="grid-item flex-basis-one_half">50%</div>
+                  <div class="grid-item flex-basis-three_quarter">75%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
       </main>
 

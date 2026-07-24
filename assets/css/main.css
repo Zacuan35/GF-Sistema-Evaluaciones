@@ -1528,8 +1528,8 @@ main {
 
 .grid-item {
   padding: 10px;
-  background-color: var(--color-border-strong);
-  border: 1px solid color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+  border: 1px solid var(--color-border-strong);
 }
 
 /* # Gap
