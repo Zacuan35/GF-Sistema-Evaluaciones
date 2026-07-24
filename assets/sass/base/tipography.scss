@@ -7,99 +7,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* # Tokens propios de este archivo
-No viven en base/theme.scss porque ese archivo se deja idéntico al de
-GF-Framework-apps; el texto de cuerpo y p.lead de este proyecto tienen
-su propio tamaño (no se toman de la escala de headings --fs-*) para
-que no crezcan junto con los headings en el breakpoint de escritorio.
+/* # Variables
 ----------------------------------------------- */
-:root {
-  --fs-text: 1rem;
-  --fs-lead: 1.5rem;
-}
+/* var(--font-display) / var(--font-body) viven en base/theme.scss
+   (junto con --font-display / --font-body) */
 
 /* # Tipography
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn{
-  font-family: var(--font-body);
-  font-size: var(--fs-text); /*font-size:16px;*/
-  line-height: 1.1875rem;
+  font-family:var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-ui);
   font-weight: var(--fw-light);
 }
 p,ul,ol {
-  font-family: var(--font-body);
-  font-size: var(--fs-text);
+  font-family:var(--font-body);
+  font-size: var(--fs-sm);
   font-weight: var(--fw-light);
   padding: 0;
 }
 p{
-  line-height: 1.4rem;
+  line-height: var(--lh-normal);
   //margin: 0 0 20px;
   margin: 0;
 }
 p:last-child {margin-bottom: 0;}
 p.lead{
-  font-size: var(--fs-lead);
-  line-height: 1.5rem;
+  font-size: var(--fs-md);
+  line-height: var(--lh-snug);
   font-weight: var(--fw-light);
+}
+
+/* Para bloques de lectura extensa (contenido editorial, ayudas
+largas, texto legal): a diferencia de .text-base, que solo cambia el
+tamaño, esta también sube el interlineado para que un párrafo largo
+se siga leyendo cómodo por encima del fs-sm que usa el texto estándar. */
+.text-reading{
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
 }
 th,td {
-  font-family: var(--font-body);
+  font-family:var(--font-body);
   font-weight: var(--fw-light);
-  font-size: var(--fs-text);
+  font-size: var(--fs-sm);
 }
 
-a{font-size: var(--fs-text);}
+a{font-size: var(--fs-sm);}
 
 small, .small {
-  font-family: var(--font-body);
-  font-weight: normal;
-  line-height: 1;
-  //color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
+  font-family:var(--font-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-none);
+  //color: var(--color-border-strong);
   font-size: 80%;
 }
 
-b,strong {font-weight: bold;}
+b,strong {font-weight: var(--fw-bold);}
 
-/*Títulos*/
-h1,h2,h3,h4,h5,h6,
-.h1,.h2,.h3,.h4,.h5,.h6 {
-  font-family: var(--font-display);
+/*Títulos
+Las etiquetas h1-h6 se eligen por jerarquía semántica del documento
+(nunca por el tamaño visual que se quiera lograr). Todas leen su
+tamaño de las mismas variables --fs-* que usan las clases .text-*,
+para que exista un solo lugar donde retocar la escala completa. */
+h1,h2,h3,h4,h5,h6 {
+  font-family:var(--font-display);
   font-weight: var(--fw-bold);
   //margin: 0 0 0.25rem 0;
   margin: 0;
   padding: 0;
-  line-height: normal;
+  line-height: var(--lh-tight);
   text-transform:initial;
 }
-/*Sólo si se requiere títulos H1 más grandes en el home */
-h1.home ,h2.home{font-size: var(--fs-3xl);}
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
+h5 { font-size: var(--fs-md); }
+h6 { font-size: var(--fs-base); }
 
-h1, .h1 { font-size: var(--fs-2xl); }
-h2, .h2 { font-size: var(--fs-xl); }
-h3, .h3 { font-size: var(--fs-lg); }
-h4, .h4 { font-size: var(--fs-md); }
-h5, .h5 { font-size: var(--fs-base); }
-h6, .h6 { font-size: var(--fs-sm); }
-h2.teaser {
-  font-family: var(--font-body);
-  font-size: var(--fs-display-3);
-  font-weight: var(--fw-bold);
-  font-style: italic;
-  margin-top: 0px;
-  text-transform: capitalize;
-}
+/* Convención para h2 en páginas de documentación: su tamaño natural
+(--fs-2xl) es para páginas con pocas secciones reales (ej. tables.html,
+website/sections.html). En páginas de referencia densa, con muchas
+subsecciones hermanas al mismo nivel (ej. buttons.html, charts.html,
+9 variantes cada una), usa <h2 class="text-lg"> — mismo nivel
+semántico, menor peso visual porque se repite muchas veces en una
+sola página. No es inconsistencia: son dos contextos distintos. */
 
+/*Escala de texto
+Clases de tamaño puro, sin implicar ningún nivel de jerarquía: se usan
+sobre cualquier etiqueta (p, span, li…) cuando el tamaño visual que se
+necesita no coincide con el nivel semántico del contenido. */
+.text-xs   { font-size: var(--fs-xs); }
+.text-sm   { font-size: var(--fs-sm); }
+.text-base { font-size: var(--fs-base); }
+.text-md   { font-size: var(--fs-md); }
+.text-lg   { font-size: var(--fs-lg); }
+.text-xl   { font-size: var(--fs-xl); }
+.text-2xl  { font-size: var(--fs-2xl); }
+.text-3xl  { font-size: var(--fs-3xl); }
+
+/*Display: tipos grandes de portada/hero, peso bold (no son h1-h6
+más grandes, son una voz tipográfica distinta que reutiliza el tope
+de la escala) */
 .display{
-  line-height: 1.2;
-  font-weight: var(--fw-light);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
 }
 .display-1{font-size: var(--fs-display-1);}
 .display-2{font-size: var(--fs-display-2);}
 .display-3{font-size: var(--fs-display-3);}
 .display-4{font-size: var(--fs-display-4);}
 
-.font-xs{font-size: var(--fs-xs);}
 .fa-sm {font-size: .875em;}
 .fa-1x {font-size: 1em;}
 .fa-2x {font-size: 2em;}
@@ -138,29 +156,19 @@ Tabletas verticales o celulares horizontales*/
 /*A partir de 1024px se aplicarán estos estilos => 1024px
 Tabletas horizontales*/
 @media (min-width: 1024px) {
-  /* Márgenes y espaciados */
-  /*
-  h1,h2,h3,h4,h5,h6,
-  .h1,.h2,.h3,.h4,.h5,.h6 {
-    margin: 0 0 1rem 0;
-  }
-  */
-
-  /* Un solo lugar redefine la escala completa de headings; h1-h6 y
-  .display-* la heredan automáticamente por leerla de estas variables. */
+  /* Un solo lugar redefine la escala completa; h1-h6 y .text-*
+  la heredan automáticamente por leerla de estas variables. */
   :root {
-    --fs-sm: 1rem;
-    --fs-base: 1.25rem;
-    --fs-md: 1.5rem;
-    --fs-lg: 1.75rem;
-    --fs-xl: 2rem;
-    --fs-2xl: 2.5rem;
-    --fs-3xl: 3.8rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 2.5rem;
 
     --fs-display-4: 3.5rem;
-    --fs-display-3: 4.5rem;
-    --fs-display-2: 5.5rem;
-    --fs-display-1: 6rem;
+    --fs-display-3: 4rem;
+    --fs-display-2: 4.5rem;
+    --fs-display-1: 5rem;
   }
 }
 
