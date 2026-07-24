@@ -359,109 +359,113 @@
             <h2 class="text-lg">Inputs</h2>
             <p>Un ejemplo por función, no por type: texto, contraseña, select, fecha, número, carga de archivos y estado inválido (.is-invalid). Al enfocar un campo aparece un anillo de sombra alrededor del borde.</p>
           </div>
-          <div class="card card-body">
-              <!-- Search-container -->
-              <div class="flex items-center flex-row mb-2">
-                <div class="search-container">
-                  <input type="text" class="search form-control" placeholder="No. de empleado">
-                  <button type="submit" class="search-button">
-                    <i class="icon-magnifying-glass"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- Form -->
-              <form class="grid gap-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                  <div class="field">
-                    <label for="name">Nombre <span>*</span></label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Escribe tu nombre aquí" required>
+          <div class="card">            
+            <div class="card-body">
+                <!-- Search-container -->
+                <div class="flex items-center flex-row mb-2">
+                  <div class="search-container">
+                    <input type="text" class="search form-control" placeholder="No. de empleado">
+                    <button type="submit" class="search-button">
+                      <i class="icon-magnifying-glass"></i>
+                    </button>
                   </div>
-                  <div class="field">
-                    <label for="password">Contraseña</label>
-                    <div class="input-wrapper">
-                      <input class="form-control" type="password" id="password" name="password" required placeholder="Escribe tu contraseña">
-                      <i class="fa-regular fa-eye toggle-password" id="togglePassword" aria-label="Mostrar u ocultar contraseña"></i>
+                </div>
+                <!-- Form -->
+                <form class="grid gap-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <div class="field">
+                      <label for="name">Nombre <span>*</span></label>
+                      <input class="form-control" type="text" id="name" name="name" placeholder="Escribe tu nombre aquí" required>
+                    </div>
+                    <div class="field">
+                      <label for="password">Contraseña</label>
+                      <div class="input-wrapper">
+                        <input class="form-control" type="password" id="password" name="password" required placeholder="Escribe tu contraseña">
+                        <i class="fa-regular fa-eye toggle-password" id="togglePassword" aria-label="Mostrar u ocultar contraseña"></i>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label for="example-select">Example select <span>*</span></label>
+                      <select id="example-select" name="example-select" class="form-control" required>
+                        <option value="" disabled selected>-- Selecciona --</option>
+                        <option value="One">One</option>
+                        <option value="Two" selected>Two</option>
+                        <option value="Three">Three</option>
+                        <option value="Four">Four</option>
+                        <option value="Five">Five</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="datetime-01">Date and time example <span>*</span></label>
+                      <input id="datetime-01" type="datetime-local" name="datetime" class="form-control" required>
+                    </div>
+                    <div class="field">
+                      <label for="number-example">Number</label>
+                      <input class="form-control" type="number" id="number-example" name="number-example" min="1" max="100" step="5" value="20">
+                    </div>
+                    <div class="field">
+                      <label for="invalid-example">Campo inválido</label>
+                      <input class="form-control is-invalid" type="email" id="invalid-example" name="invalid-example" value="correo-mal-escrito">
+                      <p class="text-danger text-xs">Ingresa un correo válido.</p>
                     </div>
                   </div>
-                  <div class="field">
-                    <label for="example-select">Example select <span>*</span></label>
-                    <select id="example-select" name="example-select" class="form-control" required>
-                      <option value="" disabled selected>-- Selecciona --</option>
-                      <option value="One">One</option>
-                      <option value="Two" selected>Two</option>
-                      <option value="Three">Three</option>
-                      <option value="Four">Four</option>
-                      <option value="Five">Five</option>
-                    </select>
+                  <div class="grid grid-cols-1">
+                    <div class="field">
+                      <label for="example-textarea">Example textarea<span>*</span></label>
+                      <textarea class="form-control" id="example-textarea" name="example-textarea" rows="5" cols="50" placeholder="Escribe tu comentario." required></textarea>
+                    </div>
                   </div>
-                  <div class="field">
-                    <label for="datetime-01">Date and time example <span>*</span></label>
-                    <input id="datetime-01" type="datetime-local" name="datetime" class="form-control" required>
+                  <div class="grid grid-cols-1">
+                    <div class="file_upload">
+                      <label for="archivo">Selecciona un archivo:</label>
+                      <input type="file" id="archivo" name="archivo" accept="image/*,application/pdf,.doc,.docx" required>
+                    </div>
                   </div>
-                  <div class="field">
-                    <label for="number-example">Number</label>
-                    <input class="form-control" type="number" id="number-example" name="number-example" min="1" max="100" step="5" value="20">
-                  </div>
-                  <div class="field">
-                    <label for="invalid-example">Campo inválido</label>
-                    <input class="form-control is-invalid" type="email" id="invalid-example" name="invalid-example" value="correo-mal-escrito">
-                    <p class="text-danger text-xs">Ingresa un correo válido.</p>
-                  </div>
-                </div>
-                <div class="grid grid-cols-1">
-                  <div class="field">
-                    <label for="example-textarea">Example textarea<span>*</span></label>
-                    <textarea class="form-control" id="example-textarea" name="example-textarea" rows="5" cols="50" placeholder="Escribe tu comentario." required></textarea>
-                  </div>
-                </div>
-                <div class="grid grid-cols-1">
-                  <div class="file_upload">
-                    <label for="archivo">Selecciona un archivo:</label>
-                    <input type="file" id="archivo" name="archivo" accept="image/*,application/pdf,.doc,.docx" required>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-default">Guardar</button>
-              </form>
+                  <button type="submit" class="btn btn-default">Guardar</button>
+                </form>
+            </div>
           </div>
 
           <div class="grid gap-1">
             <h2 class="text-lg">Switch, Radio and checkboxes</h2>
             <p>Controles de selección: switches para activar/desactivar, radios para elegir una sola opción y checkboxes para elegir varias.</p>
           </div>
-          <div class="card card-body">
-              <!-- Form -->
-              <form class="grid gap-4">
-                <div class="flex gap-4">
-                  <div class="switch-group">
-                    <p>Destacar:</p>
-                    <span class="switch-label">No</span>
-                    <label class="switch">
-                      <input type="checkbox" class="switch-input">
-                      <span class="slider"></span>
-                    </label>
+          <div class="card">
+            <div class="card-body">
+                <!-- Form -->
+                <form class="grid gap-4">
+                  <div class="flex gap-4">
+                    <div class="switch-group">
+                      <p>Destacar:</p>
+                      <span class="switch-label">No</span>
+                      <label class="switch">
+                        <input type="checkbox" class="switch-input">
+                        <span class="slider"></span>
+                      </label>
+                    </div>
                   </div>
-                </div>
-
-                <fieldset class="form-group-inline">
-                  <legend>Radio and checkboxes</legend>
-                  <label class="radio-label">
-                    <input type="radio" name="opcion" id="radio1" checked>
-                    Opción A
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" name="opcion" id="radio2">
-                    Opción B
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" id="checkbox1" checked>
-                    Opción 1
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" id="checkbox2">
-                    Opción 2
-                  </label>
-                </fieldset>
-              </form>
+  
+                  <fieldset class="form-group-inline">
+                    <legend>Radio and checkboxes</legend>
+                    <label class="radio-label">
+                      <input type="radio" name="opcion" id="radio1" checked>
+                      Opción A
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="opcion" id="radio2">
+                      Opción B
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox1" checked>
+                      Opción 1
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox2">
+                      Opción 2
+                    </label>
+                  </fieldset>
+                </form>
+            </div>
           </div>
         </section>
       </main>
