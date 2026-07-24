@@ -71,7 +71,7 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --color-canvas: #F4F5FA;
   --color-surface: #FFFFFF;
   --color-text-primary: #1A1D3A;
-  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
+  --color-text-secondary: #505269;
   --color-text-muted: #8A8FB3;
   --color-border-strong: #D3D6E8;
   --color-success-bg: #E9FBF0;
@@ -90,6 +90,7 @@ body.dark-mode {
   --color-canvas: #0C0E1D;
   --color-surface: #12142A;
   --color-text-primary: #EEF0FB;
+  --color-text-secondary: #b3b6ce;
   --color-text-muted: #6D72A0;
   --color-border-strong: #2E3260;
   --color-success-bg: rgba(34, 197, 94, 0.12);

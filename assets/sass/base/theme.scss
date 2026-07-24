@@ -77,7 +77,7 @@ $secondary-font: "Roboto", sans-serif;
   --color-surface: #FFFFFF;
 
   --color-text-primary: #1A1D3A;
-  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
+  --color-text-secondary: #505269;
   --color-text-muted: #8A8FB3;
   --color-border-strong: #D3D6E8;
 
@@ -99,6 +99,7 @@ body.dark-mode {
   --color-surface: #12142A;
 
   --color-text-primary: #EEF0FB;
+  --color-text-secondary: #b3b6ce;
   --color-text-muted: #6D72A0;
   --color-border-strong: #2E3260;
 
