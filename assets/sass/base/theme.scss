@@ -1,0 +1,150 @@
+/* =====================
+# THEMES
+===================== */
+/* Light theme*/
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #ebf5f8;
+  --tertiary-color: #cedaf8;
+  --fourth-color: #A3B9F1;
+  --fifth-color: #7A99E1;
+  --sixty-color: #528BD7;
+  --seventy-color: #1A6AB4;
+  --primary-text-color: #30363d;
+  --highlight-color: #1464C3;
+}
+
+/* Dark theme */
+body.dark-mode {
+  --primary-color: #0D0F12;   
+  --secondary-color: #1C2026; 
+  --tertiary-color: #21262C;
+  --fourth-color: #262C33;
+  --fifth-color: #2B3138;
+  --sixty-color: #313740;
+  --seventy-color: #383F48;
+  --primary-text-color: #cecece;
+  --highlight-color: #3891ff;
+}
+
+/*Fixed colors*/
+$white-color:#ffffff;
+$gray-color:#5c5c5c;
+$dark-color:#000000;
+$success-color:#16A34A;
+$warning-color:#db9a17;
+$danger-color:#DC2626;
+
+/* =================
+# COLOR DECLARATION
+================= */
+/* # Body Scrollbar
+----------------------------------------------- */
+/*Background color*/
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--primary-color);
+}
+
+/*Bar color*/
+body::-webkit-scrollbar-thumb {
+  background: var(--fifth-color);
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--primary-text-color);
+  
+}
+
+/* # General colors
+----------------------------------------------- */
+p, ul, ol, small {
+  color: var(--primary-text-color);
+  &.small{
+    color: $gray-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--highlight-color);
+  small{
+    color: var(--highlight-color);
+  }
+}
+
+a {
+  color: color-mix(in srgb, var(--highlight-color) 90%, $white-color);
+  
+  //Estados de botón
+  &:hover, &:active, &:focus {
+    color: var(--highlight-color);
+  }
+}
+
+b {
+  color: var(--highlight-color);
+}
+
+/* # Text-color
+----------------------------------------------- */
+.text-inverted { color: var(--primary-color); }
+.text-success { color: $success-color; }
+.text-danger { color: $danger-color; }
+.text-warning { color: $warning-color; }
+
+/* # StatusTitle
+----------------------------------------------- */
+.StatusTitle-Success{
+  i,h1,h2,h3,h4,h5{color:$success-color;}
+}
+.StatusTitle-Danger{
+  i,h1,h2,h3,h4,h5{color:$danger-color;}
+}
+.StatusTitle-Warning{
+  i,h1,h2,h3,h4,h5{color:$warning-color;}
+}
+
+/* # Background colors
+----------------------------------------------- */
+.bg-default {
+  background-color: var(--primary-color);
+  p, ul { color: var(--primary-text-color); }
+  b { color:var(--highlight-color);}
+}
+
+.bg-light {
+  background-color: var(--secondary-color);
+  a, p, ul { color: var(--primary-text-color); }
+  b { color: var(--seventy-color); }
+}
+
+.bg-dark {
+  background-color: var(--tertiary-color);
+  a, p, ul { color: var(--primary-color); }
+  b { color: var(--seventy-color); }
+}
+
+.bg-darker {
+  background-color: var(--primary-text-color);
+  h1, h2, h3 { color: var(--primary-color); }
+  a, p, ul { color: var(--primary-color); }
+  b { color: var(--seventy-color); }
+}
+
+.bg-success {
+  background-color: $success-color;
+  p { color: $white-color; }
+}
+
+.bg-danger {
+  background-color: $danger-color;
+  p { color: $white-color; }
+}
+
+/* # Labes
+----------------------------------------------- */
+.label { color: $white-color; }
+.label-primary { background-color: var(--fourth-color); }
+.label-danger { background-color: $danger-color; }
+.label-success { background-color: $success-color; }

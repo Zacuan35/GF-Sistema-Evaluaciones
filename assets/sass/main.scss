@@ -1,17 +1,18 @@
 /* =====================
 # MAIN
 ===================== */
-@import 'theme/theme';
-
 /*Base*/
+@import 'base/theme';
 @import 'base/reset';
 @import 'base/tipography';
 @import 'base/utilities';
-@import 'base/grid';
-@import 'base/container';
-@import 'base/flexbox';
 @import 'base/others';
 @import 'base/bajar_footer';
+
+/*Layout*/
+@import 'layouts/grid';
+@import 'layouts/flexbox';
+@import 'layouts/container';
 
 /*Components - General*/
 @import 'components/general/accordion';
