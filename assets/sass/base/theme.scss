@@ -1,11 +1,11 @@
 /* =====================
 # THEME
-Todo el sistema de diseño reutilizable vive aquí:
+Todo el sistema de diseño reutilizable vive aquí: 
 Tipografía
 Radios,
-Sombras,
+Sombras, 
 Layout,
-Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados).
+Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados). 
 Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
 ===================== */
 /* --- Fuentes (usadas por --font-display / --font-body) --- */
@@ -17,29 +17,31 @@ $secondary-font: "Roboto", sans-serif;
   --font-display: #{$primary-font};
   --font-body: #{$secondary-font};
 
-  /* Tamaño de texto de cuerpo (body, p, ul, th/td, a) y de p.lead. Son
-  variables aparte de la escala de headings de abajo porque nunca
-  crecen en el breakpoint desktop, a diferencia de --fs-sm a --fs-3xl. */
-  --fs-text: 1rem;
-  --fs-lead: 1.5rem;
-
-  /* Escala tipográfica de headings (mobile-first; --fs-sm a --fs-3xl
-  crecen en el breakpoint desktop de tipography.scss). Los valores son
-  los mismos que ya usaba cada heading, solo centralizados aquí. */
+  /* --- Escala tipográfica (mobile-first; --fs-md a --fs-3xl crecen
+  en el breakpoint desktop de tipography.scss). Un solo lugar controla
+  tanto los h1-h6 como las clases .text-*, para no duplicar valores. --- */
   --fs-xs: 0.75rem;
-  --fs-sm: 0.9rem;
+  --fs-sm: 0.875rem;
   --fs-base: 1rem;
-  --fs-md: 1.1rem;
-  --fs-lg: 1.2rem;
-  --fs-xl: 1.4rem;
-  --fs-2xl: 1.8rem;
-  --fs-3xl: 2.3rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2rem;
 
-  /* --- Display (tipos grandes de portada/hero) --- */
-  --fs-display-4: 1.5rem;
+  /* --- Display (tipos grandes de portada/hero, peso bold) --- */
+  --fs-display-4: 1.75rem;
   --fs-display-3: 2rem;
-  --fs-display-2: 2.5rem;
-  --fs-display-1: 3rem;
+  --fs-display-2: 2.25rem;
+  --fs-display-1: 2.5rem;
+
+  /* --- Interlineado: cada valor nace de un uso real ya presente en
+  tipography.scss, no de números nuevos --- */
+  --lh-tight: 1.2;     /* headings, .display */
+  --lh-snug: 1.4;      /* p.lead */
+  --lh-normal: 1.5;    /* p, ul, ol (cuerpo de lectura, ratio recomendado por WCAG) */
+  --lh-ui: 1.1875rem;  /* controles de formulario/botones a 1rem, valor heredado */
+  --lh-none: 1;        /* small, .small */
 
   /* --- Peso tipográfico --- */
   --fw-light: 300;
@@ -65,58 +67,49 @@ $secondary-font: "Roboto", sans-serif;
 
   /* --- Marca (fija en ambos temas) --- */
   --brand-primary: #1464C3;
-
-  /* Escala de tinte de marca (de más claro a más oscuro), usada en
-  botones, badges, hover states, etc. En modo oscuro deja de ser un
-  tinte de la marca y pasa a ser una escala neutra de superficie. */
-  --brand-tint-100: #A3B9F1;
-  --brand-tint-200: #7A99E1;
-  --brand-tint-300: #528BD7;
-  --brand-tint-400: #1A6AB4;
+  --brand-teal: #14B8A6;
+  --brand-amber: #F59E0B;
+  --brand-rose: #F43F5E;
+  --brand-green: #22C55E;
 
   /* --- Modo claro (default) --- */
-  --color-canvas: #ebf5f8;
-  --color-surface: #ffffff;
-  --color-border-strong: #cedaf8;
+  --color-canvas: #F4F5FA;
+  --color-surface: #FFFFFF;
 
-  --color-text-primary: #30363d;
-  --color-text-muted: #5c5c5c;
+  --color-text-primary: #1A1D3A;
+  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
+  --color-text-muted: #8A8FB3;
+  --color-border-strong: #D3D6E8;
 
-  /* --- Estados --- */
-  --color-success-bg: #E6F7EC;
-  --color-success-text: #16A34A;
-  --color-danger-bg: #FCEAEA;
-  --color-danger-text: #DC2626;
-  --color-warning-bg: #FDF3E0;
-  --color-warning-text: #DB9A17;
-  --color-info-bg: #EAF1FB;
-  --color-info-text: #1464C3;
+  --color-success-bg: #E9FBF0;
+  --color-success-text: #12875A;
+  --color-danger-bg: #FEEDEF;
+  --color-danger-text: #C4293B;
+  --color-warning-bg: #FEF6E7;
+  --color-warning-text: #9A6208;
+  --color-info-bg: #ECEFFF;
+  --color-info-text: #4548C9;
 
   color-scheme: light;
 }
 
 /* Dark theme */
 body.dark-mode {
-  --brand-tint-100: #262C33;
-  --brand-tint-200: #2B3138;
-  --brand-tint-300: #313740;
-  --brand-tint-400: #383F48;
+  --color-canvas: #0C0E1D;
+  --color-surface: #12142A;
 
-  --color-canvas: #1C2026;
-  --color-surface: #0D0F12;
-  --color-border-strong: #21262C;
+  --color-text-primary: #EEF0FB;
+  --color-text-muted: #6D72A0;
+  --color-border-strong: #2E3260;
 
-  --color-text-primary: #cecece;
-  --color-text-muted: #9AA1AB;
-
-  --color-success-bg: rgba(22, 163, 74, 0.15);
+  --color-success-bg: rgba(34, 197, 94, 0.12);
   --color-success-text: #4ADE80;
-  --color-danger-bg: rgba(220, 38, 38, 0.15);
+  --color-danger-bg: rgba(244, 63, 94, 0.12);
   --color-danger-text: #FB7185;
-  --color-warning-bg: rgba(219, 154, 23, 0.15);
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
   --color-warning-text: #FBBF24;
-  --color-info-bg: rgba(56, 145, 255, 0.15);
-  --color-info-text: #3891FF;
+  --color-info-bg: rgba(91, 95, 239, 0.16);
+  --color-info-text: #A5A8F7;
 
   color-scheme: dark;
 }
@@ -125,9 +118,17 @@ body.dark-mode {
 $white-color:#ffffff;
 $gray-color:#5c5c5c;
 $dark-color:#000000;
-$success-color:#16A34A;
-$warning-color:#db9a17;
-$danger-color:#DC2626;
+$success-color:#22C55E;
+$warning-color:#F59E0B;
+$danger-color:#F43F5E;
+
+/* Tonos derivados (no son colores nuevos: se calculan variando la
+opacidad de --color-border-strong y --color-surface que ya existen, en
+vez de declarar más --color-* fijos. --color-text-secondary vive junto
+a --color-text-primary arriba, ya que participa del sistema de tema) */
+$border-subtle: color-mix(in srgb, var(--color-border-strong) 55%, transparent);
+$fill-subtle: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
+$surface-tint: color-mix(in srgb, var(--color-surface) 94%, var(--color-text-primary) 6%);
 
 /* =================
 # COLOR DECLARATION
@@ -142,7 +143,7 @@ body::-webkit-scrollbar {
 
 /*Bar color*/
 body::-webkit-scrollbar-thumb {
-  background: var(--brand-tint-200);
+  background: var(--color-border-strong);
 }
 
 body {
@@ -153,7 +154,11 @@ body {
 
 /* # General colors
 ----------------------------------------------- */
-p, ul, ol, small {
+p, ul, ol {
+  color: var(--color-text-secondary);
+}
+
+small {
   color: var(--color-text-primary);
   &.small{
     color: var(--color-text-muted);
@@ -183,21 +188,21 @@ b {
 /* # Text-color
 ----------------------------------------------- */
 .text-inverted { color: var(--color-surface); }
-.text-success { color: $success-color; }
-.text-danger { color: $danger-color; }
-.text-warning { color: $warning-color; }
+.text-success { color: var(--color-success-text); }
+.text-danger { color: var(--color-danger-text); }
+.text-warning { color: var(--color-warning-text); }
 .text-info { color: var(--color-info-text); }
 
 /* # StatusTitle
 ----------------------------------------------- */
 .StatusTitle-Success{
-  i,h1,h2,h3,h4,h5{color:$success-color;}
+  i,h1,h2,h3,h4,h5{color:var(--color-success-text);}
 }
 .StatusTitle-Danger{
-  i,h1,h2,h3,h4,h5{color:$danger-color;}
+  i,h1,h2,h3,h4,h5{color:var(--color-danger-text);}
 }
 .StatusTitle-Warning{
-  i,h1,h2,h3,h4,h5{color:$warning-color;}
+  i,h1,h2,h3,h4,h5{color:var(--color-warning-text);}
 }
 .StatusTitle-Info{
   i,h1,h2,h3,h4,h5{color:var(--color-info-text);}
@@ -214,20 +219,20 @@ b {
 .bg-light {
   background-color: var(--color-canvas);
   a, p, ul { color: var(--color-text-primary); }
-  b { color: var(--brand-tint-400); }
+  b { color: var(--brand-primary); }
 }
 
 .bg-dark {
-  background-color: var(--color-border-strong);
-  a, p, ul { color: var(--color-text-primary); }
-  b { color: var(--brand-tint-400); }
+  background-color: $fill-subtle;
+  a, p, ul { color: var(--color-surface); }
+  b { color: var(--brand-primary); }
 }
 
 .bg-darker {
   background-color: var(--color-text-primary);
   h1, h2, h3 { color: var(--color-surface); }
   a, p, ul { color: var(--color-surface); }
-  b { color: var(--brand-tint-400); }
+  b { color: var(--brand-primary); }
 }
 
 .bg-success {
@@ -243,7 +248,7 @@ b {
 /* # Labes
 ----------------------------------------------- */
 .label { color: $white-color; }
-.label-primary { background-color: var(--brand-tint-100); }
+.label-primary { background-color: var(--brand-primary); }
 .label-danger { background-color: $danger-color; }
 .label-success { background-color: $success-color; }
 .label-info { background-color: var(--color-info-text); }

@@ -177,7 +177,7 @@
 Colour theme
 ========================== */
  .wrapper {
-  background: var(--brand-tint-300);
+  background: color-mix(in srgb, var(--brand-primary) 75%, $white-color);
 }
 
 /* ===========
@@ -208,7 +208,7 @@ Colour theme
  /*
  .dashboard-footer {
     background: var(--color-surface);
-    color: var(--brand-tint-400);
+    color: color-mix(in srgb, var(--brand-primary) 90%, $dark-color);
     padding: 15px;
     border-top: 1px solid #eee;    
   }

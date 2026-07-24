@@ -51,7 +51,7 @@ legend,
     color: var(--color-text-primary);
   }
   &:disabled{
-    background-color:var(--brand-tint-100);
+    background-color:color-mix(in srgb, var(--brand-primary) 20%, $white-color);
     //opacity: 1;
   }  
 }
@@ -118,7 +118,7 @@ input[type="range"] {
 
 /* Cambio de color al pasar el mouse */
 input[type="range"]:hover {
-  background: var(--brand-tint-100);
+  background: color-mix(in srgb, var(--brand-primary) 20%, $white-color);
 }
 
 /* Pulgar (thumb) del slider */

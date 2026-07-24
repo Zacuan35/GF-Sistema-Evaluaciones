@@ -5,12 +5,12 @@
 /*Base*/
 /* =====================
 # THEME
-Todo el sistema de diseño reutilizable vive aquí:
+Todo el sistema de diseño reutilizable vive aquí: 
 Tipografía
 Radios,
-Sombras,
+Sombras, 
 Layout,
-Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados).
+Color (marca fija + superficies/texto que se adaptan a claro/oscuro + estados). 
 Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
 ===================== */
 /* --- Fuentes (usadas por --font-display / --font-body) --- */
@@ -20,27 +20,29 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   /* --- Tipografía --- */
   --font-display: Montserrat, sans-serif;
   --font-body: Roboto, sans-serif;
-  /* Tamaño de texto de cuerpo (body, p, ul, th/td, a) y de p.lead. Son
-  variables aparte de la escala de headings de abajo porque nunca
-  crecen en el breakpoint desktop, a diferencia de --fs-sm a --fs-3xl. */
-  --fs-text: 1rem;
-  --fs-lead: 1.5rem;
-  /* Escala tipográfica de headings (mobile-first; --fs-sm a --fs-3xl
-  crecen en el breakpoint desktop de tipography.scss). Los valores son
-  los mismos que ya usaba cada heading, solo centralizados aquí. */
+  /* --- Escala tipográfica (mobile-first; --fs-md a --fs-3xl crecen
+  en el breakpoint desktop de tipography.scss). Un solo lugar controla
+  tanto los h1-h6 como las clases .text-*, para no duplicar valores. --- */
   --fs-xs: 0.75rem;
-  --fs-sm: 0.9rem;
+  --fs-sm: 0.875rem;
   --fs-base: 1rem;
-  --fs-md: 1.1rem;
-  --fs-lg: 1.2rem;
-  --fs-xl: 1.4rem;
-  --fs-2xl: 1.8rem;
-  --fs-3xl: 2.3rem;
-  /* --- Display (tipos grandes de portada/hero) --- */
-  --fs-display-4: 1.5rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2rem;
+  /* --- Display (tipos grandes de portada/hero, peso bold) --- */
+  --fs-display-4: 1.75rem;
   --fs-display-3: 2rem;
-  --fs-display-2: 2.5rem;
-  --fs-display-1: 3rem;
+  --fs-display-2: 2.25rem;
+  --fs-display-1: 2.5rem;
+  /* --- Interlineado: cada valor nace de un uso real ya presente en
+  tipography.scss, no de números nuevos --- */
+  --lh-tight: 1.2; /* headings, .display */
+  --lh-snug: 1.4; /* p.lead */
+  --lh-normal: 1.5; /* p, ul, ol (cuerpo de lectura, ratio recomendado por WCAG) */
+  --lh-ui: 1.1875rem; /* controles de formulario/botones a 1rem, valor heredado */
+  --lh-none: 1; /* small, .small */
   /* --- Peso tipográfico --- */
   --fw-light: 300;
   --fw-regular: 400;
@@ -61,54 +63,51 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
   /* --- Marca (fija en ambos temas) --- */
   --brand-primary: #1464C3;
-  /* Escala de tinte de marca (de más claro a más oscuro), usada en
-  botones, badges, hover states, etc. En modo oscuro deja de ser un
-  tinte de la marca y pasa a ser una escala neutra de superficie. */
-  --brand-tint-100: #A3B9F1;
-  --brand-tint-200: #7A99E1;
-  --brand-tint-300: #528BD7;
-  --brand-tint-400: #1A6AB4;
+  --brand-teal: #14B8A6;
+  --brand-amber: #F59E0B;
+  --brand-rose: #F43F5E;
+  --brand-green: #22C55E;
   /* --- Modo claro (default) --- */
-  --color-canvas: #ebf5f8;
-  --color-surface: #ffffff;
-  --color-border-strong: #cedaf8;
-  --color-text-primary: #30363d;
-  --color-text-muted: #5c5c5c;
-  /* --- Estados --- */
-  --color-success-bg: #E6F7EC;
-  --color-success-text: #16A34A;
-  --color-danger-bg: #FCEAEA;
-  --color-danger-text: #DC2626;
-  --color-warning-bg: #FDF3E0;
-  --color-warning-text: #DB9A17;
-  --color-info-bg: #EAF1FB;
-  --color-info-text: #1464C3;
+  --color-canvas: #F4F5FA;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #1A1D3A;
+  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 75%, transparent);
+  --color-text-muted: #8A8FB3;
+  --color-border-strong: #D3D6E8;
+  --color-success-bg: #E9FBF0;
+  --color-success-text: #12875A;
+  --color-danger-bg: #FEEDEF;
+  --color-danger-text: #C4293B;
+  --color-warning-bg: #FEF6E7;
+  --color-warning-text: #9A6208;
+  --color-info-bg: #ECEFFF;
+  --color-info-text: #4548C9;
   color-scheme: light;
 }
 
 /* Dark theme */
 body.dark-mode {
-  --brand-tint-100: #262C33;
-  --brand-tint-200: #2B3138;
-  --brand-tint-300: #313740;
-  --brand-tint-400: #383F48;
-  --color-canvas: #1C2026;
-  --color-surface: #0D0F12;
-  --color-border-strong: #21262C;
-  --color-text-primary: #cecece;
-  --color-text-muted: #9AA1AB;
-  --color-success-bg: rgba(22, 163, 74, 0.15);
+  --color-canvas: #0C0E1D;
+  --color-surface: #12142A;
+  --color-text-primary: #EEF0FB;
+  --color-text-muted: #6D72A0;
+  --color-border-strong: #2E3260;
+  --color-success-bg: rgba(34, 197, 94, 0.12);
   --color-success-text: #4ADE80;
-  --color-danger-bg: rgba(220, 38, 38, 0.15);
+  --color-danger-bg: rgba(244, 63, 94, 0.12);
   --color-danger-text: #FB7185;
-  --color-warning-bg: rgba(219, 154, 23, 0.15);
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
   --color-warning-text: #FBBF24;
-  --color-info-bg: rgba(56, 145, 255, 0.15);
-  --color-info-text: #3891FF;
+  --color-info-bg: rgba(91, 95, 239, 0.16);
+  --color-info-text: #A5A8F7;
   color-scheme: dark;
 }
 
 /*Fixed colors (iguales en ambos temas, para fondos sólidos: botones, banners, labels)*/
+/* Tonos derivados (no son colores nuevos: se calculan variando la
+opacidad de --color-border-strong y --color-surface que ya existen, en
+vez de declarar más --color-* fijos. --color-text-secondary vive junto
+a --color-text-primary arriba, ya que participa del sistema de tema) */
 /* =================
 # COLOR DECLARATION
 ================= */
@@ -122,7 +121,7 @@ body::-webkit-scrollbar {
 
 /*Bar color*/
 body::-webkit-scrollbar-thumb {
-  background: var(--brand-tint-200);
+  background: var(--color-border-strong);
 }
 
 body {
@@ -132,10 +131,14 @@ body {
 
 /* # General colors
 ----------------------------------------------- */
-p, ul, ol, small {
+p, ul, ol {
+  color: var(--color-text-secondary);
+}
+
+small {
   color: var(--color-text-primary);
 }
-p.small, ul.small, ol.small, small.small {
+small.small {
   color: var(--color-text-muted);
 }
 
@@ -164,15 +167,15 @@ b {
 }
 
 .text-success {
-  color: #16A34A;
+  color: var(--color-success-text);
 }
 
 .text-danger {
-  color: #DC2626;
+  color: var(--color-danger-text);
 }
 
 .text-warning {
-  color: #db9a17;
+  color: var(--color-warning-text);
 }
 
 .text-info {
@@ -182,15 +185,15 @@ b {
 /* # StatusTitle
 ----------------------------------------------- */
 .StatusTitle-Success i, .StatusTitle-Success h1, .StatusTitle-Success h2, .StatusTitle-Success h3, .StatusTitle-Success h4, .StatusTitle-Success h5 {
-  color: #16A34A;
+  color: var(--color-success-text);
 }
 
 .StatusTitle-Danger i, .StatusTitle-Danger h1, .StatusTitle-Danger h2, .StatusTitle-Danger h3, .StatusTitle-Danger h4, .StatusTitle-Danger h5 {
-  color: #DC2626;
+  color: var(--color-danger-text);
 }
 
 .StatusTitle-Warning i, .StatusTitle-Warning h1, .StatusTitle-Warning h2, .StatusTitle-Warning h3, .StatusTitle-Warning h4, .StatusTitle-Warning h5 {
-  color: #db9a17;
+  color: var(--color-warning-text);
 }
 
 .StatusTitle-Info i, .StatusTitle-Info h1, .StatusTitle-Info h2, .StatusTitle-Info h3, .StatusTitle-Info h4, .StatusTitle-Info h5 {
@@ -216,17 +219,17 @@ b {
   color: var(--color-text-primary);
 }
 .bg-light b {
-  color: var(--brand-tint-400);
+  color: var(--brand-primary);
 }
 
 .bg-dark {
-  background-color: var(--color-border-strong);
+  background-color: color-mix(in srgb, var(--color-border-strong) 45%, var(--color-surface));
 }
 .bg-dark a, .bg-dark p, .bg-dark ul {
-  color: var(--color-text-primary);
+  color: var(--color-surface);
 }
 .bg-dark b {
-  color: var(--brand-tint-400);
+  color: var(--brand-primary);
 }
 
 .bg-darker {
@@ -239,18 +242,18 @@ b {
   color: var(--color-surface);
 }
 .bg-darker b {
-  color: var(--brand-tint-400);
+  color: var(--brand-primary);
 }
 
 .bg-success {
-  background-color: #16A34A;
+  background-color: #22C55E;
 }
 .bg-success p {
   color: #ffffff;
 }
 
 .bg-danger {
-  background-color: #DC2626;
+  background-color: #F43F5E;
 }
 .bg-danger p {
   color: #ffffff;
@@ -263,15 +266,15 @@ b {
 }
 
 .label-primary {
-  background-color: var(--brand-tint-100);
+  background-color: var(--brand-primary);
 }
 
 .label-danger {
-  background-color: #DC2626;
+  background-color: #F43F5E;
 }
 
 .label-success {
-  background-color: #16A34A;
+  background-color: #22C55E;
 }
 
 .label-info {
@@ -397,6 +400,17 @@ table {
 ===================== */
 /* # Imported files and fonts
 ----------------------------------------------- */
+/* # Tokens propios de este archivo
+No viven en base/theme.scss porque ese archivo se deja idéntico al de
+GF-Framework-apps; el texto de cuerpo y p.lead de este proyecto tienen
+su propio tamaño (no se toman de la escala de headings --fs-*) para
+que no crezcan junto con los headings en el breakpoint de escritorio.
+----------------------------------------------- */
+:root {
+  --fs-text: 1rem;
+  --fs-lead: 1.5rem;
+}
+
 /* # Tipography
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn {
@@ -1491,7 +1505,7 @@ main {
 .grid-item {
   padding: 10px;
   background-color: var(--color-border-strong);
-  border: 1px solid var(--brand-tint-100);
+  border: 1px solid color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 
 /* # Gap
@@ -3462,37 +3476,37 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-disable {
   background-color: var(--color-canvas);
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
   cursor: not-allowed;
 }
 .btn-disable i {
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
 }
 
 /* # Btn-light
 ----------------------------------------------- */
 .btn-light {
-  background-color: color-mix(in srgb, var(--brand-tint-300) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--brand-primary) 68%, #ffffff);
   color: var(--color-surface);
 }
 .btn-light i {
   color: var(--color-surface);
 }
 .btn-light:hover {
-  background-color: var(--brand-tint-300);
+  background-color: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
 }
 
 /* btn-light-inverse */
 .btn-light-inverse {
   background-color: var(--color-canvas);
-  color: color-mix(in srgb, var(--brand-tint-300) 90%, #ffffff);
-  border-color: color-mix(in srgb, var(--brand-tint-300) 90%, #ffffff);
+  color: color-mix(in srgb, var(--brand-primary) 68%, #ffffff);
+  border-color: color-mix(in srgb, var(--brand-primary) 68%, #ffffff);
 }
 .btn-light-inverse i {
-  color: color-mix(in srgb, var(--brand-tint-300) 90%, #ffffff);
+  color: color-mix(in srgb, var(--brand-primary) 68%, #ffffff);
 }
 .btn-light-inverse:hover {
-  background-color: var(--brand-tint-300);
+  background-color: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
   color: var(--color-surface);
 }
 .btn-light-inverse:hover i {
@@ -3533,27 +3547,27 @@ Tabletas horizontales */
 /* # Btn-success
 ----------------------------------------------- */
 .btn-success {
-  background-color: rgb(28.0648648649, 207.9351351351, 94.4);
+  background-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
   color: var(--color-canvas);
 }
 .btn-success i {
   color: var(--color-canvas);
 }
 .btn-success:hover {
-  background: #16A34A;
+  background: #22C55E;
 }
 
 /* btn-success-inverse */
 .btn-success-inverse {
   background-color: var(--color-canvas);
-  border-color: rgb(28.0648648649, 207.9351351351, 94.4);
-  color: rgb(28.0648648649, 207.9351351351, 94.4);
+  border-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
+  color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
 }
 .btn-success-inverse i {
-  color: rgb(28.0648648649, 207.9351351351, 94.4);
+  color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
 }
 .btn-success-inverse:hover {
-  background-color: rgb(28.0648648649, 207.9351351351, 94.4);
+  background-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
   color: var(--color-canvas);
 }
 .btn-success-inverse:hover i {
@@ -3563,27 +3577,27 @@ Tabletas horizontales */
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-danger {
-  background-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
   color: var(--color-canvas);
 }
 .btn-danger i {
   color: var(--color-canvas);
 }
 .btn-danger:hover {
-  background: #DC2626;
+  background: #F43F5E;
 }
 
 /* btn-danger-inverse */
 .btn-danger-inverse {
   background-color: var(--color-canvas);
-  border-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
-  color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  border-color: rgb(246.763546798, 111.236453202, 134.4482758621);
+  color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
 .btn-danger-inverse i {
-  color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
 .btn-danger-inverse:hover {
-  background-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
   color: var(--color-canvas);
 }
 .btn-danger-inverse:hover i {
@@ -3593,27 +3607,27 @@ Tabletas horizontales */
 /* # Btn-warning
 ----------------------------------------------- */
 .btn-warning {
-  background-color: rgb(234.3760330579, 176.0909090909, 58.6239669421);
+  background-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
   color: var(--color-canvas);
 }
 .btn-warning i {
   color: var(--color-canvas);
 }
 .btn-warning:hover {
-  background: #db9a17;
+  background: #F59E0B;
 }
 
 /* btn-warning-inverse */
 .btn-warning-inverse {
   background-color: var(--color-canvas);
-  border-color: rgb(234.3760330579, 176.0909090909, 58.6239669421);
-  color: rgb(234.3760330579, 176.0909090909, 58.6239669421);
+  border-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
+  color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
 }
 .btn-warning-inverse i {
-  color: rgb(234.3760330579, 176.0909090909, 58.6239669421);
+  color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
 }
 .btn-warning-inverse:hover {
-  background-color: rgb(234.3760330579, 176.0909090909, 58.6239669421);
+  background-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
   color: var(--color-canvas);
 }
 .btn-warning-inverse:hover i {
@@ -3723,26 +3737,26 @@ Tabletas horizontales */
 /* # Btn-danger
 ----------------------------------------------- */
 .btn-circle.btn-danger {
-  background-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
-  border-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
+  border-color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
 .btn-circle.btn-danger i {
   color: var(--color-canvas);
 }
 .btn-circle.btn-danger:hover {
-  background-color: #DC2626;
-  border-color: #DC2626;
+  background-color: #F43F5E;
+  border-color: #F43F5E;
 }
 
 .btn-circle.btn-danger-inverse {
   background-color: var(--color-surface);
-  border-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  border-color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
 .btn-circle.btn-danger-inverse i {
-  color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
 .btn-circle.btn-danger-inverse:hover {
-  background-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
 .btn-circle.btn-danger-inverse:hover i {
   color: var(--color-surface);
@@ -3752,10 +3766,10 @@ Tabletas horizontales */
 ----------------------------------------------- */
 .btn-circle.btn-disable {
   background-color: var(--color-canvas);
-  border-color: var(--brand-tint-200);
+  border-color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
 }
 .btn-circle.btn-disable i {
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
 }
 .btn-circle.btn-disable {
   cursor: not-allowed;
@@ -3809,7 +3823,7 @@ Tabletas horizontales */
   border-color: var(--brand-primary);
 }
 .card.card-success {
-  background-color: rgb(28.0648648649, 207.9351351351, 94.4);
+  background-color: rgb(60.5584415584, 221.4415584416, 119.7792207792);
 }
 .card.card-success h1, .card.card-success h2, .card.card-success h3, .card.card-success h4, .card.card-success h5, .card.card-success h6 {
   color: var(--color-surface);
@@ -3821,14 +3835,14 @@ Tabletas horizontales */
   color: var(--color-surface);
 }
 .card.card-success {
-  border-color: #16A34A;
+  border-color: #22C55E;
 }
 .card.card-success .card-header,
 .card.card-success .card-footer {
-  border-color: #16A34A;
+  border-color: #22C55E;
 }
 .card.card-danger {
-  background-color: rgb(227.0833333333, 81.9166666667, 81.9166666667);
+  background-color: rgb(246.763546798, 111.236453202, 134.4482758621);
 }
 .card.card-danger h1, .card.card-danger h2, .card.card-danger h3, .card.card-danger h4, .card.card-danger h5, .card.card-danger h6 {
   color: var(--color-surface);
@@ -3840,14 +3854,14 @@ Tabletas horizontales */
   color: var(--color-surface);
 }
 .card.card-danger {
-  border-color: #DC2626;
+  border-color: #F43F5E;
 }
 .card.card-danger .card-header,
 .card.card-danger .card-footer {
-  border-color: #DC2626;
+  border-color: #F43F5E;
 }
 .card.card-warning {
-  background-color: rgb(234.3760330579, 176.0909090909, 58.6239669421);
+  background-color: rgb(247.0078740157, 177.4763779528, 59.9921259843);
 }
 .card.card-warning h1, .card.card-warning h2, .card.card-warning h3, .card.card-warning h4, .card.card-warning h5, .card.card-warning h6 {
   color: var(--color-surface);
@@ -3859,11 +3873,11 @@ Tabletas horizontales */
   color: var(--color-surface);
 }
 .card.card-warning {
-  border-color: #db9a17;
+  border-color: #F59E0B;
 }
 .card.card-warning .card-header,
 .card.card-warning .card-footer {
-  border-color: #db9a17;
+  border-color: #F59E0B;
 }
 
 a.card:hover {
@@ -3918,21 +3932,21 @@ a.card.card-warning:hover {
   ========= */
 }
 .panel-list .panel-item.success {
-  background-color: rgba(22, 163, 74, 0.1);
-  border-color: #16A34A;
+  background-color: rgba(34, 197, 94, 0.1);
+  border-color: #22C55E;
 }
 .panel-list .panel-item.success h6, .panel-list .panel-item.success p {
-  color: #16A34A;
+  color: #22C55E;
 }
 .panel-list .panel-item.success p {
   font-weight: 400;
 }
 .panel-list .panel-item.warning {
-  background-color: rgba(219, 154, 23, 0.1);
-  border-color: #db9a17;
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: #F59E0B;
 }
 .panel-list .panel-item.warning h6, .panel-list .panel-item.warning p {
-  color: #db9a17;
+  color: #F59E0B;
 }
 .panel-list .panel-item.warning p {
   font-weight: 400;
@@ -4183,7 +4197,7 @@ Tabletas horizontales */
 }
 .gallery-section .gallery-body #imagenDestacada {
   border-radius: var(--radius-sm);
-  border: 3px solid #16A34A;
+  border: 3px solid #22C55E;
   margin-bottom: 1rem;
 }
 .gallery-section .gallery-body .wrapper-variants p {
@@ -4215,7 +4229,7 @@ Tabletas horizontales */
 }
 .gallery-section .gallery-body .wrapper-variants .wrapper-thumbnails .thumbnail.selected .thumbnail-icon i {
   content: "\f00c"; /* Ícono de check */
-  color: #16A34A;
+  color: #22C55E;
 }
 .gallery-section .gallery-body .wrapper-variants .wrapper-thumbnails .thumbnail img {
   border-radius: var(--radius-sm);
@@ -4242,7 +4256,7 @@ Tabletas horizontales */
 /* # Thumbnail seleccionado
 ----------------------------------------------- */
 .thumbnail.selected img {
-  border: 3px solid #16A34A;
+  border: 3px solid #22C55E;
   opacity: 1 !important;
 }
 
@@ -4331,7 +4345,7 @@ Tabletas verticales o celulares horizontales*/
 
 /* Estados */
 .bg-success .dac-progress__bar {
-  background: #16A34A;
+  background: #22C55E;
 }
 
 .bg-info .dac-progress__bar {
@@ -4339,11 +4353,11 @@ Tabletas verticales o celulares horizontales*/
 }
 
 .bg-warning .dac-progress__bar {
-  background: #db9a17;
+  background: #F59E0B;
 }
 
 .bg-danger .dac-progress__bar {
-  background: #DC2626;
+  background: #F43F5E;
 }
 
 /* Tamaños opcionales */
@@ -4533,21 +4547,21 @@ Tabletas verticales o celulares horizontales*/
 # BADGE VARIANTS
 ===================== */
 .badge-success {
-  background-color: rgba(22, 163, 74, 0.1);
-  border-color: #16A34A;
-  color: #16A34A;
+  background-color: rgba(34, 197, 94, 0.1);
+  border-color: #22C55E;
+  color: #22C55E;
 }
 
 .badge-warning {
-  background-color: rgba(219, 154, 23, 0.1);
-  border-color: #db9a17;
-  color: #db9a17;
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: #F59E0B;
+  color: #F59E0B;
 }
 
 .badge-danger {
-  background-color: rgba(220, 38, 38, 0.1);
-  border-color: #DC2626;
-  color: #DC2626;
+  background-color: rgba(244, 63, 94, 0.1);
+  border-color: #F43F5E;
+  color: #F43F5E;
 }
 
 /* =====================
@@ -4576,27 +4590,27 @@ Tabletas verticales o celulares horizontales*/
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .banner_alert.alert-success {
-  background-color: rgba(22, 163, 74, 0.1);
-  border: 1px solid #16A34A;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid #22C55E;
 }
 .banner_alert.alert-success p, .banner_alert.alert-success i {
-  color: #16A34A;
+  color: #22C55E;
   font-weight: 500;
 }
 .banner_alert.alert-warning {
-  background-color: rgba(219, 154, 23, 0.1);
-  border: 1px solid #db9a17;
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid #F59E0B;
 }
 .banner_alert.alert-warning p, .banner_alert.alert-warning i {
-  color: #db9a17;
+  color: #F59E0B;
   font-weight: 500;
 }
 .banner_alert.alert-danger {
-  background-color: rgba(220, 38, 38, 0.1);
-  border: 1px solid #DC2626;
+  background-color: rgba(244, 63, 94, 0.1);
+  border: 1px solid #F43F5E;
 }
 .banner_alert.alert-danger p, .banner_alert.alert-danger i {
-  color: #DC2626;
+  color: #F43F5E;
   font-weight: 500;
 }
 .banner_alert.hide {
@@ -4729,8 +4743,8 @@ Tabletas verticales o celulares horizontales*/
 }
 
 .swal2-icon.swal2-question {
-  border-color: #db9a17 !important;
-  color: #db9a17 !important;
+  border-color: #F59E0B !important;
+  color: #F59E0B !important;
 }
 
 /* =====================
@@ -4957,11 +4971,11 @@ html {
 }
 
 .toast.success {
-  background-color: #16A34A;
+  background-color: #22C55E;
 }
 
 .toast.error {
-  background-color: #DC2626;
+  background-color: #F43F5E;
 }
 
 .toast.info {
@@ -5011,7 +5025,7 @@ table {
 }
 
 thead {
-  background-color: var(--brand-tint-300);
+  background-color: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
   color: #ffffff;
 }
 
@@ -5023,7 +5037,7 @@ tbody tr:nth-child(even) {
   background-color: var(--color-border-strong);
 }
 tbody tr:hover {
-  background-color: var(--brand-tint-100);
+  background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 
 td, th {
@@ -5036,11 +5050,11 @@ td, th {
 /* # Mensaje de celda agregada
 ----------------------------------------------- */
 tr.new {
-  background-color: rgb(148.3891891892, 240.6108108108, 182.4) !important;
-  color: #16A34A;
+  background-color: rgb(191.038961039, 243.961038961, 210.5194805195) !important;
+  color: #22C55E;
 }
 tr.new p {
-  color: #16A34A;
+  color: #22C55E;
 }
 tr.new {
   /*
@@ -5374,21 +5388,21 @@ table.dataTable thead th.sorting_desc:after {
 # STATES
 ===================== */
 .tg-row.success {
-  background-color: rgba(22, 163, 74, 0.1);
-  border-color: #16A34A;
+  background-color: rgba(34, 197, 94, 0.1);
+  border-color: #22C55E;
 }
 
 .tg-row.warning {
-  background-color: rgba(219, 154, 23, 0.1);
-  border-color: #db9a17;
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: #F59E0B;
 }
 
 .tg-row.success .tg-cell {
-  color: #16A34A;
+  color: #22C55E;
 }
 
 .tg-row.warning .tg-cell {
-  color: #db9a17;
+  color: #F59E0B;
 }
 
 /*Components - Navigation*/
@@ -5562,7 +5576,7 @@ Tabletas horizontales*/
   font-weight: 300;
 }
 .tab-button.active, .tab-button:hover, .tab-button:focus {
-  background-color: color-mix(in srgb, var(--brand-tint-400) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--brand-primary) 81%, #ffffff);
   color: var(--color-surface);
   font-weight: 600;
 }
@@ -5606,7 +5620,7 @@ Tabletas horizontales*/
   font-weight: 300;
 }
 .vertical-tabs-container .vertical-tabs .vertical-tab.active, .vertical-tabs-container .vertical-tabs .vertical-tab:hover {
-  background-color: color-mix(in srgb, var(--brand-tint-400) 90%, #ffffff);
+  background-color: color-mix(in srgb, var(--brand-primary) 81%, #ffffff);
   color: var(--color-surface);
   font-weight: 600;
 }
@@ -5702,7 +5716,7 @@ Tabletas horizontales*/
   background-color: var(--color-border-strong);
 }
 .navbar-link.active {
-  color: var(--brand-tint-300);
+  color: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
   font-weight: bold;
 }
 
@@ -5717,7 +5731,7 @@ Tabletas horizontales*/
 
 /* Only for mobile */
 .dropdown.active .dropdown-toggle {
-  background-color: var(--brand-tint-100);
+  background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 .dropdown.active .dropdown-menu {
   display: block;
@@ -5733,7 +5747,7 @@ Tabletas horizontales*/
 }
 
 .dropdown:hover .dropdown-toggle {
-  background-color: var(--brand-tint-100);
+  background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 
 /*Si se utiliza imagen de usuario*/
@@ -5749,7 +5763,7 @@ Tabletas horizontales*/
   display: none;
   position: static;
   width: 100%;
-  background-color: var(--brand-tint-100);
+  background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -5836,13 +5850,13 @@ Tabletas horizontales*/
     top: 100%;
     left: 0;
     min-width: 200px;
-    background-color: var(--brand-tint-200);
+    background-color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
   }
   .dropdown-menu a {
     color: var(--color-surface);
   }
   .dropdown-menu a:hover {
-    background-color: var(--brand-tint-100);
+    background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
   }
 }
 /* # Desktop
@@ -5893,7 +5907,7 @@ ul.social-links {
 }
 
 .bg-darker .social-links a i {
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
 }
 
 /* =====================
@@ -5940,10 +5954,10 @@ ul.secondary_menu li:hover a {
   font-weight: 500;
 }
 ul.secondary_menu li.complete {
-  border-color: #16A34A;
+  border-color: #22C55E;
 }
 ul.secondary_menu li.complete a {
-  color: #16A34A;
+  color: #22C55E;
   font-weight: 500;
 }
 ul.secondary_menu li.active {
@@ -5977,7 +5991,7 @@ ul.secondary_menu li.active a {
   transition: background-color 0.3s ease;
   opacity: 0.2;
   color: var(--color-text-primary);
-  background-color: var(--brand-tint-300);
+  background-color: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
 }
 #back-to-top i {
   line-height: 45px;
@@ -6016,7 +6030,7 @@ label {
 }
 
 label span {
-  color: #DC2626;
+  color: #F43F5E;
 }
 
 form,
@@ -6052,7 +6066,7 @@ legend,
   color: var(--color-text-primary);
 }
 .form-control:disabled {
-  background-color: var(--brand-tint-100);
+  background-color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 
 textarea.form-control {
@@ -6121,7 +6135,7 @@ input[type=range] {
 
 /* Cambio de color al pasar el mouse */
 input[type=range]:hover {
-  background: var(--brand-tint-100);
+  background: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 
 /* Pulgar (thumb) del slider */
@@ -6339,7 +6353,7 @@ input::-ms-reveal {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--brand-tint-200);
+  background-color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
   transition: 0.4s;
   border-radius: 20px;
 }
@@ -6355,7 +6369,7 @@ input::-ms-reveal {
   transition: 0.4s;
 }
 .switch input:checked + .slider {
-  background-color: #16A34A;
+  background-color: #22C55E;
 }
 .switch input:checked + .slider:before {
   transform: translateX(20px);
@@ -6511,7 +6525,7 @@ input::-ms-reveal {
 }
 
 .multi-select_field.is-empty {
-  color: var(--brand-tint-100);
+  color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 
 .multi-select_options {
@@ -7276,7 +7290,7 @@ Tabletas horizontales*/
 Colour theme
 ========================== */
 .wrapper {
-  background: var(--brand-tint-300);
+  background: color-mix(in srgb, var(--brand-primary) 75%, #ffffff);
 }
 
 /* ===========
@@ -7307,7 +7321,7 @@ Colour theme
 /*
 .dashboard-footer {
    background: var(--color-surface);
-   color: var(--brand-tint-400);
+   color: color-mix(in srgb, var(--brand-primary) 90%, $dark-color);
    padding: 15px;
    border-top: 1px solid #eee;    
  }
@@ -7910,26 +7924,26 @@ Colour theme
   gap: 0.5rem;
 }
 .face-item i {
-  color: var(--brand-tint-100);
+  color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
   font-size: 2rem;
 }
 .face-item p {
-  color: var(--brand-tint-100);
+  color: color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
   font-weight: bold;
   font-size: 90%;
   margin: 0;
 }
 .face-item.danger i, .face-item.danger p {
-  color: #DC2626;
+  color: #F43F5E;
 }
 .face-item.warning i, .face-item.warning p {
-  color: #db9a17;
+  color: #F59E0B;
 }
 .face-item.highlight i, .face-item.highlight p {
   color: var(--brand-primary);
 }
 .face-item.success i, .face-item.success p {
-  color: #16A34A;
+  color: #22C55E;
 }
 
 /* =====================
@@ -7956,27 +7970,27 @@ Colour theme
 }
 .moods .face-item i {
   transition: color 0.2s ease;
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
   font-size: 2rem;
 }
 .moods .face-item p {
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
   transition: color 0.2s ease;
   font-weight: bold;
   font-size: 90%;
   margin: 0;
 }
 .moods .face-item.danger:hover i, .moods .face-item.danger:hover p, .moods .face-item.danger.active i, .moods .face-item.danger.active p {
-  color: #DC2626;
+  color: #F43F5E;
 }
 .moods .face-item.warning:hover i, .moods .face-item.warning:hover p, .moods .face-item.warning.active i, .moods .face-item.warning.active p {
-  color: #db9a17;
+  color: #F59E0B;
 }
 .moods .face-item.highlight:hover i, .moods .face-item.highlight:hover p, .moods .face-item.highlight.active i, .moods .face-item.highlight.active p {
   color: var(--brand-primary);
 }
 .moods .face-item.success:hover i, .moods .face-item.success:hover p, .moods .face-item.success.active i, .moods .face-item.success.active p {
-  color: #16A34A;
+  color: #22C55E;
 }
 
 /* =====================
@@ -7991,7 +8005,7 @@ Colour theme
   align-items: center;
   gap: 0.5rem;
   padding: 0 1rem;
-  border-right: 1px solid var(--brand-tint-100);
+  border-right: 1px solid color-mix(in srgb, var(--brand-primary) 20%, #ffffff);
 }
 .contributor-ratings .contributor-item:last-child {
   border-right: none;
@@ -8081,11 +8095,11 @@ canvas {
   /* Completado */
 }
 .evaluation_progress .evaluation-item.completed .step-number {
-  background: #16A34A;
+  background: #22C55E;
   color: #fff;
 }
 .evaluation_progress .evaluation-item.completed h6 {
-  color: #16A34A;
+  color: #22C55E;
 }
 .evaluation_progress .evaluation-item.completed p {
   color: var(--color-text-primary);
@@ -8094,12 +8108,12 @@ canvas {
   /* Activo */
 }
 .evaluation_progress .evaluation-item.active .step-number {
-  background: #16A34A;
+  background: #22C55E;
   color: #fff;
   transform: scale(1.05);
 }
 .evaluation_progress .evaluation-item.active h6 {
-  color: #16A34A;
+  color: #22C55E;
 }
 .evaluation_progress .evaluation-item.active p {
   color: var(--color-text-primary);
@@ -8188,10 +8202,10 @@ canvas {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
 }
 .tutorial_link i {
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, #ffffff);
 }
 .tutorial_link:hover {
   color: var(--brand-primary);

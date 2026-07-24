@@ -14,7 +14,7 @@
   transition: background-color 0.3s ease;
   opacity:.2;
   color:var(--color-text-primary); 
-  background-color:var(--brand-tint-300);
+  background-color:color-mix(in srgb, var(--brand-primary) 75%, $white-color);
 
   i{
   line-height: 45px;

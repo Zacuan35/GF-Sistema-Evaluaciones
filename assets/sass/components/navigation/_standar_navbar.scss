@@ -74,7 +74,7 @@
   .navbar-link:hover {background-color: var(--color-border-strong);}
 
   &.active {
-    color: var(--brand-tint-300); 
+    color: color-mix(in srgb, var(--brand-primary) 75%, $white-color); 
     font-weight: bold;
   }
 }
@@ -87,7 +87,7 @@
 }
 /* Only for mobile */
 .dropdown.active{
-  .dropdown-toggle {background-color: var(--brand-tint-100);}
+  .dropdown-toggle {background-color: color-mix(in srgb, var(--brand-primary) 20%, $white-color);}
   .dropdown-menu {display: block;}  
 }
 
@@ -99,7 +99,7 @@
   display: block;
   font-size:0.875rem;
 }
-.dropdown:hover .dropdown-toggle {background-color: var(--brand-tint-100);}
+.dropdown:hover .dropdown-toggle {background-color: color-mix(in srgb, var(--brand-primary) 20%, $white-color);}
 /*Si se utiliza imagen de usuario*/
 .dropdown-toggle img.user{
   width:20px;
@@ -113,7 +113,7 @@
   display: none;
   position: static; 
   width: 100%;
-  background-color: var(--brand-tint-100);
+  background-color: color-mix(in srgb, var(--brand-primary) 20%, $white-color);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -194,10 +194,10 @@
     top: 100%;
     left: 0;
     min-width: 200px;
-    background-color: var(--brand-tint-200);
+    background-color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
     a {
       color: var(--color-surface);
-      &:hover {background-color: var(--brand-tint-100);}
+      &:hover {background-color: color-mix(in srgb, var(--brand-primary) 20%, $white-color);}
     }
   }
 }

@@ -11,7 +11,7 @@
 .grid-item {
   padding: 10px;
   background-color: var(--color-border-strong);
-  border: 1px solid var(--brand-tint-100);
+  border: 1px solid color-mix(in srgb, var(--brand-primary) 20%, $white-color);
 }
 
 /* # Gap

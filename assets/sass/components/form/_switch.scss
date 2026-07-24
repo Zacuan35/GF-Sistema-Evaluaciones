@@ -39,7 +39,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:var(--brand-tint-200);
+    background-color:color-mix(in srgb, var(--brand-primary) 45%, $white-color);
     transition: .4s;
     border-radius: 20px;
     &:before {

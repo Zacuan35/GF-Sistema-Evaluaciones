@@ -8,12 +8,12 @@
     gap: 0.5rem;
 
     i {
-      color: var(--brand-tint-100);
+      color: color-mix(in srgb, var(--brand-primary) 20%, $white-color);
       font-size: 2rem;
     }
 
     p {
-      color: var(--brand-tint-100);
+      color: color-mix(in srgb, var(--brand-primary) 20%, $white-color);
       font-weight: bold;
       font-size: 90%;
       margin: 0;
@@ -66,12 +66,12 @@
 
     i {
       transition: color 0.2s ease;
-      color: var(--brand-tint-200);
+      color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
       font-size: 2rem;
     }
 
     p {
-      color: var(--brand-tint-200);
+      color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
       transition: color 0.2s ease;
       font-weight: bold;
       font-size: 90%;
@@ -120,7 +120,7 @@
     align-items: center;
     gap:0.5rem;
     padding: 0 1rem;
-    border-right: 1px solid var(--brand-tint-100);
+    border-right: 1px solid color-mix(in srgb, var(--brand-primary) 20%, $white-color);
     &:last-child {
       border-right: none;
       /*
@@ -322,8 +322,8 @@ canvas {
   font-family:$primary-font;
   font-size:1rem;
   font-weight: 700;
-  color:var(--brand-tint-200);
-  i{color:var(--brand-tint-200);}
+  color:color-mix(in srgb, var(--brand-primary) 45%, $white-color);
+  i{color:color-mix(in srgb, var(--brand-primary) 45%, $white-color);}
   &:hover{
     color: var(--brand-primary);
     i{color:var(--brand-primary);}

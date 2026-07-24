@@ -48,32 +48,32 @@
 ----------------------------------------------- */
 .btn-disable {
   background-color: var(--color-canvas);
-  color: var(--brand-tint-200);
+  color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
   cursor:not-allowed;
-  i {color: var(--brand-tint-200);}    
+  i {color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);}    
 }    
 
 /* # Btn-light
 ----------------------------------------------- */
 .btn-light {
-  background-color: color-mix(in srgb, var(--brand-tint-300) 90%, $white-color);
+  background-color: color-mix(in srgb, var(--brand-primary) 68%, $white-color);
   color: var(--color-surface); 
   i {color: var(--color-surface);}
   
   &:hover {
-    background-color: var(--brand-tint-300); 
+    background-color: color-mix(in srgb, var(--brand-primary) 75%, $white-color); 
   }
 }
 
 /* btn-light-inverse */
 .btn-light-inverse {  
   background-color: var(--color-canvas);
-  color: color-mix(in srgb, var(--brand-tint-300) 90%, $white-color); 
-  border-color: color-mix(in srgb, var(--brand-tint-300) 90%, $white-color); 
-  i {color: color-mix(in srgb, var(--brand-tint-300) 90%, $white-color);}
+  color: color-mix(in srgb, var(--brand-primary) 68%, $white-color); 
+  border-color: color-mix(in srgb, var(--brand-primary) 68%, $white-color); 
+  i {color: color-mix(in srgb, var(--brand-primary) 68%, $white-color);}
 
   &:hover{
-    background-color: var(--brand-tint-300); 
+    background-color: color-mix(in srgb, var(--brand-primary) 75%, $white-color); 
     color: var(--color-surface);
     i {color: var(--color-surface);}      
   }
@@ -308,7 +308,7 @@
 ----------------------------------------------- */
 .btn-circle.btn-disable {  
   background-color:var(--color-canvas);
-  border-color: var(--brand-tint-200);
-  i{color:var(--brand-tint-200);}
+  border-color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
+  i{color:color-mix(in srgb, var(--brand-primary) 45%, $white-color);}
   cursor:not-allowed;
 }

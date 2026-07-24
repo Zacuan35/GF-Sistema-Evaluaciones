@@ -7,6 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* # Tokens propios de este archivo
+No viven en base/theme.scss porque ese archivo se deja idéntico al de
+GF-Framework-apps; el texto de cuerpo y p.lead de este proyecto tienen
+su propio tamaño (no se toman de la escala de headings --fs-*) para
+que no crezcan junto con los headings en el breakpoint de escritorio.
+----------------------------------------------- */
+:root {
+  --fs-text: 1rem;
+  --fs-lead: 1.5rem;
+}
+
 /* # Tipography
 ----------------------------------------------- */
 body, form, label, input, textarea, select, a, .btn{
@@ -44,7 +55,7 @@ small, .small {
   font-family: var(--font-body);
   font-weight: normal;
   line-height: 1;
-  //color: var(--brand-tint-200);
+  //color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
   font-size: 80%;
 }
 

@@ -46,7 +46,7 @@
   }  
 }
 .multi-select_field.is-empty {
-  color: var(--brand-tint-100);
+  color: color-mix(in srgb, var(--brand-primary) 20%, $white-color);
 }
 .multi-select_options {
   display: none;

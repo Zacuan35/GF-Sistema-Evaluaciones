@@ -44,7 +44,7 @@
   &.active,
   &:hover, 
   &:focus {
-    background-color: color-mix(in srgb, var(--brand-tint-400) 90%, $white-color); 
+    background-color: color-mix(in srgb, var(--brand-primary) 81%, $white-color); 
     color:var(--color-surface);  
     font-weight: 600;
   }  

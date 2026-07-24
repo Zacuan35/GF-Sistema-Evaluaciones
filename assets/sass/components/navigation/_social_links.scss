@@ -42,7 +42,7 @@ ul.social-links {
 .bg-darker {
   .social-links a{
     i{
-      color: var(--brand-tint-200);
+      color: color-mix(in srgb, var(--brand-primary) 45%, $white-color);
     }
   }  
 }
