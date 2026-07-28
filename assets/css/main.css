@@ -7491,25 +7491,27 @@ Colour theme
   background-color: var(--color-canvas);
 }
 
-/* # Search-field
+/* =====================
+# SIDEBAR MENU
+===================== */
+/* # Sidebar-search
 ----------------------------------------------- */
-.search-field {
+.sidebar-search {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex: 1;
-  max-width: 420px;
-  margin: 0 20px;
-  padding: 8px 14px;
+  margin: 15px 15px 5px;
+  padding: 10px 14px;
   background-color: var(--color-canvas);
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
 }
-.search-field i {
+.sidebar-search i {
   color: var(--color-text-muted);
   flex-shrink: 0;
+  font-size: 14px;
 }
-.search-field input {
+.sidebar-search input {
   border: 0;
   background: transparent;
   outline: none;
@@ -7518,18 +7520,10 @@ Colour theme
   color: var(--color-text-primary);
   width: 100%;
 }
-.search-field input::placeholder {
+.sidebar-search input::placeholder {
   color: var(--color-text-muted);
 }
 
-@media (max-width: 767px) {
-  .search-field {
-    display: none;
-  }
-}
-/* =====================
-# SIDEBAR MENU
-===================== */
 /* # Nav-section-label
 ----------------------------------------------- */
 .nav-section-label {
@@ -7556,10 +7550,10 @@ Colour theme
 }
 
 .sidebar-menu > li > a {
-  padding: 12px 5px 12px 15px;
+  padding: 10px 12px;
   display: block;
-  border-left: 3px solid transparent;
-  margin-right: 1px;
+  margin: 2px 10px;
+  border-radius: var(--radius-xs);
   font-weight: 500;
 }
 
@@ -7662,15 +7656,20 @@ Colour theme
   color: var(--color-text-muted);
 }
 
-.sidebar-menu > li > a:hover,
-.sidebar-menu > li.active > a {
+.sidebar-menu > li > a:hover {
   background: var(--color-canvas);
   color: var(--brand-primary);
-  border-left-color: var(--brand-primary);
 }
-.sidebar-menu > li > a:hover i,
-.sidebar-menu > li.active > a i {
+.sidebar-menu > li > a:hover i {
   color: var(--brand-primary);
+}
+
+.sidebar-menu > li.active > a {
+  background: var(--brand-primary);
+  color: #ffffff;
+}
+.sidebar-menu > li.active > a i {
+  color: #ffffff;
 }
 
 .sidebar-menu > li > .treeview-menu {
