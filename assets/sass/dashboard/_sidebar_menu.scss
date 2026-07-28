@@ -113,12 +113,18 @@
 	padding: 8px 14px;
 	margin: 2px 10px 2px 18px;
 	display: block;
-	border-radius: var(--radius-full);
+	border-radius: var(--radius-xs);
 	font-size: 14px;
 }
-/* El guion (icon-minus) que traían los sub-enlaces ya no se muestra: la pastilla basta como indicador */
+/* Bullet en vez del guion (icon-minus) que traían los sub-enlaces */
 .sidebar-menu .treeview-menu > li > a > i.icon-minus {
 	display: none;
+}
+.sidebar-menu .treeview-menu > li > a::before {
+	content: "•";
+	display: inline-block;
+	width: 15px;
+	color: var(--color-text-muted);
 }
 .sidebar-menu .treeview-menu > li > a > i {
 	width: 15px;
@@ -155,7 +161,7 @@
   i{color: $white-color;}
 }
 .sidebar-menu > li > .treeview-menu {
-  background: var(--color-canvas);
+  background: var(--color-surface);
 }
 
 .treeview-menu > li > a {
