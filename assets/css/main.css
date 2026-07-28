@@ -62,7 +62,7 @@ Cambia estos valores para retematizar todo el kit sin tocar el resto del CSS.
   --topbar-height: 100px;
   --transition-base: 180ms cubic-bezier(0.4, 0, 0.2, 1);
   /* --- Marca (fija en ambos temas) --- */
-  --brand-primary: #1464C3;
+  --brand-primary: #225DE0;
   --brand-teal: #14B8A6;
   --brand-amber: #F59E0B;
   --brand-rose: #F43F5E;
